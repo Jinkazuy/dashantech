@@ -24,9 +24,11 @@ export default {
 </script>
 
 <style scoped lang="stylus">
+/*导航栏最外层样式*/
 #navbar{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 50%;
@@ -34,23 +36,23 @@ export default {
     height: 80px;
     background-color: #333;
 }
+//小屏幕
 @media (min-width: 768px) {
     #navbar {
-        width: 750px;
+        width: 768px;
     }
 }
-
 //中等屏幕
 @media (min-width: 992px) {
     #navbar {
-        width: 970px;
+        width: 992px;
     }
 }
-
 //大屏幕：1336px~更高
 @media (min-width: 1336px) {
     #navbar {
         width: 1336px;
+        padding: 0 20px 0;
     }
 }
 .dslogo {
