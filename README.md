@@ -10,3 +10,9 @@ https://segmentfault.com/a/1190000014509984
 按照文章中步骤操作即可；
 2、在main.js中另外添加↓
 import "../src/common/css/bootstrap.min.css";
+
+所用插件：
+
+1、在JS中操作css：
+create-keyframe-animation
+https://www.npmjs.com/package/create-keyframe-animation
