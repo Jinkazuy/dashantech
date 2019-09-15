@@ -16,3 +16,13 @@ import "../src/common/css/bootstrap.min.css";
 1、在JS中操作css：
 create-keyframe-animation
 https://www.npmjs.com/package/create-keyframe-animation
+
+
+
+============================
+文件结构（部分）
+dashantech
+  src
+    components
+      nav-bar - 导航栏组件；
+
