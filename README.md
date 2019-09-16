@@ -14,10 +14,14 @@ import "../src/common/css/bootstrap.min.css";
 所用插件：
 
 1、在JS中操作css：
-create-keyframe-animation
+> create-keyframe-animation
 https://www.npmjs.com/package/create-keyframe-animation
 
-
+2、进度条：
+> nprogress.js
+https://github.com/rstacruz/nprogress
+https://www.jianshu.com/p/346c05d4d9d8
+https://blog.csdn.net/tswc_byy/article/details/86713618
 
 ============================
 文件结构（部分）

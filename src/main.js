@@ -11,6 +11,25 @@ import $ from "jquery";
 import "bootstrap";
 import "../src/common/css/bootstrap.min.css";
 
+// 进度条插件 ==========================
+import NProgress from "nprogress";
+import "../src/common/css/nprogress.css";
+// 隐藏右侧的loading圈圈
+NProgress.configure({ showSpinner: false });
+// 在切换路由的时候显示进度条插件
+// router加载前
+router.beforeEach((to, from, next) => {
+  NProgress.start();
+  // 设置进度条曲线和动画时间
+  NProgress.configure({ ease: "ease-in-out", speed: 1000 });
+  next();
+});
+// router加载之后，隐藏进度条
+router.afterEach(() => {
+  NProgress.done();
+});
+// 进度条插件 ==========================
+
 new Vue({
   router,
   store,
