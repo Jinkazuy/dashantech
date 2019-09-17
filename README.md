@@ -23,6 +23,11 @@ https://github.com/rstacruz/nprogress
 https://www.jianshu.com/p/346c05d4d9d8
 https://blog.csdn.net/tswc_byy/article/details/86713618
 
+3、banner插件
+> swiper
+https://www.swiper.com.cn/
+https://github.com/surmon-china/vue-awesome-swiper
+
 ============================
 文件结构（部分）
 dashantech

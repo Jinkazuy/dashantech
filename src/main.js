@@ -30,6 +30,13 @@ router.afterEach(() => {
 });
 // 进度条插件 ==========================
 
+// 轮播图插件 ==========================
+import VueAwesomeSwiper from "vue-awesome-swiper";
+Vue.use(VueAwesomeSwiper);
+// require styles
+import "swiper/dist/css/swiper.css";
+// 轮播图插件 ==========================
+
 new Vue({
   router,
   store,

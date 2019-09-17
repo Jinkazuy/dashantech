@@ -44,7 +44,7 @@ export default {
         this.showNavBarShadow = true;
         // 如果滚动制超过800px，显示侧边栏返回顶部按钮
         this.showSideBar = scrollTop > 800;
-        console.log(this.showSideBar)
+        console.log("返回顶部" + this.showSideBar);
       } else {
         this.showNavBarShadow = false;
       }

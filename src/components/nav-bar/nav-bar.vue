@@ -114,8 +114,9 @@ export default {
           z-index: 99;
         }
       }
+      // 弥散投影
       .navbar-brand::after {
-        content: '1';
+        content: '';
         width: 80%;
         height: 50%;
         position: absolute;
@@ -125,6 +126,22 @@ export default {
         border-radius: 14px;
         background-color: #1addcf;
         z-index: -1;
+        /*transition: all .4s;*/
+      }
+      // 鼠标移入弥散投影
+      .navbar-brand:hover::after {
+        animation-name: shadowTwinkle;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-delay: 0;
+        animation-fill-mode: both;
+        animation-timing-function: linear;
+        animation-play-state: running;
+      }
+      @keyframes shadowTwinkle {
+        from {filter: blur(14px); bottom: -2px;}
+        to {filter: blur(0); bottom: 10px;}
       }
     }
   }
@@ -159,6 +176,7 @@ export default {
         transition: all 0.4s;
       }
       a {
+        font-size: 16px;
         color: #808695 !important;
         font-weight: 400;
       }
@@ -181,7 +199,39 @@ export default {
       }
     }
   }
-  /*重置bootstrap样式=======结束=============*/
+  @media (max-width: 768px){
+    /*小尺寸折叠导航栏高度重置*/
+    .container-fluid {
+      .navbar-header{
+        height: 80px;
+        padding-top: 14px;
+      }
+    }
+    /*小尺寸折叠导航按钮  */
+    .navbar-toggle {
+      margin-right: 40px;
+    }
+  }
+  //解决在此分辨率下导航栏出现折叠bug
+  @media (min-width: 768px) and (max-width: 992px){
+    .container-fluid {
+      .navbar-header{
+        .navbar-brand {
+          margin-left: 30px !important;
+        }
+      }
+      .navbar-right{
+        margin-left: 10px !important;
+        li{
+          a {
+            font-size: 14px;
+            padding: 10px 10px;
+          }
+        }
+      }
+    }
+  }
+    /*重置bootstrap样式=======结束=============*/
 
 /*导航栏最外层样式*/
 .navbar-wrapper{
@@ -200,7 +250,7 @@ export default {
       .navbar-collapse {
         .navbar-right {
           float: left !important;
-          margin-left: 100px;
+          margin: 6px 0 0 100px;
         }
       }
     }

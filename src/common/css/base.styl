@@ -8,3 +8,14 @@ body, html
   -webkit-tap-highlight-color: transparent
   background: $color-background
   color: $color-text
+
+.clearfix:before,.clearfix:after {
+  content:"";
+  display:table;  /* 这句话可以出发BFC BFC可以清除浮动,BFC我们后面讲 */
+}
+.clearfix:after {
+  clear:both;
+}
+.clearfix {
+  *zoom:1;
+}
