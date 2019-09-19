@@ -28,6 +28,7 @@
         </ul>
       </div>
       <div class="bottom-cont">
+        <div class="lg-d"></div>
         <ul class="clearfix">
           <li class="bottom-nav">
             <h3 class="bottom-nav-title">网站导航</h3>
@@ -48,24 +49,24 @@
                 <ul class="add">
                   <li>华北地区</li>
                   <li class="num">张先森 13800138000</li>
-                  <li class="num">王吕四 13800138000</li>
+                  <li class="num">王旅四 13800138000</li>
                 </ul>
                 <ul class="add">
                   <li>华北地区</li>
                   <li class="num">张先森 13800138000</li>
-                  <li class="num">王吕四 13800138000</li>
-                  <li class="num">王吕四 13800138000</li>
+                  <li class="num">王旅四 13800138000</li>
+                  <li class="num">王旅四 13800138000</li>
                 </ul>
                 <ul class="add">
                   <li>华北地区</li>
                   <li class="num">张先森 13800138000</li>
-                  <li class="num">王吕四 13800138000</li>
+                  <li class="num">王旅四 13800138000</li>
                 </ul>
                 <ul class="add">
                   <li>华北地区</li>
                   <li class="num">张先森 13800138000</li>
-                  <li class="num">王吕四 13800138000</li>
-                  <li class="num">王吕四 13800138000</li>
+                  <li class="num">王旅四 13800138000</li>
+                  <li class="num">王旅四 13800138000</li>
                 </ul>
               </li>
               <li></li>
@@ -86,7 +87,6 @@
             </ul>
           </li>
         </ul>
-        <div class="lg-d"></div>
         <div class="follow">
           <span>关注我们</span>
           <div class="wechat-icon-wrapper">
@@ -142,6 +142,7 @@ export default {
     padding: 0 58px;
     // 头部logo部分 - 开始
     .bottom-header{
+      z-index: 1;
       height: 161px;
       width: 100%;
       padding: 16px 0 0 32px;
@@ -227,6 +228,8 @@ export default {
       height: 506px;
       width: 100%;
       ul {
+        position: relative;
+        z-index: 2;
         margin: 0;
         .bottom-nav, .cooperation, .programme{
           margin-right: 130px;
@@ -272,11 +275,22 @@ export default {
       // 点阵logo
       .lg-d {
         position: absolute;
-        right: -180px;
         top: 32px;
         width: 334px;
         height: 356px;
         background-color: #000;
+        z-index: 0;
+        right: 0;
+      }
+      @media (min-width: 1336px) {
+        .lg-d {
+          right: 0;
+        }
+      }
+      @media (min-width: 1600px) {
+        .lg-d {
+          right: -180px;
+        }
       }
       // 关注我们
       .follow {
@@ -348,6 +362,7 @@ export default {
     // 内容部分 - 结束
     // 底部部分 - 开始
     .bottom-footer {
+      z-index: 1;
       position: relative;
       padding: 0 40px 24px 40px;
       .border-t {

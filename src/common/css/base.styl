@@ -9,13 +9,21 @@ body, html
   background: $color-background
   color: $color-text
 
+// 清除浮动
 .clearfix:before,.clearfix:after {
   content:"";
-  display:table;  /* 这句话可以出发BFC BFC可以清除浮动,BFC我们后面讲 */
+  display:table;
 }
 .clearfix:after {
   clear:both;
 }
 .clearfix {
   *zoom:1;
+}
+
+// 文字不换行 && 省略号
+.text-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
