@@ -168,6 +168,55 @@
 >
 
 <script>
+// 使用jQuery页面加载事件
+// 处理模块1 的动画效果，因为原生css无法直接选择前方兄弟元素，所以用JQ实现；
+// eslint-disable-next-line
+  $(window).on("load", function() {
+  // eslint-disable-next-line
+    $(".server-con-1").on("mouseenter", function() {
+    // eslint-disable-next-line
+      $(".server-con-1")
+      .siblings("a")
+      .css("opacity", "0.8");
+  });
+  // eslint-disable-next-line
+    $(".server-con-1").on("mouseleave", function() {
+    // eslint-disable-next-line
+      $(".server-con-1")
+      .siblings()
+      .css("opacity", "1");
+  });
+
+  // eslint-disable-next-line
+    $(".server-con-2").on("mouseenter", function() {
+    // eslint-disable-next-line
+      $(".server-con-2")
+      .siblings("a")
+      .css("opacity", "0.8");
+  });
+  // eslint-disable-next-line
+    $(".server-con-2").on("mouseleave", function() {
+    // eslint-disable-next-line
+      $(".server-con-2")
+      .siblings()
+      .css("opacity", "1");
+  });
+
+  // eslint-disable-next-line
+    $(".server-con-3").on("mouseenter", function() {
+    // eslint-disable-next-line
+      $(".server-con-3")
+      .siblings("a")
+      .css("opacity", "0.8");
+  });
+  // eslint-disable-next-line
+    $(".server-con-3").on("mouseleave", function() {
+    // eslint-disable-next-line
+      $(".server-con-3")
+      .siblings()
+      .css("opacity", "1");
+  });
+});
 export default {
   name: "modules1",
   data() {

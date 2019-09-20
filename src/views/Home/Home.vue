@@ -34,85 +34,34 @@
     <!--banner部分 - 结束-->
     <!--内容部分 - 开始-->
     <div class="home-cont">
-      <!--内容 1-->
+      <!--内容模块 1 - 方案、内容-->
       <homeModules1></homeModules1>
+      <!--内容模块 2 - 关于我们-->
+      <homeModules2></homeModules2>
+      <!--内容模块 3 - 公司动态-->
+      <homeModules3></homeModules3>
+      <!--内容模块 4 - 客户评价-->
+      <homeModules4></homeModules4>
+      <!--内容模块 5 - 加入我们-->
+      <homeModules5></homeModules5>
     </div>
     <!--内容部分 - 结束-->
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
   </div>
 </template>
 
 <script>
-// 使用jQuery页面加载事件
-// 处理模块1 的动画效果，因为原生css无法直接选择前方兄弟元素，所以用JQ实现；
-// eslint-disable-next-line
-$(window).on("load", function() {
-  // eslint-disable-next-line
-  $(".server-con-1").on("mouseenter", function() {
-    // eslint-disable-next-line
-    $(".server-con-1")
-      .siblings("a")
-      .css("opacity", "0.8");
-  });
-  // eslint-disable-next-line
-  $(".server-con-1").on("mouseleave", function() {
-    // eslint-disable-next-line
-    $(".server-con-1")
-      .siblings()
-      .css("opacity", "1");
-  });
-
-  // eslint-disable-next-line
-  $(".server-con-2").on("mouseenter", function() {
-    // eslint-disable-next-line
-    $(".server-con-2")
-      .siblings("a")
-      .css("opacity", "0.8");
-  });
-  // eslint-disable-next-line
-  $(".server-con-2").on("mouseleave", function() {
-    // eslint-disable-next-line
-    $(".server-con-2")
-      .siblings()
-      .css("opacity", "1");
-  });
-
-  // eslint-disable-next-line
-  $(".server-con-3").on("mouseenter", function() {
-    // eslint-disable-next-line
-    $(".server-con-3")
-      .siblings("a")
-      .css("opacity", "0.8");
-  });
-  // eslint-disable-next-line
-  $(".server-con-3").on("mouseleave", function() {
-    // eslint-disable-next-line
-    $(".server-con-3")
-      .siblings()
-      .css("opacity", "1");
-  });
-});
 // 引入轮播banner组件
 import Banner from "../../components/swiper/swiper";
-// 引入首页模块1
-import homeModules1 from "../../components/index/modules - 1/modules1";
+// 引入首页模块1 - 方案、内容
+import homeModules1 from "../../components/index/modules-1/modules1";
+// 引入首页模块2 - 关于我们
+import homeModules2 from "../../components/index/modules-2/modules2";
+// 引入首页模块3 - 公司动态
+import homeModules3 from "../../components/index/modules-3/modules3";
+// 引入首页模块4 - 客户评价
+import homeModules4 from "../../components/index/modules-4/modules4";
+// 引入首页模块5 - 加入我们
+import homeModules5 from "../../components/index/modules-5/modules5";
 
 // 引入banner插画组件
 import bannerIllusCont from "../../common/images/index/banner-1/banner-ch-3.png";
@@ -168,7 +117,11 @@ export default {
   components: {
     Banner,
     bannerImg,
-    homeModules1
+    homeModules1,
+    homeModules2,
+    homeModules3,
+    homeModules4,
+    homeModules5
   }
 };
 </script>
@@ -305,10 +258,6 @@ export default {
     .swiper-button-next:hover {
       // background-image: url();
     }
-    // 选中的轮播点
-    .swiper-pagination-bullet-active {
-      background-color: #14948a;
-    }
     @media (min-width: 0px) {
       .swiper-button-prev {
         left: 0;
@@ -366,5 +315,9 @@ export default {
       }
     }
   }
+}
+// 选中的轮播点
+.swiper-pagination-bullet-active {
+  background-color: #14948a;
 }
 </style>

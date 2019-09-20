@@ -51,6 +51,12 @@ const contact = resolve => {
     resolve(module);
   });
 };
+// 一级路由：文章详情页
+const newsDetail = resolve => {
+  import("./views/News-detail/News-detail").then(module => {
+    resolve(module);
+  });
+};
 
 export default new Router({
   mode: "hash",
@@ -97,6 +103,11 @@ export default new Router({
       // 联系大善
       path: "/contact",
       component: contact
+    },
+    {
+      // 文章详情页，点击文章列表时进入，根据传入的id值获取数据
+      path: "/newsDetail",
+      component: newsDetail
     }
   ]
   // ,
