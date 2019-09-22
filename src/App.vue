@@ -17,12 +17,15 @@
 import navBar from "@/components/nav-bar/nav-bar";
 // 引入页脚组件
 import bottom from "@/components/bottom/bottom";
+
 export default {
   name: "App",
   data() {
     return {
       showNavBarShadow: false,
-      showSideBar: false
+      showSideBar: false,
+      // 解决mounted钩子触发多次的问题,因为浏览器DOM结构变化会导致mounted多次触发
+      mountedNum: 0
     };
   },
   mounted() {
@@ -33,21 +36,39 @@ export default {
   methods: {
     // 实时监听浏览器滚动值
     appScroll() {
-      let scrollTop = 0;
-      if (document.documentElement && document.documentElement.scrollTop) {
-        scrollTop = document.documentElement.scrollTop;
-      } else if (document.body) {
-        scrollTop = document.body.scrollTop;
+      // 解决mounted钩子触发多次的问题,因为浏览器DOM结构变化会导致mounted多次触发
+      if (this.mountedNum < 2) {
+        this.mountedNum++;
+        return;
       }
-      // 如果滚动制超过80px，显示导航栏阴影
-      if (scrollTop > 80) {
+
+      // 是否显示导航栏阴影
+      if (!this.showNavBarShadow && this.scrollTopPosition() > 80) {
+        // 如果滚动制超过80px，显示导航栏阴影
         this.showNavBarShadow = true;
-        // 如果滚动制超过800px，显示侧边栏返回顶部按钮
-        this.showSideBar = scrollTop > 800;
-        console.log("返回顶部" + this.showSideBar);
-      } else {
+      } else if (this.scrollTopPosition() < 80) {
+        // 如果滚动制超小于80px，显示导航栏阴影
         this.showNavBarShadow = false;
       }
+      // 是否显示返回顶部按钮
+      if (!this.showSideBar && this.scrollTopPosition() > 800) {
+        // 如果滚动制超过800px，显示返回顶部按钮
+        this.showSideBar = true;
+        console.log("返回顶部 true");
+      } else if (this.showSideBar && this.scrollTopPosition() < 800) {
+        // 如果滚动制超小于800px，显示返回顶部按钮
+        this.showSideBar = false;
+        console.log("返回顶部 false");
+      }
+    },
+    // 获取浏览器距离顶部的位置
+    scrollTopPosition() {
+      return (
+        // 浏览器兼容
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop
+      );
     }
   },
   components: {

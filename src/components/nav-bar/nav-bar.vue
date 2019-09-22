@@ -1,6 +1,6 @@
 <template>
   <!--navbar-wrapper navbar-shadow-->
-  <div :class="['navbar-wrapper', showNavBarShadow ? 'navbar-shadow' : '']">
+  <div :class="['navbar-wrapper', showNavBarShadow ? 'navbar-shadow' : '', navBarHeightFlage ? 'navbar-h-low' : '' ]">
     <!--从这里开始，使用bootstrap的结构-->
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -77,8 +77,95 @@
 
 export default {
   name: "nav-bar.vue",
+  data() {
+    return {
+      // 导航栏高度值，为true的时候就是加类名（降低高度），false就是移除类名（正常高度）
+      // 通过类名控制
+      navBarHeightFlage: false,
+      // 当滚动时需要获取当前的触发滚动事件时候的值，而且之后不能改变
+      onscrollPosition: false,
+      // 初始滚动值
+      scrollTopStart: 0,
+      // 当前实时滚动值
+      scrollTopNow: 0,
+      // 解决mounted钩子触发多次的问题,因为浏览器DOM结构变化会导致mounted多次触发
+      mountedNum: 0
+    };
+  },
   props: ["showNavBarShadow"],
-  methods: {}
+  mounted() {
+    // 监听页面实时滚动值，从而控制导航栏高度的值；
+    window.addEventListener("scroll", this.pageScroll);
+  },
+  methods: {
+    // 实时监听浏览器滚动值、监听页面滚动、监听滚动
+    // 1、当标记值为height或者low的时候，分别监听滚动的正数和复数
+    pageScroll() {
+      // 解决mounted钩子触发多次的问题,因为浏览器DOM结构变化会导致mounted多次触发
+      if (this.mountedNum < 3) {
+        this.mountedNum++;
+        return;
+      }
+
+      // 当滚动时需要获取当前的触发滚动事件时候的值，而且之后不能改变
+      if (!this.onscrollPosition) {
+        // 获取初始位置
+        this.scrollTopStart = this.scrollTopPosition();
+        // console.log("初始位置 => " + this.scrollTopStart);
+        // 然后马上关闭这个节流阀，从而将此变量固定为触发滚动开始时的数值；
+        // console.log("初始位置" + this.scrollTopStart);
+        this.onscrollPosition = true;
+      }
+
+      // 之后还要获取实时滚动值，作为对比判断；
+      this.scrollTopNow = this.scrollTopPosition();
+      // console.log("实时位置 =>" + this.scrollTopNow);
+
+      // 如果导航栏高度为正常，也就是80px时，监听滚动的正数值，也就是页面向下滚动
+      if (
+        parseInt(this.scrollTopNow - this.scrollTopStart) > 100 &&
+        !this.navBarHeightFlage
+      ) {
+        // 如果滚动制超过正100px，就给导航栏加上一个类名，从而将导航栏高度降低；
+        // console.log("加类名========================");
+        this.navBarHeightFlage = true;
+        // 将获取初始位置的节流阀打开
+        this.onscrollPosition = false;
+      } else {
+        setTimeout(() => {
+          // 滚动之后，还要重新获取初始位置
+          this.scrollTopStart = this.scrollTopPosition();
+          // console.log("初始位置" + this.scrollTopStart);
+        }, 500);
+      }
+
+      // 如果滚动值小于-100px 并且 此时导航栏高度为低版，那么就进行判断；
+      if (
+        parseInt(this.scrollTopNow - this.scrollTopStart) < -100 &&
+        this.navBarHeightFlage
+      ) {
+        // console.log("移除类名======================");
+        this.navBarHeightFlage = false;
+        // 将获取初始位置的节流阀打开
+        this.onscrollPosition = false;
+      } else {
+        setTimeout(() => {
+          // 滚动之后，还要重新获取初始位置
+          this.scrollTopStart = this.scrollTopPosition();
+          // console.log("初始位置" + this.scrollTopStart);
+        }, 500);
+      }
+    },
+    // 获取浏览器距离顶部的位置
+    scrollTopPosition() {
+      return (
+        // 浏览器兼容
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop
+      );
+    }
+  }
 };
 </script>
 
@@ -257,8 +344,13 @@ export default {
     }
   }
 }
+// 导航栏投影控制
 .navbar-shadow {
   box-shadow:0 4px 8px 0 rgba(0,0,0,.1);
+}
+// 导航栏高度控制
+.navbar-h-low {
+  color: red;
 }
 //超小屏幕
 @media (min-width: 200px) {
