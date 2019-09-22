@@ -1,6 +1,12 @@
 <template>
   <!--navbar-wrapper navbar-shadow-->
-  <div :class="['navbar-wrapper', showNavBarShadow ? 'navbar-shadow' : '', navBarHeightFlage ? 'navbar-h-low' : '' ]">
+  <div
+    :class="[
+      'navbar-wrapper',
+      showNavBarShadow ? 'navbar-shadow' : '',
+      navBarHeightFlage ? 'navbar-h-low' : ''
+    ]"
+  >
     <!--从这里开始，使用bootstrap的结构-->
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -123,10 +129,10 @@ export default {
 
       // 如果导航栏高度为正常，也就是80px时，监听滚动的正数值，也就是页面向下滚动
       if (
-        parseInt(this.scrollTopNow - this.scrollTopStart) > 100 &&
+        parseInt(this.scrollTopNow - this.scrollTopStart) > 80 &&
         !this.navBarHeightFlage
       ) {
-        // 如果滚动制超过正100px，就给导航栏加上一个类名，从而将导航栏高度降低；
+        // 如果滚动制超过正80px，就给导航栏加上一个类名，从而将导航栏高度降低；
         // console.log("加类名========================");
         this.navBarHeightFlage = true;
         // 将获取初始位置的节流阀打开
@@ -141,7 +147,7 @@ export default {
 
       // 如果滚动值小于-100px 并且 此时导航栏高度为低版，那么就进行判断；
       if (
-        parseInt(this.scrollTopNow - this.scrollTopStart) < -100 &&
+        parseInt(this.scrollTopNow - this.scrollTopStart) < -80 &&
         this.navBarHeightFlage
       ) {
         // console.log("移除类名======================");
@@ -185,6 +191,7 @@ export default {
     transform: translateX(-50%)
     background-color: #fff;
     padding: 0 !important;
+    transition: all .5s;
     .container-fluid {
       padding: 0 !important;
       // logo
@@ -249,6 +256,7 @@ export default {
     width: 100%;
   }
   .navbar-right {
+    margin-top: 0 !important;
     li {
       color: #ccc;
       position: relative;
@@ -350,7 +358,13 @@ export default {
 }
 // 导航栏高度控制
 .navbar-h-low {
-  color: red;
+  height: 60px;
+  .navbar {
+    min-height: 60px
+  }
+  .navbar-brand::after {
+    bottom: 10px !important;
+  }
 }
 //超小屏幕
 @media (min-width: 200px) {

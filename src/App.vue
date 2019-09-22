@@ -69,6 +69,21 @@ export default {
         document.documentElement.scrollTop ||
         document.body.scrollTop
       );
+    },
+    // 返回顶部，借用jquery
+    moveTop() {
+      // eslint-disable-next-line
+      $("html,body").animate({ scrollTop: 0 }, 300);
+      // eslint-disable-next-line
+      if ($("html").scrollTop()) {
+        // eslint-disable-next-line
+        $("html").animate({ scrollTop: 0 }, 300);
+        return false;
+      }
+      // eslint-disable-next-line
+      $("body").animate({ scrollTop: 0 }, 300);
+      console.log(12);
+      return false;
     }
   },
   components: {
