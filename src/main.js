@@ -37,6 +37,11 @@ Vue.use(VueAwesomeSwiper);
 import "swiper/dist/css/swiper.css";
 // 轮播图插件 ==========================
 
+// 粒子动画背景插件 ================================
+import VueParticles from "vue-particles";
+Vue.use(VueParticles);
+// 粒子动画背景插件 ================================
+
 new Vue({
   router,
   store,

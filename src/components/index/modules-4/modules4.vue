@@ -2,7 +2,11 @@
   <div class="home-cont-modu-4">
     <div class="container">
       <div class="modu-4-header">
-        <img class="qm" src="../../../common/images/ds-logo.png" alt="“" />
+        <img
+          class="qm"
+          src="../../../common/images/index/modu-4/mark.png"
+          alt="“"
+        />
         <img
           class="title"
           src="../../../common/images/titles/home-title-customer.png"
@@ -19,11 +23,7 @@
             <div class="cont-wrapper">
               <p class="cuser-cont">{{ item.p }}</p>
               <div class="cuser-info">
-                <img
-                  src="../../../common/images/titles/home-title-customer.png"
-                  alt=""
-                  class="cuser-attr"
-                />
+                <img :src="item.avatar" alt="" class="cuser-attr" />
                 <h4 class="cuser-name">{{ item.cusName }}</h4>
                 <p class="cuser-titles">{{ item.title }}</p>
               </div>
@@ -31,19 +31,63 @@
           </swiper-slide>
         </swiper>
         <!--swiper导航按钮，必须写在外边儿，不然会出问题，只要类名对上了就行-->
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
+        <div class="swiper-button-prev " slot="button-prev">
+          <i class="iconfont iconchevron-back-solid"></i>
+        </div>
+        <div class="swiper-button-next" slot="button-next">
+          <i class="iconfont iconchevron-forward-solid"></i>
+        </div>
       </div>
       <div class="modu-4-foo">
         <ul class="operative-1">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>
+            <img
+              src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png"
+              alt=""
+            />
+          </li>
         </ul>
         <ul class="operative-2">
           <li></li>
@@ -63,9 +107,6 @@
 <script>
 // 引入轮播swiper组件
 import swiper from "../../../components/swiper/swiper";
-// 动态引入swiper头像，如果是线上地址的话，可以直接将地址写在imgSrc对应的变量中，用""包裹；
-import img1 from "../../../common/images/ds-logo.png";
-import img2 from "../../../common/images/ds-logo.png";
 
 export default {
   name: "modules4",
@@ -77,21 +118,21 @@ export default {
           cusName: "张三",
           title: "xxxx医院xx主任",
           p: `用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈`,
-          attr: img1,
+          avatar: "./images/avatar.jpg",
           forKey: 1
         },
         {
           cusName: "李四",
           title: "xxxx医院xx主任",
           p: `用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈`,
-          attr: img2,
+          avatar: "./images/avatar.jpg",
           forKey: 2
         },
         {
           cusName: "王五",
           title: "xxxx医院xx主任",
           p: `用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈，特别特别好，用户评价、用户反馈`,
-          attr: img1,
+          avatar: "./images/avatar.jpg",
           forKey: 3
         }
       ]
@@ -187,6 +228,19 @@ export default {
                     }
                 }
             }
+            .swiper-button-prev, .swiper-button-next {
+              background-image: none;
+              i {
+                font-size: 40px;
+                color: #aaa;
+                transition: all .2s;
+              }
+            }
+            .swiper-button-prev:hover, .swiper-button-next:hover {
+              i {
+                color: #14948a;
+              }
+            }
             .swiper-button-prev {
                 left: 108px;
                 top: 336px;
@@ -220,6 +274,11 @@ export default {
                     width: 10.98%;
                     height: 50px;
                     background-color: #d8d8d8;
+                    display: flex;
+                    align-items: center;
+                    img {
+                      width: 100%;
+                    }
                 }
             }
         }

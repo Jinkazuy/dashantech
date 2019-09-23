@@ -3,24 +3,24 @@
     <div class="us-pics">
       <ul class="ln-1">
         <li class="col-1">
-          <img src="../../../common/images/index/testillus.png" alt="" />
+          <img src="../../../../public/images/poto-1.jpg" alt="" />
         </li>
         <li class="col-2">
-          <img src="../../../common/images/index/testillus.png" alt="" />
+          <img src="../../../../public/images/poto-2.jpg" alt="" />
         </li>
         <li class="col-3">
-          <img src="../../../common/images/index/testillus.png" alt="" />
+          <img src="../../../../public/images/poto-3.jpg" alt="" />
         </li>
       </ul>
       <ul class="ln-2">
         <li class="col-1">
-          <img src="../../../common/images/index/testillus.png" alt="" />
+          <img src="../../../../public/images/poto-3.jpg" alt="" />
         </li>
         <li class="col-2">
-          <img src="../../../common/images/index/testillus.png" alt="" />
+          <img src="../../../../public/images/poto-2.jpg" alt="" />
         </li>
         <li class="col-3">
-          <img src="../../../common/images/index/testillus.png" alt="" />
+          <img src="../../../../public/images/poto-1.jpg" alt="" />
         </li>
       </ul>
     </div>
@@ -57,7 +57,7 @@ export default {
     background-color: #fff;
     .us-pics {
         position: absolute;
-        left: -8px;
+        right: 40%;
         height: 80%;
         width: 1180px;
         background-color: rgba(240, 240, 240, 1);
@@ -70,6 +70,9 @@ export default {
             padding: 0;
             display: flex;
             justify-content: space-between;
+            img {
+              margin: 0 auto;
+            }
         }
         .ln-1 {
             margin-bottom: 8px;
@@ -112,11 +115,12 @@ export default {
     }
     .join-us {
         position: absolute;
-        left: 1230px;
+        right: 13%;
         width: 340px;
         height: 80%;
-        padding-top: 18px;
+        padding: 18px 0 0 20px;
         box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.9)
         .titles {
             margin-bottom: 10%;
         }

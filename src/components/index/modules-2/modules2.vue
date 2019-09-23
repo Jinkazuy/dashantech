@@ -20,19 +20,19 @@
           <p>
             大善科技是国内技术领先的医疗领域信息化平台系统产品供应商和相关方案提供商，拥有一支熟悉医疗行业专业背景和经验的团队，报告资深项目经理、研发总监、数据分析博士等。
           </p>
-          <img src="../../../common/images/titles/home-title-aboutUs.png" />
+          <img src="../../../common/images/index/modu-2/modu2-ch-1.svg" />
         </li>
         <li>
           <p>
             团队核心成员来自华海、东软、科达/锐帽、Agfa爱克发、美国通用电气GE、3M、微软等多家领军IT技术公司，拥有深厚的研发功底。<br /><br />以产品研发能力和专业服务能力作为公司的核心竞争力，并具有强大的产品实施，服务咨询等大型项目管理与实施经验。
           </p>
-          <img src="../../../common/images/titles/home-title-aboutUs.png" />
+          <img src="../../../common/images/index/modu-2/modu2-ch-2.svg" />
         </li>
         <li>
           <p>
             在企业级ERP、医疗健康大数据、零售大数据、政府服务平台等大型项目均具备成功开发经验，尤真对医疗信息技术和大健康领域有着深刻而清晰的认识与愿景。
           </p>
-          <img src="../../../common/images/titles/home-title-aboutUs.png" />
+          <img src="../../../common/images/index/modu-2/modu2-ch-3.svg" />
         </li>
       </ul>
     </div>
@@ -152,6 +152,7 @@ export default {
           color: rgba(128, 134, 149, 1);
           font-size: 16px;
           line-height: 30px;
+          transition: all .2s;
         }
         img {
           position: absolute;
@@ -159,6 +160,16 @@ export default {
           bottom: 0;
           width: 106px;
           height: 106px;
+          opacity: .2;
+          transition: all .4s;
+        }
+      }
+      li:hover {
+        p {
+          color: #17233d;
+        }
+        img {
+          opacity: 1;
         }
       }
     }

@@ -27,8 +27,12 @@
           </swiper-slide>
         </Banner>
         <!--swiper导航按钮，必须写在外边儿，不然会出问题，只要类名对上了就行-->
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
+        <div class="swiper-button-prev" slot="button-prev">
+          <i class="iconfont iconchevron-back-solid"></i>
+        </div>
+        <div class="swiper-button-next" slot="button-next">
+          <i class="iconfont iconchevron-forward-solid"></i>
+        </div>
       </div>
     </div>
     <!--banner部分 - 结束-->
@@ -68,8 +72,9 @@ import bannerIllusCont from "../../common/images/index/banner-1/banner-ch-3.png"
 import bannerImg from "../../components/banner-img/banner-img";
 
 // 动态引入banner下方轮播文字的配图，如果是线上地址的话，可以直接将地址写在imgSrc对应的变量中，用""包裹；
-import img1 from "../../common/images/ds-logo.png";
-import img2 from "../../common/images/ds-logo.png";
+import img1 from "../../common/images/index/banner-swiper-illus/ch_lite_1.svg";
+import img2 from "../../common/images/index/banner-swiper-illus/ch_lite_1.svg";
+import img3 from "../../common/images/index/banner-swiper-illus/ch_lite_1.svg";
 export default {
   name: "home",
   data() {
@@ -93,7 +98,7 @@ export default {
           title: "大善科技 立足于大健康医疗产业链 是国内领先的医疗领域平台",
           p: `多年耕耘于大健康医疗产业，积累了丰富的行业经验及实施方案。<br />拥有国内众多一线客户的一致好评。`,
           // 演示用线上地址
-          imgSrc: "//www.baidu.com/img/bd_logo1.png",
+          imgSrc: img3,
           forKey: 3
         }
       ],
@@ -104,10 +109,7 @@ export default {
     };
   },
   created() {
-    if (
-      // url.indexOf("http://localhost:8080/#/home") !== -1 &&
-      navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)
-    ) {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
       console.log("加载移动端样式");
       this.mob = true;
     } else {
@@ -157,7 +159,6 @@ export default {
       line-height: 1.8;
     }
   }
-  // background: linear-gradient(45deg,red,orange,yellow,green,  #00ffff,blue,purple);
   /*banner下方详细信息，使用了Swiper插件*/
   .banner-info.container {
     z-index: 9;
@@ -234,6 +235,9 @@ export default {
     /*这两个类名实在插件里的，作为父级，这里可以调用*/
     .swiper-button-prev, .swiper-button-next{
       position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 62px;
       height: 62px;
       background-color: #fff;
@@ -242,40 +246,39 @@ export default {
       background-size: 12px;
       top: 50%;
       transform: translateY(-10px);
+      background-image: none;
+      i {
+        font-size: 24px;
+        color: #aaa;
+        transition: all .2s;
+      }
     }
     /*左右切换箭头*/
     .swiper-button-prev {
       left: -31px;
-      // background-image: url();
-    }
-    .swiper-button-prev:hover {
-       // background-image: url();
     }
     .swiper-button-next {
       right: -31px;
-      // background-image: url();
     }
-    .swiper-button-next:hover {
-      // background-image: url();
+    .swiper-button-prev:hover, .swiper-button-next:hover {
+      i {
+        color: #14948a;
+      }
     }
     @media (min-width: 0px) {
       .swiper-button-prev {
         left: 0;
-        // background-image: url();
       }
       .swiper-button-next {
         right: 0;
-        // background-image: url();
       }
     }
     @media (min-width: 1300px) {
       .swiper-button-prev {
         left: -31px;
-        // background-image: url();
       }
       .swiper-button-next {
         right: -31px;
-        // background-image: url();
       }
     }
   }

@@ -8,11 +8,11 @@
         </div>
         <ul>
           <li>
-            <i class="icon"></i>
+            <i class="icon iconfont icondianhua"></i>
             <span class="text">010 - 57220697</span>
           </li>
           <li>
-            <i class="icon"></i>
+            <i class="icon iconfont iconyouxiang-cuxiantiao-fill"></i>
             <span class="text email">supportyou@dashantech.com.cn</span>
           </li>
           <li>
@@ -21,14 +21,16 @@
               target="_blank"
               href="https://map.baidu.com/poi/%E5%A4%A7%E5%96%84%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@12947142.56,4818307.47,12z?uid=91dd81486fd3d57a26e0a0e2&primaryUid=4017263196093995871&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&querytype=detailConInfo&da_src=shareurl"
             >
-              <i class="icon"></i>
+              <i class="icon iconfont iconditu"></i>
               <span class="text">北京南四环西路128号 - 诺德中心4号,楼8层</span>
             </a>
           </li>
         </ul>
       </div>
       <div class="bottom-cont">
-        <div class="lg-d"></div>
+        <div class="lg-d">
+          <img src="../../../public/images/Shan.png" />
+        </div>
         <ul class="clearfix">
           <li class="bottom-nav">
             <h3 class="bottom-nav-title">网站导航</h3>
@@ -90,8 +92,10 @@
         <div class="follow">
           <span>关注我们</span>
           <div class="wechat-icon-wrapper">
-            <i class="wechat-icon"></i>
-            <div class="qr-code"></div>
+            <i class="wechat-icon iconfont iconweixin"></i>
+            <div class="qr-code">
+              <img src="../../common/images/qr.jpg" />
+            </div>
           </div>
         </div>
       </div>
@@ -104,10 +108,10 @@
           <span class="space"></span>
           <li><a href="#">各种友链</a></li>
         </ul>
-        <div class="text-switch">
-          <i></i>
-          <span>切换语言</span>
-        </div>
+        <!--<div class="text-switch">-->
+          <!--<i></i>-->
+          <!--<span>切换语言</span>-->
+        <!--</div>-->
         <p class="copyright">
           北京大善科技有限公司 Copyright &#169; 2019 www.dashantech.com.cn All
           rights reserved.
@@ -190,8 +194,12 @@ export default {
             display: inline-block;
             width: 22px;
             height: 22px;
-            background-color: #d8d8d8;
+            color: #d8d8d8;
+            font-size: 20px;
             margin-right: 8px;
+          }
+          .icondianhua {
+            font-size: 22px;
           }
           span {
             vertical-align: top !important;
@@ -211,7 +219,7 @@ export default {
               color: #15cfc0;
             }
             i {
-              background-color: #15cfc0;
+              color: #15cfc0;
             }
           }
           .email {
@@ -278,9 +286,23 @@ export default {
         top: 32px;
         width: 334px;
         height: 356px;
-        background-color: #000;
         z-index: 0;
         right: 0;
+        opacity: .1;
+        animation: logofl 2.6s ease 0s infinite alternate running;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      // 点阵logo闪烁
+      @keyframes logofl {
+        from {
+          opacity: .1;
+        }
+        to {
+          opacity: .6;
+        }
       }
       @media (min-width: 1336px) {
         .lg-d {
@@ -318,7 +340,8 @@ export default {
             display: inline-block;
             width: 32px;
             height: 32px;
-            background-color: #D8D8D8;
+            color: #D8D8D8;
+            font-size: 34px;
           }
           .qr-code {
             opacity: 0;
@@ -332,16 +355,21 @@ export default {
             background-color: #fff;
             box-shadow:0 10px 10px 0 rgba(0,0,0,.3);
             transition: all .4s;
+            img {
+              width: 100%;
+              height: 100%;
+            }
           }
           .qr-code::before {
             content: '';
             position: absolute;
             left: -10px;
             top: 50%;
-            transform: translateY(-50%);
-            width: 10px;
-            height: 10px;
+            width: 20px;
+            height: 20px;
             background-color: #fff;
+            transform: translateY(-50%) rotateZ(45deg);
+            z-index: -1;
           }
         }
       }
@@ -350,7 +378,7 @@ export default {
           color: #15cfc0;
         }
         .wechat-icon {
-          background-color: #fff;
+          color: #fff;
         }
         .wechat-icon-wrapper {
           .qr-code{

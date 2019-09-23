@@ -8,15 +8,33 @@
       </div>
       <div class="modu1-body">
         <div class="hover-btn-box">
-          <div class="hover-btn-1" @click="hoverBtn1Cl">
+          <div
+            :class="[
+              'hover-btn-1',
+              { 'hover-btn-active': modu1HoverView === 1 }
+            ]"
+            @click="hoverBtn1Cl"
+          >
             <img
               src="../../../common/images/titles/about-title-OurServiceContent.png"
             />
           </div>
-          <div class="hover-btn-2" @click="hoverBtn2Cl">
+          <div
+            :class="[
+              'hover-btn-2',
+              { 'hover-btn-active': modu1HoverView === 2 }
+            ]"
+            @click="hoverBtn2Cl"
+          >
             <img src="../../../common/images/titles/home-title-Industry.png" />
           </div>
-          <div class="hover-btn-3" @click="hoverBtn3Cl">
+          <div
+            :class="[
+              'hover-btn-3',
+              { 'hover-btn-active': modu1HoverView === 3 }
+            ]"
+            @click="hoverBtn3Cl"
+          >
             <img src="../../../common/images/titles/about-title-Reasons.png" />
           </div>
           <div
@@ -59,63 +77,15 @@
             <!--切换显示的第二项-->
             <div class="hover-view-2" v-show="modu1HoverView === 2" :key="2">
               <ul>
-                <li class="prods-1">
+                <li
+                  v-for="(item, index) in hoverViewProds"
+                  :class="'prods-' + (index + 1)"
+                  :key="index"
+                >
                   <a href="#">
                     <div class="prods-info">
-                      <h3>标题标题标题标题</h3>
-                      <p>
-                        内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-                      </p>
-                    </div>
-                  </a>
-                </li>
-                <li class="prods-2">
-                  <a href="#">
-                    <div class="prods-info">
-                      <h3>标题标题标题标题</h3>
-                      <p>
-                        大善移动医生查房系统通过与众多医院已有的相关信息系统进行对接，实现了在移动终端设备上查看病人的基本信息、医嘱信息、电子病历、检查信息、检验信息、护理信息，同时还支持医生在终端设备上通过手写、语音以及图片的方式进行备注，很好地将医生的信息系统延伸到病人床边。
-                      </p>
-                    </div>
-                  </a>
-                </li>
-                <li class="prods-3">
-                  <a href="#">
-                    <div class="prods-info">
-                      <h3>标题标题标题标题</h3>
-                      <p>
-                        内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-                      </p>
-                    </div>
-                  </a>
-                </li>
-                <li class="prods-4">
-                  <a href="#">
-                    <div class="prods-info">
-                      <h3>标题标题标题标题</h3>
-                      <p>
-                        内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-                      </p>
-                    </div>
-                  </a>
-                </li>
-                <li class="prods-5">
-                  <a href="#">
-                    <div class="prods-info">
-                      <h3>标题标题标题标题</h3>
-                      <p>
-                        内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-                      </p>
-                    </div>
-                  </a>
-                </li>
-                <li class="prods-6">
-                  <a href="#">
-                    <div class="prods-info">
-                      <h3>标题标题标题标题</h3>
-                      <p>
-                        内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-                      </p>
+                      <h3 v-html="item.title"></h3>
+                      <p v-html="item.p"></p>
                     </div>
                   </a>
                 </li>
@@ -130,28 +100,28 @@
                 <li class="reason-1">
                   <a href="#"
                     ><img
-                      src="../../../common/images/index/testillus.png"
+                      src="../../../common/images/index/modu-1/home-modu1-reus-ch-1.png"
                       alt=""
                   /></a>
                 </li>
                 <li class="reason-2">
                   <a href="#"
                     ><img
-                      src="../../../common/images/index/testillus.png"
+                      src="../../../common/images/index/modu-1/home-modu1-reus-ch-2.png"
                       alt=""
                   /></a>
                 </li>
                 <li class="reason-3">
                   <a href="#"
                     ><img
-                      src="../../../common/images/index/testillus.png"
+                      src="../../../common/images/index/modu-1/home-modu1-reus-ch-3.png"
                       alt=""
                   /></a>
                 </li>
                 <li class="reason-4">
                   <a href="#"
                     ><img
-                      src="../../../common/images/index/testillus.png"
+                      src="../../../common/images/index/modu-1/home-modu1-reus-ch-4.png"
                       alt=""
                   /></a>
                 </li>
@@ -224,7 +194,40 @@ export default {
       // 首页内容模块1相关============
       // 首页内容模块1 - 点击左侧icon 切换右侧显示内容 && 让竖条的位置变化； 34  232   430
       modu1HoverLinePos: 34,
-      modu1HoverView: 1
+      modu1HoverView: 1,
+      // 行业解决方案数据
+      hoverViewProds: [
+        {
+          title: "PACS影像云",
+          p:
+            "基于现有的区域PACS、区域超声、区域心电，进一步实现区域影像数据的在各医疗机构内的共享和应用，推进胶片的按需分发，减少患者就医成本；建立影像云平台，实现影像数据的云存储和互联网调阅，方便患者检查结果的调阅，推进最多跑一次政策的执行。"
+        },
+        {
+          title: "电子胶片",
+          p:
+            "电子胶片，是基于移动互联网、云存储、云计算技术，相对于传统感光胶片而言的一种新型影像浏览应用服务。医院可通过该技术把患者的数字影像发布到云端并长期存储，为医疗机构、医生及其患者提供便捷的医学影响信息服务。"
+        },
+        {
+          title: "移动医生查房系统",
+          p:
+            "大善移动医生查房系统通过与众多医院已有的相关信息系统进行对接，实现了在移动终端设备上查看病人的基本信息、医嘱信息、电子病历、检查信息、检验信息、护理信息，同时还支持医生在终端设备上通过手写、语音以及图片的方式进行备注，很好地将医生的信息系统延伸到病人床边。"
+        },
+        {
+          title: "智能康复管理系统",
+          p:
+            "康复治疗前应先对病、伤、残者进行康复评定，然后制定一个理想的康复方案，由以康复医师为中心，和临床医学相关人员共同组成的康复治疗组去实施，并在实施过程中不断总结、评定调查，直至治疗结束。可实现康复科室的数字化、信息化和过程的管控，有效避免信息孤岛的出现，实现全员的数据共享。"
+        },
+        {
+          title: "医院慢病管理系统",
+          p:
+            "大善医院慢病管理系统是致力于辅助医护人员、健康管理师更好的管理患者，为医护人员提供信息化、自动化的手段来为患者提供更优质的服务，让患者居家也能享受到医疗服务。通过专业精准的慢病评估，医护患全程与决策，针对不同患者提供健康营养套餐（食物、运动、休息，衣，食，住，行）。"
+        },
+        {
+          title: "随访系统",
+          p:
+            "大善随访系统解决方案随访系统将互联网、物联网技术与患者院内外医疗健康管理结合，以智能随访、智能宣教、智能提醒、健康监测、医护患沟通为患者管理主要手段，通过平台化的设计理念，为不同类型医疗机构，打造统一随访平台。"
+        }
+      ]
     };
   },
   methods: {
@@ -278,36 +281,41 @@ export default {
                 width: 174px;
                 border-right: 1px solid rgba(216,216,216,0.5);
                 .hover-btn-1, .hover-btn-2, .hover-btn-3 {
+                  position: absolute;
+                  right: 26px;
+                  width: 160px;
+                  height: 60px;
+                  cursor: pointer;
+                  opacity: 0.5;
+                  transition: all .2s;
+                  img {
+                    height: 100%;
                     position: absolute;
-                    right: 26px;
-                    width: 160px;
-                    height: 60px;
-                    cursor: pointer;
-                    img {
-                        height: 100%;
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                    }
+                    top: 0;
+                    right: 0;
+                  }
                 }
                 .hover-btn-1 {
-                    top: 42px;
+                  top: 42px;
                 }
                 .hover-btn-2 {
-                    top: 50%;
-                    transform: translateY(-50%);
+                  top: 50%;
+                  transform: translateY(-50%);
                 }
                 .hover-btn-3 {
-                    bottom: 42px;
+                  bottom: 42px;
                 }
                 .hover-line {
-                    position: absolute;
-                    right: 0;
-                    top: 34px;
-                    width: 6px;
-                    height: 80px;
-                    background-color: #14948a;
-                    transition: all .4s;
+                  position: absolute;
+                  right: 0;
+                  top: 34px;
+                  width: 6px;
+                  height: 80px;
+                  background-color: #14948a;
+                  transition: all .4s;
+                }
+                .hover-btn-active {
+                  opacity: 1;
                 }
             }
             // 首页模块1 - 公用效果
@@ -410,17 +418,17 @@ export default {
                     // 因为css原声无法选择前方的兄弟元素，所以私用jQuery实现；
                     /*产品1*/
                     .server-con-1 {
-                        background: url('../../../common/images/index/testillus.png') no-repeat;
+                        background: url('../../../common/images/index/modu-1/ourServer-ch-1.jpg') no-repeat;
                         background-size: cover;
                     }
                     /*产品2*/
                     .server-con-2 {
-                        background: url('../../../common/images/index/testillus.png') no-repeat;
+                        background: url('../../../common/images/index/modu-1/ourServer-ch-2.jpg') no-repeat;
                         background-size: cover;
                     }
                     /*产品3*/
                     .server-con-3 {
-                        background: url('../../../common/images/index/testillus.png') no-repeat;
+                        background: url('../../../common/images/index/modu-1/ourServer-ch-3.jpg') no-repeat;
                         background-size: cover;
                     }
                 }

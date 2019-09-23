@@ -28,6 +28,13 @@ https://blog.csdn.net/tswc_byy/article/details/86713618
 https://www.swiper.com.cn/
 https://github.com/surmon-china/vue-awesome-swiper
 
+4、粒子连线插件
+> particles.js
+npm install vue-particles --save-dev
+https://www.cnblogs.com/ldlx-mars/p/8012142.html
+https://github.com/VincentGarreau/particles.js
+https://codepen.io/VincentGarreau/pen/pnlso?q=particles.js&order=popularity&depth=code&show_forks=false
+
 
 ============================
 文件结构（部分）

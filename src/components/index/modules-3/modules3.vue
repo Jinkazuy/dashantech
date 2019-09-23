@@ -11,21 +11,21 @@
             :class="{ 'news-list-route-cl': listModu === 1 }"
             @click="newsListRoute1"
           >
-            <i></i>
+            <i class="iconfont icon24gf-newspapers2"></i>
             <span>{{ articleInfoData[0].btListInfo.btClass }}</span>
           </li>
           <li
             :class="{ 'news-list-route-cl': listModu === 2 }"
             @click="newsListRoute2"
           >
-            <i></i>
+            <i class="iconfont icon24gf-newspapers2"></i>
             <span>{{ articleInfoData[1].btListInfo.btClass }}</span>
           </li>
           <li
             :class="{ 'news-list-route-cl': listModu === 3 }"
             @click="newsListRoute3"
           >
-            <i></i>
+            <i class="iconfont icon24gf-newspapers2"></i>
             <span>{{ articleInfoData[2].btListInfo.btClass }}</span>
           </li>
         </ul>
@@ -85,8 +85,8 @@
 </template>
 
 <script>
-// 文章顶部大文章图片
-import topImgObj from "../../../common/images/index/testillus.png";
+// 文章顶部大文章图片,使用import的方式引入，除非在变异打包后不能读取dist下的images文件夹，否则不推荐这种引入的方式；
+// import topImgObj from "../../../../public/images/news-bg-img.png";
 export default {
   name: "modules3",
   data() {
@@ -108,10 +108,11 @@ export default {
             title:
               "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
             conts: `2019年7月25日，我司正式获聘成为中国卫生信息与健康大数据学会第七届常务理事单位。<br/><br/> 中国卫生信息与健康医疗大数据学会中国卫生信息与健康医疗大数据学会（Chinese Health Information and Big Data Association, CHIBDA, 以下简称“学会”）……`,
-            // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
+            // 注意！这里的图片，是npm run build 后，也就是编译后的相对路径，也就是把public下的images文件夹直接输出到了编译后的根目录
+            // 所以直接./images即可；
             // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
             // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-            imgSrc: topImgObj
+            imgSrc: "./images/news-bg-img.png"
           },
           // 底部三个文章列表内容
           btListInfo: {
@@ -124,12 +125,11 @@ export default {
                 aLink: `newsDetail?id=${1}`,
                 month: "August",
                 dates: "2019/09/25",
-                title:
-                  "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
+                title: "公司团建|与大善同行，聚力向前，出发！",
                 // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
                 // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
                 // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: topImgObj
+                imgSrc: "./images/news-bg-img.png"
               },
               {
                 articleId: 2,
@@ -141,7 +141,7 @@ export default {
                 // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
                 // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
                 // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: topImgObj
+                imgSrc: "./images/news-bg-img.png"
               },
               {
                 articleId: 3,
@@ -152,7 +152,7 @@ export default {
                 // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
                 // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
                 // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: topImgObj
+                imgSrc: "./images/news-bg-img.png"
               }
             ]
           }
@@ -171,7 +171,7 @@ export default {
             // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
             // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
             // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-            imgSrc: topImgObj
+            imgSrc: "./images/news-bg-img.png"
           },
           // 底部三个文章列表内容
           btListInfo: {
@@ -188,7 +188,7 @@ export default {
                 // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
                 // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
                 // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: topImgObj
+                imgSrc: "./images/news-bg-img.png"
               },
               {
                 articleId: 5,
@@ -200,7 +200,7 @@ export default {
                 // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
                 // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
                 // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: topImgObj
+                imgSrc: "./images/news-bg-img.png"
               },
               {
                 articleId: 6,
@@ -211,7 +211,7 @@ export default {
                 // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
                 // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
                 // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: topImgObj
+                imgSrc: "./images/news-bg-img.png"
               }
             ]
           }
@@ -230,7 +230,7 @@ export default {
             // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
             // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
             // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-            imgSrc: topImgObj
+            imgSrc: "./images/news-bg-img.png"
           },
           // 底部三个文章列表内容
           btListInfo: {
@@ -247,7 +247,7 @@ export default {
                 // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
                 // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
                 // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: topImgObj
+                imgSrc: "./images/news-bg-img.png"
               },
               {
                 articleId: 8,
@@ -259,7 +259,7 @@ export default {
                 // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
                 // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
                 // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: topImgObj
+                imgSrc: "./images/news-bg-img.png"
               },
               {
                 articleId: 9,
@@ -270,7 +270,7 @@ export default {
                 // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
                 // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
                 // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: topImgObj
+                imgSrc: "./images/news-bg-img.png"
               }
             ]
           }
@@ -348,7 +348,9 @@ export default {
                         width: 24px;
                         height: 24px;
                         transition: all .4s;
-                        background-color: rgba(128, 134, 149, 1);
+                        font-size: 28px;
+                        line-height: 0.9;
+                        color: #ddd;
                     }
                     span {
                         width: 100%;
@@ -363,7 +365,7 @@ export default {
                 }
                 li:hover {
                     i {
-                        background-color: rgba(51, 51, 51, 1);
+                        color: #14948a;
                     }
                     span {
                         color: rgba(51, 51, 51, 1);
@@ -372,10 +374,11 @@ export default {
                 li.news-list-route-cl {
                     background-color: rgba(244, 245, 247, 1);
                     i {
-                        background-color: rgba(51, 51, 51, 1);
+                        color: #14948a;
                     }
                     span {
                         color: rgba(51, 51, 51, 1);
+                        font-weight: 700;
                     }
                 }
             }
@@ -591,7 +594,7 @@ export default {
                         margin: 0 1%;
                     }
                     li:hover {
-                        box-shadow: 0 10px 25px 10px rgba(0,0,150,0.2), 0 20px 15px 0 rgba(0,0,0,.3);
+                        box-shadow: 0 10px 25px 10px rgba(0,0,150,0.1), 0 15px 15px 0 rgba(0,0,0,.1);
                         transform: translateY(-20px);
                     }
                 }
