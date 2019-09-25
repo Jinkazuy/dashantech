@@ -4,7 +4,7 @@
       <div class="bottom-header">
         <div class="bt-logo">
           <div class="shadow-blur"></div>
-          <img src="../../common/images/ds-logo.png" />
+          <img src="../../common/images/ds-logo.svg" />
         </div>
         <ul>
           <li>
@@ -109,8 +109,8 @@
           <li><a href="#">各种友链</a></li>
         </ul>
         <!--<div class="text-switch">-->
-          <!--<i></i>-->
-          <!--<span>切换语言</span>-->
+        <!--<i></i>-->
+        <!--<span>切换语言</span>-->
         <!--</div>-->
         <p class="copyright">
           北京大善科技有限公司 Copyright &#169; 2019 www.dashantech.com.cn All
@@ -135,10 +135,12 @@ export default {
 }
 // ============== 重置BS样式 - 结束 ==============
 #bottom{
+  position: relative;
   width: 100%;
   background-color: #1f3158;
   border-top: 4px solid #14948a;
   box-sizing: border-box;
+  z-index: 999;
   .container {
     display: block;
     height: 100%;

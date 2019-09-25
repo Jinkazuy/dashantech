@@ -295,6 +295,9 @@ export default {
                     right: 0;
                   }
                 }
+                .hover-btn-1:hover, .hover-btn-2:hover, .hover-btn-3:hover {
+                  opacity: 1;
+                }
                 .hover-btn-1 {
                   top: 42px;
                 }

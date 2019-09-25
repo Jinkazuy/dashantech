@@ -93,4 +93,8 @@ export default {
   #nprogress .bar {
     background: #14948a !important;
   }
+  // 选中的轮播点
+  .swiper-pagination-bullet-active {
+    background-color: #14948a !important;
+  }
 </style>

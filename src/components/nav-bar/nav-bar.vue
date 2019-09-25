@@ -27,7 +27,7 @@
           <a class="navbar-brand" href="#"
             ><img
               class="ds-logo-navBar"
-              src="../../common/images/ds-logo.png"
+              src="../../common/images/ds-logo.svg"
               alt="大善科技"
             />
           </a>

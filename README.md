@@ -27,6 +27,7 @@ https://blog.csdn.net/tswc_byy/article/details/86713618
 > swiper
 https://www.swiper.com.cn/
 https://github.com/surmon-china/vue-awesome-swiper
+demo: https://surmon-china.github.io/vue-awesome-swiper/
 
 4、粒子连线插件
 > particles.js
