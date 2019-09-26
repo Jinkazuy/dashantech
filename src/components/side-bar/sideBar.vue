@@ -45,7 +45,7 @@ export default {
     bottom: 100px;
     width: 46px;
     height: 112px;
-    z-index: 98;
+    z-index: 9999;
     .back-top, .we-chat {
         position: absolute;
         width: 46px;
