@@ -15,11 +15,11 @@
 </template>
 <script>
 // 引入导航栏组件
-import navBar from "@/components/nav-bar/nav-bar";
+import navBar from "./components/layouts/nav-bar/nav-bar";
 // 引入侧边栏组件
-import sideBar from "@/components/side-bar/sideBar";
+import sideBar from "./components/layouts/side-bar/sideBar";
 // 引入页脚组件
-import bottom from "@/components/bottom/bottom";
+import bottom from "./components/layouts/bottom/bottom";
 
 export default {
   name: "App",

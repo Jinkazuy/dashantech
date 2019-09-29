@@ -1,21 +1,24 @@
 <template>
-  <div class="home-cont-modu-2">
-    <div class="container">
+  <div class="home-cont-modu-2 w100">
+    <div class="container w100 h100">
       <h3 class="modu-2-titles">
         <img
+          class="w100 h100"
           src="../../../common/images/titles/home-title-aboutUs.png"
           alt="关于我们"
         />
       </h3>
-      <div class="modu-2-headers">
+      <div class="modu-2-headers w100">
         <p>
           北京大善青松科技有限公司（简称“大善科技”），<br />立足北京中关村高新技术资源优势，深入医疗大健康产业。
         </p>
         <div class="modu-2-headers-logo">
-          <img src="../../../common/images/ds-logo.png" alt="大善科技" />
+          <div class="logo-wrapper w100 h100">
+            <logoMg></logoMg>
+          </div>
         </div>
       </div>
-      <ul class="modu-2-body">
+      <ul class="modu-2-body w100">
         <li>
           <p>
             大善科技是国内技术领先的医疗领域信息化平台系统产品供应商和相关方案提供商，拥有一支熟悉医疗行业专业背景和经验的团队，报告资深项目经理、研发总监、数据分析博士等。
@@ -40,21 +43,24 @@
 </template>
 
 <script>
+// 引入logo动效
+import logoMg from "../../layouts/logoMg";
+
 export default {
-  name: "modules2"
+  name: "modules2",
+  components: {
+    logoMg
+  }
 };
 </script>
 
 <style scoped lang="stylus">
 .home-cont-modu-2 {
-  width: 100%;
   height: 824px;
   background-color: #fff;
   .container {
     position: relative;
     padding: 0;
-    height: 100%;
-    width: 100%;
     .modu-2-titles {
       position: absolute;
       left: 0;
@@ -63,16 +69,11 @@ export default {
       padding: 0;
       margin: 0;
       width: 138px;
-      img {
-        height: 100%;
-        width: 100%;
-      }
     }
     .modu-2-headers {
       position: absolute;
       left: 0;
       top: 224px;
-      width: 100%;
       p {
         position: absolute;
         left: 0;
@@ -88,13 +89,9 @@ export default {
         right: 60px;
         width: 268px;
         height: 80px;
-        img {
-          width: 100%;
-          height: 100%;
-          display: inline-block;
-          z-index: 2;
-          position: absolute;
-          left:0;
+        .logo-wrapper {
+          border-radius: 40px;
+          overflow: hidden;
         }
       }
       .modu-2-headers-logo:after {
@@ -134,7 +131,6 @@ export default {
       top: 410px;
       height: 334px;
       padding: 0;
-      width: 100%;
       margin: 0;
       display: flex;
       justify-content: space-between;

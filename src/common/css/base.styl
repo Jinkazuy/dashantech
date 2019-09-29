@@ -1,15 +1,71 @@
-// 基础样式，同时引入了 ariable.styl(设计规范样式) ，因为这个文件中的某些地方用到了设计规范的样式；
-@import "variable.styl"
-
 body, html
   line-height: 1
   font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif !important
   user-select: none
   -webkit-tap-highlight-color: transparent
-  background: $color-background
-  color: $color-text
 
-// 清除浮动
+//字体定义规范
+.ft-sz-14 {
+  font-size: 14px !important;
+}
+.ft-sz-16 {
+  font-size: 16px !important;
+}
+.ft-sz-40 {
+  font-size: 40px !important;
+}
+
+// ============= 基础栅格 .container栅格容器，用于覆盖bootstrap样式 =============
+@media (min-width: 768px) {
+  .container {
+    width: 768px !important;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 992px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px !important;
+  }
+}
+@media (min-width: 1336px) {
+  .container {
+    width: 1336px !important;
+  }
+}
+
+// ============= 基础栅格 .cont-inner栅格容器，用于覆盖bootstrap样式 =============
+.cont-inner {
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+@media (min-width: 1336px) {
+  .cont-inner {
+    width: 1220px !important;
+  }
+}
+
+
+
+
+// ============= 重置BS导航栏栅格 =============================
+@media (min-width: 1200px){
+  .navbar {
+    width: 1200px !important;
+  }
+}
+@media (min-width: 1336px){
+  .navbar {
+    width: 1336px !important;
+  }
+}
+
+
+// ============= 清除浮动 =============================
 .clearfix:before,.clearfix:after {
   content:"";
   display:table;
@@ -18,12 +74,28 @@ body, html
   clear:both;
 }
 .clearfix {
-  *zoom:1;
+*zoom:1;
 }
 
-// 文字不换行 && 省略号
+// ============= 文字不换行 && 省略号 =============================
 .text-nowrap {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+// ============= 宽度、高度相关类 =============================
+.h100 {
+  height: 100%;
+}
+.w100 {
+  width: 100%;
+}
+
+// ============= 定位相关 =============================
+.posi-re {
+  position: relative;
+}
+.posi-ab {
+  position: absolute;
 }

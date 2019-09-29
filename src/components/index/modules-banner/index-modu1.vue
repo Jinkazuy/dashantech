@@ -1,5 +1,5 @@
 <template>
-  <div class="pro-modu-1">
+  <div class="pro-modu-1 w100">
     <div class="container">
       <div class="pro-modu-hd">
         <p class="pro-mo1-title">
@@ -12,7 +12,7 @@
         </p>
       </div>
     </div>
-    <div class="bt-info">
+    <div class="bt-info w100">
       <ul class="container">
         <li>
           <h4>健康大数据平台</h4>
@@ -32,8 +32,8 @@
         </li>
       </ul>
     </div>
-    <div class="video-mask">
-      <video autoplay loop muted>
+    <div class="video-mask w100 h100">
+      <video autoplay loop muted class="h100 vid posi-ab">
         <source
           poster="../../../common/images/product/modu-1/11e36ace051064945d6e60bb10ae9282.jpg"
           src="../../../common/images/product/modu-1/228129277a.mp4"
@@ -41,7 +41,7 @@
         />
       </video>
     </div>
-    <div class="mask-modu"></div>
+    <div class="mask-modu w100 h100"></div>
   </div>
 </template>
 
@@ -54,7 +54,6 @@ export default {
 <style scoped lang="stylus">
 .pro-modu-1 {
     height: 690px;
-    width: 100%;
     position: relative;
     background-color: pink;
     background-image: url("../../../common/images/product/modu-1/11e36ace051064945d6e60bb10ae9282.jpg")
@@ -84,7 +83,6 @@ export default {
         position: absolute;
         left: 0;
         bottom: 0;
-        width: 100%;
         height: 126px;
         background-color: rgba(38,41,51,0.8);
         z-index: 6;
@@ -95,7 +93,7 @@ export default {
                 width: 33.3333333%;
                 text-align: center;
                 color: #fff;
-                padding: 16px 70px 0;
+                padding: 16px 4% 0;
                 h4 {
                     margin: 0 0 6px 0;
                     font-size: 20px;
@@ -112,8 +110,6 @@ export default {
         position: absolute;
         left: 0;
         top: 0;
-        width: 100%;
-        height: 100%;
         background:rgba(38,41,51,1);
         opacity:0.8;
         z-index: 3;
@@ -122,13 +118,30 @@ export default {
       position: absolute;
       left: 0;
       top: 0;
-      width: 100%;
-      height: 100%;
       overflow: hidden;
       z-index: 2;
-      video {
-        width: 100%;
+      .vid {
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
+}
+// 不同分辨率适配(不包括移动端样式)
+@media (min-width: 1200px) {
+  .vid {
+    width: 100%;
+    height: auto;
+  }
+}
+// 不同分辨率适配(不包括移动端样式)
+@media (max-width: 1200px) {
+  .bt-info {
+    height: 140px !important;
+  }
+}
+@media (max-width: 992px) {
+  .bt-info {
+    height: 160px !important;
+  }
 }
 </style>

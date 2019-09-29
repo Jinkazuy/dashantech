@@ -8,7 +8,7 @@
     <div class="we-chat">
       <i class="iconfont iconweixin"></i>
       <div class="side-qr-code">
-        <img src="../../common/images/qr.jpg" />
+        <img class="w100 h100" src="../../../common/images/qr.jpg" />
       </div>
     </div>
   </div>
@@ -75,10 +75,6 @@ export default {
             background-color: #fff;
             box-shadow:0 10px 10px 0 rgba(0,0,0,.3);
             transition: all .4s;
-            img {
-                width: 100%;
-                height: 100%;
-            }
         }
         .side-qr-code::before {
             content: '';

@@ -1,6 +1,6 @@
 <template>
-  <div class="home-cont-modu-4">
-    <div class="container">
+  <div class="home-cont-modu-4 w100">
+    <div class="container h100">
       <div class="modu-4-header">
         <img
           class="qm"
@@ -13,7 +13,7 @@
           alt="“"
         />
       </div>
-      <div class="modu-4-body">
+      <div class="modu-4-body w100">
         <swiper class="swiper-wrapper" :delay="6000">
           <swiper-slide
             class="banner-items"
@@ -21,7 +21,7 @@
             :key="item.forKey"
           >
             <div class="cont-wrapper">
-              <p class="cuser-cont">{{ item.p }}</p>
+              <p class="cuser-cont w100">{{ item.p }}</p>
               <div class="cuser-info">
                 <img :src="item.avatar" alt="" class="cuser-attr" />
                 <h4 class="cuser-name">{{ item.cusName }}</h4>
@@ -38,7 +38,7 @@
           <i class="iconfont iconchevron-forward-solid"></i>
         </div>
       </div>
-      <div class="modu-4-foo">
+      <div class="modu-4-foo w100">
         <ul class="operative-1">
           <li>
             <img
@@ -106,7 +106,7 @@
 
 <script>
 // 引入轮播swiper组件
-import swiper from "../../../components/swiper/swiper";
+import swiper from "../../layouts/swiper/swiper";
 
 export default {
   name: "modules4",
@@ -146,12 +146,10 @@ export default {
 
 <style scoped lang="stylus">
 .home-cont-modu-4 {
-    width: 100%;
     height: 852px;
     background-color: #fcfcfc;
     .container {
         padding: 0;
-        height: 100%;
         position: relative;
         .modu-4-header {
             .qm {
@@ -171,7 +169,6 @@ export default {
             }
         }
         .modu-4-body {
-            width: 100%;
             .swiper-wrapper {
                 position: absolute;
                 top: 240px;
@@ -192,7 +189,6 @@ export default {
                         top: 50%;
                         transform: translateY(-50%);
                         left: 0;
-                        width: 100%;
                         text-align: center;
                         padding: 40px;
                         font-size: 16px;
@@ -258,7 +254,6 @@ export default {
             position: absolute;
             bottom: 80px;
             left: 0;
-            width: 100%;
             padding: 0 122px;
             height: 136px;
             .operative-1, .operative-2 {

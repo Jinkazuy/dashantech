@@ -1,5 +1,9 @@
 <template>
-  <swiper :options="swiperOption" ref="mySwiper" class="swiper-wrapper">
+  <swiper
+    :options="swiperOption"
+    ref="mySwiper"
+    class="swiper-wrapper w100 h100"
+  >
     <!-- slides -->
     <!--使用插槽-->
     <slot></slot>
@@ -57,8 +61,6 @@ export default {
 
 <style scoped lang="stylus">
 .swiper-wrapper {
-    width: 100%;
-    height: 100%;
     position: relative;
 }
 </style>

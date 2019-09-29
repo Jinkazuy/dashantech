@@ -23,6 +23,12 @@ const product = resolve => {
     resolve(module);
   });
 };
+// 一级路由：产品详情-PACS
+const productPacs = resolve => {
+  import("./views/Product-PACS/productPacs.vue").then(module => {
+    resolve(module);
+  });
+};
 
 // 一级路由：公司动态
 const newsCenter = resolve => {
@@ -59,17 +65,12 @@ const newsDetail = resolve => {
 };
 
 export default new Router({
-  mode: "hash",
+  mode: "history",
   base: process.env.BASE_URL,
   routes: [
     {
-      // 重定向到推荐页路由
+      // 首页
       path: "/",
-      redirect: "/home"
-    },
-    {
-      // 关于我们
-      path: "/home",
       name: "home",
       component: home
     },
@@ -83,6 +84,11 @@ export default new Router({
       // 产品中心
       path: "/product",
       component: product
+    },
+    {
+      // 产品详情 - PACS
+      path: "/productPacs",
+      component: productPacs
     },
     {
       // 公司动态

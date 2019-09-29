@@ -1,12 +1,12 @@
 <template>
-  <div class="home-cont-modu-3">
-    <div class="container">
+  <div class="home-cont-modu-3 w100">
+    <div class="container h100">
       <!--左侧操作列表-->
       <div class="modu-3-news-list">
         <div class="news-list-titles">
           <img src="../../../common/images/titles/news-title-news.png" />
         </div>
-        <ul class="news-list-route">
+        <ul class="news-list-route w100">
           <li
             :class="{ 'news-list-route-cl': listModu === 1 }"
             @click="newsListRoute1"
@@ -29,16 +29,16 @@
             <span>{{ articleInfoData[2].btListInfo.btClass }}</span>
           </li>
         </ul>
-        <div class="list-qrcode">
+        <div class="list-qrcode w100">
           <img src="../../../common/images/qr.jpg" alt="微信公众号：大善科技" />
-          <p>微信公众号：大善科技</p>
+          <p class="w100">微信公众号：大善科技</p>
         </div>
       </div>
       <!--右侧文章列表-->
-      <div class="modu-3-news-cont">
+      <div class="modu-3-news-cont h100">
         <!--顶部大模块-->
-        <div class="news-cont-top">
-          <div class="left-cont">
+        <div class="news-cont-top w100">
+          <div class="left-cont h100">
             <div class="left-cont-dates">
               <span class="month">{{ articleInfo.topInfo.month }}</span>
               <span class="dates">{{ articleInfo.topInfo.dates }}</span>
@@ -51,26 +51,27 @@
               <p v-html="articleInfo.topInfo.conts"></p>
             </div>
             <div class="on-more">
-              <router-link :to="articleInfo.topInfo.aLink"
+              <router-link class="w100 h100" :to="articleInfo.topInfo.aLink"
                 >查看更多</router-link
               >
             </div>
           </div>
-          <div class="right-img">
-            <img :src="articleInfo.topInfo.imgSrc" />
+          <div class="right-img h100">
+            <img class="w100 h100" :src="articleInfo.topInfo.imgSrc" />
           </div>
         </div>
         <!--底部列表模块-->
-        <div class="news-cont-bot">
+        <div class="news-cont-bot w100">
           <h4 class="bot-class">{{ articleInfo.btListInfo.btClass }}</h4>
-          <ul class="bot-cont">
+          <ul class="bot-cont w100">
             <li
+              class="h100"
               v-for="item in articleInfo.btListInfo.btCont"
               :key="item.articleId"
             >
               <router-link :to="item.aLink">
-                <img :src="item.imgSrc" />
-                <h4 v-html="item.title"></h4>
+                <img class="w100" :src="item.imgSrc" />
+                <h4 class="w100" v-html="item.title"></h4>
                 <div class="bot-cont-dates">
                   <span class="month">{{ item.month }}</span>
                   <span class="dates">{{ item.dates }}</span>
@@ -306,13 +307,11 @@ export default {
 
 <style scoped lang="stylus">
 .home-cont-modu-3 {
-    width: 100%;
     height: 880px;
     background-color: rgba(231, 233, 242, 1);
     .container {
         position: relative;
         padding: 0;
-        height: 100%;
         // 左侧新闻列表切换
         .modu-3-news-list {
             position: absolute;
@@ -333,7 +332,6 @@ export default {
                 top: 174px;
                 margin: 0;
                 padding: 0;
-                width: 100%;
                 li {
                     position: relative;
                     width: 100%;
@@ -386,7 +384,6 @@ export default {
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                width: 100%;
                 height: 240px;
                 img {
                     position: absolute;
@@ -406,7 +403,6 @@ export default {
                     left: 50%;
                     transform: translateX(-50%);
                     margin: 0;
-                    width: 100%;
                     text-align: center;
                     font-size: 14px;
                     color: rgba(128, 134, 149, 1);
@@ -419,13 +415,11 @@ export default {
             right: 58px;
             top: 0;
             width: 958px;
-            height: 100%;
             // 顶部大模块
             .news-cont-top {
                 position: absolute;
                 top: 80px;
                 left: 0;
-                width: 100%;
                 height: 383px;
                 background-color: #fff;
                 border-radius: 4px;
@@ -435,7 +429,6 @@ export default {
                     left: 0;
                     top: 0;
                     width: 67%;
-                    height: 100%;
                     .left-cont-dates {
                         position: absolute;
                         left: 44px;
@@ -487,8 +480,6 @@ export default {
                             color: #14948a;
                             line-height: 32px;
                             display: block;
-                            width: 100%;
-                            height: 100%;
                             text-decoration: none;
                             transition: all .4s;
                             background-color: #fafafa;
@@ -502,15 +493,10 @@ export default {
                     }
                 }
                 .right-img {
-                    height: 100%;
                     width: 32.8%;
                     position: absolute;
                     right: 0;
                     top: 0;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
                 }
             }
             // 三个小模块
@@ -518,7 +504,6 @@ export default {
                 position: absolute;
                 bottom: 80px;
                 left: 0;
-                width: 100%;
                 height: 300px;
                 .bot-class {
                     margin: 0;
@@ -535,10 +520,8 @@ export default {
                     bottom: 0;
                     margin: 0;
                     height: 260px;
-                    width: 100%;
                     li {
                         position: relative;
-                        height: 100%;
                         width: 32.66%;
                         float: left;
                         background-color: #fff;
@@ -551,14 +534,12 @@ export default {
                                 position: absolute;
                                 top: 0;
                                 left: 0;
-                                width: 100%;
                                 height: 50%;
                             }
                             h4 {
                                 position: absolute;
                                 top: 54%;
                                 margin: 0;
-                                width: 100%;
                                 font-size: 16px;
                                 font-weight: 700;
                                 color: rgba(23, 35, 61, 1);

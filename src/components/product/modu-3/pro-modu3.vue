@@ -1,8 +1,8 @@
 <template>
-  <div class="pro-modu-3">
-    <div class="pro-modu-bg"></div>
-    <div class="container">
-      <div class="pro-mo3-hd">
+  <div class="pro-modu-3 w100">
+    <div class="pro-modu-bg w100 h100"></div>
+    <div class="container h100">
+      <div class="pro-mo3-hd w100">
         <h4>为什么选择大善科技</h4>
         <p>
           多年耕耘于大健康医疗产业，积累了丰富的行业经验及实施方案。拥有国内众多一线客户的一致好评。
@@ -12,50 +12,71 @@
         <ul>
           <li>
             <div class="ill">
-              <img src="../../../common/images/about/modu-2/ch-rc.png" />
+              <img
+                class="w100 h100"
+                src="../../../common/images/about/modu-2/ch-rc.png"
+              />
             </div>
-            <div class="num">
+            <div class="num w100">
               <span class="number">107位</span>
               <p class="p-type">技术人才</p>
             </div>
           </li>
           <li>
             <div class="ill">
-              <img src="../../../common/images/about/modu-2/ch-zj.png" />
+              <img
+                class="w100 h100"
+                src="../../../common/images/about/modu-2/ch-zj.png"
+              />
             </div>
-            <div class="num">
+            <div class="num w100">
               <span class="number">500位</span>
               <p class="p-type">行业专家</p>
             </div>
           </li>
           <li>
             <div class="ill">
-              <img src="../../../common/images/about/modu-2/ch-zl.png" />
+              <img
+                class="w100 h100"
+                src="../../../common/images/about/modu-2/ch-zl.png"
+              />
             </div>
-            <div class="num">
+            <div class="num w100">
               <span class="number">79项</span>
               <p class="p-type">技术专利</p>
             </div>
           </li>
         </ul>
       </div>
-      <div class="pro-mo3-ft">
-        <p>合作伙伴共建专业稳定医疗大数据服务</p>
-        <ul>
+      <div class="pro-mo3-ft w100">
+        <p class="w100">合作伙伴共建专业稳定医疗大数据服务</p>
+        <ul class="w100">
           <li>
-            <img src="http://www.dashantech.com.cn/images/logo_style.svg" />
+            <img
+              class="w100 h100"
+              src="http://www.dashantech.com.cn/images/logo_style.svg"
+            />
           </li>
           <li>
-            <img src="http://www.baidu.com/img/baidu_jgylogo3.gif" />
+            <img
+              class="w100 h100"
+              src="http://www.baidu.com/img/baidu_jgylogo3.gif"
+            />
           </li>
           <li>
-            <img src="../../../common/images/ds-logo.svg" />
+            <img class="w100 h100" src="../../../common/images/ds-logo.svg" />
           </li>
           <li>
-            <img src="http://www.dashantech.com.cn/images/logo_style.svg" />
+            <img
+              class="w100 h100"
+              src="http://www.dashantech.com.cn/images/logo_style.svg"
+            />
           </li>
           <li>
-            <img src="http://www.dashantech.com.cn/images/logo_style.svg" />
+            <img
+              class="w100 h100"
+              src="http://www.dashantech.com.cn/images/logo_style.svg"
+            />
           </li>
         </ul>
       </div>
@@ -72,18 +93,15 @@ export default {
 <style scoped lang="stylus">
 .pro-modu-3 {
     position: relative;
-    width: 100%;
     height: 744px;
     background-color: rgba(46,48,55,1);
     .container {
-      height: 100%;
       padding: 0;
       .pro-mo3-hd {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
         top: 0;
-        width: 100%;
         height: 190px;
         text-align: center;
         color: #fff;
@@ -127,8 +145,6 @@ export default {
               height: 84px;
               transition: all .4s;
               img {
-                width: 100%;
-                height: 100%;
                 z-index: 10;
               }
             }
@@ -147,7 +163,6 @@ export default {
               filter: blur(40px);
             }
             .num {
-              width: 100%;
               position: absolute;
               top: 84px;
               left: 50%;
@@ -183,17 +198,14 @@ export default {
         left: 50%;
         transform: translateX(-50%)
         bottom: 50px;
-        width: 100%;
         color: #fff;
         p {
           font-size: 20px;
           margin: 0 0 40px 0;
-          width: 100%;
           text-align: center;
         }
         ul {
           padding: 0;
-          width: 100%;
           li {
             float: left;
             height: 80px;
@@ -201,8 +213,6 @@ export default {
             background-color: rgba(0, 0, 0, .1);
             margin: 0 1% 0 0;
             img {
-              width: 100%;
-              height: 100%;
               padding: 10px;
             }
           }
@@ -213,8 +223,6 @@ export default {
       position: absolute;
       left: 0;
       top: 0;
-      width: 100%;
-      height: 100%;
       background-image: url("../../../common/images/product/modu-3/pro-mo3-bg.png")
       background-size: cover;
       background-position: center;

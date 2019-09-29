@@ -1,8 +1,8 @@
 <template>
   <div class="product">
     <!--banner部分 - 开始-->
-    <div class="banner-wrapper">
-      <div class="banner-bg container">
+    <div class="banner-wrapper w100">
+      <div class="banner-bg container h100">
         <h2>智慧医疗大数据解决方案</h2>
         <p class="ft-sz-16">
           大善科技立足于大健康医疗产业链是国内领先的医疗领域平台多年耕耘于大健康医疗产业,积累了丰富的行业经验及实施方案。拥有国内众多一线客户的一致好评。
@@ -43,10 +43,10 @@
 
 <script>
 // 引入轮播banner组件
-import Banner from "../../components/swiper/swiper";
+import Banner from "../../components/layouts/swiper/swiper";
 // 引入banner插画组件
 import bannerIllusCont from "../../common/images/index/banner-1/banner-ch-3.png";
-import bannerImg from "../../components/banner-img/banner-img";
+import bannerImg from "../../components/layouts/banner-img/banner-img";
 // 动态引入banner下方轮播文字的配图，如果是线上地址的话，可以直接将地址写在imgSrc对应的变量中，用""包裹；
 import img1 from "../../common/images/index/banner-swiper-illus/ch_lite_1.svg";
 import img2 from "../../common/images/index/banner-swiper-illus/ch_lite_1.svg";
@@ -94,6 +94,24 @@ export default {
       this.mob = false;
     }
   },
+  mounted() {
+    // 因为所有页面是作为app.vue的router-view，所以滚动值会继承；
+    // 那么切换router的时候就需要将网页的滚动值归零；
+    // 出发mounted是，也就是初始化页面时，返回顶部；
+    // 返回顶部，借用jquery
+    // eslint-disable-next-line
+    $("html,body").animate({ scrollTop: 0 }, 300);
+    // eslint-disable-next-line
+    if ($("html").scrollTop()) {
+      // eslint-disable-next-line
+      $("html").animate({ scrollTop: 0 }, 300);
+      return false;
+    }
+    // eslint-disable-next-line
+    $("body").animate({ scrollTop: 0 }, 300);
+    console.log(12);
+    return false;
+  },
   components: {
     Banner,
     bannerImg,
@@ -104,19 +122,15 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-  // 引入变量css（包含设计规范）
-  @import "../../common/css/variable.styl"
 .product{
   // ======================== banner部分 ========================
   /*banner 最外层*/
   .banner-wrapper {
     position: relative;
-    width: 100%;
     height: 590px;
     background: #110a36;
     .banner-bg {
       color: #fff;
-      height: 100%;
       h2{
         position: absolute;
         top: 174px;

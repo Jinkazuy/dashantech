@@ -1,13 +1,13 @@
 <template>
-  <div class="home-cont-modu-1">
+  <div class="home-cont-modu-1 w100">
     <div class="container">
-      <div class="modu1-title">
-        <p class="ft-sz-40">
+      <div class="modu1-title w100">
+        <p class="ft-sz-40 w100">
           大善科技始终秉承着“中国科技、服务华人”的经营理念<br />专注大健康医疗领域深度挖掘
         </p>
       </div>
-      <div class="modu1-body">
-        <div class="hover-btn-box">
+      <div class="modu1-body w100">
+        <div class="hover-btn-box h100">
           <div
             :class="[
               'hover-btn-1',
@@ -16,6 +16,7 @@
             @click="hoverBtn1Cl"
           >
             <img
+              class="h100"
               src="../../../common/images/titles/about-title-OurServiceContent.png"
             />
           </div>
@@ -42,28 +43,32 @@
             :style="{ top: modu1HoverLinePos + 'px' }"
           ></div>
         </div>
-        <div class="hover-view-box">
+        <div class="hover-view-box h100">
           <transition-group name="hover-view-box">
             <!--切换显示的第一项-->
-            <div class="hover-view-1" v-show="modu1HoverView === 1" :key="1">
-              <a class="server-con-1" href="#">
-                <div class="server-con-info">
+            <div
+              class="hover-view-1 w100 h100"
+              v-show="modu1HoverView === 1"
+              :key="1"
+            >
+              <a class="server-con-1 h100" href="#">
+                <div class="server-con-info w100">
                   <h3>医疗大健康平台</h3>
                   <p>
                     依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案
                   </p>
                 </div>
               </a>
-              <a class="server-con-2" href="#">
-                <div class="server-con-info">
+              <a class="server-con-2 h100" href="#">
+                <div class="server-con-info w100">
                   <h3>医疗大健康平台</h3>
                   <p>
                     依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案
                   </p>
                 </div>
               </a>
-              <a class="server-con-3" href="#">
-                <div class="server-con-info">
+              <a class="server-con-3 h100" href="#">
+                <div class="server-con-info w100">
                   <h3>医疗大健康平台</h3>
                   <p>
                     依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案
@@ -71,23 +76,27 @@
                 </div>
               </a>
               <div class="on-more">
-                <a href="#" class="ft-sz-14">查看更多</a>
+                <a href="#" class="ft-sz-14 w100 h100">查看更多</a>
               </div>
             </div>
             <!--切换显示的第二项-->
-            <div class="hover-view-2" v-show="modu1HoverView === 2" :key="2">
-              <ul>
+            <div
+              class="hover-view-2 w100 h100"
+              v-show="modu1HoverView === 2"
+              :key="2"
+            >
+              <ul class="w100">
                 <li
                   v-for="(item, index) in hoverViewProds"
                   :class="'prods-' + (index + 1)"
                   :key="index"
                 >
-                  <a href="#">
-                    <div class="prods-info">
+                  <router-link :to="item.route" href="#" class="w100 h100">
+                    <div class="prods-info h100">
                       <h3 v-html="item.title"></h3>
                       <p v-html="item.p"></p>
                     </div>
-                  </a>
+                  </router-link>
                 </li>
               </ul>
               <div class="on-more">
@@ -95,35 +104,39 @@
               </div>
             </div>
             <!--切换显示的第三项-->
-            <div class="hover-view-3" v-show="modu1HoverView === 3" :key="3">
-              <ul>
+            <div
+              class="hover-view-3 w100 h100"
+              v-show="modu1HoverView === 3"
+              :key="3"
+            >
+              <ul class="w100 h100">
                 <li class="reason-1">
-                  <a href="#"
-                    ><img
-                      src="../../../common/images/index/modu-1/home-modu1-reus-ch-1.png"
-                      alt=""
-                  /></a>
+                  <img
+                    class="w100 h100"
+                    src="../../../common/images/index/modu-1/home-modu1-reus-ch-1.png"
+                    alt=""
+                  />
                 </li>
                 <li class="reason-2">
-                  <a href="#"
-                    ><img
-                      src="../../../common/images/index/modu-1/home-modu1-reus-ch-2.png"
-                      alt=""
-                  /></a>
+                  <img
+                    class="w100 h100"
+                    src="../../../common/images/index/modu-1/home-modu1-reus-ch-2.png"
+                    alt=""
+                  />
                 </li>
                 <li class="reason-3">
-                  <a href="#"
-                    ><img
-                      src="../../../common/images/index/modu-1/home-modu1-reus-ch-3.png"
-                      alt=""
-                  /></a>
+                  <img
+                    class="w100 h100"
+                    src="../../../common/images/index/modu-1/home-modu1-reus-ch-3.png"
+                    alt=""
+                  />
                 </li>
                 <li class="reason-4">
-                  <a href="#"
-                    ><img
-                      src="../../../common/images/index/modu-1/home-modu1-reus-ch-4.png"
-                      alt=""
-                  /></a>
+                  <img
+                    class="w100 h100"
+                    src="../../../common/images/index/modu-1/home-modu1-reus-ch-4.png"
+                    alt=""
+                  />
                 </li>
               </ul>
               <div class="on-more">
@@ -199,31 +212,37 @@ export default {
       hoverViewProds: [
         {
           title: "PACS影像云",
+          route: "/productPacs",
           p:
             "基于现有的区域PACS、区域超声、区域心电，进一步实现区域影像数据的在各医疗机构内的共享和应用，推进胶片的按需分发，减少患者就医成本；建立影像云平台，实现影像数据的云存储和互联网调阅，方便患者检查结果的调阅，推进最多跑一次政策的执行。"
         },
         {
           title: "电子胶片",
+          route: "#",
           p:
             "电子胶片，是基于移动互联网、云存储、云计算技术，相对于传统感光胶片而言的一种新型影像浏览应用服务。医院可通过该技术把患者的数字影像发布到云端并长期存储，为医疗机构、医生及其患者提供便捷的医学影响信息服务。"
         },
         {
           title: "移动医生查房系统",
+          route: "#",
           p:
             "大善移动医生查房系统通过与众多医院已有的相关信息系统进行对接，实现了在移动终端设备上查看病人的基本信息、医嘱信息、电子病历、检查信息、检验信息、护理信息，同时还支持医生在终端设备上通过手写、语音以及图片的方式进行备注，很好地将医生的信息系统延伸到病人床边。"
         },
         {
           title: "智能康复管理系统",
+          route: "#",
           p:
             "康复治疗前应先对病、伤、残者进行康复评定，然后制定一个理想的康复方案，由以康复医师为中心，和临床医学相关人员共同组成的康复治疗组去实施，并在实施过程中不断总结、评定调查，直至治疗结束。可实现康复科室的数字化、信息化和过程的管控，有效避免信息孤岛的出现，实现全员的数据共享。"
         },
         {
           title: "医院慢病管理系统",
+          route: "#",
           p:
             "大善医院慢病管理系统是致力于辅助医护人员、健康管理师更好的管理患者，为医护人员提供信息化、自动化的手段来为患者提供更优质的服务，让患者居家也能享受到医疗服务。通过专业精准的慢病评估，医护患全程与决策，针对不同患者提供健康营养套餐（食物、运动、休息，衣，食，住，行）。"
         },
         {
           title: "随访系统",
+          route: "#",
           p:
             "大善随访系统解决方案随访系统将互联网、物联网技术与患者院内外医疗健康管理结合，以智能随访、智能宣教、智能提醒、健康监测、医护患沟通为患者管理主要手段，通过平台化的设计理念，为不同类型医疗机构，打造统一随访平台。"
         }
@@ -250,16 +269,13 @@ export default {
 <style scoped lang="stylus">
 .home-cont-modu-1 {
     background-color: rgba(249,249,249,1);
-    width: 100%;
     padding-top: 220px;
     height: 1135px;
     .container {
         display: block;
         .modu1-title {
-            width: 100%;
             p {
                 margin: 0 0 108px 0;
-                width: 100%;
                 text-align: center;
                 color: #17233D;
                 font-weight: 700;
@@ -268,7 +284,6 @@ export default {
         }
         .modu1-body {
             height: 518px;
-            width: 100%;
             padding: 0 58px;
             position: relative;
             .hover-btn-box {
@@ -277,7 +292,6 @@ export default {
                 box-sizing: border-box;
                 left: 0;
                 top: 0;
-                height: 100%;
                 width: 174px;
                 border-right: 1px solid rgba(216,216,216,0.5);
                 .hover-btn-1, .hover-btn-2, .hover-btn-3 {
@@ -289,7 +303,6 @@ export default {
                   opacity: 0.5;
                   transition: all .2s;
                   img {
-                    height: 100%;
                     position: absolute;
                     top: 0;
                     right: 0;
@@ -338,8 +351,6 @@ export default {
                     color: #14948a;
                     line-height: 32px;
                     display: block;
-                    width: 100%;
-                    height: 100%;
                     text-decoration: none;
                     transition: all .4s;
                     background-color: #fafafa;
@@ -356,13 +367,10 @@ export default {
                 left: 174px;
                 top: 0;
                 right: 0;
-                height: 100%;
                 .hover-view-1, .hover-view-2, .hover-view-3 {
                     position: absolute;
                     left: 0;
                     top: 0;
-                    width: 100%;
-                    height: 100%;
                 }
                 /*首页模块1 - 切换视图1*/
                 .hover-view-1 {
@@ -372,7 +380,6 @@ export default {
                     .server-con-1, .server-con-2, .server-con-3 {
                         position: relative;
                         display: block;
-                        height: 100%;
                         width: 30%;
                         background-color: #fff;
                         color: #fff;
@@ -387,7 +394,6 @@ export default {
                             left: 0;
                             bottom: -120px;
                             height: 200px;
-                            width: 100%;
                             padding-top: 26px;
                             text-align: center;
                             background-color: rgba(20, 40, 120, .6);
@@ -439,7 +445,6 @@ export default {
                 .hover-view-2 {
                     padding: 0 36px;
                     ul {
-                        width: 100%;
                         margin: 0;
                         padding: .2% 0 0 0;
                         li {
@@ -455,8 +460,6 @@ export default {
                             a{
                                 position: relative;
                                 display: inline-block;
-                                width: 100%;
-                                height: 100%;
                                 background-color: #ccc;
                                 text-decoration: none;
                                 color: #fff;
@@ -464,7 +467,6 @@ export default {
                                     position: absolute;
                                     top: 188px;
                                     left: 0;
-                                    height: 100%;
                                     padding: 0 32px;
                                     padding-top: 16px;
                                     background-color: rgba(40, 40, 50, 0.7)
@@ -542,8 +544,6 @@ export default {
                     ul {
                         position: relative;
                         padding: 0;
-                        width: 100%;
-                        height: 100%;
                         li {
                             width: 46%;
                             height: 46%;
@@ -552,14 +552,6 @@ export default {
                             border-radius: 6px;
                             overflow: hidden;
                             transition: all .4s;
-                            a {
-                                width: 100%
-                                height: 100%;
-                                img {
-                                    width: 100%;
-                                    height: 100%;
-                                }
-                            }
                         }
                         // 因为卡片颜色不同，所以投影颜色分开写；
                         li:hover{

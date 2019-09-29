@@ -1,7 +1,7 @@
 <template>
-  <div class="con-modu-3">
+  <div class="con-modu-3 w100">
     <div id="plant"></div>
-    <div :id="id" class="m-map"></div>
+    <div :id="id" class="m-map w100 h100"></div>
   </div>
 </template>
 
@@ -62,12 +62,7 @@ export default {
 
 <style scoped lang="stylus">
 .con-modu-3 {
-    width: 100%;
     height: 480px;
     background-color: #fafafa;
-    .m-map {
-      width: 100%;
-      height: 100%;
-    }
 }
 </style>

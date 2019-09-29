@@ -2,14 +2,14 @@
   <!--navbar-wrapper navbar-shadow-->
   <div
     :class="[
-      'navbar-wrapper',
+      'navbar-wrapper w100',
       showNavBarShadow ? 'navbar-shadow' : '',
       navBarHeightFlage ? 'navbar-h-low' : ''
     ]"
   >
     <!--从这里开始，使用bootstrap的结构-->
     <nav class="navbar navbar-default">
-      <div class="container-fluid">
+      <div class="container-fluid w100">
         <!--下拉折叠按钮-->
         <div class="navbar-header">
           <button
@@ -24,20 +24,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"
-            ><img
-              class="ds-logo-navBar"
-              src="../../common/images/ds-logo.svg"
-              alt="大善科技"
-            />
-          </a>
+          <router-link class="navbar-brand" to="/">
+            <logoMg></logoMg>
+          </router-link>
         </div>
         <!--常规导航栏-->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <!--导航栏链接，右浮动-->
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <router-link to="/home">首页</router-link>
+              <router-link to="/">首页</router-link>
               <div class="border-line border-line-home"></div>
             </li>
             <li>
@@ -80,6 +76,9 @@
 // $(function() {
 //   alert("234");
 // });
+
+// 引入logo动效
+import logoMg from "../logoMg";
 
 export default {
   name: "nav-bar.vue",
@@ -171,13 +170,14 @@ export default {
         document.body.scrollTop
       );
     }
+  },
+  components: {
+    logoMg
   }
 };
 </script>
 
 <style scoped lang="stylus">
-  // 引入变量css（包含设计规范）
-  @import "../../common/css/variable.styl"
   /*重置bootstrap样式=======开始=============*/
   .navbar {
     border: none;
@@ -202,9 +202,6 @@ export default {
         margin-left: 70px !important;
         border-radius: 25px;
         position: relative;
-        img {
-          height: 100%;
-        }
         .ds-logo-navBar {
           z-index: 99;
         }
@@ -246,14 +243,9 @@ export default {
     margin-right: auto;
     margin-left: auto;
   }
-
   .navbar-collapse{
     align-items: center;
     color: #999;
-  }
-
-  .container-fluid{
-    width: 100%;
   }
   .navbar-right {
     margin-top: 0 !important;
@@ -291,7 +283,7 @@ export default {
       }
       a {
         /*font-weight: 800;*/
-        color: $color-theme !important;
+        color: #14948a !important;
       }
     }
   }
@@ -334,7 +326,6 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   background-color: #fff;
   height: 80px;
   z-index: 999;
@@ -402,7 +393,7 @@ export default {
 /*文字*/
 .router-link-exact-active.router-link-active{
   font-weight: 800;
-  color: $color-theme !important;
+  color: #14948a !important;
 }
 /*下划线*/
 .router-link-exact-active.router-link-active+div{

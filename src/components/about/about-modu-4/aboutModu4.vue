@@ -1,33 +1,33 @@
 <template>
-  <div class="about-modu-4">
-    <div class="container">
-      <div class="ab-mo-4-title">
+  <div class="about-modu-4 w100">
+    <div class="container h100">
+      <div class="ab-mo-4-title posi-ab">
         <img src="../../../common/images/titles/about-title-Ourteam.png" />
       </div>
-      <div class="per-gr">
-        <div class="per-pic">
-          <img :src="perShowData.perImgSrc" />
-          <div class="bg-cir"></div>
+      <div class="per-gr w100 posi-ab">
+        <div class="per-pic posi-ab">
+          <img class="h100 posi-ab" :src="perShowData.perImgSrc" />
+          <div class="bg-cir posi-ab"></div>
         </div>
-        <div class="per-tit">
+        <div class="per-tit posi-ab">
           <span class="per-name">{{ perShowData.perNameZh }}</span>
           <span class="per-title">{{ perShowData.perTit }}</span>
-          <span class="per-en-name">{{ perShowData.perNameEn }}</span>
+          <span class="per-en-name posi-ab">{{ perShowData.perNameEn }}</span>
         </div>
-        <div class="per-info">
+        <div class="per-info posi-ab">
           <p class="info-zh" v-html="perShowData.perInfoZh"></p>
           <p class="info-en">{{ perShowData.perInfoEn }}</p>
         </div>
       </div>
-      <div class="per-list">
-        <ul class="clearfix">
-          <li @mouseenter="perHover1">
+      <div class="per-list w100 posi-ab">
+        <ul class="clearfix h100">
+          <li class="h100" @mouseenter="perHover1">
             <div class="card-pic">
               <img src="#" />
             </div>
             <div
               :class="[
-                'card-tit',
+                'card-tit w100',
                 { 'card-tit-active': perShowData.perNameZh === '汤道青' }
               ]"
             >
@@ -35,8 +35,8 @@
             </div>
           </li>
           <li @mouseenter="perHover2">
-            <div class="card-pic">
-              <img src="#" />
+            <div class="card-pic w100">
+              <img class="w100 h100" src="#" />
             </div>
             <div
               :class="[
@@ -187,16 +187,13 @@ export default {
 
 <style scoped lang="stylus">
 .about-modu-4 {
-    width: 100%;
     height: 900px;
     background-color: rgba(40,41,67,1);
     background-image: url("../../../common/images/about/modu-4/teamBG.png");
     background-size: cover ;
     .container {
         padding: 0;
-        height: 100%;
         .ab-mo-4-title {
-            position: absolute;
             left: 50%;
             transform: translateX(-50%);
             top: 80px;
@@ -204,30 +201,24 @@ export default {
             height: 85px;
         }
         .per-gr {
-            position: absolute;
             left: 50%;
             transform: translateX(-50%);
             bottom: 80px;
-            width: 100%;
             height: 640px;
             .per-pic {
-                position: absolute;
                 left: 0;
                 top: 0;
                 width: 500px;
                 height: 590px;
                 img {
-                    position: absolute;
                     left: 50%;
                     transform: translateX(-50%);
                     top: 0;
                     z-index: 10;
                     display: inline-block;
                     margin: 0 atuo;
-                    height: 100%
                 }
                 .bg-cir {
-                    position: absolute;
                     left: 50%;
                     transform: translateX(-50%);
                     bottom: 20px;
@@ -239,7 +230,6 @@ export default {
                 }
             }
             .per-tit {
-                position: absolute;
                 left: 576px;
                 top: 130px;
                 width: 600px;
@@ -259,7 +249,6 @@ export default {
                     font-size: 16px;
                 }
                 .per-en-name {
-                    position: absolute;
                     left: 0;
                     top: 0;
                     font-size: 70px;
@@ -269,7 +258,6 @@ export default {
                 }
             }
             .per-info {
-                position: absolute;
                 left: 578px;
                 top: 260px;
                 width: 440px;
@@ -287,37 +275,27 @@ export default {
             }
         }
         .per-list {
-            position: absolute;
             bottom: 80px;
             left: 0;
-            width: 100%;
             height: 110px;
             ul {
                 padding: 0;
                 margin: 0;
-                height: 100%;
                 display: flex;
                 justify-content: center;
                 li {
                     float: left;
                     width: 172px;
-                    height: 100%;
                     margin: 0 12px 0 0;
                     background-color: pink;
                     border-radius: 4px;
                     overflow: hidden;
                     transition: all .4s;
                     .card-pic {
-                      width: 100%;
                       height: 74px;
                       background-color: #fff;
-                      img {
-                        width: 100%;
-                        height: 100%;
-                      }
                     }
                     .card-tit {
-                      width: 100%;
                       text-align: center;
                       line-height: 36px;
                       font-size: 16px;

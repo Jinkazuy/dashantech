@@ -1,9 +1,9 @@
 <template>
   <div class="news-center">
     <div class="news-c-banner">
-      <swiper :options="swiperOption" class="swiper-box">
+      <swiper :options="swiperOption" class="swiper-box h100">
         <swiper-slide v-for="(item, index) in bannerSrc" :key="index">
-          <img :src="item.src" />
+          <img class="w100" :src="item.src" />
         </swiper-slide>
         <!--swiper导航按钮，必须写在外边儿，不然会出问题，只要类名对上了就行-->
         <div class="swiper-button-prev" slot="button-prev">
@@ -83,6 +83,24 @@ export default {
       ]
     };
   },
+  mounted() {
+    // 因为所有页面是作为app.vue的router-view，所以滚动值会继承；
+    // 那么切换router的时候就需要将网页的滚动值归零；
+    // 出发mounted是，也就是初始化页面时，返回顶部；
+    // 返回顶部，借用jquery
+    // eslint-disable-next-line
+    $("html,body").animate({ scrollTop: 0 }, 300);
+    // eslint-disable-next-line
+    if ($("html").scrollTop()) {
+      // eslint-disable-next-line
+      $("html").animate({ scrollTop: 0 }, 300);
+      return false;
+    }
+    // eslint-disable-next-line
+    $("body").animate({ scrollTop: 0 }, 300);
+    console.log(12);
+    return false;
+  },
   components: {
     newsModu,
     modu1
@@ -102,7 +120,6 @@ export default {
     background-color: #e7e9f2;
     .swiper-box {
       position: absolute;
-      height: 100%;
       left: 50%;
       transform: translateX(-50%);
       width: 200%;
@@ -119,7 +136,6 @@ export default {
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
-          width: 100%;
         }
       }
       /*这两个类名实在插件里的，作为父级，这里可以调用*/

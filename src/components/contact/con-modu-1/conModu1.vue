@@ -1,14 +1,14 @@
 <template>
-  <div class="con-modu-1">
-    <div class="bg-mask"></div>
-    <div class="container">
-      <div class="text-gr">
+  <div class="con-modu-1 w100">
+    <div class="bg-mask w100 h100"></div>
+    <div class="container w100 h100">
+      <div class="text-gr w100">
         <h4>这里能够找到我们</h4>
         <p>
           大善科技始终秉承着“中国科技、服务华人”的经营理念，专注大健康医疗领域深度挖掘。
         </p>
       </div>
-      <div class="cont-gr">
+      <div class="cont-gr w100">
         <div class="input-gr">
           <!--mvvm,不用form表单-->
           <input
@@ -43,14 +43,14 @@
             placeholder="*您想要对我们说的"
             :class="{ 'bdr-err': tipsBorder === 'textErr' }"
           ></textarea>
-          <div class="tips">
+          <div class="tips w100">
             <p :class="{ bingo: allB === true }">{{ tipsText }}</p>
           </div>
           <div class="sub-btn" @click="subBtn">提交</div>
         </div>
         <div class="contact-info">
-          <ul>
-            <li>
+          <ul class="w100 h100">
+            <li class="w100">
               <h4>地址</h4>
               <p>北京市丰台区南四环西路128号 诺德中心4号楼8层</p>
             </li>
@@ -161,7 +161,6 @@ export default {
 .con-modu-1 {
   position: relative;
   height: 750px;
-  width: 100%;
   background-color: pink;
   background: url("../../../common/images/contact/hand.jpg") no-repeat;
   background-size: cover;
@@ -170,20 +169,15 @@ export default {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
     background:rgba(38,41,51,1);
     opacity:0.8;
   }
   .container {
-    width: 100%;
-    height: 100%;
     padding: 0;
     .text-gr {
       margin-top: 80px;
       color: #fff;
       text-align: center;
-      width: 100%;
       h4 {
         margin: 0 0 36px 0;
         font-size: 40px;
@@ -198,7 +192,6 @@ export default {
       top: 250px;
       left: 50%;
       transform: translateX(-50%);
-      width: 100%;
       height: 414px;
       padding: 0 56px;
       .input-gr {
@@ -252,7 +245,6 @@ export default {
           background-color: rgba(243, 246, 255, 1);
         }
         .tips {
-          width: 100%;
           height: 20px;
           text-align: center;
           font-size: 16px;
@@ -296,13 +288,10 @@ export default {
         float: right;
         border-radius: 4px;
         ul {
-          width: 100%;
-          height: 100%;
           border-radius: 4px;
           padding: 52px;
           li {
             height: 26%;
-            width: 100%;
             margin-bottom: 10%;
             padding-left: 50px;
             color: rgba(23, 35, 61, 1);

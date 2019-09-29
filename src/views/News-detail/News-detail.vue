@@ -5,9 +5,9 @@
         <div class="news-list-titles">
           <img src="../../common/images/titles/news-title-news.png" />
         </div>
-        <div class="list-qrcode">
+        <div class="list-qrcode w100">
           <img src="../../common/images/qr.jpg" alt="微信公众号：大善科技" />
-          <p>微信公众号：大善科技</p>
+          <p class="w100">微信公众号：大善科技</p>
         </div>
       </div>
       <div class="right-box" ref="rgBox">
@@ -87,6 +87,23 @@ export default {
       this.$refs.rgBox.clientHeight ||
       this.$refs.rgBox.offsetHeight ||
       this.$refs.rgBox.scrollHeight;
+
+    // 因为所有页面是作为app.vue的router-view，所以滚动值会继承；
+    // 那么切换router的时候就需要将网页的滚动值归零；
+    // 出发mounted是，也就是初始化页面时，返回顶部；
+    // 返回顶部，借用jquery
+    // eslint-disable-next-line
+    $("html,body").animate({ scrollTop: 0 }, 300);
+    // eslint-disable-next-line
+    if ($("html").scrollTop()) {
+      // eslint-disable-next-line
+      $("html").animate({ scrollTop: 0 }, 300);
+      return false;
+    }
+    // eslint-disable-next-line
+    $("body").animate({ scrollTop: 0 }, 300);
+    console.log(12);
+    return false;
   },
   methods: {
     pageScroll() {
@@ -137,7 +154,6 @@ export default {
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 100%;
         height: 240px;
         img {
           position: absolute;
@@ -157,7 +173,6 @@ export default {
           left: 50%;
           transform: translateX(-50%);
           margin: 0;
-          width: 100%;
           text-align: center;
           font-size: 14px;
           color: rgba(128, 134, 149, 1);

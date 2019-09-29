@@ -1,5 +1,5 @@
 <template>
-  <div class="news-modu-3">
+  <div class="news-modu-3 w100">
     <vue-particles
       color="#dedede"
       :particleOpacity="0.1"
@@ -18,14 +18,17 @@
       clickMode="push"
     >
     </vue-particles>
-    <div class="container">
+    <div class="container w100 h100">
       <div class="news-m3-title">
-        <img src="../../../common/images/titles/news-title-Events.png" />
+        <img
+          class="w100 h100"
+          src="../../../common/images/titles/news-title-Events.png"
+        />
       </div>
       <div class="news-m3-logo">
-        <img src="../../../common/images/ds-logo.svg" />
+        <img class="w100 h100" src="../../../common/images/ds-logo.svg" />
       </div>
-      <div class="news-m3-time-line">
+      <div class="news-m3-time-line w100">
         <ul class="t-l-box">
           <li v-for="(item, index) in timeLineData" :key="index">
             <div class="li-or">
@@ -70,7 +73,6 @@ export default {
 
 <style scoped lang="stylus">
 .news-modu-3 {
-    width: 100%;
     height: 860px;
     background:rgba(14,24,51,1);
     position: relative;
@@ -82,8 +84,6 @@ export default {
         width: 100%;
     }
     .container {
-        height: 100%;
-        width: 100%;
         padding: 0;
         .news-m3-title, .news-m3-logo, .news-m3-time-line {
             position: absolute;
@@ -91,8 +91,6 @@ export default {
             transform: translateX(-50%);
             img {
                 position: relative;
-                width: 100%;
-                height: 100%;
                 z-index: 5;
             }
         }
@@ -132,7 +130,6 @@ export default {
         }
         .news-m3-time-line {
             top: 420px;
-            width: 100%;
             height: 50px;
             ul {
                 position: absolute;

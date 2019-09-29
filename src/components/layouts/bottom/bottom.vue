@@ -1,10 +1,10 @@
 <template>
-  <div id="bottom">
-    <div class="container">
-      <div class="bottom-header">
+  <div id="bottom" class="w100">
+    <div class="container h100">
+      <div class="bottom-header w100">
         <div class="bt-logo">
           <div class="shadow-blur"></div>
-          <img src="../../common/images/ds-logo.svg" />
+          <logoMg></logoMg>
         </div>
         <ul>
           <li>
@@ -27,9 +27,9 @@
           </li>
         </ul>
       </div>
-      <div class="bottom-cont">
+      <div class="bottom-cont w100">
         <div class="lg-d">
-          <img src="../../../public/images/Shan.png" />
+          <img class="w100 h100" src="../../../../public/images/Shan.png" />
         </div>
         <ul class="clearfix">
           <li class="bottom-nav">
@@ -94,13 +94,13 @@
           <div class="wechat-icon-wrapper">
             <i class="wechat-icon iconfont iconweixin"></i>
             <div class="qr-code">
-              <img src="../../common/images/qr.jpg" />
+              <img class="w100 h100" src="../../../common/images/qr.jpg" />
             </div>
           </div>
         </div>
       </div>
       <div class="bottom-footer">
-        <div class="border-t"></div>
+        <div class="border-t w100"></div>
         <ul class="find-link">
           <li><a href="#">服务条款</a></li>
           <span class="space"></span>
@@ -122,8 +122,14 @@
 </template>
 
 <script>
+// 引入logo动效
+import logoMg from "../logoMg";
+
 export default {
-  name: "bottom"
+  name: "bottom",
+  components: {
+    logoMg
+  }
 };
 </script>
 
@@ -136,21 +142,18 @@ export default {
 // ============== 重置BS样式 - 结束 ==============
 #bottom{
   position: relative;
-  width: 100%;
   background-color: #1f3158;
   border-top: 4px solid #14948a;
   box-sizing: border-box;
   z-index: 999;
   .container {
     display: block;
-    height: 100%;
     color: #fff;
     padding: 0 58px;
     // 头部logo部分 - 开始
     .bottom-header{
       z-index: 1;
       height: 161px;
-      width: 100%;
       padding: 16px 0 0 32px;
       box-sizing: border-box;
       border-bottom: 1px solid #186674;
@@ -160,7 +163,7 @@ export default {
       .bt-logo {
         position: relative;
         border-radius: 22px;
-        width: 140px;
+        width: 156px;
         height: 44px;
         img {
           position: absolute;
@@ -236,7 +239,6 @@ export default {
       position: relative;
       padding-top: 44px;
       height: 506px;
-      width: 100%;
       ul {
         position: relative;
         z-index: 2;
@@ -292,10 +294,6 @@ export default {
         right: 0;
         opacity: .1;
         animation: logofl 2.6s ease 0s infinite alternate running;
-        img {
-          width: 100%;
-          height: 100%;
-        }
       }
       // 点阵logo闪烁
       @keyframes logofl {
@@ -357,10 +355,6 @@ export default {
             background-color: #fff;
             box-shadow:0 10px 10px 0 rgba(0,0,0,.3);
             transition: all .4s;
-            img {
-              width: 100%;
-              height: 100%;
-            }
           }
           .qr-code::before {
             content: '';
@@ -396,7 +390,6 @@ export default {
       position: relative;
       padding: 0 40px 24px 40px;
       .border-t {
-        width: 100%;
         height: 1px;
         background-color: #fff;
         border-top: 1px solid #186674;

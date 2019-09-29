@@ -1,13 +1,17 @@
 <template>
-  <div class="pro-modu-2 clearfix">
+  <div class="pro-modu-2 clearfix w100">
     <div class="pro-mo2-title">
-      <img src="../../../common/images/titles/home-title-Industry.png" />
+      <img
+        class="w100"
+        src="../../../common/images/titles/home-title-Industry.png"
+      />
     </div>
     <div class="pro-mo2-hd container">
       <ul>
         <li :class="{ 'pro-li-active': liActiveNum === 1 }" @click="proLi1">
-          <div class="pro-mo2-hd-illus">
+          <div class="pro-mo2-hd-illus w100">
             <img
+              class="h100"
               src="../../../common/images/product/modu-2/test_20190924172645.png"
               alt=""
             />
@@ -15,8 +19,9 @@
           <p class="pro-mo2-hd-text">PACS影像云</p>
         </li>
         <li :class="{ 'pro-li-active': liActiveNum === 2 }" @click="proLi2">
-          <div class="pro-mo2-hd-illus">
+          <div class="pro-mo2-hd-illus w100">
             <img
+              class="h100"
               src="../../../common/images/product/modu-2/test_20190924172645.png"
               alt=""
             />
@@ -24,8 +29,9 @@
           <p class="pro-mo2-hd-text">随访系统</p>
         </li>
         <li :class="{ 'pro-li-active': liActiveNum === 3 }" @click="proLi3">
-          <div class="pro-mo2-hd-illus">
+          <div class="pro-mo2-hd-illus w100">
             <img
+              class="h100"
               src="../../../common/images/product/modu-2/test_20190924172645.png"
               alt=""
             />
@@ -33,8 +39,9 @@
           <p class="pro-mo2-hd-text">互联网医院信息平台</p>
         </li>
         <li :class="{ 'pro-li-active': liActiveNum === 4 }" @click="proLi4">
-          <div class="pro-mo2-hd-illus">
+          <div class="pro-mo2-hd-illus w100">
             <img
+              class="h100"
               src="../../../common/images/product/modu-2/test_20190924172645.png"
               alt=""
             />
@@ -42,8 +49,9 @@
           <p class="pro-mo2-hd-text">移动医生查房系统</p>
         </li>
         <li :class="{ 'pro-li-active': liActiveNum === 5 }" @click="proLi5">
-          <div class="pro-mo2-hd-illus">
+          <div class="pro-mo2-hd-illus w100">
             <img
+              class="h100"
               src="../../../common/images/product/modu-2/test_20190924172645.png"
               alt=""
             />
@@ -51,8 +59,9 @@
           <p class="pro-mo2-hd-text">电子胶片</p>
         </li>
         <li :class="{ 'pro-li-active': liActiveNum === 6 }" @click="proLi6">
-          <div class="pro-mo2-hd-illus">
+          <div class="pro-mo2-hd-illus w100">
             <img
+              class="h100"
               src="../../../common/images/product/modu-2/test_20190924172645.png"
               alt=""
             />
@@ -60,8 +69,9 @@
           <p class="pro-mo2-hd-text">区域慢病管理系统</p>
         </li>
         <li :class="{ 'pro-li-active': liActiveNum === 7 }" @click="proLi7">
-          <div class="pro-mo2-hd-illus">
+          <div class="pro-mo2-hd-illus w100">
             <img
+              class="h100"
               src="../../../common/images/product/modu-2/test_20190924172645.png"
               alt=""
             />
@@ -106,7 +116,7 @@
                 基于现有的区域PACS、区域超声、区域心电，进一步实现区域影像数据的在各医疗机构内的共享和应用，推进胶片的按需分发，减少患者就医成本；建立影像云平台，实现影像数据的云存储和互联网调阅，方便患者检查结果的调阅，推进最多跑一次政策的执行。
               </p>
               <div class="info-btn">
-                <a href="#">查看详情</a>
+                <router-link to="/productPacs">查看详情</router-link>
               </div>
             </div>
           </div>
@@ -250,7 +260,6 @@ export default {
 <style scoped lang="stylus">
 .pro-modu-2 {
     margin: 200px 0 0 0;
-    width: 100%;
     height: 1146px;
     position: relative;
     .pro-mo2-title {
@@ -259,9 +268,6 @@ export default {
         transform: translateX(-50%);
         top: 80px;
         width: 202px;
-        img {
-            width: 100%;
-        }
     }
     .pro-mo2-hd {
         position: relative;
@@ -278,7 +284,6 @@ export default {
                 width: 160px;
                 cursor: pointer;
                 .pro-mo2-hd-illus {
-                    width: 100%;
                     height: 40px;
                     margin-bottom: 8px;
                     display: flex;

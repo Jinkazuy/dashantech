@@ -1,26 +1,26 @@
 <template>
-  <div class="home-cont-modu-4">
+  <div class="home-cont-modu-4 w100">
     <div class="us-pics">
-      <ul class="ln-1">
+      <ul class="ln-1 w100">
         <li class="col-1">
-          <img src="../../../../public/images/poto-1.jpg" alt="" />
+          <img class="w100 h100" src="../../../../public/images/poto-1.jpg" alt="" />
         </li>
         <li class="col-2">
-          <img src="../../../../public/images/poto-2.jpg" alt="" />
+          <img class="w100 h100" src="../../../../public/images/poto-2.jpg" alt="" />
         </li>
         <li class="col-3">
-          <img src="../../../../public/images/poto-3.jpg" alt="" />
+          <img class="w100 h100" src="../../../../public/images/poto-3.jpg" alt="" />
         </li>
       </ul>
-      <ul class="ln-2">
+      <ul class="ln-2 w100">
         <li class="col-1">
-          <img src="../../../../public/images/poto-3.jpg" alt="" />
+          <img class="w100 h100" src="../../../../public/images/poto-3.jpg" alt="" />
         </li>
         <li class="col-2">
-          <img src="../../../../public/images/poto-2.jpg" alt="" />
+          <img class="w100 h100" src="../../../../public/images/poto-2.jpg" alt="" />
         </li>
         <li class="col-3">
-          <img src="../../../../public/images/poto-1.jpg" alt="" />
+          <img class="w100 h100" src="../../../../public/images/poto-1.jpg" alt="" />
         </li>
       </ul>
     </div>
@@ -30,12 +30,12 @@
         alt="加入我们"
         class="titles"
       />
-      <p class="join-text">
+      <p class="join-text w100">
         在大善科技可以展示你的所有才华，我们期待这样的你加入进来。<br /><br />医疗科学工作者、大数据分析师、高级JAVA开发、数据可视化工程师。
         <br /><br />如果您具备创业精神，我们更欢迎你的加入，一起分享行业成果。
       </p>
       <div class="on-more">
-        <router-link to="/join">加入我们</router-link>
+        <router-link class="w100 h100" to="/join">加入我们</router-link>
       </div>
     </div>
   </div>
@@ -50,7 +50,6 @@ export default {
 <style scoped lang="stylus">
 .home-cont-modu-4 {
     position: relative;
-    width: 100%;
     height: 820px;
     padding-top: 5%;
     box-sizing: border-box;
@@ -64,7 +63,6 @@ export default {
         padding: 8px;
         box-sizing: border-box;
         .ln-1, .ln-2 {
-            width: 100%;
             height: 49.3%;
             margin: 0;
             padding: 0;
@@ -76,12 +74,6 @@ export default {
         }
         .ln-1 {
             margin-bottom: 8px;
-            .col-1, .col-2, .col-3 {
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
             .col-1 {
                 width: 45%;
             }
@@ -95,12 +87,6 @@ export default {
         }
         .ln-2 {
             margin-bottom: 8px;
-            .col-1, .col-2, .col-3 {
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
             .col-1 {
                 flex: 1;
             }
@@ -128,7 +114,6 @@ export default {
             font-size: 20px;
             line-height: 36px;
             color: rgba(128, 134, 149, 1);
-            width: 100%;
             margin-bottom: 10%;
         }
         .on-more {
@@ -142,8 +127,6 @@ export default {
                 color: #14948a;
                 line-height: 32px;
                 display: block;
-                width: 100%;
-                height: 100%;
                 text-decoration: none;
                 transition: all .4s;
                 background-color: #fafafa;

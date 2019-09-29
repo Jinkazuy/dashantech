@@ -2,21 +2,21 @@
   <div class="banner-illus">
     <img
       class="banner-liius-lines"
-      src="../../common/images/bannerIllus-bg/lines.png"
+      src="../../../common/images/bannerIllus-bg/lines.png"
     />
     <img
       class="banner-liius-foo"
-      src="../../common/images/bannerIllus-bg/banner-foo.png"
+      src="../../../common/images/bannerIllus-bg/banner-foo.png"
     />
     <img
       class="banner-liius-num"
-      src="../../common/images/bannerIllus-bg/num10101.png"
+      src="../../../common/images/bannerIllus-bg/num10101.png"
     />
     <!--banner插画主体，需要父级传入-->
     <img class="banner-liius-ch" :src="bannerIllusCont" />
     <img
       class="banner-liius-or"
-      src="../../common/images/bannerIllus-bg/ornament.png"
+      src="../../../common/images/bannerIllus-bg/ornament.png"
     />
     <div class="banner-liius-light"></div>
   </div>

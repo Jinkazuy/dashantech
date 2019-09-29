@@ -1,6 +1,6 @@
 <template>
-  <div class="join-modu-1">
-    <div class="bg-mask"></div>
+  <div class="join-modu-1 w100">
+    <div class="bg-mask w100 h100"></div>
     <div class="container">
       <h2>欢迎加入大善科技</h2>
       <h6>Welcome To Dashan Tech</h6>
@@ -22,7 +22,6 @@ export default {
 <style scoped lang="stylus">
 .join-modu-1 {
   position: relative;
-  width: 100%;
   height: 460px;
   background-image: url("../../../common/images/join/hand.jpg");
   background-size: cover;
@@ -31,8 +30,6 @@ export default {
     position: absolute;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
     background:rgba(38,41,51,1);
     opacity:0.8;
   }

@@ -2,6 +2,7 @@
   <div class="con-modu-2 container">
     <div class="co-mo2-title">
       <img
+        class="w100 h100"
         src="../../../common/images/titles/contact-title-ContactUs.png"
         alt="联系我们"
       />
@@ -51,10 +52,6 @@ export default {
         top: 80px;
         width: 136px;
         height: 84px;
-        img {
-            width: 100%;
-            height: 100%;
-        }
     }
     .co-mo2-bd {
         .bd-l, .bd-r {

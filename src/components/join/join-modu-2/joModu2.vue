@@ -3,14 +3,15 @@
     <div class="container">
       <div class="jo-mo2-tit">
         <img
+          class="w100 h100"
           src="../../../common/images/titles/home-title-joinUs.png"
           alt="加入我们"
         />
       </div>
       <div class="job-cont">
-        <ul>
+        <ul class="h100 w100">
           <li
-            :class="['list-item', { 'list-active': listItem.active }]"
+            :class="['list-item w100', { 'list-active': listItem.active }]"
             v-for="(listItem, idx) in jobsData"
             :key="idx"
             @click="liClick(listItem.id)"
@@ -49,7 +50,10 @@
           <p class="ft-l-p2">投递邮件至：hr@xxxx.com</p>
         </div>
         <div class="ft-r">
-          <img src="../../../common/images/join/jobteam.png" />
+          <img
+            class="w100 h100"
+            src="../../../common/images/join/jobteam.png"
+          />
         </div>
       </div>
     </div>
@@ -183,10 +187,6 @@ export default {
             margin: 0 auto 44px;
             width: 138px;
             height: 87px;
-            img {
-                width: 100%;
-                height: 100%;
-            }
         }
         .job-cont {
             width: 92%;
@@ -196,8 +196,6 @@ export default {
             box-shadow:0 4px 8px 0 rgba(0,0,0,0.1);
             border-radius: 4px;
             ul {
-                width: 100%;
-                height: 100%;
                 border-radius: 4px;
                 box-sizing: border-box;
                 overflow: hidden;
@@ -205,7 +203,6 @@ export default {
                 .list-item {
                     cursor: pointer;
                     position: relative;
-                    width: 100%;
                     height: 90px;
                     background-color: #fff;
                     padding: 32px 44px;
@@ -333,10 +330,6 @@ export default {
                 top: 8px;
                 bottom: 8px;
                 width: 580px;
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
             }
         }
     }

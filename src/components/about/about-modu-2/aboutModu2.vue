@@ -1,39 +1,49 @@
 <template>
-  <div class="about-modu-2">
+  <div class="about-modu-2 w100">
     <div class="container">
-      <div class="ab-mo-wrapper">
+      <div class="ab-mo-wrapper w100">
         <div class="ab-mo2-title">
           <img
+            class="w100"
             src="../../../common/images/titles/about-title-DaDshanTech.png"
           />
         </div>
-        <div class="ab-mo2-body">
+        <div class="ab-mo2-body w100">
           <ul>
-            <li>
-              <div class="ill">
-                <img src="../../../common/images/about/modu-2/ch-rc.png" />
+            <li class="posi-re">
+              <div class="ill w100 posi-ab">
+                <img
+                  class="w100 h100 posi-ab"
+                  src="../../../common/images/about/modu-2/ch-rc.png"
+                />
               </div>
-              <div class="num">
+              <div class="num posi-ab">
                 <span class="number">107</span>
                 <span class="Company">位</span>
                 <p class="p-type">技术人才</p>
               </div>
             </li>
-            <li>
-              <div class="ill">
-                <img src="../../../common/images/about/modu-2/ch-zj.png" />
+            <li class="posi-re">
+              <div class="ill w100 posi-ab">
+                <img
+                  class="w100 h100 posi-ab"
+                  src="../../../common/images/about/modu-2/ch-zj.png"
+                />
               </div>
-              <div class="num">
+              <div class="num posi-ab">
                 <span class="number">500</span>
                 <span class="Company">位</span>
                 <p class="p-type">行业专家</p>
               </div>
             </li>
-            <li>
-              <div class="ill">
-                <img src="../../../common/images/about/modu-2/ch-zl.png" />
+            <li class="posi-re">
+              <div class="ill w100 posi-ab">
+                <img
+                  class="w100 h100 posi-ab"
+                  src="../../../common/images/about/modu-2/ch-zl.png"
+                />
               </div>
-              <div class="num">
+              <div class="num posi-ab">
                 <span class="number">79</span>
                 <span class="Company">项</span>
                 <p class="p-type">技术专利</p>
@@ -54,24 +64,18 @@ export default {
 
 <style scoped lang="stylus">
 .about-modu-2 {
-    width: 100%;
     height: 734px;
     background-color: #f9f9f9;
     padding-top: 230px;
     .container {
         padding: 0;
         .ab-mo-wrapper{
-            width: 100%;
             .ab-mo2-title {
                 width: 330px;
                 margin: 0 auto;
                 height: 84px;
-                img {
-                    width: 100;
-                }
             }
             .ab-mo2-body {
-                width: 100%;
                 ul {
                     width: 69%;
                     padding: 0;
@@ -81,18 +85,12 @@ export default {
                     li {
                         width: 230px;
                         height: 300px;
-                        position: relative;
                         .ill {
-                            position: absolute;
                             top: 0;
                             left: 0;
-                            width: 100%;
                             height: 198px;
                             transition: all .4s;
                             img {
-                                position: absolute;
-                                width: 100%;
-                                height: 100%;
                                 z-index: 10;
                             }
                         }
@@ -111,7 +109,6 @@ export default {
                           filter: blur(40px);
                         }
                         .num {
-                            position: absolute;
                             top: 200px;
                             left: 50%;
                             transform: translateX(-50%);

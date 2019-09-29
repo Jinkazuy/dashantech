@@ -3,12 +3,13 @@
     <div class="container">
       <div class="jo-mo3-tit">
         <img
+          class="w100 h100"
           src="../../../common/images/titles/join-title-FringeBenefits.png"
           alt="福利待遇"
         />
       </div>
-      <div class="jo-mo3-pic">
-        <ul>
+      <div class="jo-mo3-pic w100">
+        <ul class="w100">
           <li>
             <img src="../../../common/images/join/fl-1.png" />
           </li>
@@ -20,39 +21,39 @@
           </li>
         </ul>
       </div>
-      <div class="jo-mo3-ft">
-        <ul>
-          <li>
+      <div class="jo-mo3-ft w100">
+        <ul class="w100">
+          <li class="h100">
             <div class="icon-b"></div>
             <p class="icon-i">弹性工作</p>
           </li>
-          <li>
+          <li class="h100">
             <div class="icon-b"></div>
             <p class="icon-i">弹性工作</p>
           </li>
-          <li>
+          <li class="h100">
             <div class="icon-b"></div>
             <p class="icon-i">弹性工作</p>
           </li>
-          <li>
+          <li class="h100">
             <div class="icon-b"></div>
             <p class="icon-i">弹性工作</p>
           </li>
         </ul>
-        <ul>
-          <li>
+        <ul class="w100">
+          <li class="h100">
             <div class="icon-b"></div>
             <p class="icon-i">弹性工作</p>
           </li>
-          <li>
+          <li class="h100">
             <div class="icon-b"></div>
             <p class="icon-i">弹性工作</p>
           </li>
-          <li>
+          <li class="h100">
             <div class="icon-b"></div>
             <p class="icon-i">弹性工作</p>
           </li>
-          <li>
+          <li class="h100">
             <div class="icon-b"></div>
             <p class="icon-i">弹性工作</p>
           </li>
@@ -77,15 +78,9 @@ export default {
             width: 138px;
             height: 87px;
             margin: 80px auto 40px;
-            img {
-                width: 100%;
-                height: 100%;
-            }
         }
         .jo-mo3-pic {
-            width: 100%;
             ul {
-                width: 100%;
                 display: flex;
                 justify-content: space-between;
                 padding: 0;
@@ -100,18 +95,15 @@ export default {
             }
         }
         .jo-mo3-ft {
-            width: 100%;
             height: 300px;
             margin: 80px 0 0;
             ul {
-                width: 100%;
                 height: 84px;
                 margin: 0 0 48px;
                 display: flex;
                 justify-content: space-around;
                 padding: 0;
                 li {
-                    height: 100%;
                     width: 80px;
                     border-radius: 4px;
                     overflow: hidden;

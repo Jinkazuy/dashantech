@@ -1,32 +1,32 @@
 <template>
-  <div class="about-modu-3">
-    <div class="container">
-      <div class="ab-co-3-title">
+  <div class="about-modu-3 w100">
+    <div class="container h100">
+      <div class="ab-co-3-title posi-ab">
         <img
+          class="w100 h100"
           src="../../../common/images/titles/about-title-OurServiceContent.png"
-          alt=""
         />
       </div>
-      <div class="ab-co-3-body">
-        <div class="ab3-hover-view-1">
-          <a class="ab3-server-con-1" href="#">
-            <div class="ab3-server-con-info">
+      <div class="ab-co-3-body w100 posi-ab">
+        <div class="ab3-hover-view-1 h100 posi-ab">
+          <a class="ab3-server-con-1 h100 posi-re" href="#">
+            <div class="ab3-server-con-info posi-ab w100">
               <h3>医疗大健康平台</h3>
               <p>
                 依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案
               </p>
             </div>
           </a>
-          <a class="ab3-server-con-2" href="#">
-            <div class="ab3-server-con-info">
+          <a class="ab3-server-con-2 h100 posi-re" href="#">
+            <div class="ab3-server-con-info posi-ab w100">
               <h3>医疗大健康平台</h3>
               <p>
                 依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案
               </p>
             </div>
           </a>
-          <a class="ab3-server-con-3" href="#">
-            <div class="ab3-server-con-info">
+          <a class="ab3-server-con-3 h100 posi-re" href="#">
+            <div class="ab3-server-con-info posi-ab w100">
               <h3>医疗大健康平台</h3>
               <p>
                 依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案
@@ -98,40 +98,27 @@ export default {
 .about-modu-3 {
     background-color: #fff;
     height: 800px;
-    width: 100%;
     .container {
         padding: 0;
-        height: 100%;
         .ab-co-3-title {
-            position: absolute;
             left: 50%;
             transform: translateX(-50%);
             top: 80px;
             width: 234px;
             height: 84px;
-            img {
-                width: 100%;
-                height: 100%;
-            }
         }
         .ab-co-3-body {
-            position: absolute;
             top: 204px;
-            width: 100%;
             height: 512px;
             .ab3-hover-view-1 {
-                position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
                 top: 0;
                 width: 1020px;
-                height: 100%;
                 display: flex;
                 justify-content: space-between;
                 .ab3-server-con-1, .ab3-server-con-2, .ab3-server-con-3 {
-                    position: relative;
                     display: block;
-                    height: 100%;
                     width: 317px;
                     background-color: #fff;
                     color: #fff;
@@ -142,11 +129,9 @@ export default {
                     // 背景模糊、毛玻璃效果，只有IOS&&chrome能够看到该效果；
                     // backdrop-filter: blur(20px);
                     .ab3-server-con-info {
-                        position: absolute;
                         left: 0;
                         bottom: -120px;
                         height: 200px;
-                        width: 100%;
                         padding-top: 26px;
                         text-align: center;
                         background-color: rgba(20, 40, 120, .6);
