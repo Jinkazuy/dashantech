@@ -40,7 +40,7 @@
               <router-link to="/about">关于我们</router-link>
               <div class="border-line"></div>
             </li>
-            <li>
+            <li @mouseenter="proRouterHover" @mouseleave="proRouterUnHover">
               <router-link to="/product">产品中心</router-link>
               <div class="border-line"></div>
             </li>
@@ -66,6 +66,12 @@
       </div>
       <!-- /.container-fluid -->
     </nav>
+    <!--<div class="pro-toast-wrapper "></div>-->
+    <div
+      :class="['pro-toast-wrapper', { 'pro-toast-wrapper-hover': proLinkShow }]"
+    >
+      <div class="container"></div>
+    </div>
   </div>
 </template>
 
@@ -94,7 +100,9 @@ export default {
       // 当前实时滚动值
       scrollTopNow: 0,
       // 解决mounted钩子触发多次的问题,因为浏览器DOM结构变化会导致mounted多次触发
-      mountedNum: 0
+      mountedNum: 0,
+      // 产品中心连接鼠标移入
+      proLinkShow: false
     };
   },
   props: ["showNavBarShadow"],
@@ -169,6 +177,15 @@ export default {
         document.documentElement.scrollTop ||
         document.body.scrollTop
       );
+    },
+    // 产品中心hover
+    proRouterHover() {
+      console.log(1111111);
+      this.proLinkShow = true;
+    },
+    proRouterUnHover() {
+      console.log(222222);
+      this.proLinkShow = false;
     }
   },
   components: {
@@ -192,6 +209,7 @@ export default {
     background-color: #fff;
     padding: 0 !important;
     transition: all .5s;
+    z-index: 999;
     .container-fluid {
       padding: 0 !important;
       // logo
@@ -328,7 +346,7 @@ export default {
   left: 0;
   background-color: #fff;
   height: 80px;
-  z-index: 999;
+  z-index: 9999;
   box-shadow:0 1px 0 0 rgba(0,0,0,.05);
   transition: all .5s;
   // 将BS的导航栏按钮清除右侧浮动,需要一层一层找到；
@@ -406,5 +424,28 @@ export default {
 /*因为首页少两个字，所以重置下划线偏移量*/
 .router-link-exact-active.router-link-active+div.border-line-home{
   transform: translateX(26%);
+}
+// 产品中心浮层模块；
+.pro-toast-wrapper {
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  margin: -20px 0 0;
+  transition: all .4s;
+  transform: translateY(-300px);
+  border-top: 1px solid rgba(0,0,0,0);
+  z-index: -99;
+  box-shadow:0 1px 0 0 rgba(0,0,0,0);
+  box-sizing: border-box;
+  .container {
+    padding: 0;
+    height: 100%;
+    background-color: pink;
+  }
+}
+.pro-toast-wrapper-hover {
+  transform: translateY(0);
+  border-top: 1px solid rgba(0,0,0,.05);
+  box-shadow:0 10px 20px 0 rgba(0,0,0,.1);
 }
 </style>
