@@ -3,24 +3,48 @@
     <div class="us-pics">
       <ul class="ln-1 w100">
         <li class="col-1">
-          <img class="w100 h100" src="../../../../public/images/poto-1.jpg" alt="" />
+          <img
+            class="w100 h100"
+            src="../../../../public/images/poto-1.jpg"
+            alt=""
+          />
         </li>
         <li class="col-2">
-          <img class="w100 h100" src="../../../../public/images/poto-2.jpg" alt="" />
+          <img
+            class="w100 h100"
+            src="../../../../public/images/poto-2.jpg"
+            alt=""
+          />
         </li>
         <li class="col-3">
-          <img class="w100 h100" src="../../../../public/images/poto-3.jpg" alt="" />
+          <img
+            class="w100 h100"
+            src="../../../../public/images/poto-3.jpg"
+            alt=""
+          />
         </li>
       </ul>
       <ul class="ln-2 w100">
         <li class="col-1">
-          <img class="w100 h100" src="../../../../public/images/poto-3.jpg" alt="" />
+          <img
+            class="w100 h100"
+            src="../../../../public/images/poto-3.jpg"
+            alt=""
+          />
         </li>
         <li class="col-2">
-          <img class="w100 h100" src="../../../../public/images/poto-2.jpg" alt="" />
+          <img
+            class="w100 h100"
+            src="../../../../public/images/poto-2.jpg"
+            alt=""
+          />
         </li>
         <li class="col-3">
-          <img class="w100 h100" src="../../../../public/images/poto-1.jpg" alt="" />
+          <img
+            class="w100 h100"
+            src="../../../../public/images/poto-1.jpg"
+            alt=""
+          />
         </li>
       </ul>
     </div>

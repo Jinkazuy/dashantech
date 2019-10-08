@@ -68,7 +68,9 @@
     </nav>
     <!--<div class="pro-toast-wrapper "></div>-->
     <div
-      :class="['pro-toast-wrapper', { 'pro-toast-wrapper-hover': proLinkShow }]"
+      :class="['pro-toast-wrapper container', { 'pro-toast-wrapper-hover': proLinkShow }]"
+      @mouseenter="proToastWrapperMouseEnter"
+      @mouseleave="proToastWrapperMouseLeave"
     >
       <div class="container"></div>
     </div>
@@ -102,7 +104,9 @@ export default {
       // 解决mounted钩子触发多次的问题,因为浏览器DOM结构变化会导致mounted多次触发
       mountedNum: 0,
       // 产品中心连接鼠标移入
-      proLinkShow: false
+      proLinkShow: false,
+      // 因为鼠标移出产品中心会将下拉浮层隐藏，因为需要一个定时器来防止移出时立刻隐藏；
+      proToastTimeout: {}
     };
   },
   props: ["showNavBarShadow"],
@@ -185,6 +189,20 @@ export default {
     },
     proRouterUnHover() {
       console.log(222222);
+      // 移出产品中心A标签时，设置一个定时器延迟隐藏下拉浮层的时间；
+      // ∵ 因为用了Bootstrap的框架，所以navbar的ul li标签调整高度后会影响其他分辨率下的样式，
+      // ∴ 所以，在鼠标移出'产品中心'连接的时候，设置一个200毫秒的延迟，用户一般在200毫秒可以移入下拉的浮层
+      //    那么在鼠标移入这个浮层时，清除这个定时器即可；
+      this.proToastTimeout = setTimeout(() => {
+        this.proLinkShow = false;
+      }, 200);
+    },
+    // 鼠标移入下拉产品中心下拉浮层时，清除定时器；
+    proToastWrapperMouseEnter() {
+      this.proLinkShow = true;
+      clearTimeout(this.proToastTimeout);
+    },
+    proToastWrapperMouseLeave() {
       this.proLinkShow = false;
     }
   },
@@ -262,11 +280,13 @@ export default {
     margin-left: auto;
   }
   .navbar-collapse{
+    height: 100%;
     align-items: center;
     color: #999;
   }
   .navbar-right {
     margin-top: 0 !important;
+    height: 100%;
     li {
       color: #ccc;
       position: relative;
@@ -427,10 +447,9 @@ export default {
 }
 // 产品中心浮层模块；
 .pro-toast-wrapper {
-  width: 100%;
   height: 300px;
   background-color: #fff;
-  margin: -20px 0 0;
+  margin: -20px auto 0;
   transition: all .4s;
   transform: translateY(-300px);
   border-top: 1px solid rgba(0,0,0,0);

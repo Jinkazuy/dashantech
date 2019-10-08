@@ -1,12 +1,15 @@
 <template>
-  <div class="pro-modu-1 w100">
+  <div :class="['pro-modu-1', 'w100', mob ? 'pro-modu-1-mob-css' : '']">
     <div class="container">
       <div class="pro-modu-hd">
         <p class="pro-mo1-title">
-          大善科技 立足于大健康医疗产业链 是国内领先的医疗领域平台
+          大善科技 立足于大健康医疗产业链
+          <br v-if="mob" />是国内领先的医疗领域平台
         </p>
         <p class="pro-mo1-desc">
-          多年耕耘于大健康医疗产业，积累了丰富的行业经验及实施方案。
+          多年耕耘于大健康医疗产业，<br
+            v-if="mob"
+          />积累了丰富的行业经验及实施方案。
           <br />
           拥有国内众多一线客户的一致好评。
         </p>
@@ -35,6 +38,7 @@
     <div class="video-mask w100 h100">
       <video autoplay loop muted class="h100 vid posi-ab">
         <source
+          v-if="!mob"
           poster="../../../common/images/product/modu-1/11e36ace051064945d6e60bb10ae9282.jpg"
           src="../../../common/images/product/modu-1/228129277a.mp4"
           type="video/mp4"
@@ -47,7 +51,21 @@
 
 <script>
 export default {
-  name: "pro-modu1"
+  name: "pro-modu1",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("index-modu-1-加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -142,6 +160,22 @@ export default {
 @media (max-width: 992px) {
   .bt-info {
     height: 160px !important;
+  }
+}
+
+// =============== 移动端样式 ===================
+.pro-modu-1-mob-css {
+  height: 500px;
+  .container{
+    .pro-modu-hd {
+      .pro-mo1-title {
+        font-size: 20px;
+      }
+      .pro-mo1-desc {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
   }
 }
 </style>
