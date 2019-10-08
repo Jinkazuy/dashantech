@@ -125,6 +125,7 @@ export default {
                   font-size: 24px;
                   color: #14948a;
                   margin-bottom: 20px;
+                  font-weight: 700;
                 }
                 p {
                   font-size: 16px;

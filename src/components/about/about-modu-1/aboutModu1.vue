@@ -126,6 +126,9 @@ export default {
   .about-modu-info {
     top: 380px;
     left: 50%;
+    @media (max-width: 1366px) {
+      width: 90% !important;
+    }
     transform: translateX(-50%);
     height: 290px;
     background-color: #fff;

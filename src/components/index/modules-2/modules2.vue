@@ -64,6 +64,12 @@ export default {
     .modu-2-titles {
       position: absolute;
       left: 0;
+      @media (max-width: 1336px) {
+        left: 6%;
+      }
+      @media (max-width: 1366px) {
+        left: 6%;
+      }
       top: 80px;
       height: 84px;
       padding: 0;
@@ -77,6 +83,12 @@ export default {
       p {
         position: absolute;
         left: 0;
+        @media (max-width: 1336px) {
+          left: 6%;
+        }
+        @media (max-width: 1366px) {
+          left: 6%;
+        }
         font-size: 24px;
         line-height: 40px;
         font-weight: 700;
@@ -127,7 +139,8 @@ export default {
     }
     .modu-2-body {
       position: absolute;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       top: 410px;
       height: 334px;
       padding: 0;
@@ -167,6 +180,16 @@ export default {
         img {
           opacity: 1;
         }
+      }
+    }
+    @media (max-width: 1336px) {
+      .modu-2-body {
+        width:90%;
+      }
+    }
+    @media (max-width: 1366px) {
+      .modu-2-body {
+        width:90%;
       }
     }
   }

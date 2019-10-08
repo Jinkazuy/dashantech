@@ -29,6 +29,12 @@ const productPacs = resolve => {
     resolve(module);
   });
 };
+// 一级路由：产品详情-随访系统
+const productFollow = resolve => {
+  import("./views/Product-follow/productFollow.vue").then(module => {
+    resolve(module);
+  });
+};
 
 // 一级路由：公司动态
 const newsCenter = resolve => {
@@ -89,6 +95,11 @@ export default new Router({
       // 产品详情 - PACS
       path: "/productPacs",
       component: productPacs
+    },
+    {
+      // 产品详情 - 随访系统
+      path: "/productFollow",
+      component: productFollow
     },
     {
       // 公司动态

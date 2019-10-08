@@ -139,6 +139,9 @@ export default {
         padding: 0;
     }
     .pacs-mo5-illus-box {
+        @media (max-width: 1366px) {
+          width: 90% !important;
+        }
         img {
             width: 100%;
             transition: all .4s;

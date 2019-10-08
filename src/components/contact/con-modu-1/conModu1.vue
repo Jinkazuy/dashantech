@@ -52,15 +52,15 @@
           <ul class="w100 h100">
             <li class="w100">
               <h4>地址</h4>
-              <p>北京市丰台区南四环西路128号 诺德中心4号楼8层</p>
+              <p>北京市丰台区南四环西路128号 诺德中心4号楼8层&nbsp;&nbsp;</p>
             </li>
             <li>
               <h4>电话</h4>
-              <p>010-57220697</p>
+              <p>&nbsp;010-57220697&nbsp;</p>
             </li>
             <li>
               <h4>邮箱</h4>
-              <p>supportyou@dashantech.com.cn</p>
+              <p>&nbsp;supportyou@dashantech.com.cn&nbsp;</p>
             </li>
           </ul>
         </div>
@@ -297,7 +297,8 @@ export default {
             color: rgba(23, 35, 61, 1);
             h4 {
               font-size: 20px;
-              font-weight: 700;
+              font-weight: 900;
+              color: #14948a;
             }
             p {
               font-size: 14px;

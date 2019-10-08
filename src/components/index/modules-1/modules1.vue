@@ -269,9 +269,10 @@ export default {
 <style scoped lang="stylus">
 .home-cont-modu-1 {
     background-color: rgba(249,249,249,1);
-    padding-top: 220px;
+    padding-top: 160px;
     height: 1135px;
     .container {
+        padding: 0;
         display: block;
         .modu1-title {
             p {
@@ -284,13 +285,19 @@ export default {
         }
         .modu1-body {
             height: 518px;
-            padding: 0 58px;
+            padding: 0;
             position: relative;
             .hover-btn-box {
                 position: absolute;
                 padding: 42px 26px 42px 0;
                 box-sizing: border-box;
                 left: 0;
+                @media (max-width: 1336px) {
+                  left: 48px;
+                }
+                @media (max-width: 1366px) {
+                  left: 48px;
+                }
                 top: 0;
                 width: 174px;
                 border-right: 1px solid rgba(216,216,216,0.5);
@@ -306,6 +313,7 @@ export default {
                     position: absolute;
                     top: 0;
                     right: 0;
+                    width: 100%;
                   }
                 }
                 .hover-btn-1:hover, .hover-btn-2:hover, .hover-btn-3:hover {
@@ -334,6 +342,7 @@ export default {
                   opacity: 1;
                 }
             }
+
             // 首页模块1 - 公用效果
             // 查看更多按钮
             .on-more {
@@ -365,6 +374,12 @@ export default {
             .hover-view-box {
                 position: absolute;
                 left: 174px;
+                @media (max-width: 1336px) {
+                  left: 222px;
+                }
+                @media (max-width: 1366px) {
+                  left: 222px;
+                }
                 top: 0;
                 right: 0;
                 .hover-view-1, .hover-view-2, .hover-view-3 {
@@ -441,6 +456,12 @@ export default {
                         background-size: cover;
                     }
                 }
+                @media (max-width: 1336px) {
+                  width: 80%;
+                }
+                @media (max-width: 1366px) {
+                  width: 80%;
+                }
                 /*首页模块1 - 切换视图2*/
                 .hover-view-2 {
                     padding: 0 36px;
@@ -485,6 +506,12 @@ export default {
                                     }
                                 }
                             }
+                        }
+                        li:nth-of-type(3){
+                          margin: 0 0 34px 0;
+                        }
+                        li:nth-of-type(6){
+                          margin: 0 0 34px 0;
                         }
                         li:hover{
                             box-shadow: 0 10px 25px 10px rgba(0,0,150,0.2), 0 20px 15px 0 rgba(0,0,0,.3);

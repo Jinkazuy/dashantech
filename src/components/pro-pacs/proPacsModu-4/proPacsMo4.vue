@@ -91,6 +91,9 @@ export default {
         .db-text {
             color: #fff;
             width: 100%;
+            @media (max-width: 1366px) {
+              width: 80% !important;
+            }
             padding: 0 0 80px;
             display: flex;
             justify-content: space-around;

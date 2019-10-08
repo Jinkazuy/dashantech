@@ -156,6 +156,9 @@ export default {
       position: absolute;
       bottom: -95px;
       left: 50%;
+      @media (max-width: 1366px) {
+        width: 90% !important;
+      }
       transform: translateX(-50%);
       height: 190px;
       padding: 0;

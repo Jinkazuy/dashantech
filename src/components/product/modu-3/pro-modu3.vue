@@ -199,6 +199,12 @@ export default {
         transform: translateX(-50%)
         bottom: 50px;
         color: #fff;
+        @media (max-width: 1336px) {
+          width: 90%;
+        }
+        @media (max-width: 1366px) {
+          width: 90%;
+        }
         p {
           font-size: 20px;
           margin: 0 0 40px 0;

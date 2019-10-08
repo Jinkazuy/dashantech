@@ -79,8 +79,8 @@
           <li class="programme">
             <h3 class="bottom-nav-title">行业方案</h3>
             <ul class="nav-list">
-              <li><a href="#">PACS影像云</a></li>
-              <li><a href="#">随访系统</a></li>
+              <li><router-link to="/productPacs">PACS影像云</router-link></li>
+              <li><router-link to="/productFollow">随访系统</router-link></li>
               <li><a href="#">互联网医院信息平台</a></li>
               <li><a href="#">移动医生查房系统</a></li>
               <li><a href="#">电子胶片</a></li>
@@ -136,7 +136,6 @@ export default {
 <style scoped lang="stylus">
 // ============== 重置BS样式 - 开始 ==============
 .container {
-  padding: 0;
   line-height: 1;
 }
 // ============== 重置BS样式 - 结束 ==============
@@ -150,6 +149,10 @@ export default {
     display: block;
     color: #fff;
     padding: 0 58px;
+    box-sizing: border-box;
+    @media (max-width: 1336px) {
+      width: 1319px !important;
+    }
     // 头部logo部分 - 开始
     .bottom-header{
       z-index: 1;
