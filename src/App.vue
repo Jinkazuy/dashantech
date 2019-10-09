@@ -1,5 +1,8 @@
 <template>
-  <div class="better-wrapper" ref="betterWrapper">
+  <div
+    :class="['better-wrapper', mob ? 'better-wrapper-mob' : '']"
+    ref="betterWrapper"
+  >
     <div id="app">
       <!--引入nav-bar组件-->
       <!--根据当前router-view传过来的参数，然后传导航栏组件，从而渲染当前已经激活的link的css样式-->
@@ -28,14 +31,23 @@ export default {
       showNavBarShadow: false,
       showSideBar: false,
       // 解决mounted钩子触发多次的问题,因为浏览器DOM结构变化会导致mounted多次触发
-      mountedNum: 0
+      mountedNum: 0,
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
     };
   },
   mounted() {
     // 监听页面实时滚动值，从而控制导航栏投影和侧边栏的显示/隐藏
     window.addEventListener("scroll", this.appScroll);
   },
-  updated() {},
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("index-modu-1-加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  },
   methods: {
     // 实时监听浏览器滚动值
     appScroll() {
@@ -96,5 +108,11 @@ export default {
   // 选中的轮播点
   .swiper-pagination-bullet-active {
     background-color: #14948a !important;
+  }
+  // ========== 移动端样式 ============
+  .better-wrapper-mob {
+    #app {
+      padding-top: 60px;
+    }
   }
 </style>

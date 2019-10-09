@@ -1,5 +1,5 @@
 <template>
-  <div id="bottom" class="w100">
+  <div id="bottom" :class="['w100', mob ? 'bottom-mob' : '']">
     <div class="container h100">
       <div class="bottom-header w100">
         <div class="bt-logo">
@@ -22,7 +22,7 @@
               href="https://map.baidu.com/poi/%E5%A4%A7%E5%96%84%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@12947142.56,4818307.47,12z?uid=91dd81486fd3d57a26e0a0e2&primaryUid=4017263196093995871&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&querytype=detailConInfo&da_src=shareurl"
             >
               <i class="icon iconfont iconditu"></i>
-              <span class="text">北京南四环西路128号 - 诺德中心4号,楼8层</span>
+              <span class="text">北京南四环西路128号 - 诺德中心4号,<br v-if="mob"/>楼8层</span>
             </a>
           </li>
         </ul>
@@ -32,7 +32,7 @@
           <img class="w100 h100" src="../../../../public/images/Shan.png" />
         </div>
         <ul class="clearfix">
-          <li class="bottom-nav">
+          <li class="bottom-nav" v-if="!mob">
             <h3 class="bottom-nav-title">网站导航</h3>
             <ul class="nav-list">
               <li><router-link to="/home">首页</router-link></li>
@@ -127,6 +127,20 @@ import logoMg from "../logoMg";
 
 export default {
   name: "bottom",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("index-modu-1-加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  },
   components: {
     logoMg
   }
@@ -453,6 +467,74 @@ export default {
       }
     }
     // 底部部分 - 结束
+  }
+}
+#bottom.bottom-mob {
+  width: 100% !important;
+  .container {
+    padding: 0;
+    width: 100% !important;
+    .bottom-header {
+      height: 230px;
+      width: 100%;
+      padding: 0;
+      display: block;
+      .bt-logo {
+        margin: 20px auto;
+      }
+      ul {
+        padding: 0 0 0 20px;
+        box-sizing: border-box;
+        display: block;
+        margin: 0;
+        height: 160px;
+        li {
+          margin-bottom: 20px;
+          text-align: center;
+        }
+      }
+    }
+    .bottom-cont {
+      height: 800px;
+      .lg-d {
+        width: 100%;
+      }
+      ul {
+        padding: 0 0 0 20px;
+        li.cooperation {
+          width: 100%;
+          h3 {
+            width: 60%;
+          }
+          ul.nav-list {
+            li {
+              ul {
+                margin: 0 30px 30px 0;
+              }
+            }
+          }
+        }
+        li.programme {
+          width: 100%;
+          ul.nav-list {
+            li {
+              float: left;
+              margin: 0 20px 20px 0;
+              padding: 10px;
+              border-radius: 2px;
+              background-color: #215987;
+            }
+          }
+        }
+      }
+      .follow {
+        padding: 0 0 0 20px;
+      }
+    }
+    .bottom-footer {
+      padding: 20px;
+      box-sizing: border-box;
+    }
   }
 }
 </style>

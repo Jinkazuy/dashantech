@@ -4,7 +4,8 @@
     :class="[
       'navbar-wrapper w100',
       showNavBarShadow ? 'navbar-shadow' : '',
-      navBarHeightFlage ? 'navbar-h-low' : ''
+      navBarHeightFlage ? 'navbar-h-low' : '',
+      mob ? 'navbar-wrapper-mob' : ''
     ]"
   >
     <!--从这里开始，使用bootstrap的结构-->
@@ -34,31 +35,31 @@
           <ul class="nav navbar-nav navbar-right">
             <li>
               <router-link to="/">首页</router-link>
-              <div class="border-line border-line-home"></div>
+              <div class="border-line border-line-home" v-if="!mob"></div>
             </li>
             <li>
               <router-link to="/about">关于我们</router-link>
-              <div class="border-line"></div>
+              <div class="border-line" v-if="!mob"></div>
             </li>
             <li @mouseenter="proRouterHover" @mouseleave="proRouterUnHover">
               <router-link to="/product">产品中心</router-link>
-              <div class="border-line"></div>
+              <div class="border-line" v-if="!mob"></div>
             </li>
             <li>
               <router-link to="/newsCenter">公司动态</router-link>
-              <div class="border-line"></div>
+              <div class="border-line" v-if="!mob"></div>
             </li>
             <li>
               <router-link to="/solutionCenter">解决方案</router-link>
-              <div class="border-line"></div>
+              <div class="border-line" v-if="!mob"></div>
             </li>
             <li>
               <router-link to="/join">加入我们</router-link>
-              <div class="border-line"></div>
+              <div class="border-line" v-if="!mob"></div>
             </li>
             <li>
               <router-link to="/contact">联系大善</router-link>
-              <div class="border-line"></div>
+              <div class="border-line" v-if="!mob"></div>
             </li>
           </ul>
         </div>
@@ -68,7 +69,10 @@
     </nav>
     <!--<div class="pro-toast-wrapper "></div>-->
     <div
-      :class="['pro-toast-wrapper container', { 'pro-toast-wrapper-hover': proLinkShow }]"
+      :class="[
+        'pro-toast-wrapper container',
+        { 'pro-toast-wrapper-hover': proLinkShow }
+      ]"
       @mouseenter="proToastWrapperMouseEnter"
       @mouseleave="proToastWrapperMouseLeave"
     >
@@ -106,10 +110,20 @@ export default {
       // 产品中心连接鼠标移入
       proLinkShow: false,
       // 因为鼠标移出产品中心会将下拉浮层隐藏，因为需要一个定时器来防止移出时立刻隐藏；
-      proToastTimeout: {}
+      proToastTimeout: {},
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
     };
   },
   props: ["showNavBarShadow"],
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("index-modu-1-加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  },
   mounted() {
     // 监听页面实时滚动值，从而控制导航栏高度的值；
     window.addEventListener("scroll", this.pageScroll);
@@ -185,7 +199,10 @@ export default {
     // 产品中心hover
     proRouterHover() {
       console.log(1111111);
-      this.proLinkShow = true;
+      // 在  不是  移动端的情况下才能展开下拉菜单；
+      if (!this.mob) {
+        this.proLinkShow = true;
+      }
     },
     proRouterUnHover() {
       console.log(222222);
@@ -235,7 +252,7 @@ export default {
         width: 170px;
         height: 50px;
         padding: 0;
-        margin-left: 70px !important;
+        margin-left: 28px !important;
         border-radius: 25px;
         position: relative;
         .ds-logo-navBar {
@@ -361,16 +378,21 @@ export default {
 
 /*导航栏最外层样式*/
 .navbar-wrapper{
+  border-bottom: 2px solid #14948a;
+  box-sizing: border-box;
   position: fixed;
   top: 0;
   left: 0;
   background-color: #fff;
   height: 80px;
-  z-index: 9999;
+  z-index: 99999;
   box-shadow:0 1px 0 0 rgba(0,0,0,.05);
   transition: all .5s;
   // 将BS的导航栏按钮清除右侧浮动,需要一层一层找到；
   .navbar {
+    border-radius: 0 !important;
+    border-bottom: 2px solid #14948a;
+    box-sizing: border-box;
     .container-fluid {
       .navbar-collapse {
         .navbar-right {
@@ -466,5 +488,49 @@ export default {
   transform: translateY(0);
   border-top: 1px solid rgba(0,0,0,.05);
   box-shadow:0 10px 20px 0 rgba(0,0,0,.1);
+}
+// =========== 移动端样式 =============
+.navbar-wrapper-mob {
+  height: 60px;
+  .navbar{
+    min-height: 60px;
+    .container-fluid {
+      .navbar-header {
+        height: 60px;
+        padding-top: 0;
+        // 按钮
+        .navbar-toggle {
+          margin-top: 14px;
+          margin-right: 30px;
+        }
+        // logo
+        .navbar-brand {
+          margin-top: 16px;
+          height: 30px;
+          width: 102px;
+          .log-mg {}
+        }
+      }
+      // 下拉菜单
+      #bs-example-navbar-collapse-1 {
+        ul.navbar-nav {
+          margin: 0 auto;
+          padding: 6px 0;
+          li {
+            background-color: #eee;
+            border-radius: 2px;
+            float: left;
+            width: 30%;
+            margin: 1.5%;
+            a {
+              text-align: center;
+            }
+            a.router-link-exact-active {
+            }
+          }
+        }
+      }
+    }
+  }
 }
 </style>

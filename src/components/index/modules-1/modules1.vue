@@ -1,9 +1,13 @@
 <template>
-  <div class="home-cont-modu-1 w100">
+  <div :class="['home-cont-modu-1', 'w100', mob ? 'home-cont-modu-1-mob' : '']">
     <div class="container">
       <div class="modu1-title w100">
         <p class="ft-sz-40 w100">
-          大善科技始终秉承着“中国科技、服务华人”的经营理念<br />专注大健康医疗领域深度挖掘
+          大善科技始终秉承着
+          <br v-if="mob" />
+          “中国科技、服务华人”的经营理念
+          <br />
+          专注大健康医疗领域深度挖掘
         </p>
       </div>
       <div class="modu1-body w100">
@@ -246,8 +250,18 @@ export default {
           p:
             "大善随访系统解决方案随访系统将互联网、物联网技术与患者院内外医疗健康管理结合，以智能随访、智能宣教、智能提醒、健康监测、医护患沟通为患者管理主要手段，通过平台化的设计理念，为不同类型医疗机构，打造统一随访平台。"
         }
-      ]
+      ],
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
     };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("index-modu-1-加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
   },
   methods: {
     hoverBtn1Cl() {
@@ -615,5 +629,143 @@ export default {
             }
         }
     }
+}
+// ================== 移动端样式 ====================
+.home-cont-modu-1-mob {
+  padding-top: 60px;
+  height: 600px;
+  .container {
+    .modu1-title {
+      p {
+        font-size: 20px !important;
+        line-height: 32px;
+        padding: 0 20px;
+        margin: 0 0 20px 0;
+      }
+    }
+    .modu1-body {
+      height: 250px;
+      .hover-btn-box {
+        position: relative;
+        width: 100%;
+        height: 80px;
+        padding: 0 30px;
+        left: 0 !important;
+        display: flex;
+         justify-content: space-between;
+         align-items: center;
+        .hover-btn-1, .hover-btn-2, .hover-btn-3 {
+          position: relative;
+          margin: 0;
+          top: 0;
+          left: 0;
+          width: 80px;
+          height: 30px;
+          transform: translateY(0);
+          img {
+            position: relative;
+          }
+        }
+        .hover-btn-1::after, .hover-btn-2::after, .hover-btn-3::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          height: 3px;
+          width: 1%;
+          background-color: #fff;
+          transition: all .4s;
+        }
+        .hover-btn-1 {
+          transform: translateY(-1px);
+        }
+        .hover-btn-2 {
+          transform: translateY(-4px);
+        }
+        .hover-btn-3 {
+          transform: translateY(-2px);
+        }
+        .hover-line {
+          display: none;
+        }
+        .hover-btn-active::after {
+          width: 100%;
+          background-color: #14948a;
+        }
+      }
+      .hover-view-box {
+        left: 0;
+        top: 80px;
+        bottom: 0;
+        height: auto;
+        width: 100%;
+        .hover-view-1 {
+          padding: 0 10px;
+          a {
+            div {
+              bottom: -140px !important;
+              h3 {
+                font-size: 12px !important;
+                line-height: 10px !important;
+              }
+              p {
+                display: none;
+              }
+            }
+          }
+          .on-more {
+            bottom: -50px;
+          }
+        }
+        .hover-view-2 {
+          padding: 0 10px;
+          width: 100%;
+          ul {
+            padding: 0;
+            li {
+              height: 120px;
+              margin-right: 4.8%;
+              margin-bottom: 16px !important;
+              a {
+                div {
+                  width: 100%;
+                  top: 80px !important;
+                  padding: 6px 2px 0 !important;
+                  h3 {
+                    font-size: 12px !important;
+                    line-height: 20px;
+                    width: 100%;
+                  }
+                  p {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+          .on-more {
+            left: 50%;
+            bottom: -140px;
+          }
+        }
+        .hover-view-3 {
+          padding: 0 10px;
+          ul {
+            margin: 0;
+            li {
+              margin: 0 2% 2% 0;
+              /*float: none;*/
+              width: 48%;
+              /*height: 90%;*/
+              /*margin: 0 auto 20px;*/
+            }
+          }
+          .on-more {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 </style>

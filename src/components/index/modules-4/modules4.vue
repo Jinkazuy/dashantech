@@ -1,5 +1,5 @@
 <template>
-  <div class="home-cont-modu-4 w100">
+  <div :class="['home-cont-modu-4', 'w100' ,mob ? 'home-cont-modu-4-mob' : '']">
     <div class="container h100">
       <div class="modu-4-header">
         <img
@@ -31,10 +31,10 @@
           </swiper-slide>
         </swiper>
         <!--swiper导航按钮，必须写在外边儿，不然会出问题，只要类名对上了就行-->
-        <div class="swiper-button-prev " slot="button-prev">
+        <div class="swiper-button-prev " slot="button-prev" v-if="!mob">
           <i class="iconfont iconchevron-back-solid"></i>
         </div>
-        <div class="swiper-button-next" slot="button-next">
+        <div class="swiper-button-next" slot="button-next" v-if="!mob">
           <i class="iconfont iconchevron-forward-solid"></i>
         </div>
       </div>
@@ -89,7 +89,7 @@
             />
           </li>
         </ul>
-        <ul class="operative-2">
+        <ul class="operative-2" v-if="!mob">
           <li></li>
           <li></li>
           <li></li>
@@ -135,8 +135,18 @@ export default {
           avatar: "./images/avatar.jpg",
           forKey: 3
         }
-      ]
+      ],
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
     };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("index-modu-1-加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
   },
   components: {
     swiper
@@ -278,5 +288,52 @@ export default {
             }
         }
     }
+}
+// =========== 移动端样式 =============
+.home-cont-modu-4-mob {
+  height: 510px;
+  .container {
+    .modu-4-header {
+      img:first-of-type {
+        top: 20px;
+        left: 20px;
+        width: 30px!important;
+        height: 24px!important;
+      }
+      img:last-of-type {
+        top: 40px;
+        width: 70px!important;
+        height: 40px!important;
+      }
+    }
+    .modu-4-body {
+      .swiper-container {
+        top: 120px;
+        width: 88%;
+        .banner-items {
+          width: 100% !important;
+          .cont-wrapper {
+            p {
+              padding: 0 16px;
+              font-size: 12px;
+              line-height: 20px;
+              margin-top: -20px;
+            }
+          }
+        }
+      }
+    }
+    .modu-4-foo {
+      bottom: 30px !important;
+      padding: 0 20px !important;
+      height: 30px;
+      ul {
+        height: 100% !important;
+        li {
+          height: 100% !important;
+        }
+      }
+    }
+  }
 }
 </style>

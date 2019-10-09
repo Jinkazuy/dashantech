@@ -1,5 +1,5 @@
 <template>
-  <div class="side-bar">
+  <div :class="['side-bar', mob ? 'side-bar-mob' : '']">
     <transition name="back-top-trans">
       <div class="back-top" @click="moveTop" v-show="showSideBar">
         <i class="iconfont iconchevron-top-solid"></i>
@@ -18,6 +18,20 @@
 export default {
   name: "sideBar",
   props: ["showSideBar"],
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("index-modu-1-加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  },
   methods: {
     // 返回顶部，借用jquery
     moveTop() {
@@ -31,7 +45,6 @@ export default {
       }
       // eslint-disable-next-line
       $("body").animate({ scrollTop: 0 }, 300);
-      console.log(12);
       return false;
     }
   }
@@ -109,5 +122,21 @@ export default {
             opacity: 1;
         }
     }
+}
+
+// ============== 移动端样式 =================
+.side-bar-mob {
+  bottom: 140px;
+  right: 20px;
+  .we-chat {
+    .side-qr-code {
+      display: none;
+    }
+  }
+  .we-chat:hover {
+    .side-qr-code {
+      display: block;
+    }
+  }
 }
 </style>

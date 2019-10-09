@@ -1,5 +1,5 @@
 <template>
-  <div class="home-cont-modu-2 w100">
+  <div :class="['home-cont-modu-2', 'w100', mob ? 'home-cont-modu-2-mob' : '']">
     <div class="container w100 h100">
       <h3 class="modu-2-titles">
         <img
@@ -10,7 +10,7 @@
       </h3>
       <div class="modu-2-headers w100">
         <p>
-          北京大善青松科技有限公司（简称“大善科技”），<br />立足北京中关村高新技术资源优势，深入医疗大健康产业。
+          北京大善青松科技有限公司（简称“大善科技”），<br v-if="!mob" />立足北京中关村高新技术资源优势，深入医疗大健康产业。
         </p>
         <div class="modu-2-headers-logo">
           <div class="logo-wrapper w100 h100">
@@ -48,6 +48,20 @@ import logoMg from "../../layouts/logoMg";
 
 export default {
   name: "modules2",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("index-modu-1-加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  },
   components: {
     logoMg
   }
@@ -190,6 +204,46 @@ export default {
     @media (max-width: 1366px) {
       .modu-2-body {
         width:90%;
+      }
+    }
+  }
+}
+// ================== 移动端样式 ====================
+.home-cont-modu-2-mob {
+  height: 850px;
+  .container {
+    .modu-2-titles {
+      width: 69px;
+      height: 42px;
+    }
+    .modu-2-headers {
+      top: 140px;
+      p {
+        width: 86%;
+        font-size: 14px;
+        line-height: 24px;
+      }
+      .modu-2-headers-logo {
+        top: -60px;
+        right: 40px;
+        width: 134px;
+        height: 40px;
+      }
+    }
+    ul.modu-2-body {
+      top: 240px;
+      display: block;
+      li {
+        padding: 0;
+        width: 100%;
+        height: 180px;
+        margin-bottom: 20px;
+        p {
+          padding: 10px;
+          font-size: 12px;
+          line-height: 20px;
+          margin: 0;
+        }
       }
     }
   }

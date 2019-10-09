@@ -165,15 +165,32 @@ export default {
 
 // =============== 移动端样式 ===================
 .pro-modu-1-mob-css {
-  height: 500px;
+  height: 600px;
   .container{
     .pro-modu-hd {
       .pro-mo1-title {
         font-size: 20px;
+        font-weight: 700;
       }
       .pro-mo1-desc {
         font-size: 14px;
         line-height: 20px;
+      }
+    }
+  }
+  .bt-info {
+    height: 260px !important;
+    ul.container {
+      display: block;
+      li {
+        float: none;
+        width: 100%;
+        h4 {
+          font-size: 14px;
+        }
+        p {
+          font-size: 12px;
+        }
       }
     }
   }

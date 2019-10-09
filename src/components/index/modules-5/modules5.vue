@@ -1,5 +1,5 @@
 <template>
-  <div class="home-cont-modu-4 w100">
+  <div :class="['home-cont-modu-4', 'w100', mob ? 'home-cont-modu-4-mob' : '']">
     <div class="us-pics">
       <ul class="ln-1 w100">
         <li class="col-1">
@@ -55,8 +55,8 @@
         class="titles"
       />
       <p class="join-text w100">
-        在大善科技可以展示你的所有才华，我们期待这样的你加入进来。<br /><br />医疗科学工作者、大数据分析师、高级JAVA开发、数据可视化工程师。
-        <br /><br />如果您具备创业精神，我们更欢迎你的加入，一起分享行业成果。
+        在大善科技可以展示你的所有才华，<br v-if="mob"/>我们期待这样的你加入进来。<br /><br />医疗科学工作者、大数据分析师、<br v-if="mob"/>高级JAVA开发、数据可视化工程师。
+        <br /><br />如果您具备创业精神，<br v-if="mob"/>我们更欢迎你的加入，一起分享行业成果。
       </p>
       <div class="on-more">
         <router-link class="w100 h100" to="/join">加入我们</router-link>
@@ -67,7 +67,21 @@
 
 <script>
 export default {
-  name: "modules5"
+  name: "modules5",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("index-modu-1-加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -163,5 +177,35 @@ export default {
             }
         }
     }
+}
+// ============ 移动端样式 ===========
+.home-cont-modu-4-mob {
+  height: 580px;
+  .join-us {
+    width: 100%;
+    padding: 0 10px;
+    height: 40%;
+    right: 0;
+    img {
+      display: block;
+      width: 80px;
+      margin: 0 auto;
+    }
+    .join-text {
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+    }
+    .on-more {
+      margin: 0 auto;
+    }
+  }
+  .us-pics {
+    height: 32%;
+    left:0;
+    right: 0;
+    width: 100%;
+    bottom:20px;
+  }
 }
 </style>

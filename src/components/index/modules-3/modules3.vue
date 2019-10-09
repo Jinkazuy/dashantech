@@ -1,8 +1,8 @@
 <template>
-  <div class="home-cont-modu-3 w100">
+  <div :class="['home-cont-modu-3', 'w100', mob ? 'home-cont-modu-3-mob' : '']">
     <div class="container h100">
       <!--左侧操作列表-->
-      <div class="modu-3-news-list">
+      <div class="modu-3-news-list" v-if="!mob">
         <div class="news-list-titles">
           <img src="../../../common/images/titles/news-title-news.png" />
         </div>
@@ -36,6 +36,9 @@
       </div>
       <!--右侧文章列表-->
       <div class="modu-3-news-cont h100">
+        <div class="news-list-titles" v-if="mob">
+          <img src="../../../common/images/titles/news-title-news.png" />
+        </div>
         <!--顶部大模块-->
         <div class="news-cont-top w100">
           <div class="left-cont h100">
@@ -276,11 +279,20 @@ export default {
             ]
           }
         }
-      ]
+      ],
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
     };
   },
   created() {
     this.articleInfo = this.articleInfoData[0];
+
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("index-modu-1-加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
   },
   methods: {
     newsListRoute1() {
@@ -582,5 +594,79 @@ export default {
             }
         }
     }
+}
+// ========== 移动端样式 ===========
+.home-cont-modu-3 {
+  height: 680px;
+  .container {
+    .modu-3-news-cont {
+      position: relative;
+      right: 0;
+      width: 98%;
+      margin: 0 auto;
+      // 移动端单独写一个标题
+      .news-list-titles {
+        width: 80px;
+        margin: 40px auto 0;
+        img {
+          width: 100%;
+        }
+      }
+      .news-cont-top {
+        top: 120px;
+        height: 160px;
+        .left-cont {
+          .left-cont-dates {
+            left: 10px;
+            top: 10px;
+            .month {
+              font-size: 16px;
+            }
+            .dates {
+              font-size: 12px;
+            }
+          }
+          .left-cont-titles {
+            left: 10px;
+            top: 40px;
+            p {
+              font-size: 16px;
+            }
+          }
+          .left-cont-conts {}
+          .on-more {
+             left: 10px;
+            bottom: 16px;
+            width: 70px;
+            height: 24px;
+            font-size: 12px;
+            a {
+              line-height: 24px;
+            }
+          }
+        }
+        .right-img {
+          img {}
+        }
+      }
+      .news-cont-bot {
+        top: 320px;
+        ul.bot-cont {
+          li {
+            a {
+              img {}
+              h4 {
+                font-size: 12px;
+                line-height: 20px;
+              }
+              .bot-cont-dates {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 </style>
