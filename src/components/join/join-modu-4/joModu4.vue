@@ -1,5 +1,5 @@
 <template>
-  <div class="join-modu-4 w100">
+  <div :class="['join-modu-4', 'w100', mob ? 'join-modu-4-mob' : '']">
     <div class="container">
       <div class="jo-mo4-tit">
         <img
@@ -25,7 +25,9 @@
               <img src="../../../common/images/join/bd-icon-2.png" />
             </div>
             <p class="bd-link">视频面试 & 面试邀约</p>
-            <p class="bd-desc">部分地区视频面试后<br />等待面试邀约</p>
+            <p class="bd-desc">
+              部分地区视频面试后 &nbsp; <br v-if="!mob" />等待面试邀约
+            </p>
           </li>
           <li class="mo4-bd-arr h100">
             <i class="iconfont iconjiantou"></i>
@@ -45,7 +47,21 @@
 
 <script>
 export default {
-  name: "joModu4"
+  name: "joModu4",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -107,5 +123,45 @@ export default {
             }
         }
     }
+}
+//  =================== 移动端样式 ================
+.join-modu-4-mob {
+  height: auto;
+  .container {
+    padding: 40px 0;
+    .jo-mo4-tit {
+      width: 69px;
+      height: 42px;
+    }
+    .jo-mo4-bd {
+      height: auto;
+      ul {
+        display: block;
+        li.mo4-bd-mo {
+          .bd-icon {
+            height: 30px;
+            img {
+              height: 100%;
+            }
+          }
+          .bd-link {}
+          .bd-desc {
+            font-size: 12px;
+          }
+        }
+        li.mo4-bd-arr {
+          i {
+            position: relative;
+            top: 0;
+            transform: translateX(-50%) rotateZ(0);
+            opacity: .4;
+            font-size: 32px;
+            color: #14948a;
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+  }
 }
 </style>

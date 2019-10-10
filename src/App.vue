@@ -37,8 +37,23 @@ export default {
     };
   },
   mounted() {
-    // 监听页面实时滚动值，从而控制导航栏投影和侧边栏的显示/隐藏
+    // 1、监听页面实时滚动值，从而控制导航栏投影和侧边栏的显示/隐藏
+    // 2、将bootstrap下拉导航navigationBar，点击屏幕或者滚动屏幕时，隐藏起来,否则只能再次点击汉堡建才能将bootstrap的下拉菜单隐藏起来；
     window.addEventListener("scroll", this.appScroll);
+    // 这里是点击view-router中的内容，隐藏导航下拉菜单，但是view-router标签不能通过JQ选择器选择到，所以用#app>子集，选到每个view-router中的内容；
+    // 将bootstrap下拉导航navigationBar，点击屏幕或者滚动屏幕时，隐藏起来,否则只能再次点击汉堡建才能将bootstrap的下拉菜单隐藏起来；
+    // 因为jquery在初始化页面时不能马上拿到DOM元素，所以延迟一下即可；
+    setTimeout(() => {
+      // eslint-disable-next-line
+      $(
+        "#app>.home,.about,.product,.news-center,.join,.contact,.product-pacs"
+      ).on("click", function() {
+        // eslint-disable-next-line
+        $("#bs-example-navbar-collapse-1")
+          .removeClass("show")
+          .addClass("collapse");
+      });
+    }, 1000);
   },
   created() {
     if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
@@ -75,6 +90,11 @@ export default {
         this.showSideBar = false;
         console.log("返回顶部 false");
       }
+      // 将bootstrap下拉导航navigationBar，点击屏幕或者滚动屏幕时，隐藏起来,否则只能再次点击汉堡建才能将bootstrap的下拉菜单隐藏起来；
+      // eslint-disable-next-line
+      $("#bs-example-navbar-collapse-1")
+        .removeClass("show")
+        .addClass("collapse");
     },
     // 获取浏览器距离顶部的位置
     scrollTopPosition() {

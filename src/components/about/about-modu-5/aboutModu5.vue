@@ -1,5 +1,5 @@
 <template>
-  <div class="about-modu-5 w100">
+  <div :class="['about-modu-5', 'w100', mob ? 'about-modu-5-mob' : '']">
     <div class="container">
       <div class="ab-mo5-title posi-ab">
         <img src="../../../common/images/titles/about-title-Reasons.png" />
@@ -53,7 +53,21 @@
 
 <script>
 export default {
-  name: "aboutModu5"
+  name: "aboutModu5",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("index-modu-1-加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -155,5 +169,47 @@ export default {
         }
       }
     }
+}
+// ============= 移动端样式 ===========
+.about-modu-5-mob {
+  height: auto;
+  padding-bottom: 99px;
+  .container {
+    display: block;
+    .ab-mo5-title {
+      position: relative;
+      width: 100%;
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      top: 30px;
+      margin-bottom: 20px;
+      img {
+        width: 116px;
+        height: 44px;
+      }
+    }
+    .ab-mo5-info {
+      position: relative;
+      top: 0;
+      margin-bottom: 20px;
+      h3 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+    .ab-mo5-body {
+      position: relative;
+      width: 98%;
+      top: 0;
+      .more-button {
+        position: relative;
+        top: 0;
+      }
+    }
+  }
 }
 </style>

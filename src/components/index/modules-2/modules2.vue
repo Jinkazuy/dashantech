@@ -10,7 +10,9 @@
       </h3>
       <div class="modu-2-headers w100">
         <p>
-          北京大善青松科技有限公司（简称“大善科技”），<br v-if="!mob" />立足北京中关村高新技术资源优势，深入医疗大健康产业。
+          北京大善青松科技有限公司（简称“大善科技”），<br
+            v-if="!mob"
+          />立足北京中关村高新技术资源优势，深入医疗大健康产业。
         </p>
         <div class="modu-2-headers-logo">
           <div class="logo-wrapper w100 h100">

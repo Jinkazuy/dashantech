@@ -1,5 +1,5 @@
 <template>
-  <div :class="['home-cont-modu-4', 'w100' ,mob ? 'home-cont-modu-4-mob' : '']">
+  <div :class="['home-cont-modu-4', 'w100', mob ? 'home-cont-modu-4-mob' : '']">
     <div class="container h100">
       <div class="modu-4-header">
         <img

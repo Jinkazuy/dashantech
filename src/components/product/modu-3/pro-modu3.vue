@@ -1,5 +1,5 @@
 <template>
-  <div class="pro-modu-3 w100">
+  <div :class="['pro-modu-3', 'w100', mob ? 'pro-modu-3-mob' : '']">
     <div class="pro-modu-bg w100 h100"></div>
     <div class="container h100">
       <div class="pro-mo3-hd w100">
@@ -86,7 +86,21 @@
 
 <script>
 export default {
-  name: "pro-modu3"
+  name: "pro-modu3",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -242,5 +256,54 @@ export default {
         opacity: 1;
       }
     }
+}
+// ============== 移动端样式 ===========
+.pro-modu-3-mob {
+  height: auto;
+  .container {
+    display: block;
+    .pro-mo3-hd {
+      position: relative;
+      margin: 0 0 40px;
+      h4 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 12px;
+        padding: 0 40px;
+      }
+    }
+    .pro-mo3-bd {
+      position: relative;
+      top: 0;
+      width: 100%;
+      ul {
+        margin: 0;
+        width: 100%;
+        li {
+          .num {
+            .number {
+              font-size: 20px;
+            }
+            .p-type {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    .pro-mo3-ft {
+      position: relative;
+      &>p {
+        font-size: 12px;
+        margin: 0 0 16px;
+      }
+      ul {
+        li {
+          height: 50px;
+        }
+      }
+    }
+  }
 }
 </style>

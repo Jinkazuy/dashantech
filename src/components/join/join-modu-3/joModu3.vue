@@ -1,5 +1,5 @@
 <template>
-  <div class="join-modu-3">
+  <div :class="['join-modu-3', mob ? 'join-modu-3-mob' : '']">
     <div class="container">
       <div class="jo-mo3-tit">
         <img
@@ -65,7 +65,21 @@
 
 <script>
 export default {
-  name: "joModu3"
+  name: "joModu3",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -122,5 +136,25 @@ export default {
             }
         }
     }
+}
+// =========== 移动端样式 ==========
+.join-modu-3-mob {
+  .container {
+    padding: 0 20px;
+    .jo-mo3-tit {
+      width: 69px;
+      height: 42px;
+    }
+    .jo-mo3-ft {
+      height: 250px;
+      ul {
+        li {
+          p {
+            font-size: 12px !important;
+          }
+        }
+      }
+    }
+  }
 }
 </style>

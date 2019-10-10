@@ -64,6 +64,7 @@ export default {
     console.log(12);
     return false;
   },
+  methods: {},
   components: {
     homeBanner,
     homeModules1,

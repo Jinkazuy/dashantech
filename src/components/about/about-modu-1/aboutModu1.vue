@@ -1,6 +1,8 @@
 <template>
   <!--banner部分-->
-  <div class="about-modu-1 w100 posi-re">
+  <div
+    :class="['about-modu-1', 'w100', 'posi-re', mob ? 'about-modu-1-mob' : '']"
+  >
     <vue-particles
       color="#dedede"
       :particleOpacity="0.3"
@@ -27,7 +29,7 @@
     <div class="about-modu-text w100 posi-ab">
       <p class="w100">
         北京大善青松科技有限公司（简称“大善科技”），
-        <br />
+        <br v-if="!mob" />
         立足北京中关村高新技术资源优势，深入医疗大健康产业。
       </p>
     </div>
@@ -37,11 +39,11 @@
       </div>
       <p class="text posi-ab">
         大善科技是国内技术领先的医疗领域信息化平台系统产品供应商和相关方案提供商，拥有一支熟悉医疗行业专业背景和经验的团队，报告资深项目经理、研发总监、数据分析博士等。
-        <br />
-        <br />
+        <br v-if="!mob" />
+        <br v-if="!mob" />
         团队核心成员来自华海、东软、科达/锐帽、Agfa爱克发、美国通用电气GE、3M、微软等多家领军IT技术公司，拥有深厚的研发功底。以产品研发能力和专业服务能力作为公司的核心竞争力，并具有强大的产品实施，服务咨询等大型项目管理与实施经验。
-        <br />
-        <br />
+        <br v-if="!mob" />
+        <br v-if="!mob" />
         在企业级ERP、医疗健康大数据、零售大数据、政府服务平台等大型项目均具备成功开发经验，尤真对医疗信息技术和大健康领域有着深刻而清晰的认识与愿景。
       </p>
       <div class="autograph posi-ab">
@@ -58,6 +60,20 @@ import logoMg from "../../layouts/logoMg";
 
 export default {
   name: "modu1",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("index-modu-1-加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  },
   components: {
     logoMg
   }
@@ -164,6 +180,57 @@ export default {
         font-weight: 700;
       }
       span {}
+    }
+  }
+}
+// =============== 移动端样式 ==============
+.about-modu-1-mob {
+  height: auto;
+  padding-bottom: 40px;
+  background-color: #fff;
+  position: relative;
+  padding-top: 200px;
+  #particles-js {
+    position: absolute;
+    left:0;
+    top:0;
+    height: 50%;
+    width: 100%;
+  }
+  .about-modu-logo {
+    width: 290px;
+    height: 80px;
+  }
+  .about-modu-text {
+    position: relative;
+    top: 0;
+    margin-bottom: 30px;
+    p {
+      font-size: 16px;
+      line-height: 30px;
+      padding: 0 40px;
+    }
+  }
+  .about-modu-info {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 1px;
+    transform: translateX(0);
+    display: block;
+    padding: 0;
+    height: auto;
+    .photo {
+      position: relative;
+      top: 0;
+      transform: translateY(0);
+      width: 100%;
+    }
+    p {
+      position: relative;
+      left: 0;
+      top: 0;
+      padding: 20px 20px 100px;
     }
   }
 }

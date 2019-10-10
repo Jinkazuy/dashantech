@@ -1,5 +1,5 @@
 <template>
-  <div class="about-modu-4 w100">
+  <div :class="['about-modu-4', 'w100', mob ? 'about-modu-4-mob' : '']">
     <div class="container h100">
       <div class="ab-mo-4-title posi-ab">
         <img src="../../../common/images/titles/about-title-Ourteam.png" />
@@ -162,8 +162,18 @@ export default {
         perInfoZh: "上善若水 厚德载物",
         perInfoEn:
           "Network Security Big Data Experts Successful Continuous Entrepreneurs"
-      }
+      },
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
     };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("index-modu-1-加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
   },
   methods: {
     perHover1() {
@@ -319,6 +329,91 @@ export default {
             }
         }
     }
-
+}
+// =========== 移动端样式 ===============
+.about-modu-4-mob {
+  height: auto;
+  .container {
+    display: block;
+    .ab-mo-4-title {
+      position: relative;
+      top: 0;
+      margin: 40px 0;
+      width: 132px;
+      height: 42px;
+      img {
+        width: 100%;
+      }
+    }
+    .per-gr {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 100%;
+      transform: translateX(0);
+      margin-bottom: 360px;
+      .per-pic {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 176px;
+        height: 206px;
+        .bg-cir {
+          top: 50%;
+          transform: translateY(-50%) translateX(-50%);
+          width: 90%;
+          height: 80%;
+        }
+      }
+      .per-tit {
+        top: 10px;
+        left: 40%;
+        width: 60%;
+        height: auto;
+        .per-name {
+          font-size: 20px;
+          margin-top: 10px;
+        }
+        .per-title {
+          font-size: 14px;
+        }
+        .per-en-name {
+          font-size: 28px;
+          top: 36px;
+        }
+      }
+      .per-info {
+        top: 110px;
+        left: 45%;
+        width: 55%;
+        p.info-zh {
+          font-size: 14px;
+          margin: 0 0 20px;
+        }
+        p.info-en {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+    }
+    .per-list {
+      height: auto;
+      bottom: 40px;
+      ul {
+        padding-left: 12px;
+        display: block;
+        width: 100%;
+        li {
+          margin-bottom: 12px;
+          width: 30%;
+          .card-tit {
+            span {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 </style>

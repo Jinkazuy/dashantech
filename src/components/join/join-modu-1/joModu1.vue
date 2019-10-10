@@ -1,5 +1,5 @@
 <template>
-  <div class="join-modu-1 w100">
+  <div :class="['join-modu-1', 'w100', mob ? 'join-modu-1-mob' : '']">
     <div class="bg-mask w100 h100"></div>
     <div class="container">
       <h2>欢迎加入大善科技</h2>
@@ -15,7 +15,21 @@
 
 <script>
 export default {
-  name: "joModu1"
+  name: "joModu1",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -63,6 +77,24 @@ export default {
         font-size: 16px;
         line-height: 32px;
       }
+    }
+  }
+}
+// ========== 移动端样式 =========
+.join-modu-1-mob {
+  .container {
+    padding: 0;
+    h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    h6 {
+      font-size: 12px;
+      opacity: .4;
+    }
+    .wec-text {
+      width: 92%;
+      padding: 20px;
     }
   }
 }

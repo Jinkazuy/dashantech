@@ -1,5 +1,5 @@
 <template>
-  <div class="news-modu-3 w100">
+  <div :class="['news-modu-3', 'w100', mob ? 'news-modu-3-mob' : '']">
     <vue-particles
       color="#dedede"
       :particleOpacity="0.1"
@@ -65,8 +65,18 @@ export default {
           eventInfo:
             "大善科技获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位"
         }
-      ]
+      ],
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
     };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
   }
 };
 </script>
@@ -186,5 +196,41 @@ export default {
             }
         }
     }
+}
+// ============== 移动端样式 ===========
+.news-modu-3-mob {
+  height: 760px;
+  .container {
+    display: block;
+    .news-m3-title {
+      position: relative;
+      top: 40px;
+      width: 58px;
+      height: 42px;
+    }
+    .news-m3-logo {
+      position: relative;
+      top: 110px;
+    }
+    .news-m3-time-line {
+      height: auto;
+      top: 340px;
+      ul {
+        position: relative;
+        left: 0;
+        transform: translateX(40px);
+        width: 80%;
+        li {
+          .li-date {
+            font-size: 12px;
+          }
+          .li-p {
+            font-size: 14px;
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
 }
 </style>

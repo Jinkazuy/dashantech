@@ -1,5 +1,5 @@
 <template>
-  <div class="join-modu-2">
+  <div :class="['join-modu-2', mob ? 'join-modu-2-mob' : '']">
     <div class="container">
       <div class="jo-mo2-tit">
         <img
@@ -148,8 +148,18 @@ export default {
             "3、享受养老金制度及高额的医疗、大病、意外保障。"
           ]
         }
-      ]
+      ],
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
     };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
   },
   methods: {
     // 点击列表，给其他li去掉.list-active类名，然后给自己加上.list-active类名，实现展开与隐藏；
@@ -333,5 +343,67 @@ export default {
             }
         }
     }
+}
+// ===================== 移动端样式 ======================
+.join-modu-2-mob {
+  padding-top: 200px;
+  padding-bottom: 40px;
+  .container {
+    .jo-mo2-tit {
+      width: 69px;
+      height: 42px;
+    }
+    .job-cont {
+      ul {
+        li {
+          .job-type {
+            font-size: 16px !important;
+            margin-right: 70px !important;
+          }
+          .req {
+            margin-left: 0 !important;
+            ul {
+              li {
+                padding-left: 0 !important;
+                font-size: 12px !important;
+              }
+            }
+          }
+          .tre {
+            margin-left: 0 !important;
+            ul {
+              li {
+                padding-left: 0 !important;
+                font-size: 12px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .job-ft {
+      height: auto;
+      .ft-l {
+        float: none;
+        width: 100%;
+        margin: 0;
+        h2 {
+          font-size: 20px;
+          margin-bottom: 30px;
+        }
+        .ft-l-p2 {
+          margin: 0;
+        }
+      }
+      .ft-r {
+        position: relative;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+      }
+    }
+  }
 }
 </style>

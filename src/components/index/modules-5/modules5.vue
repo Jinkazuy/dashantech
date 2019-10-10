@@ -55,8 +55,13 @@
         class="titles"
       />
       <p class="join-text w100">
-        在大善科技可以展示你的所有才华，<br v-if="mob"/>我们期待这样的你加入进来。<br /><br />医疗科学工作者、大数据分析师、<br v-if="mob"/>高级JAVA开发、数据可视化工程师。
-        <br /><br />如果您具备创业精神，<br v-if="mob"/>我们更欢迎你的加入，一起分享行业成果。
+        在大善科技可以展示你的所有才华，<br
+          v-if="mob"
+        />我们期待这样的你加入进来。<br /><br />医疗科学工作者、大数据分析师、<br
+          v-if="mob"
+        />高级JAVA开发、数据可视化工程师。 <br /><br />如果您具备创业精神，<br
+          v-if="mob"
+        />我们更欢迎你的加入，一起分享行业成果。
       </p>
       <div class="on-more">
         <router-link class="w100 h100" to="/join">加入我们</router-link>

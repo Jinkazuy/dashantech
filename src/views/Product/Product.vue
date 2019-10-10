@@ -1,5 +1,5 @@
 <template>
-  <div class="product">
+  <div :class="['product', mob ? 'product-mob' : '']">
     <!--banner部分 - 开始-->
     <div class="banner-wrapper w100">
       <div class="banner-bg container h100">
@@ -27,10 +27,10 @@
           </swiper-slide>
         </Banner>
         <!--swiper导航按钮，必须写在外边儿，不然会出问题，只要类名对上了就行-->
-        <div class="swiper-button-prev" slot="button-prev">
+        <div class="swiper-button-prev" slot="button-prev" v-if="!mob">
           <i class="iconfont iconchevron-back-solid"></i>
         </div>
-        <div class="swiper-button-next" slot="button-next">
+        <div class="swiper-button-next" slot="button-next" v-if="!mob">
           <i class="iconfont iconchevron-forward-solid"></i>
         </div>
       </div>
@@ -306,6 +306,54 @@ export default {
           top: 18%;
           .banner-liius-foo {
             top: 70px;
+          }
+        }
+      }
+    }
+  }
+}
+// ============ 移动端 =========
+.product-mob {
+  .banner-wrapper {
+    margin-bottom: 100px;
+    .banner-bg {
+      padding: 0;
+      h2 {
+        top: 80px;
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+      }
+      p {
+        top: 300px;
+        padding: 0 30px;
+        width: 100%;
+        font-size: 14px !important;
+        box-sizing: border-box;
+      }
+      .banner-illus {
+        right: 50%;
+        transform: translateX(50%);
+        height: 290px;
+      }
+    }
+    .banner-info {
+      bottom: -60px !important;
+      .swiper-container {
+        .banner-items {
+          width: 100% !important;
+          .ills {
+            display: none;
+          }
+          h3 {
+            font-size: 16px;
+            left: 10%;
+            width: 80%;
+          }
+          p {
+            font-size: 12px;
+            left: 10%;
+            width: 80%;
           }
         }
       }

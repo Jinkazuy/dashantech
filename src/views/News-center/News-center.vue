@@ -1,15 +1,15 @@
 <template>
-  <div class="news-center">
+  <div :class="['news-center', mob ? 'news-center-mob' : '']">
     <div class="news-c-banner">
       <swiper :options="swiperOption" class="swiper-box h100">
         <swiper-slide v-for="(item, index) in bannerSrc" :key="index">
           <img class="w100" :src="item.src" />
         </swiper-slide>
         <!--swiper导航按钮，必须写在外边儿，不然会出问题，只要类名对上了就行-->
-        <div class="swiper-button-prev" slot="button-prev">
+        <div class="swiper-button-prev" slot="button-prev" v-if="!mob">
           <i class="iconfont iconchevron-back-solid"></i>
         </div>
-        <div class="swiper-button-next" slot="button-next">
+        <div class="swiper-button-next" slot="button-next" v-if="!mob">
           <i class="iconfont iconchevron-forward-solid"></i>
         </div>
         <div class="swiper-pagination" slot="pagination"></div>
@@ -80,8 +80,18 @@ export default {
           index: 6,
           src: "./images/poto-2.jpg"
         }
-      ]
+      ],
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
     };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
   },
   mounted() {
     // 因为所有页面是作为app.vue的router-view，所以滚动值会继承；
@@ -170,6 +180,26 @@ export default {
         i {
           color: #14948a;
         }
+      }
+    }
+  }
+}
+// ============移动端样式=============
+.news-center-mob {
+  .news-c-banner {
+    height: 240px;
+    margin-top: 20px;
+    .swiper-container {
+      height: 90%;
+      .swiper-wrapper {
+        .swiper-slide {
+          img {
+            height: 100%;
+          }
+        }
+      }
+      .swiper-pagination {
+        bottom: -4px;
       }
     }
   }

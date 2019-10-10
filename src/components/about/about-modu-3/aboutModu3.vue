@@ -1,5 +1,5 @@
 <template>
-  <div class="about-modu-3 w100">
+  <div :class="['about-modu-3', 'w100', mob ? 'about-modu-3-mob' : '']">
     <div class="container h100">
       <div class="ab-co-3-title posi-ab">
         <img
@@ -90,7 +90,21 @@
   });
 });
 export default {
-  name: "aboutModu3"
+  name: "aboutModu3",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("index-modu-1-加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -181,5 +195,44 @@ export default {
             }
         }
     }
+}
+.about-modu-3-mob {
+  height: auto;
+  padding: 0 0 40px;
+  .container {
+    display: block;
+    .ab-co-3-title {
+      position: relative;
+      top: 0;
+      left: 50%;
+      margin: 40px 0;
+      width: 128px;
+      height: 42px;
+    }
+    .ab-co-3-body {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 200px;
+      .ab3-hover-view-1 {
+        width: 100%;
+        padding: 0 20px;
+        a {
+          div {
+            bottom: -140px !important;
+            h3 {
+              font-size: 12px !important;
+            }
+            p {
+              display: none;
+            }
+          }
+        }
+        a.ab3-server-con-2 {
+          margin: 0 10px;
+        }
+      }
+    }
+  }
 }
 </style>

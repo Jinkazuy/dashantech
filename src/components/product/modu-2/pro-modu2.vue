@@ -1,5 +1,5 @@
 <template>
-  <div class="pro-modu-2 clearfix w100">
+  <div :class="['pro-modu-2', 'clearfix', 'w100', mob ? 'pro-modu-2-mob' : '']">
     <div class="pro-mo2-title">
       <img
         class="w100"
@@ -228,8 +228,18 @@ export default {
   data() {
     return {
       // 每个tab的代表数字
-      liActiveNum: 1
+      liActiveNum: 1,
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
     };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
   },
   methods: {
     proLi1() {
@@ -431,5 +441,54 @@ export default {
         }
       }
     }
+}
+// ============== 移动端样式 ==============
+.pro-modu-2-mob {
+  height: auto;
+  margin: 0;
+  border-bottom: 2px solid #14948a;
+  .pro-mo2-title {
+    width: 100px;
+    top: 40px;
+  }
+  .pro-mo2-hd {
+    margin-top: 140px;
+    ul {
+      li {
+        width: 80px;
+        height: auto;
+        padding-bottom: 20px;
+        margin: 0 10px 10px 0;
+        .pro-mo2-hd-illus {}
+        .pro-mo2-hd-text {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .pro-mo2-bd {
+    height: 340px;
+    .container {
+      .pro-mo2-bd-illus {
+        opacity: .3;
+        height: 80%;
+        width: 80%;
+        left: auto;
+        right: 10%;
+      }
+      .pro-mo2-bd-info {
+        width: 80%;
+        h4 {
+          font-size: 16px;
+          line-height: 26px;
+          margin: 20px 0;
+        }
+        p {
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="about-modu-2 w100">
+  <div :class="['about-modu-2', 'w100', mob ? 'about-modu-2-mob' : '']">
     <div class="container">
       <div class="ab-mo-wrapper w100">
         <div class="ab-mo2-title">
@@ -58,7 +58,21 @@
 
 <script>
 export default {
-  name: "aboutModu2"
+  name: "aboutModu2",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("index-modu-1-加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -144,5 +158,56 @@ export default {
             }
         }
     }
+}
+// =============== 移动端样式 ==================
+.about-modu-2-mob {
+  padding: 40px 0 40px;
+  height: auto;
+  .container {
+    .ab-mo-wrapper {
+      .ab-mo2-title {
+        width: 125px;
+        height: 42px;
+      }
+      .ab-mo2-body {
+        ul {
+          width: 80%;
+          li.posi-re {
+            width: 30%;
+            height: auto;
+            .ill {
+              position: relative;
+              width: 100%;
+              height: auto;
+              img {
+                position: relative;
+                height: auto;
+              }
+            }
+            .ill:before,.ill:after {
+              content:"";
+              display:table;
+            }
+            .ill:after {
+              clear:both;
+            }
+            .num {
+              position: relative;
+              top: 0;
+              .number {
+                font-size: 20px;
+              }
+              .Company {
+                font-size: 12px;
+              }
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 </style>

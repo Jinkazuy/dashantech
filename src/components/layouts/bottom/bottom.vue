@@ -22,7 +22,9 @@
               href="https://map.baidu.com/poi/%E5%A4%A7%E5%96%84%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/@12947142.56,4818307.47,12z?uid=91dd81486fd3d57a26e0a0e2&primaryUid=4017263196093995871&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&querytype=detailConInfo&da_src=shareurl"
             >
               <i class="icon iconfont iconditu"></i>
-              <span class="text">北京南四环西路128号 - 诺德中心4号,<br v-if="mob"/>楼8层</span>
+              <span class="text"
+                >北京南四环西路128号 - 诺德中心4号,<br v-if="mob" />楼8层</span
+              >
             </a>
           </li>
         </ul>
@@ -90,12 +92,15 @@
           </li>
         </ul>
         <div class="follow">
-          <span>关注我们</span>
-          <div class="wechat-icon-wrapper">
+          <span v-if="!mob">关注我们</span>
+          <div class="wechat-icon-wrapper" v-if="!mob">
             <i class="wechat-icon iconfont iconweixin"></i>
             <div class="qr-code">
               <img class="w100 h100" src="../../../common/images/qr.jpg" />
             </div>
+          </div>
+          <div class="mob-qr-code" v-if="mob">
+            <img class="w100 h100" src="../../../common/images/qr.jpg" />
           </div>
         </div>
       </div>
@@ -529,6 +534,15 @@ export default {
       }
       .follow {
         padding: 0 0 0 20px;
+        width: 160px;
+        height: 140px;
+        .mob-qr-code {
+          width: 100%;
+          height: 100%;
+          img {
+            width: 100%;
+          }
+        }
       }
     }
     .bottom-footer {
