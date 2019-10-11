@@ -1,5 +1,5 @@
 <template>
-  <div class="con-modu-2 container">
+  <div :class="['con-modu-2', 'container', mob ? 'con-modu-2-mob' : '']">
     <div class="co-mo2-title">
       <img
         class="w100 h100"
@@ -37,7 +37,21 @@
 
 <script>
 export default {
-  name: "conModu2"
+  name: "conModu2",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -87,5 +101,49 @@ export default {
             }
         }
     }
+}
+// ============= 移动端样式 ============
+.con-modu-2-mob {
+  display: block;
+  height: auto;
+  .co-mo2-title {
+    position: relative;
+    top: 0;
+    width: 69px;
+    height: 42px;
+    margin: 20px 0;
+  }
+  .co-mo2-bd {
+    padding: 20px;
+    .bd-l {
+      float: none;
+      margin: 0;
+      h4 {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    }
+    .bd-r {
+      width: 100%;
+      margin: 60px 0 0;
+      float: none;
+      h4 {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      ul {
+        li {
+          margin-bottom: 20px;
+        }
+      }
+      ul:before,ul:after {
+        content:"";
+        display:table;
+      }
+      ul:after {
+        clear:both;
+      }
+    }
+  }
 }
 </style>

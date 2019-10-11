@@ -1,14 +1,14 @@
 <template>
-  <div class="proPacsMo-6">
+  <div :class="['proPacsMo-6', mob ? 'proPacsMo-6-mob' : '']">
     <div class="pacs-mo6-hd">
       <div class="pacs-mo6-hd-tit">
         <img src="../../../common/images/titles/prd-title-pacs-wt.png" />
       </div>
       <p>
         满足院内临床科室与医技科室灵活调图像与报告
-        <br />
+        <br v-if="!mob" />
         包含登记工作站、技师工作站、诊断工作站、临床工站
-        <br />
+        <br v-if="!mob" />
         支持与院内HIS/EMR胶片自助打印系统快速融合
       </p>
     </div>
@@ -22,7 +22,22 @@
 
 <script>
 export default {
-  name: "proPacsMo6"
+  name: "proPacsMo6",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    // 是否渲染移动端样式
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -58,5 +73,29 @@ export default {
             }
         }
     }
+}
+// ============== 移动端样式 ===================
+.proPacsMo-6-mob {
+  .pacs-mo6-hd {
+    .pacs-mo6-hd-tit {
+      width: 50%;
+      margin-bottom: 40px;
+    }
+    p {
+      padding: 0 20px;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  .pacs-mo6-bd {
+    .container {
+      margin: 180px auto 0;
+      img {
+        width: 100%;
+        height: 100%;
+        margin: -140px 0 0;
+      }
+    }
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="proPacsMo-5 w100">
+  <div :class="['proPacsMo-5', 'w100', mob ? 'proPacsMo-5-mob' : '']">
     <ul class="pacs-mo5-btn-box">
       <li :class="{ 'on-hover': btnHoverNow === 1 }" @mouseenter="mouseHover1">
         全院PACS云
@@ -52,8 +52,19 @@ export default {
   name: "proPacsMo5",
   data() {
     return {
-      btnHoverNow: 1
+      btnHoverNow: 1,
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
     };
+  },
+  created() {
+    // 是否渲染移动端样式
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
   },
   methods: {
     mouseHover1() {
@@ -154,5 +165,30 @@ export default {
             display: inline-block;
         }
     }
+}
+// ================ 移动端样式 ================
+.proPacsMo-5-mob {
+  padding: 0;
+  ul.pacs-mo5-btn-box {
+    display: block;
+    width: 90%;
+    margin: 0 auto 20px;
+    li {
+      margin: 0 12px 30px 0;
+      font-size: 12px;
+    }
+  }
+  .pacs-mo5-btn-box:before,.pacs-mo5-btn-box:after {
+    content:"";
+    display:table;
+  }
+  .pacs-mo5-btn-box:after {
+    clear:both;
+  }
+  .pacs-mo5-illus-box {
+    img {
+      height: 100%;
+    }
+  }
 }
 </style>

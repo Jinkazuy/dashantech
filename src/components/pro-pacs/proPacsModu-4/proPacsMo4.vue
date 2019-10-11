@@ -1,5 +1,5 @@
 <template>
-  <div class="proPacsMo-4 w100">
+  <div :class="['proPacsMo-4', 'w100', mob ? 'proPacsMo-4-mob' : '']">
     <div class="pacs-mo4-tit">
       <div class="tit-img-box">
         <img src="../../../common/images/titles/prd-title-pacs-child.png" />
@@ -7,12 +7,14 @@
       <p>
         从影像存储到影像智能，实现备份扩容、移动阅片、影像三维重建、区域影像共享和集中阅片服务。
         <br />
+        <br v-if="mob" />
         主要建设内容如下所示：
         <br />
         满足院内临床科室与医技科室灵活调图像与报告
         <br />
         包含登记工作站、技师工作站、诊断工作站、临床工站
         <br />
+        <br v-if="mob" />
         支持与院内HIS/EMR胶片自助打印系统快速融合
       </p>
     </div>
@@ -53,7 +55,22 @@
 
 <script>
 export default {
-  name: "proPacsMo4"
+  name: "proPacsMo4",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    // 是否渲染移动端样式
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -114,5 +131,43 @@ export default {
             }
         }
     }
+}
+//  =============== 移动端样式 ================
+.proPacsMo-4-mob {
+  .pacs-mo4-tit {
+    padding: 40px 0 120px;
+    .tit-img-box {
+      width: 149px;
+    }
+    p {
+      margin-top: 30px;
+      font-size: 14px;
+      line-height: 24px;
+      padding: 0 10px;
+    }
+  }
+  .pacs-mo4-bd {
+    .illus-box {
+      img {
+        width: 94%;
+        height: 100%;
+      }
+    }
+    .db-text {
+      display: block;
+      width: 100% !important;
+      padding: 40px 20px 0;
+      li {
+        width: 100% !important;
+        margin: 0 0 40px !important;
+        h4 {
+          font-size: 16px;
+        }
+        p {
+          opacity: .6;
+        }
+      }
+    }
+  }
 }
 </style>

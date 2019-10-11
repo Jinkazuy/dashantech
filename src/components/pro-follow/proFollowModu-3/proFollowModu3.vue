@@ -1,5 +1,13 @@
 <template>
-  <div class="proFollowMo-3 container w100 clearfix">
+  <div
+    :class="[
+      'proFollowMo-3',
+      'container',
+      'w100',
+      'clearfix',
+      mob ? 'proFollowMo-3-mob' : ''
+    ]"
+  >
     <div class="pro-follow-inter-face-img-box">
       <img :src="descInfo[currentHoverLi].imgSrc" />
     </div>
@@ -61,8 +69,19 @@ export default {
           litText: "支持软件拨号、耳麦通话、电话录音、自动保存记录",
           imgSrc: "./images/gui-1.png"
         }
-      ]
+      ],
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
     };
+  },
+  created() {
+    // 是否渲染移动端样式
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
   },
   methods: {
     liHover(idx) {
@@ -128,5 +147,27 @@ export default {
             }
         }
     }
+}
+// ============= 移动端样式 ============
+.proFollowMo-3-mob {
+  display: block;
+  .pro-follow-inter-face-img-box {
+    float: none;
+    margin: 0 auto 30px;
+    width: 80%;
+  }
+  ul.pro-follow-desc-list-box {
+    float: none;
+    width: 100%;
+    margin: 0;
+    li {
+      .big-tx{
+        font-size: 16px;
+      }
+      .lit-tx{
+        font-size: 12px;
+      }
+    }
+  }
 }
 </style>

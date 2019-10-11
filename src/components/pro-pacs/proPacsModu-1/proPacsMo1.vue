@@ -1,5 +1,7 @@
 <template>
-  <div class="proPacsMo-1 w100 clearfix">
+  <div
+    :class="['proPacsMo-1', 'w100', 'clearfix', mob ? 'proPacsMo-1-mob' : '']"
+  >
     <div class="container">
       <div class="pro-pacs-mo1-tit">
         <h1>影像云(PACS云)</h1>
@@ -22,8 +24,19 @@ export default {
   data() {
     return {
       // banner插画主体
-      bannerIllusCont: bannerIllusCont
+      bannerIllusCont: bannerIllusCont,
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
     };
+  },
+  created() {
+    // 是否渲染移动端样式
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
   },
   components: {
     bannerImg
@@ -63,5 +76,28 @@ export default {
             transform: translateY(16%);
         }
     }
+}
+// ============= 移动端样式 ==========
+.proPacsMo-1-mob {
+  .container {
+    display: block;
+    padding: 40px 0 0;
+    .pro-pacs-mo1-tit {
+      width: 100%;
+      margin: 40px 0 0;
+      padding: 0 20px;
+      h1 {
+        font-size: 24px;
+      }
+    }
+    // 插画样式
+    // 由于是组件，所以在这里直接写插画组件样式，不单独在组件里改样式了；
+    .banner-illus {
+      right: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 200px;
+    }
+  }
 }
 </style>

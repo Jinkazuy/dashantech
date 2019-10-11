@@ -1,5 +1,5 @@
 <template>
-  <div class="proFollowMo-4 w100">
+  <div :class="['proFollowMo-4', 'w100', mob ? 'proFollowMo-4-mob' : '']">
     <div class="container">
       <div class="pro-fol-mo4-tit">
         <img src="../../../common/images/titles/prd-title-char-white.png" />
@@ -60,8 +60,19 @@ export default {
           p: `搭建全院统一随访平台，避免重复投入，管理困难；`,
           imgSrc: "./images/blockchain-7.png"
         }
-      ]
+      ],
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
     };
+  },
+  created() {
+    // 是否渲染移动端样式
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
   }
 };
 </script>
@@ -131,5 +142,34 @@ export default {
             }
         }
     }
+}
+// =========== 移动端样式 ===============
+.proFollowMo-4-mob {
+  .container {
+    padding: 0 20px;
+    .pro-fol-mo4-tit {
+      width: 69px;
+    }
+    .pro-fol-mo4-bd {
+      ul {
+        padding: 0;
+        li {
+          width: 100%;
+          h4 {
+            font-size: 16px;
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+          p {
+            width: 100%;
+            padding: 0 0 0 50px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
 }
 </style>

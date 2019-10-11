@@ -1,12 +1,12 @@
 <template>
-  <div class="proPacsMo-3 w100">
+  <div :class="['proPacsMo-3', 'w100', mob ? 'proPacsMo-3-mob' : '']">
     <div class="pacs-mo3-tit">
       <div class="tit-img-box">
         <img src="../../../common/images/titles/prd-title-pacs.png" />
       </div>
       <p>
         从影像存储到影像智能，实现备份扩容、移动阅片、影像三维重建、区域影像恭喜那个和集中阅片服务
-        <br />
+        <br v-if="!mob" />
         主要建设内容如下所示
       </p>
     </div>
@@ -49,7 +49,22 @@
 
 <script>
 export default {
-  name: "proPacsMo3"
+  name: "proPacsMo3",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    // 是否渲染移动端样式
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -110,5 +125,43 @@ export default {
             }
         }
     }
+}
+// ============= 移动端样式 =============
+.proPacsMo-3-mob {
+  .pacs-mo3-tit {
+    padding: 40px 0 90px;
+    .tit-img-box{
+      width: 149px;
+    }
+    p {
+      padding: 0 30px;
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+  .pacs-mo3-bd {
+    .illus-box {
+      padding: 0;
+      img {
+        width: 90% !important;
+        height: 100%;
+      }
+    }
+    .db-text {
+      display: block;
+      width: 100% !important;
+      padding: 0 20px;
+      li {
+        width: 100% !important;
+        margin: 0 0 40px !important;
+        h4 {
+          font-size: 16px;
+        }
+        p {
+          opacity: .6;
+        }
+      }
+    }
+  }
 }
 </style>

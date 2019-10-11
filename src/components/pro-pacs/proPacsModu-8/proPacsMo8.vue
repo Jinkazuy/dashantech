@@ -1,5 +1,5 @@
 <template>
-  <div class="proPacsMo-8">
+  <div :class="['proPacsMo-8', mob ? 'proPacsMo-8-mob' : '']">
     <div class="pacs-mo8-hd">
       <img src="../../../common/images/titles/prd-title-大善PACS-ylt.png" />
     </div>
@@ -10,7 +10,7 @@
             <img src="../../../common/images/pro-pacs/mo8/illustration-1.png" />
           </div>
           <div class="text-box">
-            <h4>（1）提供专业、全面的医学影像解决方案</h4>
+            <h4>1) 提供专业、全面的医学影像解决方案</h4>
             <p>
               集存储、传输及调阅等功能为一体，向外围拓展，向云端延伸，解决存储问题、实现数据共享。
             </p>
@@ -18,7 +18,7 @@
         </li>
         <li class="container">
           <div class="text-box">
-            <h4>（2）增加医院效益</h4>
+            <h4>2) 增加医院效益</h4>
             <p>
               节省成本:可存储上十年云存储，减少医院电子病历的维护成本;为无胶片化铺路，节省大量耗材采购成本。
               <br />
@@ -38,7 +38,7 @@
             <img src="../../../common/images/pro-pacs/mo8/illustration-3.png" />
           </div>
           <div class="text-box">
-            <h4>（3）造福患者</h4>
+            <h4>3) 造福患者</h4>
             <p>
               节省费用:百姓没多花一分钱，在基层医院享受大医院的医疗及专家资源;节省检查费用，原始影像数据全。
               <br />
@@ -52,7 +52,7 @@
         </li>
         <li class="container">
           <div class="text-box">
-            <h4>（4）增加社会效益</h4>
+            <h4>4) 增加社会效益</h4>
             <p>
               实现标准规范:平台数据更标准、更规范、应用范围广;信息互联互通、方便医院患者使用。
               <br />
@@ -72,7 +72,7 @@
             <img src="../../../common/images/pro-pacs/mo8/illustration-5.png" />
           </div>
           <div class="text-box">
-            <h4>（5）助力分级诊疗、远程医疗落地</h4>
+            <h4>5) 助力分级诊疗、远程医疗落地</h4>
             <p>
               构建区域内部的医学影像信息交换平台，实现区域内医院的医学影像资源的共享与整合。
               <br />
@@ -88,7 +88,23 @@
 
 <script>
 export default {
-  name: "proPacsMo8"
+  name: "proPacsMo8",
+  data() {
+    return {
+      btnHoverNow: 1,
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    // 是否渲染移动端样式
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -138,5 +154,28 @@ export default {
         }
 
     }
+}
+// =========== 移动端样式 =========
+.proPacsMo-8-mob {
+  .pacs-mo8-hd {
+    width: 50%;
+  }
+  .pacs-mo8-bd {
+    ul {
+      li {
+        padding: 40px 0 !important;
+        .text-box {
+          h4 {
+            font-size : 16px !important;
+            line-height: 30px;
+          }
+          p {
+            font-size: 12px !important;
+            padding: 0 !important;
+          }
+        }
+      }
+    }
+  }
 }
 </style>

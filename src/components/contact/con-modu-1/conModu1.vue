@@ -1,5 +1,5 @@
 <template>
-  <div class="con-modu-1 w100">
+  <div :class="['con-modu-1', 'w100', mob ? 'con-modu-1-mob' : '']">
     <div class="bg-mask w100 h100"></div>
     <div class="container w100 h100">
       <div class="text-gr w100">
@@ -101,8 +101,18 @@ export default {
           value: 3
         }
       ],
-      allB: false
+      allB: false,
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
     };
+  },
+  created() {
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
   },
   methods: {
     subBtn() {
@@ -320,6 +330,51 @@ export default {
             margin: 0;
             background: url("../../../common/images/contact/em.png") no-repeat;
           }
+        }
+      }
+    }
+  }
+}
+// ============== 移动端样式 ==============
+.con-modu-1-mob {
+  height: auto;
+  padding: 0 0 20px;
+  .container {
+    display: block;
+    .text-gr {
+      margin-bottom: 40px;
+      h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+        padding: 0 40px;
+      }
+    }
+    .cont-gr {
+      position: relative;
+      top: 0;
+      height: auto;
+      padding: 0 20px;
+      .input-gr {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+        height: auto;
+        padding: 20px;
+        input {
+          box-shadow: none;
+        }
+        textarea {
+          font-size: 14px;
+        }
+      }
+      .contact-info {
+        float: none;
+        width: 100%;
+        ul {
+          padding: 20px !important;
         }
       }
     }

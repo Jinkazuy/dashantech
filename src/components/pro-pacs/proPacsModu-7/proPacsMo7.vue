@@ -1,5 +1,5 @@
 <template>
-  <div class="proPacsMo-7">
+  <div :class="['proPacsMo-7', mob ? 'proPacsMo-7-mob' : '']">
     <div class="pacs-mo7-hd">
       <div class="pacs-mo7-hd-tit">
         <img src="../../../common/images/titles/prd-title-大善PACS-ylt.png" />
@@ -15,7 +15,22 @@
 
 <script>
 export default {
-  name: "proPacsMo7"
+  name: "proPacsMo7",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    // 是否渲染移动端样式
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -44,5 +59,23 @@ export default {
             }
         }
     }
+}
+// ========== 移动端样式 ===========
+.proPacsMo-7-mob {
+  padding: 0;
+  .pacs-mo7-hd {
+    width: 50%;
+  }
+  .pacs-mo7-bd {
+    .container {
+      padding: 0 0 40px;
+      margin: 200px auto 0;
+      img {
+        margin: -150px auto 0;
+        width: 94%;
+        height: 100%;
+      }
+    }
+  }
 }
 </style>

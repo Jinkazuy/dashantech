@@ -1,5 +1,5 @@
 <template>
-  <div class="proFollowMo-2 w100">
+  <div :class="['proFollowMo-2', 'w100', mob ? 'proFollowMo-2-mob' : '']">
     <div class="bgimg"></div>
     <div class="container clearfix">
       <div class="pro-follow-mo2-tit clearfix">
@@ -42,7 +42,22 @@
 
 <script>
 export default {
-  name: "proFollowModu2"
+  name: "proFollowModu2",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    // 是否渲染移动端样式
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -129,5 +144,40 @@ export default {
           }
         }
     }
+}
+// =========== 移动端样式 ============
+.proFollowMo-2-mob {
+  .container {
+    .pro-follow-mo2-tit {
+      padding: 20px;
+      h3 {
+        font-size: 24px;
+      }
+      p {
+        width: 100%;
+      }
+    }
+    .op-flow-illus-box {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    ul.desc-list {
+      padding: 30px 16px;
+      margin-bottom: 40px;
+      li {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px;
+        h4 {
+          font-size: 16px;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
 }
 </style>

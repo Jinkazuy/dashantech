@@ -1,5 +1,5 @@
 <template>
-  <div class="proPacsMo-2 w100">
+  <div :class="['proPacsMo-2', 'w100', mob ? 'proPacsMo-2-mob' : '']">
     <div class="bgimg"></div>
     <div class="container clearfix">
       <div class="pro-pacs-mo2-tit clearfix">
@@ -43,7 +43,22 @@
 
 <script>
 export default {
-  name: "proPacsMo2"
+  name: "proPacsMo2",
+  data() {
+    return {
+      // 控制显示移动端还是pc端css样式的变量
+      mob: false
+    };
+  },
+  created() {
+    // 是否渲染移动端样式
+    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+      console.log("加载移动端样式");
+      this.mob = true;
+    } else {
+      this.mob = false;
+    }
+  }
 };
 </script>
 
@@ -139,5 +154,36 @@ export default {
         }
       }
     }
+}
+// =========== 移动端样式 ==============
+.proPacsMo-2-mob {
+  .container {
+    .pro-pacs-mo2-tit {
+      padding: 20px;
+      h3 {
+        font-size: 24px;
+      }
+      p {
+        float: none !important;
+        width: 100%;
+      }
+      p:first-of-type {
+        margin-bottom: 20px;
+      }
+    }
+    ul.card-list {
+      padding: 0 20px;
+      li {
+        float: none;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        h4 {}
+        p {
+          width: 100% !important;
+        }
+      }
+    }
+  }
 }
 </style>
