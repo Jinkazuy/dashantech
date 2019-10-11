@@ -8,7 +8,7 @@
       mob ? 'proFollowMo-3-mob' : ''
     ]"
   >
-    <div class="pro-follow-inter-face-img-box">
+    <div class="pro-follow-inter-face-img-box" v-if="!mob">
       <img :src="descInfo[currentHoverLi].imgSrc" />
     </div>
     <ul class="pro-follow-desc-list-box">
@@ -20,6 +20,9 @@
       >
         <span class="big-tx">{{ item.bigText }}</span>
         <span class="lit-tx">{{ item.litText }}</span>
+        <div class="pro-follow-inter-face-img-box" v-if="mob">
+          <img :src="descInfo[currentHoverLi].imgSrc" />
+        </div>
       </li>
     </ul>
   </div>
@@ -161,11 +164,32 @@ export default {
     width: 100%;
     margin: 0;
     li {
+      border-left: 8px solid #ccc;
+      border-radius: 0;
       .big-tx{
+        display: block;
         font-size: 16px;
+        height: 100%;
       }
       .lit-tx{
         font-size: 12px;
+      }
+      .pro-follow-inter-face-img-box {
+        margin: 0;
+        height: 0;
+        transition: all .3s;
+        img {
+          height: 0;
+        }
+      }
+    }
+    li.current-hover {
+      .pro-follow-inter-face-img-box {
+        margin: 40px;
+        height: auto;
+        img {
+          height: auto;
+        }
       }
     }
   }

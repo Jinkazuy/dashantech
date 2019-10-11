@@ -164,7 +164,7 @@ export default {
           }
           p {
             width: 100%;
-            padding: 0 0 0 50px;
+            padding: 0 0 0 52px;
             font-size: 14px;
           }
         }
