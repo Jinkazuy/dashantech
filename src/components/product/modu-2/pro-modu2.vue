@@ -456,7 +456,7 @@ export default {
     ul {
       li {
         width: 80px;
-        height: auto;
+        height: 100px;
         padding-bottom: 20px;
         margin: 0 10px 10px 0;
         .pro-mo2-hd-illus {}

@@ -58,7 +58,7 @@ export default {
           imgSrc: "./images/gui-2.png"
         },
         {
-          bigText: "　知识库",
+          bigText: "知识库",
           litText: "收纳各种医学知识，位医护人员提供医学参考",
           imgSrc: "./images/gui-1.png"
         },

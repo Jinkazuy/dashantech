@@ -596,7 +596,7 @@ export default {
     }
 }
 // ========== 移动端样式 ===========
-.home-cont-modu-3 {
+.home-cont-modu-3-mob {
   height: 680px;
   .container {
     .modu-3-news-cont {

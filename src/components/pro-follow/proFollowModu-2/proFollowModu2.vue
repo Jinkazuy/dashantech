@@ -172,9 +172,11 @@ export default {
         margin: 0 0 20px;
         h4 {
           font-size: 16px;
+          margin-bottom: 8px;
         }
         p {
           font-size: 12px;
+          line-height: 20px;
         }
       }
     }
