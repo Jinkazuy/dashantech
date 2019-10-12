@@ -1,13 +1,13 @@
 <template>
   <div :class="['about-modu-4', 'w100', mob ? 'about-modu-4-mob' : '']">
     <div class="container h100">
-      <div class="ab-mo-4-title posi-ab">
+      <div class="ab-mo-4-title po-lf50-tr50 posi-ab">
         <img src="../../../common/images/titles/about-title-Ourteam.png" />
       </div>
-      <div class="per-gr w100 posi-ab">
+      <div class="per-gr po-lf50-tr50 w100 posi-ab">
         <div class="per-pic posi-ab">
-          <img class="h100 posi-ab" :src="perShowData.perImgSrc" />
-          <div class="bg-cir posi-ab"></div>
+          <img class="h100 po-lf50-tr50 posi-ab" :src="perShowData.perImgSrc" />
+          <div class="bg-cir po-lf50-tr50 posi-ab"></div>
         </div>
         <div class="per-tit posi-ab">
           <span class="per-name">{{ perShowData.perNameZh }}</span>
@@ -23,7 +23,11 @@
         <ul class="clearfix h100">
           <li class="h100" @mouseenter="perHover1">
             <div class="card-pic">
-              <img src="#" />
+              <img
+                class="w100 h100"
+                src="../../../../public/images/per-TDQ.png"
+              />
+              <span>汤道青</span>
             </div>
             <div
               :class="[
@@ -36,7 +40,11 @@
           </li>
           <li @mouseenter="perHover2">
             <div class="card-pic w100">
-              <img class="w100 h100" src="#" />
+              <img
+                class="w100 h100"
+                src="../../../../public/images/per-GZQ.png"
+              />
+              <span>郭志群</span>
             </div>
             <div
               :class="[
@@ -49,7 +57,11 @@
           </li>
           <li @mouseenter="perHover3">
             <div class="card-pic">
-              <img src="#" />
+              <img
+                class="w100 h100"
+                src="../../../../public/images/per-LH.png"
+              />
+              <span>吕辉</span>
             </div>
             <div
               :class="[
@@ -62,7 +74,11 @@
           </li>
           <li @mouseenter="perHover4">
             <div class="card-pic">
-              <img src="#" />
+              <img
+                class="w100 h100"
+                src="../../../../public/images/per-ZML.png"
+              />
+              <span>赵明亮</span>
             </div>
             <div
               :class="[
@@ -75,7 +91,11 @@
           </li>
           <li @mouseenter="perHover5">
             <div class="card-pic">
-              <img src="#" />
+              <img
+                class="w100 h100"
+                src="../../../../public/images/per-TF.png"
+              />
+              <span>唐凤</span>
             </div>
             <div
               :class="[
@@ -100,7 +120,7 @@ export default {
       perData: [
         {
           // 汤道青
-          perImgSrc: "./images/per.png",
+          perImgSrc: "./images/per-TDQ.png",
           perNameZh: "汤道青",
           perNameEn: "Tang daoqing",
           perTit: "董事长",
@@ -110,7 +130,7 @@ export default {
         },
         {
           // 郭志群
-          perImgSrc: "./images/per.png",
+          perImgSrc: "./images/per-GZQ.png",
           perNameZh: "郭志群",
           perNameEn: "Guo Zhiqun",
           perTit: "联合创始人&CEO",
@@ -120,7 +140,7 @@ export default {
         },
         {
           // 吕辉
-          perImgSrc: "./images/per.png",
+          perImgSrc: "./images/per-LH.png",
           perNameZh: "吕辉",
           perNameEn: "Lv Hui",
           perTit: "营销总裁",
@@ -134,7 +154,7 @@ export default {
         },
         {
           // 赵明亮
-          perImgSrc: "./images/per.png",
+          perImgSrc: "./images/per-ZML.png",
           perNameZh: "赵明亮",
           perNameEn: "Zhao Mingliang",
           perTit: "技术总监",
@@ -144,7 +164,7 @@ export default {
         },
         {
           // 唐凤
-          perImgSrc: "./images/per.png",
+          perImgSrc: "./images/per-TF.png",
           perNameZh: "唐凤",
           perNameEn: "Tang Feng",
           perTit: "人力行政经理",
@@ -155,7 +175,7 @@ export default {
       ],
       perShowData: {
         // 汤道青
-        perImgSrc: "./images/per.png",
+        perImgSrc: "./images/per-TDQ.png",
         perNameZh: "汤道青",
         perNameEn: "Tang Daoqing",
         perTit: "董事长",
@@ -195,15 +215,11 @@ export default {
     .container {
         padding: 0;
         .ab-mo-4-title {
-            left: 50%;
-            transform: translateX(-50%);
             top: 80px;
             width: 266px;
             height: 85px;
         }
         .per-gr {
-            left: 50%;
-            transform: translateX(-50%);
             bottom: 80px;
             height: 640px;
             .per-pic {
@@ -212,16 +228,12 @@ export default {
                 width: 500px;
                 height: 590px;
                 img {
-                    left: 50%;
-                    transform: translateX(-50%);
                     top: 0;
                     z-index: 10;
                     display: inline-block;
                     margin: 0 atuo;
                 }
                 .bg-cir {
-                    left: 50%;
-                    transform: translateX(-50%);
                     bottom: 20px;
                     width: 500px;
                     height: 500px;
@@ -295,14 +307,30 @@ export default {
                     .card-pic {
                       height: 74px;
                       background-color: #fff;
+                      position: relative;
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      padding: 0 10px;
+                      img {
+                        width:  50px;
+                        margin: 10% 0 0 5%;
+                      }
+                      span {
+                        position: absolute;
+                        left: 50%;
+                        font-size: 20px;
+                      }
                     }
                     .card-tit {
+                      position: relative;
                       text-align: center;
                       line-height: 36px;
                       font-size: 16px;
                       color: #fff;
                       background-color: rgba(66, 68, 97, 1);
                       transition: all .4s;
+                      z-index: 20;
                     }
                     .card-tit-active {
                       background-color: #14948a;
@@ -397,6 +425,11 @@ export default {
         li {
           margin-bottom: 12px;
           width: 30%;
+          .card-pic {
+            span {
+              font-size: 12px;
+            }
+          }
           .card-tit {
             span {
               font-size: 12px;

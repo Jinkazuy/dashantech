@@ -21,20 +21,20 @@
       clickMode="push"
     >
     </vue-particles>
-    <div class="about-modu-logo posi-ab">
+    <div class="about-modu-logo po-lf50-tr50 posi-ab">
       <div class="logo-wrapper w100 h100">
         <logoMg></logoMg>
       </div>
     </div>
-    <div class="about-modu-text w100 posi-ab">
+    <div class="about-modu-text po-lf50-tr50 w100 posi-ab">
       <p class="w100">
         北京大善青松科技有限公司（简称“大善科技”），
         <br v-if="!mob" />
         立足北京中关村高新技术资源优势，深入医疗大健康产业。
       </p>
     </div>
-    <div class="about-modu-info container posi-ab">
-      <div class="photo posi-ab">
+    <div class="about-modu-info po-lf50-tr50 container posi-ab">
+      <div class="photo po-tp50-tr50 posi-ab">
         <img class="w100 h100" src="../../../../public/images/poto-1.jpg" />
       </div>
       <p class="text posi-ab">
@@ -78,8 +78,6 @@ export default {
   }
   .about-modu-logo {
     top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
     width: 580px;
     height: 160px;
     border-radius: 80px;
@@ -115,8 +113,6 @@ export default {
   }
   .about-modu-text {
     top: 250px;
-    left: 50%;
-    transform: translateX(-50%);
     p {
       margin: 0;
       text-align: center;
@@ -128,19 +124,15 @@ export default {
   }
   .about-modu-info {
     top: 380px;
-    left: 50%;
     @media (max-width: 1366px) {
       width: 90% !important;
     }
-    transform: translateX(-50%);
     height: 290px;
     background-color: #fff;
     border-radius: 4px;
     box-shadow:0 4px 8px 0 rgba(0,0,0,0.1);
     .photo {
       left: 0;
-      top: 50%;
-      transform: translateY(-50%);
       width: 372px;
       height: 334px;
       padding: 6px;

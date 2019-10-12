@@ -1,10 +1,10 @@
 <template>
   <div :class="['about-modu-5', 'w100', mob ? 'about-modu-5-mob' : '']">
     <div class="container">
-      <div class="ab-mo5-title posi-ab">
+      <div class="ab-mo5-title po-lf50-tr50 posi-ab">
         <img src="../../../common/images/titles/about-title-Reasons.png" />
       </div>
-      <div class="ab-mo5-info posi-ab">
+      <div class="ab-mo5-info po-lf50-tr50 posi-ab">
         <h3>大健康医疗服务云平台</h3>
         <p class="w100">
           依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案。
@@ -13,7 +13,7 @@
           移动大健康综合服务云平台汇聚居民全生命周期的总和医疗和健康大数据，建立居民健康画像及家庭实施、有效、精准健康档案。
         </p>
       </div>
-      <div class="ab-mo5-body posi-ab">
+      <div class="ab-mo5-body po-lf50-tr50 posi-ab">
         <ul class="w100 h100 posi-re">
           <li class="reason-1">
             <img
@@ -45,7 +45,9 @@
           </li>
         </ul>
         <div class="more-button posi-ab">
-          <a class="w100 h100" href="#">行业解决方案</a>
+          <router-link class="w100 h100" to="/product"
+            >行业解决方案</router-link
+          >
         </div>
       </div>
     </div>
@@ -67,8 +69,6 @@ export default {
     background-position: center center;
     .container {
       .ab-mo5-title {
-        left: 50%;
-        transform: translateX(-50%);
         top: 80px;
         width:496px;
         height: 170px;
@@ -79,8 +79,6 @@ export default {
         justify-content: center;
       }
       .ab-mo5-info {
-        left: 50%;
-        transform: translateX(-50%);
         top: 280px;
         width: 70%;
         color: #fff;
@@ -97,8 +95,6 @@ export default {
         }
       }
       .ab-mo5-body {
-        left: 50%;
-        transform: translateX(-50%);
         top: 440px;
         width: 80%;
         ul {

@@ -24,38 +24,54 @@
       <div class="jo-mo3-ft w100">
         <ul class="w100">
           <li class="h100">
-            <div class="icon-b"></div>
-            <p class="icon-i">弹性工作</p>
+            <div class="icon-b">
+              <img src="../../../common/images/join/fl/fl-1.svg" />
+            </div>
+            <p class="icon-i">周末双休</p>
           </li>
           <li class="h100">
-            <div class="icon-b"></div>
-            <p class="icon-i">弹性工作</p>
+            <div class="icon-b">
+              <img src="../../../common/images/join/fl/fl-2.svg" />
+            </div>
+            <p class="icon-i">五险一金</p>
           </li>
           <li class="h100">
-            <div class="icon-b"></div>
-            <p class="icon-i">弹性工作</p>
+            <div class="icon-b">
+              <img src="../../../common/images/join/fl/fl-3.svg" />
+            </div>
+            <p class="icon-i">零食下午茶</p>
           </li>
           <li class="h100">
-            <div class="icon-b"></div>
-            <p class="icon-i">弹性工作</p>
+            <div class="icon-b">
+              <img src="../../../common/images/join/fl/fl-4.svg" />
+            </div>
+            <p class="icon-i">良好氛围团队</p>
           </li>
         </ul>
         <ul class="w100">
           <li class="h100">
-            <div class="icon-b"></div>
-            <p class="icon-i">弹性工作</p>
+            <div class="icon-b">
+              <img src="../../../common/images/join/fl/fl-5.svg" />
+            </div>
+            <p class="icon-i">领导nice</p>
           </li>
           <li class="h100">
-            <div class="icon-b"></div>
-            <p class="icon-i">弹性工作</p>
+            <div class="icon-b">
+              <img src="../../../common/images/join/fl/fl-6.svg" />
+            </div>
+            <p class="icon-i">出差补助</p>
           </li>
           <li class="h100">
-            <div class="icon-b"></div>
-            <p class="icon-i">弹性工作</p>
+            <div class="icon-b">
+              <img src="../../../common/images/join/fl/fl-7.svg" />
+            </div>
+            <p class="icon-i">扁平化管理</p>
           </li>
           <li class="h100">
-            <div class="icon-b"></div>
-            <p class="icon-i">弹性工作</p>
+            <div class="icon-b">
+              <img src="../../../common/images/join/fl/fl-8.svg" />
+            </div>
+            <p class="icon-i">定期团建</p>
           </li>
         </ul>
       </div>
@@ -105,14 +121,17 @@ export default {
                 justify-content: space-around;
                 padding: 0;
                 li {
-                    width: 80px;
+                    width: 120px;
                     border-radius: 4px;
                     overflow: hidden;
                     .icon-b {
                         width:44px;
                         height:44px;
-                        border:2px solid rgba(51,51,51,1);
                         margin: 0 auto 16px;
+                        img {
+                          width: 100%;
+                          height: 100%;
+                        }
                     }
                     .icon-i {
                         text-align: center;

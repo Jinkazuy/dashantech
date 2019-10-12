@@ -1,6 +1,6 @@
 <template>
   <div :class="['con-modu-2', 'container', mob ? 'con-modu-2-mob' : '']">
-    <div class="co-mo2-title">
+    <div class="co-mo2-title po-lf50-tr50">
       <img
         class="w100 h100"
         src="../../../common/images/titles/contact-title-ContactUs.png"
@@ -48,8 +48,6 @@ export default {
     padding: 0;
     .co-mo2-title {
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
         top: 80px;
         width: 136px;
         height: 84px;

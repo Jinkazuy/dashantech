@@ -17,7 +17,7 @@
                   src="../../../common/images/about/modu-2/ch-rc.png"
                 />
               </div>
-              <div class="num posi-ab">
+              <div class="num po-lf50-tr50 posi-ab">
                 <span class="number">107</span>
                 <span class="Company">位</span>
                 <p class="p-type">技术人才</p>
@@ -30,7 +30,7 @@
                   src="../../../common/images/about/modu-2/ch-zj.png"
                 />
               </div>
-              <div class="num posi-ab">
+              <div class="num po-lf50-tr50 posi-ab">
                 <span class="number">500</span>
                 <span class="Company">位</span>
                 <p class="p-type">行业专家</p>
@@ -43,7 +43,7 @@
                   src="../../../common/images/about/modu-2/ch-zl.png"
                 />
               </div>
-              <div class="num posi-ab">
+              <div class="num po-lf50-tr50 posi-ab">
                 <span class="number">79</span>
                 <span class="Company">项</span>
                 <p class="p-type">技术专利</p>
@@ -111,8 +111,6 @@ export default {
                         }
                         .num {
                             top: 200px;
-                            left: 50%;
-                            transform: translateX(-50%);
                             line-height: 1;
                             margin-top: 14px;
                             text-align: center;

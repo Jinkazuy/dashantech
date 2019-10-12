@@ -1,14 +1,14 @@
 <template>
   <div :class="['about-modu-3', 'w100', mob ? 'about-modu-3-mob' : '']">
     <div class="container h100">
-      <div class="ab-co-3-title posi-ab">
+      <div class="ab-co-3-title po-lf50-tr50 posi-ab">
         <img
           class="w100 h100"
           src="../../../common/images/titles/about-title-OurServiceContent.png"
         />
       </div>
       <div class="ab-co-3-body w100 posi-ab">
-        <div class="ab3-hover-view-1 h100 posi-ab">
+        <div class="ab3-hover-view-1 po-lf50-tr50  h100 posi-ab">
           <a class="ab3-server-con-1 h100 posi-re" href="#">
             <div class="ab3-server-con-info posi-ab w100">
               <h3>医疗大健康平台</h3>
@@ -102,8 +102,6 @@ export default {
     .container {
         padding: 0;
         .ab-co-3-title {
-            left: 50%;
-            transform: translateX(-50%);
             top: 80px;
             width: 234px;
             height: 84px;
@@ -112,8 +110,6 @@ export default {
             top: 204px;
             height: 512px;
             .ab3-hover-view-1 {
-                left: 50%;
-                transform: translateX(-50%);
                 top: 0;
                 width: 1020px;
                 display: flex;

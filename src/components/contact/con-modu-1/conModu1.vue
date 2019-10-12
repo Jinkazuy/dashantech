@@ -8,7 +8,7 @@
           大善科技始终秉承着“中国科技、服务华人”的经营理念，专注大健康医疗领域深度挖掘。
         </p>
       </div>
-      <div class="cont-gr w100">
+      <div class="cont-gr po-lf50-tr50 w100">
         <div class="input-gr">
           <!--mvvm,不用form表单-->
           <input
@@ -191,8 +191,6 @@ export default {
     .cont-gr {
       position: absolute;
       top: 250px;
-      left: 50%;
-      transform: translateX(-50%);
       height: 414px;
       padding: 0 56px;
       .input-gr {
