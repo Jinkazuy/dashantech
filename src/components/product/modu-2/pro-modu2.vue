@@ -225,21 +225,12 @@
 <script>
 export default {
   name: "pro-modu2",
+  props: ["mob"],
   data() {
     return {
       // 每个tab的代表数字
-      liActiveNum: 1,
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      liActiveNum: 1
     };
-  },
-  created() {
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
   },
   methods: {
     proLi1() {

@@ -93,6 +93,7 @@
 // import topImgObj from "../../../../public/images/news-bg-img.png";
 export default {
   name: "modules3",
+  props: ["mob"],
   data() {
     return {
       // 文章分类切换
@@ -279,20 +280,11 @@ export default {
             ]
           }
         }
-      ],
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      ]
     };
   },
   created() {
     this.articleInfo = this.articleInfoData[0];
-
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("index-modu-1-加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
   },
   methods: {
     newsListRoute1() {
@@ -427,6 +419,18 @@ export default {
             right: 58px;
             top: 0;
             width: 958px;
+            @media (max-width: 1336px) {
+              width: 70%;
+            }
+            @media (min-width: 1336px) {
+              width: 958px;
+            }
+            @media (max-width: 1200px) {
+              width: 62%;
+            }
+            @media (max-width: 992px) {
+              width: 52%;
+            }
             // 顶部大模块
             .news-cont-top {
                 position: absolute;

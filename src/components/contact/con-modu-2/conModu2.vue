@@ -38,20 +38,7 @@
 <script>
 export default {
   name: "conModu2",
-  data() {
-    return {
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
-    };
-  },
-  created() {
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
-  }
+  props: ["mob"]
 };
 </script>
 

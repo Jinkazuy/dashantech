@@ -206,6 +206,7 @@
 });
 export default {
   name: "modules1",
+  props: ["mob"],
   data() {
     return {
       // 首页内容模块1相关============
@@ -250,18 +251,8 @@ export default {
           p:
             "大善随访系统解决方案随访系统将互联网、物联网技术与患者院内外医疗健康管理结合，以智能随访、智能宣教、智能提醒、健康监测、医护患沟通为患者管理主要手段，通过平台化的设计理念，为不同类型医疗机构，打造统一随访平台。"
         }
-      ],
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      ]
     };
-  },
-  created() {
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("index-modu-1-加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
   },
   methods: {
     hoverBtn1Cl() {

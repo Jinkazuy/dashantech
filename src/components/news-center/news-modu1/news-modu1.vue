@@ -46,6 +46,7 @@
 <script>
 export default {
   name: "modu1",
+  props: ["mob"],
   data() {
     return {
       // 时间线mock数据，DOM排列顺序与数组中的顺序相同；
@@ -65,18 +66,8 @@ export default {
           eventInfo:
             "大善科技获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位"
         }
-      ],
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      ]
     };
-  },
-  created() {
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
   }
 };
 </script>

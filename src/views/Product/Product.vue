@@ -36,8 +36,8 @@
       </div>
     </div>
     <!--banner部分 - 结束-->
-    <modu2></modu2>
-    <modu3></modu3>
+    <modu2 :mob="mob"></modu2>
+    <modu3 :mob="mob"></modu3>
   </div>
 </template>
 
@@ -56,6 +56,7 @@ import modu2 from "../../components/product/modu-2/pro-modu2";
 import modu3 from "../../components/product/modu-3/pro-modu3";
 export default {
   name: "Product",
+  props: ["mob"],
   data() {
     return {
       // 顶部banner下方轮播文字内容
@@ -81,18 +82,8 @@ export default {
         }
       ],
       // banner插画主体
-      bannerIllusCont: bannerIllusCont,
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      bannerIllusCont: bannerIllusCont
     };
-  },
-  created() {
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
   },
   mounted() {
     // 因为所有页面是作为app.vue的router-view，所以滚动值会继承；
@@ -109,7 +100,6 @@ export default {
     }
     // eslint-disable-next-line
     $("body").animate({ scrollTop: 0 }, 300);
-    console.log(12);
     return false;
   },
   components: {

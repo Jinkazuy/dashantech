@@ -63,6 +63,7 @@
 <script>
 export default {
   name: "joModu2",
+  props: ["mob"],
   data() {
     return {
       // 职位信息数据,本地mock，模拟json
@@ -148,18 +149,8 @@ export default {
             "3、享受养老金制度及高额的医疗、大病、意外保障。"
           ]
         }
-      ],
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      ]
     };
-  },
-  created() {
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
   },
   methods: {
     // 点击列表，给其他li去掉.list-active类名，然后给自己加上.list-active类名，实现展开与隐藏；

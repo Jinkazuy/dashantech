@@ -162,19 +162,10 @@ export default {
         perInfoZh: "上善若水 厚德载物",
         perInfoEn:
           "Network Security Big Data Experts Successful Continuous Entrepreneurs"
-      },
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      }
     };
   },
-  created() {
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("index-modu-1-加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
-  },
+  props: ["mob"],
   methods: {
     perHover1() {
       this.perShowData = this.perData[0];

@@ -1,8 +1,8 @@
 <template>
   <div class="contact">
-    <modu1></modu1>
-    <modu2></modu2>
-    <modu3></modu3>
+    <modu1 :mob="mob"></modu1>
+    <modu2 :mob="mob"></modu2>
+    <modu3 :mob="mob"></modu3>
   </div>
 </template>
 
@@ -12,6 +12,7 @@ import modu2 from "../../components/contact/con-modu-2/conModu2";
 import modu3 from "../../components/contact/con-modu-3/conModu3";
 export default {
   name: "Contact",
+  props: ["mob"],
   mounted() {
     // 因为所有页面是作为app.vue的router-view，所以滚动值会继承；
     // 那么切换router的时候就需要将网页的滚动值归零；
@@ -27,7 +28,6 @@ export default {
     }
     // eslint-disable-next-line
     $("body").animate({ scrollTop: 0 }, 300);
-    console.log(12);
     return false;
   },
   components: {

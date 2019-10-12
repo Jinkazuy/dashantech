@@ -1,17 +1,17 @@
 <template>
   <div :class="['home', 'clearfix', mob ? 'mob-css' : '']">
-    <homeBanner></homeBanner>
+    <homeBanner :mob="mob"></homeBanner>
     <!--内容部分 - 开始-->
     <!--内容模块 1 - 方案、内容-->
-    <homeModules1></homeModules1>
+    <homeModules1 :mob="mob"></homeModules1>
     <!--内容模块 2 - 关于我们-->
-    <homeModules2></homeModules2>
+    <homeModules2 :mob="mob"></homeModules2>
     <!--内容模块 3 - 公司动态-->
-    <homeModules3></homeModules3>
+    <homeModules3 :mob="mob"></homeModules3>
     <!--内容模块 4 - 客户评价-->
-    <homeModules4></homeModules4>
+    <homeModules4 :mob="mob"></homeModules4>
     <!--内容模块 5 - 加入我们-->
-    <homeModules5></homeModules5>
+    <homeModules5 :mob="mob"></homeModules5>
     <!--内容部分 - 结束-->
   </div>
 </template>
@@ -32,20 +32,7 @@ import homeModules5 from "../../components/index/modules-5/modules5";
 
 export default {
   name: "home",
-  data() {
-    return {
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
-    };
-  },
-  created() {
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
-  },
+  props: ["mob"],
   mounted() {
     // 因为所有页面是作为app.vue的router-view，所以滚动值会继承；
     // 那么切换router的时候就需要将网页的滚动值归零；
@@ -61,7 +48,6 @@ export default {
     }
     // eslint-disable-next-line
     $("body").animate({ scrollTop: 0 }, 300);
-    console.log(12);
     return false;
   },
   methods: {},

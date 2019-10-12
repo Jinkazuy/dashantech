@@ -7,6 +7,7 @@
 <script>
 export default {
   name: "Solution-center",
+  props: ["mob"],
   mounted() {
     // 因为所有页面是作为app.vue的router-view，所以滚动值会继承；
     // 那么切换router的时候就需要将网页的滚动值归零；
@@ -22,7 +23,6 @@ export default {
     }
     // eslint-disable-next-line
     $("body").animate({ scrollTop: 0 }, 300);
-    console.log(12);
     return false;
   }
 };

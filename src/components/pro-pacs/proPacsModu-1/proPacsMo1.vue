@@ -21,22 +21,12 @@ import bannerIllusCont from "../../../common/images/index/banner-1/banner-ch-3.p
 import bannerImg from "../../../components/layouts/banner-img/banner-img";
 export default {
   name: "proPacsMo1",
+  props: ["mob"],
   data() {
     return {
       // banner插画主体
-      bannerIllusCont: bannerIllusCont,
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      bannerIllusCont: bannerIllusCont
     };
-  },
-  created() {
-    // 是否渲染移动端样式
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
   },
   components: {
     bannerImg

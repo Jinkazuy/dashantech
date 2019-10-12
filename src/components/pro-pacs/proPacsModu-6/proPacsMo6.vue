@@ -23,21 +23,7 @@
 <script>
 export default {
   name: "proPacsMo6",
-  data() {
-    return {
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
-    };
-  },
-  created() {
-    // 是否渲染移动端样式
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
-  }
+  props: ["mob"]
 };
 </script>
 

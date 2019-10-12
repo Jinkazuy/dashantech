@@ -110,6 +110,7 @@ import swiper from "../../layouts/swiper/swiper";
 
 export default {
   name: "modules4",
+  props: ["mob"],
   data() {
     return {
       // 顶部banner下方轮播文字内容
@@ -135,18 +136,8 @@ export default {
           avatar: "./images/avatar.jpg",
           forKey: 3
         }
-      ],
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      ]
     };
-  },
-  created() {
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("index-modu-1-加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
   },
   components: {
     swiper

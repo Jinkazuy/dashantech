@@ -15,8 +15,8 @@
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
-    <newsModu></newsModu>
-    <modu1></modu1>
+    <newsModu :mob="mob"></newsModu>
+    <modu1 :mob="mob"></modu1>
   </div>
 </template>
 
@@ -27,6 +27,7 @@ import newsModu from "../../components/index/modules-3/modules3";
 import modu1 from "../../components/news-center/news-modu1/news-modu1";
 export default {
   name: "News-center",
+  props: ["mob"],
   data() {
     return {
       // swiper配置项
@@ -80,18 +81,8 @@ export default {
           index: 6,
           src: "./images/poto-2.jpg"
         }
-      ],
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      ]
     };
-  },
-  created() {
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
   },
   mounted() {
     // 因为所有页面是作为app.vue的router-view，所以滚动值会继承；

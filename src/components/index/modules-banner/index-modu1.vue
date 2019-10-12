@@ -52,20 +52,22 @@
 <script>
 export default {
   name: "pro-modu1",
-  data() {
-    return {
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
-    };
-  },
-  created() {
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("index-modu-1-加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
-  }
+  props: ["mob"]
+  // 由父级传入mob，不需要每个子组件判断了；
+  // data() {
+  //   return {
+  //     // 控制显示移动端还是pc端css样式的变量
+  //     mob: false
+  //   };
+  // },
+  // created() {
+  //   if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+  //     console.log("index-modu-1-加载移动端样式");
+  //     this.mob = true;
+  //   } else {
+  //     this.mob = false;
+  //   }
+  // }
 };
 </script>
 

@@ -1,5 +1,12 @@
 <template>
-  <div :class="['proFollowMo-1', 'w100', 'clearfix', mob ? 'proFollowMo-1-mob' : '']">
+  <div
+    :class="[
+      'proFollowMo-1',
+      'w100',
+      'clearfix',
+      mob ? 'proFollowMo-1-mob' : ''
+    ]"
+  >
     <div class="container">
       <div class="pro-follow-mo1-tit">
         <h1>随访系统</h1>
@@ -19,22 +26,12 @@ import bannerIllusCont from "../../../common/images/index/banner-1/banner-ch-3.p
 import bannerImg from "../../../components/layouts/banner-img/banner-img";
 export default {
   name: "proFollowModu1",
+  props: ["mob"],
   data() {
     return {
       // banner插画主体
-      bannerIllusCont: bannerIllusCont,
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      bannerIllusCont: bannerIllusCont
     };
-  },
-  created() {
-    // 是否渲染移动端样式
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
   },
   components: {
     bannerImg

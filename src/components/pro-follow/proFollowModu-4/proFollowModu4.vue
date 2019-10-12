@@ -22,6 +22,7 @@
 <script>
 export default {
   name: "proFollowModu4",
+  props: ["mob"],
   data() {
     return {
       proFolMmo4BdInfo: [
@@ -60,19 +61,8 @@ export default {
           p: `搭建全院统一随访平台，避免重复投入，管理困难；`,
           imgSrc: "./images/blockchain-7.png"
         }
-      ],
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      ]
     };
-  },
-  created() {
-    // 是否渲染移动端样式
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
   }
 };
 </script>

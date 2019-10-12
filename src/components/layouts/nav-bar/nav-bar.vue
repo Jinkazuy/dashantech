@@ -110,20 +110,10 @@ export default {
       // 产品中心连接鼠标移入
       proLinkShow: false,
       // 因为鼠标移出产品中心会将下拉浮层隐藏，因为需要一个定时器来防止移出时立刻隐藏；
-      proToastTimeout: {},
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      proToastTimeout: {}
     };
   },
-  props: ["showNavBarShadow"],
-  created() {
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("index-modu-1-加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
-  },
+  props: ["showNavBarShadow", "mob"],
   mounted() {
     // 监听页面实时滚动值，从而控制导航栏高度的值；
     window.addEventListener("scroll", this.pageScroll);

@@ -1,13 +1,13 @@
 <template>
   <div class="product-pacs">
-    <mo1></mo1>
-    <mo2></mo2>
-    <mo3></mo3>
-    <mo4></mo4>
-    <mo5></mo5>
-    <mo6></mo6>
-    <mo7></mo7>
-    <mo8></mo8>
+    <mo1 :mob="mob"></mo1>
+    <mo2 :mob="mob"></mo2>
+    <mo3 :mob="mob"></mo3>
+    <mo4 :mob="mob"></mo4>
+    <mo5 :mob="mob"></mo5>
+    <mo6 :mob="mob"></mo6>
+    <mo7 :mob="mob"></mo7>
+    <mo8 :mob="mob"></mo8>
   </div>
 </template>
 
@@ -22,6 +22,7 @@ import mo7 from "../../components/pro-pacs/proPacsModu-7/proPacsMo7";
 import mo8 from "../../components/pro-pacs/proPacsModu-8/proPacsMo8";
 export default {
   name: "productPacs",
+  props: ["mob"],
   mounted() {
     // 因为所有页面是作为app.vue的router-view，所以滚动值会继承；
     // 那么切换router的时候就需要将网页的滚动值归零；
@@ -37,7 +38,6 @@ export default {
     }
     // eslint-disable-next-line
     $("body").animate({ scrollTop: 0 }, 300);
-    console.log(12);
     return false;
   },
   components: {

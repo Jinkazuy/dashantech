@@ -31,6 +31,7 @@
 <script>
 export default {
   name: "proFollowModu3",
+  props: ["mob"],
   data() {
     return {
       // 当前悬停li的索引，用于替换UI界面图片&改变li背景色；
@@ -72,19 +73,8 @@ export default {
           litText: "支持软件拨号、耳麦通话、电话录音、自动保存记录",
           imgSrc: "./images/gui-1.png"
         }
-      ],
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      ]
     };
-  },
-  created() {
-    // 是否渲染移动端样式
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
   },
   methods: {
     liHover(idx) {

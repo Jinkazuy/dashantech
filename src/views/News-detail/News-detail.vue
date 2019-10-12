@@ -36,6 +36,7 @@
 <script>
 export default {
   name: "News-detail",
+  props: ["mob"],
   data() {
     return {
       rBoxH: 0,
@@ -65,9 +66,7 @@ export default {
           info:
             "2019年7月25日，我司正式获聘成为中国卫生信息与健康大数据学会第七届常务理事单位。 中国卫生信息与健康医疗大数据学会中国卫生信息与健康医疗大数据学会（Chinese Health Information and Big Data Association, CHIBDA, 以下简称“学会”）是国家卫生和计划生育委员会主管的国家一级学会。其前身是成立于1984年的中国卫生统计学会；2004年更名为中国卫生信息学会。2017年7月，经民政部批复，同意中国卫生信息学会更名为中国卫生信息与健康医疗大数据学会，学会现有专业委员会56个。 近两年，伴随着“互联网+医疗健康”“医联体”“医共体”“大健康”等理念和战略的确立，健康中国建设逐步有效地推进，不断迈入新台阶，我司作为医疗领域信息化平台系统产品供应商和相关解决方案提供商（欢迎了解我司《【关于我们】走进大善科技》），竭力与同业仁人志士一起为医疗卫生事业共蓄力谋发展。 此次获得学会的聘任，我司将充分发挥自身高新技术资源优势和理念，在医疗卫生信息化和大健康数据建设方面为卫生健康事业服务。"
         }
-      ],
-      // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      ]
     };
   },
   created() {
@@ -89,13 +88,6 @@ export default {
       console.log("文章不存在");
     } else {
       this.articleInfo = ret;
-    }
-    // 是否渲染移动端样式
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
     }
   },
   mounted() {

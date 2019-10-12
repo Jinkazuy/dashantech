@@ -9,10 +9,11 @@
       <navBar
         :linkActive="'home'"
         :showNavBarShadow="showNavBarShadow"
+        :mob="mob"
       ></navBar>
-      <router-view></router-view>
+      <router-view :mob="mob"></router-view>
       <sideBar :showSideBar="showSideBar"></sideBar>
-      <bottom></bottom>
+      <bottom :mob="mob"></bottom>
     </div>
   </div>
 </template>
@@ -56,12 +57,24 @@ export default {
     }, 1000);
   },
   created() {
+    // 初始化数据的时候判断是否为移动端，用于传给每个一级页面，然后由一级页面传给每个子组件
     if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
       console.log("index-modu-1-加载移动端样式");
       this.mob = true;
     } else {
       this.mob = false;
     }
+    // 屏幕尺寸改变时候判断是否为移动端，用于传给每个一级页面，然后由一级页面传给每个子组件
+    // eslint-disable-next-line
+    $(window).resize(()=> {
+      if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
+        this.mob = true;
+        console.log(this.mob);
+      } else {
+        this.mob = false;
+        console.log(this.mob);
+      }
+    });
   },
   methods: {
     // 实时监听浏览器滚动值
