@@ -83,11 +83,11 @@
             <ul class="nav-list">
               <li><router-link to="/productPacs">PACS影像云</router-link></li>
               <li><router-link to="/productFollow">随访系统</router-link></li>
-              <li><a href="#">互联网医院信息平台</a></li>
-              <li><a href="#">移动医生查房系统</a></li>
-              <li><a href="#">电子胶片</a></li>
-              <li><a href="#">区域慢病管理系统</a></li>
-              <li><a href="#">智能康复管理系统</a></li>
+              <li><router-link to="/ProductHospitalInfo">互联网医院信息平台</router-link></li>
+              <li><router-link to="/productWardRound">移动医生查房系统</router-link></li>
+              <li><router-link to="/productFilm">电子胶片</router-link></li>
+              <li><router-link to="/productIllMG">区域慢病管理系统</router-link></li>
+              <li><router-link to="/productRecovery">智能康复管理系统</router-link></li>
             </ul>
           </li>
         </ul>

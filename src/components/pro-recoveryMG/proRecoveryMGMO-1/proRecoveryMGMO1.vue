@@ -1,17 +1,17 @@
 <template>
   <div
     :class="[
-      'proFollowMo-1',
+      'pro-recover-mg-modu-1',
       'w100',
       'clearfix',
-      mob ? 'proFollowMo-1-mob' : ''
+      mob ? 'pro-recover-mg-modu-1-mob' : ''
     ]"
   >
     <div class="container">
-      <div class="pro-follow-mo1-tit">
-        <h1>随访系统</h1>
+      <div class="pro-recover-mg-modu-1-tit">
+        <h1>智能康复管理系统</h1>
         <p>
-          医学随访是指医院或者医疗保健机构对曾在医院就诊的病人以通讯或者其他的方式进行定期了解患者病情变化和指导患者康复的一种观察方法。医院随访是医院以门诊、住院患者为主要服务对象，是实现院后持续服务和评价反馈的主要手段，包括关怀性随访和管理性随访，主要目的是提高患者满意度，增强患者忠诚度，提升医院管理水平。
+          康复治疗前应先对病、伤、残者进行康复评定，然后制定一个理想的康复方案，由以康复医师为中心，和临床医学相关人员共同组成的康复治疗组去实施，并在实施过程中不断总结、评定调查，直至治疗结束。可实现康复科室的数字化、信息化和过程的管控，有效避免信息孤岛的出现，实现全员的数据共享。
         </p>
       </div>
       <!--将banner插图封装为组件，需要用到时，将插画主体（不包括底板和点缀等部分）的图片传入-->
@@ -21,11 +21,10 @@
 </template>
 
 <script>
-// 引入banner插画组件
-import bannerIllusCont from "../../../common/images/product/items-illus/sfxt.png";
+import bannerIllusCont from "../../../common/images/product/items-illus/jkgl.png";
 import bannerImg from "../../../components/layouts/banner-img/banner-img";
 export default {
-  name: "proFollowModu1",
+  name: "proRecoveryMGMO1",
   props: ["mob"],
   data() {
     return {
@@ -40,13 +39,13 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-.proFollowMo-1 {
+.pro-recover-mg-modu-1 {
     z-index: 2;
     position: relative;
     background-color: rgba(16, 10, 48, 1)
     .container {
         padding: 0 58px;
-        .pro-follow-mo1-tit {
+        .pro-recover-mg-modu-1-tit {
             margin: 220px 0 0 0;
             width: 34%;
             h1,p {
@@ -73,26 +72,26 @@ export default {
     }
 }
 // ============= 移动端样式 =============
-.proFollowMo-1-mob {
-  .container {
-    display: block;
-    padding: 40px 0 0;
-    .pro-follow-mo1-tit {
-      width: 100%;
-      margin: 40px 0 0;
-      padding: 0 20px;
-      h1 {
-        font-size: 24px;
-      }
+.pro-recover-mg-modu-1-mob {
+    .container {
+        display: block;
+        padding: 40px 0 0;
+        .pro-recover-mg-modu-1-tit {
+            width: 100%;
+            margin: 40px 0 0;
+            padding: 0 20px;
+            h1 {
+                font-size: 24px;
+            }
+        }
+        // 插画样式
+        // 由于是组件，所以在这里直接写插画组件样式，不单独在组件里改样式了；
+        .banner-illus {
+            right: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 200px;
+        }
     }
-    // 插画样式
-    // 由于是组件，所以在这里直接写插画组件样式，不单独在组件里改样式了；
-    .banner-illus {
-      right: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 200px;
-    }
-  }
 }
 </style>

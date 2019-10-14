@@ -12,7 +12,7 @@
           <div class="pro-mo2-hd-illus w100">
             <img
               class="h100"
-              src="../../../common/images/product/modu-2/test_20190924172645.png"
+              src="../../../common/images/product/modu-2/lt-ch-pacs.png"
               alt=""
             />
           </div>
@@ -22,7 +22,7 @@
           <div class="pro-mo2-hd-illus w100">
             <img
               class="h100"
-              src="../../../common/images/product/modu-2/test_20190924172645.png"
+              src="../../../common/images/product/modu-2/lt-ch-sfxt.png"
               alt=""
             />
           </div>
@@ -32,7 +32,7 @@
           <div class="pro-mo2-hd-illus w100">
             <img
               class="h100"
-              src="../../../common/images/product/modu-2/test_20190924172645.png"
+              src="../../../common/images/product/modu-2/lt-ch-xxpt.png"
               alt=""
             />
           </div>
@@ -42,7 +42,7 @@
           <div class="pro-mo2-hd-illus w100">
             <img
               class="h100"
-              src="../../../common/images/product/modu-2/test_20190924172645.png"
+              src="../../../common/images/product/modu-2/lt-ch-ydys.png"
               alt=""
             />
           </div>
@@ -52,7 +52,7 @@
           <div class="pro-mo2-hd-illus w100">
             <img
               class="h100"
-              src="../../../common/images/product/modu-2/test_20190924172645.png"
+              src="../../../common/images/product/modu-2/lt-ch-dzjp.png"
               alt=""
             />
           </div>
@@ -62,7 +62,7 @@
           <div class="pro-mo2-hd-illus w100">
             <img
               class="h100"
-              src="../../../common/images/product/modu-2/test_20190924172645.png"
+              src="../../../common/images/product/modu-2/lt-ch-mbgl.png"
               alt=""
             />
           </div>
@@ -72,7 +72,7 @@
           <div class="pro-mo2-hd-illus w100">
             <img
               class="h100"
-              src="../../../common/images/product/modu-2/test_20190924172645.png"
+              src="../../../common/images/product/modu-2/lt-ch-jkgl.png"
               alt=""
             />
           </div>
@@ -107,7 +107,7 @@
           <div class="bd-info-1" :key="1" v-show="liActiveNum === 1">
             <div class="pro-mo2-bd-illus">
               <img
-                src="../../../common/images/product/modu-2/pro-mo2-ch-ce.png"
+                src="../../../common/images/product/modu-2/big-ch-pacs.png"
               />
             </div>
             <div class="pro-mo2-bd-info">
@@ -123,7 +123,7 @@
           <div class="bd-info-2" :key="2" v-show="liActiveNum === 2">
             <div class="pro-mo2-bd-illus">
               <img
-                src="../../../common/images/product/modu-2/pro-mo2-ch-ce.png"
+                src="../../../common/images/product/modu-2/big-ch-sfxt.png"
               />
             </div>
             <div class="pro-mo2-bd-info">
@@ -132,14 +132,14 @@
                 大善随访系统解决方案随访系统将互联网、物联网技术与患者院内外医疗健康管理结合，以智能随访、智能宣教、智能提醒、健康监测、医护患沟通为患者管理主要手段，通过平台化的设计理念，为不同类型医疗机构，打造统一随访平台。
               </p>
               <div class="info-btn">
-                <a href="#">查看详情</a>
+                <router-link to="/productFollow">查看详情</router-link>
               </div>
             </div>
           </div>
           <div class="bd-info-3" :key="3" v-show="liActiveNum === 3">
             <div class="pro-mo2-bd-illus">
               <img
-                src="../../../common/images/product/modu-2/pro-mo2-ch-ce.png"
+                src="../../../common/images/product/modu-2/big-ch-xxpt.png"
               />
             </div>
             <div class="pro-mo2-bd-info">
@@ -148,14 +148,14 @@
                 互联网医院信息平台是一套集健康大数据收集、健康管理与疾病预防、网上诊疗为一体的远程医疗服务与协同信息平台，提供基于互联网的医疗卫生服务，利用互联网延伸医嘱、电子处方等网络医疗健康服务应用，从而提高医疗服务效率，保证医疗质量和医疗安全。
               </p>
               <div class="info-btn">
-                <a href="#">查看详情</a>
+                <router-link to="/ProductHospitalInfo">查看详情</router-link>
               </div>
             </div>
           </div>
           <div class="bd-info-4" :key="4" v-show="liActiveNum === 4">
             <div class="pro-mo2-bd-illus">
               <img
-                src="../../../common/images/product/modu-2/pro-mo2-ch-ce.png"
+                src="../../../common/images/product/modu-2/big-ch-ydys.png"
               />
             </div>
             <div class="pro-mo2-bd-info">
@@ -164,14 +164,14 @@
                 大善移动医生查房系统通过与众多医院已有的相关信息系统进行对接，实现了在移动终端设备上查看病人的基本信息、医嘱信息、电子病历、检查信息、检验信息、护理信息，同时还支持医生在终端设备上通过手写、语音以及图片的方式进行备注，很好地将医生的信息系统延伸到病人床边。
               </p>
               <div class="info-btn">
-                <a href="#">查看详情</a>
+                <router-link to="/productWardRound">查看详情</router-link>
               </div>
             </div>
           </div>
           <div class="bd-info-5" :key="5" v-show="liActiveNum === 5">
             <div class="pro-mo2-bd-illus">
               <img
-                src="../../../common/images/product/modu-2/pro-mo2-ch-ce.png"
+                src="../../../common/images/product/modu-2/big-ch-dzjp.png"
               />
             </div>
             <div class="pro-mo2-bd-info">
@@ -180,14 +180,14 @@
                 电子胶片，是基于移动互联网、、云存储、云计算技术，相对于传统感光胶片而言的一种新型影像浏览应用服务。医院可通过该技术把患者的数字影像发布到云端并长期存储，为医疗机构、医生及其患者提供便捷的医学影响信息服务。
               </p>
               <div class="info-btn">
-                <a href="#">查看详情</a>
+                <router-link to="/productFilm">查看详情</router-link>
               </div>
             </div>
           </div>
           <div class="bd-info-6" :key="6" v-show="liActiveNum === 6">
             <div class="pro-mo2-bd-illus">
               <img
-                src="../../../common/images/product/modu-2/pro-mo2-ch-ce.png"
+                src="../../../common/images/product/modu-2/big-ch-mbgl.png"
               />
             </div>
             <div class="pro-mo2-bd-info">
@@ -196,14 +196,14 @@
                 大善医院慢病管理系统是致力于辅助医护人员、健康管理师更好的管理患者，为医护人员提供信息化、自动化的手段来为患者提供更优质的服务，让患者居家也能享受到医疗服务。通过专业精准的慢病评估，医护患全程与决策，针对不同患者提供健康营养套餐（食物、运动、休息，衣，食，住，行）。
               </p>
               <div class="info-btn">
-                <a href="#">查看详情</a>
+                <router-link to="/productIllMG">查看详情</router-link>
               </div>
             </div>
           </div>
           <div class="bd-info-7" :key="7" v-show="liActiveNum === 7">
             <div class="pro-mo2-bd-illus">
               <img
-                src="../../../common/images/product/modu-2/pro-mo2-ch-ce.png"
+                src="../../../common/images/product/modu-2/big-ch-jkgl.png"
               />
             </div>
             <div class="pro-mo2-bd-info">
@@ -212,7 +212,7 @@
                 康复治疗前应先对病、伤、残者进行康复评定，然后制定一个理想的康复方案，由以康复医师为中心，和临床医学相关人员共同组成的康复治疗组去实施，并在实施过程中不断总结、评定调查，直至治疗结束。可实现康复科室的数字化、信息化和过程的管控，有效避免信息孤岛的出现，实现全员的数据共享。
               </p>
               <div class="info-btn">
-                <a href="#">查看详情</a>
+                <router-link to="/productRecovery">查看详情</router-link>
               </div>
             </div>
           </div>
@@ -372,8 +372,8 @@ export default {
           left: 10%;
           top: 50%;
           transform: translateY(-50%);
-          width: 47%;
-          height: 520px;
+          width: 50%;
+          /*height: 520px;*/
           img {
             width: 100%;
             height: 100%;

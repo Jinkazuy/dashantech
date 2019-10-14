@@ -35,6 +35,38 @@ const productFollow = resolve => {
     resolve(module);
   });
 };
+// 一级路由：产品详情-互联网医院信息管理平台
+const ProductHospitalInfo = resolve => {
+  import("./views/Product-hospitalInfo/ProductHospitalInfo.vue").then(
+    module => {
+      resolve(module);
+    }
+  );
+};
+// 一级路由：产品详情-移动医生查房
+const productWardRound = resolve => {
+  import("./views/Product-wardRound/productWardRound.vue").then(module => {
+    resolve(module);
+  });
+};
+// 一级路由：产品详情-电子胶片
+const productFilm = resolve => {
+  import("./views/Product-Film/productFilm.vue").then(module => {
+    resolve(module);
+  });
+};
+// 一级路由：产品详情-慢病管理系统
+const productIllMG = resolve => {
+  import("./views/Product-illnessMG/ProductIllnessMG.vue").then(module => {
+    resolve(module);
+  });
+};
+// 一级路由：产品详情-智能康复管理系统
+const productRecovery = resolve => {
+  import("./views/Product-recovery/ProductRecovery.vue").then(module => {
+    resolve(module);
+  });
+};
 
 // 一级路由：公司动态
 const newsCenter = resolve => {
@@ -92,6 +124,7 @@ export default new Router({
       component: product
     },
     {
+      // ProductHospitalInfo
       // 产品详情 - PACS
       path: "/productPacs",
       component: productPacs
@@ -100,6 +133,31 @@ export default new Router({
       // 产品详情 - 随访系统
       path: "/productFollow",
       component: productFollow
+    },
+    {
+      // 产品详情 - 互联网医院信息管理平台
+      path: "/ProductHospitalInfo",
+      component: ProductHospitalInfo
+    },
+    {
+      // 产品详情 - 移动医生查房
+      path: "/productWardRound",
+      component: productWardRound
+    },
+    {
+      // 产品详情 - 电子胶片
+      path: "/productFilm",
+      component: productFilm
+    },
+    {
+      // 产品详情 - 慢病管理系统
+      path: "/productIllMG",
+      component: productIllMG
+    },
+    {
+      // 产品详情 - 智能康复管理系统
+      path: "/productRecovery",
+      component: productRecovery
     },
     {
       // 公司动态
