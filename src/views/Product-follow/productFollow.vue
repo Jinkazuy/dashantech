@@ -43,6 +43,17 @@ export default {
   }
 };
 </script>
-<style scoped lang="stylus">
-.product-follow {}
+<style lang="stylus">
+.product-follow {
+  // 调整顶部banner插画位置（移动）
+  .proFollowMo-1-mob {
+    .container {
+      .banner-illus {
+        .banner-liius-ch {
+          transform: translateX(-50%) translateY(40%);
+        }
+      }
+    }
+  }
+}
 </style>

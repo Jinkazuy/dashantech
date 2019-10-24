@@ -32,4 +32,27 @@ export default {
 };
 </script>
 
-<style scoped lang="stylus"></style>
+<style lang="stylus">
+.product-illMG {
+  // 调整顶部banner插画位置
+  .pro-ill-MG-modu-1 {
+    .container {
+      .banner-illus {
+        .banner-liius-ch {
+          transform: translateX(-50%) translateY(-16%);
+        }
+      }
+    }
+  }
+  // 调整顶部banner插画位置（移动）
+  .pro-ill-MG-modu-1-mob {
+    .container {
+      .banner-illus {
+        .banner-liius-ch {
+          transform: translateX(-50%) translateY(30%);
+        }
+      }
+    }
+  }
+}
+</style>

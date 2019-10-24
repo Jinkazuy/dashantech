@@ -32,4 +32,27 @@ export default {
 };
 </script>
 
-<style scoped lang="stylus"></style>
+<style lang="stylus">
+.product-recovery {
+  // 调整顶部banner插画位置
+  .pro-recover-mg-modu-1 {
+    .container {
+      .banner-illus {
+        .banner-liius-ch {
+          transform: translateX(-40%) translateY(10%);
+        }
+      }
+    }
+  }
+  // 调整顶部banner插画位置（移动）
+  .pro-recover-mg-modu-1-mob {
+    .container {
+      .banner-illus {
+        .banner-liius-ch {
+          transform: translateX(-40%) translateY(60%);
+        }
+      }
+    }
+  }
+}
+</style>

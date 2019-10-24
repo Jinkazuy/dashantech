@@ -95,7 +95,7 @@
                   :class="'prods-' + (index + 1)"
                   :key="index"
                 >
-                  <router-link :to="item.route" href="#" class="w100 h100">
+                  <router-link :to="item.route" class="w100 h100">
                     <div class="prods-info h100">
                       <h3 v-html="item.title"></h3>
                       <p v-html="item.p"></p>
@@ -104,7 +104,7 @@
                 </li>
               </ul>
               <div class="on-more">
-                <a href="#" class="ft-sz-14">查看更多</a>
+                <a href="/product" class="ft-sz-14">查看更多</a>
               </div>
             </div>
             <!--切换显示的第三项-->
@@ -223,31 +223,31 @@ export default {
         },
         {
           title: "电子胶片",
-          route: "#",
+          route: "/productFilm",
           p:
             "电子胶片，是基于移动互联网、云存储、云计算技术，相对于传统感光胶片而言的一种新型影像浏览应用服务。医院可通过该技术把患者的数字影像发布到云端并长期存储，为医疗机构、医生及其患者提供便捷的医学影响信息服务。"
         },
         {
           title: "移动医生查房系统",
-          route: "#",
+          route: "/productWardRound",
           p:
             "大善移动医生查房系统通过与众多医院已有的相关信息系统进行对接，实现了在移动终端设备上查看病人的基本信息、医嘱信息、电子病历、检查信息、检验信息、护理信息，同时还支持医生在终端设备上通过手写、语音以及图片的方式进行备注，很好地将医生的信息系统延伸到病人床边。"
         },
         {
           title: "智能康复管理系统",
-          route: "#",
+          route: "/productRecovery",
           p:
             "康复治疗前应先对病、伤、残者进行康复评定，然后制定一个理想的康复方案，由以康复医师为中心，和临床医学相关人员共同组成的康复治疗组去实施，并在实施过程中不断总结、评定调查，直至治疗结束。可实现康复科室的数字化、信息化和过程的管控，有效避免信息孤岛的出现，实现全员的数据共享。"
         },
         {
           title: "医院慢病管理系统",
-          route: "#",
+          route: "/productIllMG",
           p:
             "大善医院慢病管理系统是致力于辅助医护人员、健康管理师更好的管理患者，为医护人员提供信息化、自动化的手段来为患者提供更优质的服务，让患者居家也能享受到医疗服务。通过专业精准的慢病评估，医护患全程与决策，针对不同患者提供健康营养套餐（食物、运动、休息，衣，食，住，行）。"
         },
         {
           title: "随访系统",
-          route: "#",
+          route: "/productFollow",
           p:
             "大善随访系统解决方案随访系统将互联网、物联网技术与患者院内外医疗健康管理结合，以智能随访、智能宣教、智能提醒、健康监测、医护患沟通为患者管理主要手段，通过平台化的设计理念，为不同类型医疗机构，打造统一随访平台。"
         }
@@ -495,7 +495,7 @@ export default {
                                     left: 0;
                                     padding: 0 32px;
                                     padding-top: 16px;
-                                    background-color: rgba(40, 40, 50, 0.7)
+                                    background-color: rgba(20,40,120,0.6);
                                     transition: all .4s;
                                     border-radius: 0 0 6px 6px;
                                     h3 {
@@ -523,47 +523,49 @@ export default {
                             transform: translateY(-20px);
                             .prods-info {
                                 top: 0;
-                                background-color: rgba(40, 40, 50, 0.9);
+                                background-color: rgba(0,0,40,0.9);
                                 // 背景模糊、毛玻璃效果，只有IOS&&chrome能够看到该效果；
                                 backdrop-filter: blur(4px);
                             }
                         }
+
                         // 这是每个li的class,因为背景图不同，所以单拎出来写；
                         .prods-1{
                             a{
-                                background: url('../../../common/images/index/testillus.png') no-repeat;
-                                background-size: cover;
+                             background: url('../../../common/images/product/items-illus/pacs.png') no-repeat;
                             }
                         }
                         .prods-2{
                             a{
-                                background: url('../../../common/images/index/testillus.png') no-repeat;
-                                background-size: cover;
+                              background: url('../../../common/images/product/items-illus/dzjp.png') no-repeat;
                             }
                         }
                         .prods-3{
                             a{
-                                background: url('../../../common/images/index/testillus.png') no-repeat;
-                                background-size: cover;
+                              background: url('../../../common/images/product/items-illus/ydys.png') no-repeat;
                             }
                         }
                         .prods-4{
                             a{
-                                background: url('../../../common/images/index/testillus.png') no-repeat;
-                                background-size: cover;
+                              background: url('../../../common/images/product/items-illus/jkgl.png') no-repeat;
                             }
                         }
                         .prods-5{
                             a{
-                                background: url('../../../common/images/index/testillus.png') no-repeat;
-                                background-size: cover;
+                              background: url('../../../common/images/product/items-illus/mbgl.png') no-repeat;
                             }
                         }
                         .prods-6{
                             a{
-                                background: url('../../../common/images/index/testillus.png') no-repeat;
-                                background-size: cover;
+                              background: url('../../../common/images/product/items-illus/sfxt.png') no-repeat;
                             }
+                        }
+                        .prods-1, .prods-2, .prods-3, .prods-4, .prods-5, .prods-6 {
+                          a {
+                            background-size: 80% auto;
+                            background-position: center;
+                            background-color: #0c1639;
+                          }
                         }
                     }
                     .on-more {

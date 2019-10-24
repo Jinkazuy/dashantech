@@ -53,7 +53,17 @@ export default {
 };
 </script>
 
-<style scoped lang="stylus">
+<style lang="stylus">
 .product-pacs {
+  // 调整顶部banner插画位置（移动）
+  .proPacsMo-1-mob {
+    .container {
+      .banner-illus {
+        .banner-liius-ch {
+          transform: translateX(-50%) translateY(60%);
+        }
+      }
+    }
+  }
 }
 </style>

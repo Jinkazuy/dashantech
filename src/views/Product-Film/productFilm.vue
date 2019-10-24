@@ -32,4 +32,17 @@ export default {
 };
 </script>
 
-<style scoped lang="stylus"></style>
+<style lang="stylus">
+.product-film {
+  // 调整顶部banner插画位置（移动）
+  .pro-film-modu-1-mob {
+    .container {
+      .banner-illus {
+        .banner-liius-ch {
+          transform: translateX(-50%) translateY(66%);
+        }
+      }
+    }
+  }
+}
+</style>

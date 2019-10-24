@@ -32,4 +32,17 @@ export default {
 };
 </script>
 
-<style scoped lang="stylus"></style>
+<style lang="stylus">
+.product-productWardRound {
+  // 调整顶部banner插画位置（移动）
+  .pro-WardRound-modu-1-mob {
+    .container {
+      .banner-illus {
+        .banner-liius-ch {
+          transform: translateX(-50%) translateY(50%);
+        }
+      }
+    }
+  }
+}
+</style>

@@ -83,11 +83,60 @@
             <ul class="nav-list">
               <li><router-link to="/productPacs">PACS影像云</router-link></li>
               <li><router-link to="/productFollow">随访系统</router-link></li>
-              <li><router-link to="/ProductHospitalInfo">互联网医院信息平台</router-link></li>
-              <li><router-link to="/productWardRound">移动医生查房系统</router-link></li>
+              <li>
+                <router-link to="/ProductHospitalInfo"
+                  >互联网医院信息平台</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/productWardRound"
+                  >移动医生查房系统</router-link
+                >
+              </li>
               <li><router-link to="/productFilm">电子胶片</router-link></li>
-              <li><router-link to="/productIllMG">区域慢病管理系统</router-link></li>
-              <li><router-link to="/productRecovery">智能康复管理系统</router-link></li>
+              <li>
+                <router-link to="/productIllMG">医院慢病管理系统</router-link>
+              </li>
+              <li>
+                <router-link to="/productRecovery"
+                  >智能康复管理系统</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/productYLT"
+                  >城市医疗联合体信息平台</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/productRegionalCloud"
+                  >区域医疗影像及诊断云平台</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/productIntensiveCare"
+                  >重症护理信息管理平台</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/productWiseCare"
+                  >智慧护理管理系统</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/productClinicalDrug"
+                  >药物临床试验系统</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/productHemodialysis"
+                  >血液透析信息管理平台</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/productRegionalSlow"
+                  >区域慢病管理系统</router-link
+                >
+              </li>
             </ul>
           </li>
         </ul>
@@ -461,6 +510,10 @@ export default {
     // 底部部分 - 结束
   }
 }
+// ================== 移动端部分 ==================
+// ================== 移动端部分 ==================
+// ================== 移动端部分 ==================
+// ================== 移动端部分 ==================
 #bottom.bottom-mob {
   width: 100% !important;
   .container {
@@ -487,7 +540,7 @@ export default {
       }
     }
     .bottom-cont {
-      height: 800px;
+      height: 1040px;
       .lg-d {
         width: 100%;
       }

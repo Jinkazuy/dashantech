@@ -67,6 +67,58 @@ const productRecovery = resolve => {
     resolve(module);
   });
 };
+// 一级路由：医联体
+const productYLT = resolve => {
+  import("./views/Product-yltInfo/ProductYltInfo.vue").then(module => {
+    resolve(module);
+  });
+};
+// 一级路由：区域医疗影像及诊断云平台
+const productRegionalCloud = resolve => {
+  import("./views/Product-RegionalCloud/ProductRegionalCloud.vue").then(
+    module => {
+      resolve(module);
+    }
+  );
+};
+// 一级路由：重症护理信息管理平台
+const productIntensiveCare = resolve => {
+  import("./views/Product-intensiveCare/ProductIntensiveCare.vue").then(
+    module => {
+      resolve(module);
+    }
+  );
+};
+// 一级路由：智慧护理管理平台
+const productWiseCare = resolve => {
+  import("./views/Product-wiseCare/ProductWiseCare.vue").then(module => {
+    resolve(module);
+  });
+};
+// 一级路由：药物临床试验系统
+const productClinicalDrug = resolve => {
+  import("./views/Product-clinicalDrug/ProductClinicalDrug.vue").then(
+    module => {
+      resolve(module);
+    }
+  );
+};
+// 一级路由：血液透析信息管理平台
+const productHemodialysis = resolve => {
+  import("./views/Product-hemodialysis/productHemodialysis.vue").then(
+    module => {
+      resolve(module);
+    }
+  );
+};
+// 一级路由：区域慢病管理系统
+const productRegionalSlow = resolve => {
+  import("./views/Product-regionalSlow/ProductRegionalSlow.vue").then(
+    module => {
+      resolve(module);
+    }
+  );
+};
 
 // 一级路由：公司动态
 const newsCenter = resolve => {
@@ -158,6 +210,41 @@ export default new Router({
       // 产品详情 - 智能康复管理系统
       path: "/productRecovery",
       component: productRecovery
+    },
+    {
+      // 产品详情 - 医联体
+      path: "/productYLT",
+      component: productYLT
+    },
+    {
+      // 产品详情 - 区域医疗影像及诊断云平台
+      path: "/productRegionalCloud",
+      component: productRegionalCloud
+    },
+    {
+      // 产品详情 - 重症护理信息管理平台
+      path: "/productIntensiveCare",
+      component: productIntensiveCare
+    },
+    {
+      // 产品详情 - 智慧护理管理平台
+      path: "/productWiseCare",
+      component: productWiseCare
+    },
+    {
+      // 产品详情 - 血液透析信息管理平台
+      path: "/productHemodialysis",
+      component: productHemodialysis
+    },
+    {
+      // 产品详情 - 药物临床试验系统
+      path: "/productClinicalDrug",
+      component: productClinicalDrug
+    },
+    {
+      // 产品详情 - 区域慢病管理系统
+      path: "/productRegionalSlow",
+      component: productRegionalSlow
     },
     {
       // 公司动态
