@@ -40,7 +40,7 @@ export default {
         }
         .banner-illus {
           .banner-liius-ch {
-            transform: translateX(-50%) translateY(-16%);
+            transform: translateX(-50%) translateY(30%);
           }
         }
     }
