@@ -26,7 +26,7 @@
 
 <script>
 // 引入banner插画组件
-import bannerIllusCont from "../../../common/images/product/items-illus/zzhl.png";
+import bannerIllusCont from "../../../../public/images/zzhl.png";
 import bannerImg from "../../../components/layouts/banner-img/banner-img";
 export default {
   name: "proIntensiveCareMO1",

@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import bannerIllusCont from "../../../common/images/product/items-illus/jkgl.png";
+import bannerIllusCont from "../../../../public/images/jkgl.png";
 import bannerImg from "../../../components/layouts/banner-img/banner-img";
 export default {
   name: "proRecoveryMGMO1",

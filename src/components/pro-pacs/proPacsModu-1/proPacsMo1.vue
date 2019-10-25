@@ -17,7 +17,7 @@
 
 <script>
 // 引入banner插画组件
-import bannerIllusCont from "../../../common/images/product/items-illus/pacs.png";
+import bannerIllusCont from "../../../../public/images/pacs.png";
 import bannerImg from "../../../components/layouts/banner-img/banner-img";
 export default {
   name: "proPacsMo1",

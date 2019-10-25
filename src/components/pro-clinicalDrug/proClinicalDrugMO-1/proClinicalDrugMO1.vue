@@ -24,7 +24,7 @@
 
 <script>
 // 引入banner插画组件
-import bannerIllusCont from "../../../common/images/product/items-illus/ywlcsy.png";
+import bannerIllusCont from "../../../../public/images/ywlcsy.png";
 import bannerImg from "../../../components/layouts/banner-img/banner-img";
 export default {
   name: "proClinicalDrugMO1",

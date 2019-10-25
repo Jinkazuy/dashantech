@@ -104,7 +104,9 @@
                 </li>
               </ul>
               <div class="on-more">
-                <a href="/product" class="ft-sz-14">查看更多</a>
+                <router-link href="/product" class="ft-sz-14"
+                  >查看更多</router-link
+                >
               </div>
             </div>
             <!--切换显示的第三项-->
@@ -532,32 +534,32 @@ export default {
                         // 这是每个li的class,因为背景图不同，所以单拎出来写；
                         .prods-1{
                             a{
-                             background: url('../../../common/images/product/items-illus/pacs.png') no-repeat;
+                             background: url('../../../../public/images/pacs.png') no-repeat;
                             }
                         }
                         .prods-2{
                             a{
-                              background: url('../../../common/images/product/items-illus/dzjp.png') no-repeat;
+                              background: url('../../../../public/images/dzjp.png') no-repeat;
                             }
                         }
                         .prods-3{
                             a{
-                              background: url('../../../common/images/product/items-illus/ydys.png') no-repeat;
+                              background: url('../../../../public/images/ydys.png') no-repeat;
                             }
                         }
                         .prods-4{
                             a{
-                              background: url('../../../common/images/product/items-illus/jkgl.png') no-repeat;
+                              background: url('../../../../public/images/jkgl.png') no-repeat;
                             }
                         }
                         .prods-5{
                             a{
-                              background: url('../../../common/images/product/items-illus/mbgl.png') no-repeat;
+                              background: url('../../../../public/images/mbgl.png') no-repeat;
                             }
                         }
                         .prods-6{
                             a{
-                              background: url('../../../common/images/product/items-illus/sfxt.png') no-repeat;
+                              background: url('../../../../public/images/sfxt.png') no-repeat;
                             }
                         }
                         .prods-1, .prods-2, .prods-3, .prods-4, .prods-5, .prods-6 {

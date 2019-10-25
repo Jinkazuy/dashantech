@@ -22,7 +22,7 @@
 
 <script>
 // 引入banner插画组件
-import bannerIllusCont from "../../../common/images/product/items-illus/zhhl.png";
+import bannerIllusCont from "../../../../public/images/zhhl.png";
 import bannerImg from "../../../components/layouts/banner-img/banner-img";
 export default {
   name: "proWiseCareMO1",

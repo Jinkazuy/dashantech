@@ -80,7 +80,7 @@ export default {
         {
           showNumber: 0,
           // 编译后，取根目录下的public的地址；
-          imgBigSrc: "images/big-ch-pacs.png",
+          imgBigSrc: "images/pacs.png",
           imgLtSrc: "images/lt-ch-pacs.png",
           h4: "PACS影像云",
           p:
@@ -91,7 +91,7 @@ export default {
         {
           showNumber: 1,
           // 编译后，取根目录下的public的地址；
-          imgBigSrc: "images/big-ch-sfxt.png",
+          imgBigSrc: "images/sfxt.png",
           imgLtSrc: "images/lt-ch-sfxt.png",
           h4: "随访系统",
           p:
@@ -102,7 +102,7 @@ export default {
         {
           showNumber: 2,
           // 编译后，取根目录下的public的地址；
-          imgBigSrc: "images/big-ch-xxpt.png",
+          imgBigSrc: "images/xxpt.png",
           imgLtSrc: "images/lt-ch-xxpt.png",
           h4: "互联网医院信息平台",
           p:
@@ -113,7 +113,7 @@ export default {
         {
           showNumber: 3,
           // 编译后，取根目录下的public的地址；
-          imgBigSrc: "images/big-ch-ydys.png",
+          imgBigSrc: "images/ydys.png",
           imgLtSrc: "images/lt-ch-ydys.png",
           h4: "移动医生查房系统",
           p:
@@ -124,7 +124,7 @@ export default {
         {
           showNumber: 4,
           // 编译后，取根目录下的public的地址；
-          imgBigSrc: "images/big-ch-dzjp.png",
+          imgBigSrc: "images/dzjp.png",
           imgLtSrc: "images/lt-ch-dzjp.png",
           h4: "电子胶片",
           p:
@@ -135,7 +135,7 @@ export default {
         {
           showNumber: 5,
           // 编译后，取根目录下的public的地址；
-          imgBigSrc: "images/big-ch-mbgl.png",
+          imgBigSrc: "images/mbgl.png",
           imgLtSrc: "images/lt-ch-mbgl.png",
           h4: "医院慢病管理系统",
           p:
@@ -146,7 +146,7 @@ export default {
         {
           showNumber: 6,
           // 编译后，取根目录下的public的地址；
-          imgBigSrc: "images/big-ch-jkgl.png",
+          imgBigSrc: "images/jkgl.png",
           imgLtSrc: "images/lt-ch-jkgl.png",
           h4: "智能康复管理系统",
           p:
@@ -156,7 +156,7 @@ export default {
         {
           showNumber: 7,
           // 编译后，取根目录下的public的地址；
-          imgBigSrc: "images/big-ch-ylt.png",
+          imgBigSrc: "images/ylt.png",
           imgLtSrc: "images/lt-ch-ylt.png",
           h4: "城市医疗联合体信息平台",
           p: "",
@@ -165,7 +165,7 @@ export default {
         {
           showNumber: 8,
           // 编译后，取根目录下的public的地址；
-          imgBigSrc: "images/big-ch-qyyyx.png",
+          imgBigSrc: "images/qyyyx.png",
           imgLtSrc: "images/lt-ch-qyyyx.png",
           h4: "区域医疗影像及诊断云平台",
           p: "",
@@ -174,7 +174,7 @@ export default {
         {
           showNumber: 9,
           // 编译后，取根目录下的public的地址；Intensive-care   IntensiveCare
-          imgBigSrc: "images/big-ch-zzhl.png",
+          imgBigSrc: "images/zzhl.png",
           imgLtSrc: "images/lt-ch-zzhl.png",
           h4: "重症护理信息管理平台",
           p: "",
@@ -183,7 +183,7 @@ export default {
         {
           showNumber: 10,
           // 编译后，取根目录下的public的地址； Wise-care  WiseCare
-          imgBigSrc: "images/big-ch-zhhl.png",
+          imgBigSrc: "images/zhhl.png",
           imgLtSrc: "images/lt-ch-zhhl.png",
           h4: "智慧护理管理系统",
           p: "",
@@ -192,7 +192,7 @@ export default {
         {
           showNumber: 11,
           // 编译后，取根目录下的public的地址；Clinical-drug  ClinicalDrug
-          imgBigSrc: "images/big-ch-ywlcsy.png",
+          imgBigSrc: "images/ywlcsy.png",
           imgLtSrc: "images/lt-ch-ywlcsy.png",
           h4: "药物临床试验系统",
           p: "",
@@ -201,7 +201,7 @@ export default {
         {
           showNumber: 12,
           // 编译后，取根目录下的public的地址； hemodialysis
-          imgBigSrc: "images/big-ch-xytx.png",
+          imgBigSrc: "images/xytx.png",
           imgLtSrc: "images/lt-ch-xytx.png",
           h4: "血液透析信息管理平台",
           p: "",
@@ -210,7 +210,7 @@ export default {
         {
           showNumber: 13,
           // 编译后，取根目录下的public的地址；regional-slow  regionalSlow
-          imgBigSrc: "images/big-ch-qymb.png",
+          imgBigSrc: "images/qymb.png",
           imgLtSrc: "images/lt-ch-qymb.png",
           h4: "区域慢病管理系统",
           p: "",

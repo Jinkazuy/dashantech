@@ -27,7 +27,7 @@
 
 <script>
 // 引入banner插画组件
-import bannerIllusCont from "../../../common/images/product/items-illus/qyyyx.png";
+import bannerIllusCont from "../../../../public/images/qyyyx.png";
 import bannerImg from "../../../components/layouts/banner-img/banner-img";
 export default {
   name: "proRegionalCloudMO1",

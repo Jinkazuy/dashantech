@@ -23,7 +23,7 @@
 
 <script>
 // 引入banner插画组件
-import bannerIllusCont from "../../../common/images/product/items-illus/qymb.png";
+import bannerIllusCont from "../../../../public/images/qymb.png";
 import bannerImg from "../../../components/layouts/banner-img/banner-img";
 export default {
   name: "proRegionalSlowMO1",

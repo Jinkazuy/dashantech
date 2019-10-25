@@ -25,7 +25,7 @@
 
 <script>
 // 引入banner插画组件
-import bannerIllusCont from "../../../common/images/product/items-illus/ylt.png";
+import bannerIllusCont from "../../../../public/images/ylt.png";
 import bannerImg from "../../../components/layouts/banner-img/banner-img";
 export default {
   name: "proYltInfoModu1",
