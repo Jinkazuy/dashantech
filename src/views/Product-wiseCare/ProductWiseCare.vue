@@ -1,11 +1,17 @@
 <template>
   <div class="Product-wise-care">
     <mo1 :mob="mob"></mo1>
+    <mo2 :mob="mob"></mo2>
+    <mo3 :mob="mob"></mo3>
+    <mo4 :mob="mob"></mo4>
   </div>
 </template>
 
 <script>
 import mo1 from "../../components/pro-wiseCare/proWiseCareMO-1/proWiseCareMO1";
+import mo2 from "../../components/pro-wiseCare/proWiseCareMO-2/proWiseCareMO2";
+import mo3 from "../../components/pro-wiseCare/proWiseCareMO-3/proWiseCareMO3";
+import mo4 from "../../components/pro-wiseCare/proWiseCareMO-4/proWiseCareMO4";
 export default {
   name: "ProductWiseCare",
   props: ["mob"],
@@ -27,7 +33,10 @@ export default {
     return false;
   },
   components: {
-    mo1
+    mo1,
+    mo2,
+    mo3,
+    mo4
   }
 };
 </script>

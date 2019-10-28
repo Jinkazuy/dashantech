@@ -54,7 +54,7 @@ export default {
     background-color: rgba(16,10,48,1);
     .bgimg {
       width: 100%;
-      height: 70%;
+      height: 100%;
       position: absolute;
       left: 0;
       bottom: 0;
@@ -62,7 +62,7 @@ export default {
       background-position: center bottom;
       background-repeat: no-repeat;
       background-size: 100% auto;
-      opacity: .08;
+      opacity: .7;
       z-index: 1;
     }
     .container {
@@ -101,7 +101,7 @@ export default {
           margin: 0 1% 1% 0;
           height: 322px;
           // background:linear-gradient(270deg,rgba(50,54,123,1) 0%,rgba(28,20,69,1) 100%);
-          background-color: rgba(16,10,48,.6);
+          background-color: rgba(16,10,48,.9);
           box-shadow:0 5px 4px 0 rgba(0,0,0,0.29);
           border-radius:4px;
           background-image: url("../../../common/images/pro-pacs/banner-3-ill.png");

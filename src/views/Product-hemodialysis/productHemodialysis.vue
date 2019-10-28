@@ -1,11 +1,23 @@
 <template>
   <div class="Product-hemodialysis">
     <mo1 :mob="mob"></mo1>
+    <mo2 :mob="mob"></mo2>
+    <mo3 :mob="mob"></mo3>
+    <mo4 :mob="mob"></mo4>
+    <mo5 :mob="mob"></mo5>
+    <mo6 :mob="mob"></mo6>
+    <mo7 :mob="mob"></mo7>
   </div>
 </template>
 
 <script>
 import mo1 from "../../components/pro-hemodialysis/proHemodialysisMo-1/proHemodialysisMo1";
+import mo2 from "../../components/pro-hemodialysis/proHemodialysisMo-2/proHemodialysisMo2";
+import mo3 from "../../components/pro-hemodialysis/proHemodialysisMo-3/proHemodialysisMo3";
+import mo4 from "../../components/pro-hemodialysis/proHemodialysisMo-4/proHemodialysisMo4";
+import mo5 from "../../components/pro-hemodialysis/proHemodialysisMo-5/proHemodialysisMo5";
+import mo6 from "../../components/pro-hemodialysis/proHemodialysisMo-6/proHemodialysisMo6";
+import mo7 from "../../components/pro-hemodialysis/proHemodialysisMo-7/proHemodialysisMo7";
 export default {
   name: "productHemodialysis",
   props: ["mob"],
@@ -27,7 +39,13 @@ export default {
     return false;
   },
   components: {
-    mo1
+    mo1,
+    mo2,
+    mo3,
+    mo4,
+    mo5,
+    mo6,
+    mo7
   }
 };
 </script>

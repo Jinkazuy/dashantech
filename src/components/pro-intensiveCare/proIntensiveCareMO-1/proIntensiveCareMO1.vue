@@ -48,6 +48,8 @@ export default {
     z-index: 2;
     position: relative;
     background-color: rgba(16, 10, 48, 1)
+    overflow: hidden;
+    padding-bottom: 80px;
     .container {
         padding: 0 58px;
         .pro-intensiveCare-mo1-tit {

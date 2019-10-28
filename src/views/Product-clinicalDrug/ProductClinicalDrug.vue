@@ -1,11 +1,19 @@
 <template>
   <div class="Product-clinical-drug">
     <mo1 :mob="mob"></mo1>
+    <mo2 :mob="mob"></mo2>
+    <mo3 :mob="mob"></mo3>
+    <mo4 :mob="mob"></mo4>
+    <mo5 :mob="mob"></mo5>
   </div>
 </template>
 
 <script>
 import mo1 from "../../components/pro-clinicalDrug/proClinicalDrugMO-1/proClinicalDrugMO1";
+import mo2 from "../../components/pro-clinicalDrug/proClinicalDrugMO-2/proClinicalDrugMO2";
+import mo3 from "../../components/pro-clinicalDrug/proClinicalDrugMO-3/proClinicalDrugMO3";
+import mo4 from "../../components/pro-clinicalDrug/proClinicalDrugMO-4/proClinicalDrugMO4";
+import mo5 from "../../components/pro-clinicalDrug/proClinicalDrugMO-5/proClinicalDrugMO5";
 export default {
   name: "ProductClinicalDrug",
   props: ["mob"],
@@ -27,7 +35,11 @@ export default {
     return false;
   },
   components: {
-    mo1
+    mo1,
+    mo2,
+    mo3,
+    mo4,
+    mo5
   }
 };
 </script>
