@@ -11,10 +11,12 @@
       <img src="../../../common/images/titles/prd-title-XYTX-SI.png" />
       <p>
         为减少系统数据的二次录入和准确性，进一步保证护理系统的质量，系统需要和医院的其
-        他临床系统进行无缝集成。<br />与医院现有 IT 系统整合 :
-        医院现有信息系统如 HIS、检验、检查、手麻等系统的集成。<br />实现
+        他临床系统进行无缝集成。<br /><br v-if="mob" />与医院现有 IT 系统整合 :
+        医院现有信息系统如 HIS、检验、检查、手麻等系统的集成。<br /><br
+          v-if="mob"
+        />实现
         了从剪不断理还乱的传统点和点之间的网状集成方式转变成了更为合理先进的松耦合集成平台。
-        <br />
+        <br /><br v-if="mob" />
         支持 HL7, SOAP,XML,Webservice
         等接口方式，即插即用，轻松实现与各类信息系统 间无缝集成，减少集成风险。
       </p>
@@ -119,6 +121,11 @@ export default {
     .hemodialysis-mo7-tit {
         img {
             height: 42px;
+        }
+        p {
+          padding: 0 20px;
+          font-size: 12px;
+          line-height: 24px;
         }
     }
     .hemodialysis-mo7-bd {

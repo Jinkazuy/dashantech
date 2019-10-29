@@ -3,7 +3,7 @@
     :class="['better-wrapper', mob ? 'better-wrapper-mob' : '']"
     ref="betterWrapper"
   >
-    <div id="app">
+    <div id="app" v-if="isIE === -1 || isIE === 'edge'">
       <!--引入nav-bar组件-->
       <!--根据当前router-view传过来的参数，然后传导航栏组件，从而渲染当前已经激活的link的css样式-->
       <navBar
@@ -25,6 +25,22 @@ import sideBar from "./components/layouts/side-bar/sideBar";
 // 引入页脚组件
 import bottom from "./components/layouts/bottom/bottom";
 
+// 不管是不是ie浏览器，那么都添加这个DOM，在进入vue后，说明支持vue，那么就清除这个DOM元素，并且渲染#app；
+// eslint-disable-next-line
+$("<div class=\"is-ie\">\n" +
+    '<div class="logo-wrapper">\n' +
+    "<img src='images/ds-logo.png' width='100%' height='100%'>\n" +
+    "</div>\n" +
+    '<p class="sorry">\n' +
+    "抱歉，不支持IE浏览器\n" +
+    "<br />\n" +
+    "请使用谷歌浏览器、火狐浏览器、360浏览器极速模式、Edge浏览器\n" +
+    "</p>\n" +
+    '<img class="qr" src="images/qr.jpg" />\n' +
+    '<p class="flow">请关注 ‘大善科技’ 公众号，了解更多医疗科技资讯</p>\n' +
+    "</div>"
+).appendTo("body");
+
 export default {
   name: "App",
   data() {
@@ -34,7 +50,9 @@ export default {
       // 解决mounted钩子触发多次的问题,因为浏览器DOM结构变化会导致mounted多次触发
       mountedNum: 0,
       // 控制显示移动端还是pc端css样式的变量
-      mob: false
+      mob: false,
+      // 是否是ie或者Edge浏览器
+      isIE: -1
     };
   },
   mounted() {
@@ -54,6 +72,10 @@ export default {
           .removeClass("show")
           .addClass("collapse");
       });
+      // 图片防止拖拽
+      // ondragstart="return false;"
+      // eslint-disable-next-line
+      $("img").attr("ondragstart", "return false;");
     }, 1000);
   },
   created() {
@@ -64,6 +86,7 @@ export default {
     } else {
       this.mob = false;
     }
+
     // 屏幕尺寸改变时候判断是否为移动端，用于传给每个一级页面，然后由一级页面传给每个子组件
     // eslint-disable-next-line
     $(window).resize(()=> {
@@ -75,6 +98,17 @@ export default {
         console.log(this.mob);
       }
     });
+
+    // 判断是否是id浏览器，整体页面会用这个isIE做判定条件，是否渲染页面，还是渲染‘抱歉，不能用ie’的div；
+    this.isIE = this.iEVersion();
+    // 因为在一开始就在body中追加了对不起，不支持ie浏览器，所以，如果能够进入到这里，说明vue可以生效
+    // （因为IE对methods的中function不兼容，所以js报错，不能进入到vue的JS中；）
+    // 但是允许Edge浏览器，因为就算是用Edge浏览器模拟ie8 ie11，那么vue的function简写也能够识别，不会有BUG；
+    if (this.isIE === -1 || this.isIE === "edge") {
+      // 移除不支持ie的DOM元素
+      // eslint-disable-next-line
+      $(".is-ie").remove();
+    }
   },
   methods: {
     // 实时监听浏览器滚动值
@@ -117,6 +151,37 @@ export default {
         document.documentElement.scrollTop ||
         document.body.scrollTop
       );
+    },
+    // 判断是否为id浏览器，这个函数也能判断ie浏览器版本
+    iEVersion() {
+      var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+      var isIE =
+        userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器
+      var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器
+      var isIE11 =
+        userAgent.indexOf("Trident") > -1 && userAgent.indexOf("rv:11.0") > -1;
+      if (isIE) {
+        var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+        reIE.test(userAgent);
+        var fIEVersion = parseFloat(RegExp["$1"]);
+        if (fIEVersion === 7) {
+          return 7;
+        } else if (fIEVersion === 8) {
+          return 8;
+        } else if (fIEVersion === 9) {
+          return 9;
+        } else if (fIEVersion === 10) {
+          return 10;
+        } else {
+          return 6; //IE版本<=7
+        }
+      } else if (isEdge) {
+        return "edge"; //edge
+      } else if (isIE11) {
+        return 11; //IE11
+      } else {
+        return -1; //不是ie浏览器
+      }
     }
   },
   components: {
@@ -146,6 +211,37 @@ export default {
   .better-wrapper-mob {
     #app {
       padding-top: 60px;
+    }
+  }
+  .is-ie {
+    margin-top: 50px;
+    .logo-wrapper {
+      display: block;
+      margin: 120px auto 50px;
+      width: 260px;
+      height: 76px;
+      border-radius: 38px;
+      overflow: hidden;
+    }
+    p.sorry {
+      text-align: center;
+      font-size: 40px;
+      color: #14948a;
+    }
+    img.qr {
+      display: block;
+      margin: 120px auto 0;
+      width: 200px;
+      height: 200px;
+      border: 2px solid #14948a;
+      border-radius: 4px;
+    }
+    p.flow {
+      margin-top: 16px;
+      color: #14948a;
+      font-size: 16px;
+      text-align: center;
+      font-weight: 900;
     }
   }
 </style>

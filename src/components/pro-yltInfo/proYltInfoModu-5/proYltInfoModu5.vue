@@ -1,22 +1,30 @@
 <template>
   <div
     :class="[
-      'pro-regionalCloud-mo3',
+      'pro-YltInfo-mo5',
       'w100',
       'clearfix',
-      mob ? 'pro-regionalCloud-mo3-mob' : ''
+      mob ? 'pro-YltInfo-mo5-mob' : ''
     ]"
   >
-    <div class="pro-regionalCloud-mo3-hd">
-      <img src="../../../common/images/titles/prd-title-QYYYX-framework.png" />
-      <!--<p>深刻理解与洞察重症护理的需求</p>-->
+    <div class="pro-YltInfo-mo5-hd">
+      <img src="../../../common/images/titles/prd-title-YLT-IM.png" />
+      <p>
+        构建安全、可靠、高效、实用的信息化体系，充分发挥信息系统对医疗集团
+        的支撑作用，实现远程医疗、公共卫生、家庭医生签约、健康管理、计划生育、
+        医疗保险、绩效考核等信息互联互通。
+        <br /><br />通过信息化手段，推进检查检验结果查
+        询、推送与互认，开展移动支付、出院患者床旁结算、门诊患者诊间结算等服
+        务，使患者就医更加方便、快捷， “让信息多跑路、病人少跑腿”，提高群众综
+        合满意度。“小病不出乡，大病不出县”，促进医疗资源下沉。
+      </p>
     </div>
     <div class="color-bg-mask"></div>
-    <div class="pro-regionalCloud-mo3-bd container">
+    <div class="pro-YltInfo-mo5-bd container">
       <!--// 使用ondragstart防止拖拽-->
       <img
         ondragstart="return false;"
-        src="../../../common/images/pro-regionalCloud/regionalCloudMO3.png"
+        src="../../../common/images/pro-ylt/ylt-mo5.png"
       />
     </div>
   </div>
@@ -24,17 +32,17 @@
 
 <script>
 export default {
-  name: "proRegionalCloudMO3",
+  name: "proYltInfoModu5",
   props: ["mob"]
 };
 </script>
 
 <style scoped lang="stylus">
-.pro-regionalCloud-mo3 {
+.pro-YltInfo-mo5 {
     position: relative;
     padding-bottom: 80px;
     background-color: rgba(240, 245, 255, 1);
-    .pro-regionalCloud-mo3-hd {
+    .pro-YltInfo-mo5-hd {
         margin: 80px 0 44px;
         img {
             height: 84px;
@@ -44,8 +52,8 @@ export default {
             margin-top: 80px;
         }
         p {
+            padding: 0 30%;
             font-size: 16px;
-            font-weight: 700;
             color: rgba(23, 35, 61, 1);
             text-align: center;
         }
@@ -58,7 +66,7 @@ export default {
         height: 40%;
         background-color: #28327a;
     }
-    .pro-regionalCloud-mo3-bd {
+    .pro-YltInfo-mo5-bd {
         padding: 0 58px;
         img {
             width: 100%;
@@ -69,20 +77,21 @@ export default {
 
 
 // ========== 移动端样式 =========
-.pro-regionalCloud-mo3-mob {
+.pro-YltInfo-mo5-mob {
     padding-bottom: 20px;
-    .pro-regionalCloud-mo3-hd {
+    .pro-YltInfo-mo5-hd {
         img{
             height: 42px;
         }
         p {
             font-size: 12px;
+            padding: 0 20px;
         }
     }
     .color-bg-mask {
         height: 30%;
     }
-    .pro-regionalCloud-mo3-bd {
+    .pro-YltInfo-mo5-bd {
         padding: 0 20px;
     }
 }

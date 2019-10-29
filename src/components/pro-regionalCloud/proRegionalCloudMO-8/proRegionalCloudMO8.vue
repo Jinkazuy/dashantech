@@ -34,7 +34,7 @@
         </div>
       </li>
       <li class="container">
-        <div class="mo8-bd-img-box">
+        <div class="mo8-bd-img-box" v-if="!mob">
           <img
             ondragstart="return false;"
             src="../../../common/images/pro-regionalCloud/regionalCloud8-2.png"
@@ -54,6 +54,12 @@
             区域中心医院高端影像检查、 住院治疗业务的持续增长。
           </p>
         </div>
+        <div class="mo8-bd-img-box" v-if="mob">
+          <img
+            ondragstart="return false;"
+            src="../../../common/images/pro-regionalCloud/regionalCloud8-2.png"
+          />
+        </div>
       </li>
       <li class="container">
         <!--// 使用ondragstart防止拖拽-->
@@ -72,7 +78,7 @@
         </div>
       </li>
       <li class="container">
-        <div class="mo8-bd-img-box">
+        <div class="mo8-bd-img-box" v-if="!mob">
           <img
             ondragstart="return false;"
             src="../../../common/images/pro-regionalCloud/regionalCloud8-4.png"
@@ -86,6 +92,12 @@
             可以移动端实现无损图像浏览、影像报告书写和云端上传等功能。该系统具备传统PACS的基
             本报告书写功能，还具备影像后处理功能。
           </p>
+        </div>
+        <div class="mo8-bd-img-box" v-if="mob">
+          <img
+            ondragstart="return false;"
+            src="../../../common/images/pro-regionalCloud/regionalCloud8-4.png"
+          />
         </div>
       </li>
       <li class="container">
@@ -193,6 +205,27 @@ export default {
     }
     .pro-regionalCloud-mo8-bd {
         padding: 0 20px;
+        li {
+          display: block;
+          padding: 20px;
+          .mo8-bd-text-box {
+            width: 100%;
+            margin-bottom: 20px;
+            h4 {
+              font-size: 16px;
+            }
+            p {
+              font-size: 14px;
+              line-height: 22px;
+            }
+          }
+          .mo8-bd-img-box {
+            width: 100%;
+            img {
+              width: 100%;
+            }
+          }
+        }
     }
 }
 </style>

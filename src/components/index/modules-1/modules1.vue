@@ -104,7 +104,7 @@
                 </li>
               </ul>
               <div class="on-more">
-                <router-link href="/product" class="ft-sz-14"
+                <router-link to="/product" class="ft-sz-14"
                   >查看更多</router-link
                 >
               </div>

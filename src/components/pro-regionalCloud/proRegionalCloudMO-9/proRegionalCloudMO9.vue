@@ -145,10 +145,23 @@ export default {
         }
     }
     .color-bg-mask {
-        height: 30%;
+        height: 80%;
     }
     .pro-regionalCloud-mo9-bd {
         padding: 0 20px;
+    }
+    .pro-regionalCloud-mo9-ft {
+        padding: 20px 20px 0;
+        li {
+            margin-bottom: 30px;
+            h4{
+                font-size: 16px;
+            }
+            p{
+                font-size: 12px;
+                line-height: 24px;
+            }
+        }
     }
 }
 </style>

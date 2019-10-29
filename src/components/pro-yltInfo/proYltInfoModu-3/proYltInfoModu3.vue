@@ -1,22 +1,21 @@
 <template>
   <div
     :class="[
-      'pro-regionalCloud-mo3',
+      'pro-YltInfo-mo3',
       'w100',
       'clearfix',
-      mob ? 'pro-regionalCloud-mo3-mob' : ''
+      mob ? 'pro-YltInfo-mo3-mob' : ''
     ]"
   >
-    <div class="pro-regionalCloud-mo3-hd">
-      <img src="../../../common/images/titles/prd-title-QYYYX-framework.png" />
-      <!--<p>深刻理解与洞察重症护理的需求</p>-->
+    <div class="pro-YltInfo-mo3-hd">
+      <img src="../../../common/images/titles/prd-title-YLT-BF.png" />
+      <p>“以治病为中心向以健康为中心转变” 为核心理念</p>
     </div>
-    <div class="color-bg-mask"></div>
-    <div class="pro-regionalCloud-mo3-bd container">
+    <div class="pro-YltInfo-mo3-bd container">
       <!--// 使用ondragstart防止拖拽-->
       <img
         ondragstart="return false;"
-        src="../../../common/images/pro-regionalCloud/regionalCloudMO3.png"
+        src="../../../common/images/pro-ylt/ylt-mo3.png"
       />
     </div>
   </div>
@@ -24,17 +23,17 @@
 
 <script>
 export default {
-  name: "proRegionalCloudMO3",
+  name: "proYltInfoModu2",
   props: ["mob"]
 };
 </script>
 
 <style scoped lang="stylus">
-.pro-regionalCloud-mo3 {
+.pro-YltInfo-mo3 {
     position: relative;
     padding-bottom: 80px;
     background-color: rgba(240, 245, 255, 1);
-    .pro-regionalCloud-mo3-hd {
+    .pro-YltInfo-mo3-hd {
         margin: 80px 0 44px;
         img {
             height: 84px;
@@ -45,21 +44,12 @@ export default {
         }
         p {
             font-size: 16px;
-            font-weight: 700;
             color: rgba(23, 35, 61, 1);
             text-align: center;
         }
     }
-    .color-bg-mask {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: 40%;
-        background-color: #28327a;
-    }
-    .pro-regionalCloud-mo3-bd {
-        padding: 0 58px;
+    .pro-YltInfo-mo3-bd {
+        padding: 0 160px;
         img {
             width: 100%;
             height: 100%;
@@ -69,9 +59,9 @@ export default {
 
 
 // ========== 移动端样式 =========
-.pro-regionalCloud-mo3-mob {
+.pro-YltInfo-mo3-mob {
     padding-bottom: 20px;
-    .pro-regionalCloud-mo3-hd {
+    .pro-YltInfo-mo3-hd {
         img{
             height: 42px;
         }
@@ -79,10 +69,7 @@ export default {
             font-size: 12px;
         }
     }
-    .color-bg-mask {
-        height: 30%;
-    }
-    .pro-regionalCloud-mo3-bd {
+    .pro-YltInfo-mo3-bd {
         padding: 0 20px;
     }
 }
