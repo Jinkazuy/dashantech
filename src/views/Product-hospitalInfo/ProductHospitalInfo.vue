@@ -1,11 +1,14 @@
 <template>
   <div class="product-hospital-info">
     <mo1 :mob="mob"></mo1>
+    <onup></onup>
   </div>
 </template>
 
 <script>
 import mo1 from "../../components/pro-hospitalInfo/proHospitalInfoModu-1/proHospitalInfoModu1";
+// 正在升级模块
+import onup from "../../components/layouts/onUpData/onUpData";
 export default {
   name: "ProductHospitalInfo",
   props: ["mob"],
@@ -27,7 +30,8 @@ export default {
     return false;
   },
   components: {
-    mo1
+    mo1,
+    onup
   }
 };
 </script>

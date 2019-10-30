@@ -153,6 +153,12 @@ const newsDetail = resolve => {
     resolve(module);
   });
 };
+// 一级路由：404
+const notFound = resolve => {
+  import("./views/notFound404/notFound404").then(module => {
+    resolve(module);
+  });
+};
 
 export default new Router({
   mode: "history",
@@ -270,6 +276,11 @@ export default new Router({
       // 文章详情页，点击文章列表时进入，根据传入的id值获取数据
       path: "/newsDetail",
       component: newsDetail
+    },
+    {
+      // 404
+      path: "/notFound",
+      component: notFound
     }
   ]
   // ,

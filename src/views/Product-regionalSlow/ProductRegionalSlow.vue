@@ -1,11 +1,13 @@
 <template>
   <div class="Product-regional-slow">
     <mo1 :mob="mob"></mo1>
+    <onup></onup>
   </div>
 </template>
 
 <script>
 import mo1 from "../../components/pro-regionalSlow/proRegionalSlowMO-1/proRegionalSlowMO1";
+import onup from "../../components/layouts/onUpData/onUpData";
 export default {
   name: "ProductRegionalSlow",
   props: ["mob"],
@@ -27,7 +29,8 @@ export default {
     return false;
   },
   components: {
-    mo1
+    mo1,
+    onup
   }
 };
 </script>

@@ -40,6 +40,7 @@ export default {
 
 <style scoped lang="stylus">
 .pro-recover-mg-modu-1 {
+    overflow: hidden;
     z-index: 2;
     position: relative;
     background-color: rgba(16, 10, 48, 1)

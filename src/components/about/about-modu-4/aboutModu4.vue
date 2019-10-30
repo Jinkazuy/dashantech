@@ -21,24 +21,24 @@
       </div>
       <div class="per-list w100 posi-ab">
         <ul class="clearfix h100">
-          <li class="h100" @mouseenter="perHover1">
-            <div class="card-pic">
-              <img
-                class="w100 h100"
-                src="../../../../public/images/per-TDQ.png"
-              />
-              <span>汤道青</span>
-            </div>
-            <div
-              :class="[
-                'card-tit w100',
-                { 'card-tit-active': perShowData.perNameZh === '汤道青' }
-              ]"
-            >
-              <span>董事长</span>
-            </div>
-          </li>
-          <li @mouseenter="perHover2">
+          <!--<li class="h100" @mouseenter="perHover1">-->
+          <!--<div class="card-pic">-->
+          <!--<img-->
+          <!--class="w100 h100"-->
+          <!--src="../../../../public/images/per-TDQ.png"-->
+          <!--/>-->
+          <!--<span>汤道青</span>-->
+          <!--</div>-->
+          <!--<div-->
+          <!--:class="[-->
+          <!--'card-tit w100',-->
+          <!--{ 'card-tit-active': perShowData.perNameZh === '汤道青' }-->
+          <!--]"-->
+          <!--&gt;-->
+          <!--<span>董事长</span>-->
+          <!--</div>-->
+          <!--</li>-->
+          <li @mouseenter="perHover1">
             <div class="card-pic w100">
               <img
                 class="w100 h100"
@@ -55,7 +55,7 @@
               <span>联合创始人&CEO</span>
             </div>
           </li>
-          <li @mouseenter="perHover3">
+          <li @mouseenter="perHover2">
             <div class="card-pic">
               <img
                 class="w100 h100"
@@ -72,7 +72,7 @@
               <span>营销总裁</span>
             </div>
           </li>
-          <li @mouseenter="perHover4">
+          <li @mouseenter="perHover3">
             <div class="card-pic">
               <img
                 class="w100 h100"
@@ -89,7 +89,7 @@
               <span>技术总监</span>
             </div>
           </li>
-          <li @mouseenter="perHover5">
+          <li @mouseenter="perHover4">
             <div class="card-pic">
               <img
                 class="w100 h100"
@@ -118,16 +118,16 @@ export default {
   data() {
     return {
       perData: [
-        {
-          // 汤道青
-          perImgSrc: "./images/per-TDQ.png",
-          perNameZh: "汤道青",
-          perNameEn: "Tang daoqing",
-          perTit: "董事长",
-          perInfoZh: "上善若水 厚德载物",
-          perInfoEn:
-            "Network Security Big Data Experts Successful Continuous Entrepreneurs"
-        },
+        // {
+        //   // 汤道青
+        //   perImgSrc: "./images/per-TDQ.png",
+        //   perNameZh: "汤道青",
+        //   perNameEn: "Tang daoqing",
+        //   perTit: "董事长",
+        //   perInfoZh: "上善若水 厚德载物",
+        //   perInfoEn:
+        //     "Network Security Big Data Experts Successful Continuous Entrepreneurs"
+        // },
         {
           // 郭志群
           perImgSrc: "./images/per-GZQ.png",
@@ -174,12 +174,12 @@ export default {
         }
       ],
       perShowData: {
-        // 汤道青
-        perImgSrc: "./images/per-TDQ.png",
-        perNameZh: "汤道青",
-        perNameEn: "Tang Daoqing",
-        perTit: "董事长",
-        perInfoZh: "上善若水 厚德载物",
+        // 郭志群
+        perImgSrc: "./images/per-GZQ.png",
+        perNameZh: "郭志群",
+        perNameEn: "Guo Zhiqun",
+        perTit: "联合创始人&CEO",
+        perInfoZh: "网络安全大数据专家 连续成功创业者",
         perInfoEn:
           "Network Security Big Data Experts Successful Continuous Entrepreneurs"
       }

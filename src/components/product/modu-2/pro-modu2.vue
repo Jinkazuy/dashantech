@@ -9,10 +9,10 @@
     <div class="pro-mo2-hd container">
       <ul>
         <li
-          :class="{ 'pro-li-active': liActiveNum === idx }"
-          @click="proLi(idx)"
-          v-for="(item, idx) in proInfoData"
-          :key="idx"
+          :class="{ 'pro-li-active': liActiveNum === item.showNumber }"
+          @click="proLi(item.showNumber)"
+          v-for="item in proInfoData"
+          :key="item.showNumber"
         >
           <div class="pro-mo2-hd-illus w100">
             <img class="h100" :src="item.imgLtSrc" />
@@ -88,16 +88,16 @@ export default {
           routerTo: "/productPacs"
         },
         // 随访系统
-        {
-          showNumber: 1,
-          // 编译后，取根目录下的public的地址；
-          imgBigSrc: "images/sfxt.png",
-          imgLtSrc: "images/lt-ch-sfxt.png",
-          h4: "随访系统",
-          p:
-            "大善随访系统解决方案随访系统将互联网、物联网技术与患者院内外医疗健康管理结合，以智能随访、智能宣教、智能提醒、健康监测、医护患沟通为患者管理主要手段，通过平台化的设计理念，为不同类型医疗机构，打造统一随访平台。",
-          routerTo: "/productFollow"
-        },
+        // {
+        //   showNumber: 1,
+        //   // 编译后，取根目录下的public的地址；
+        //   imgBigSrc: "images/sfxt.png",
+        //   imgLtSrc: "images/lt-ch-sfxt.png",
+        //   h4: "随访系统",
+        //   p:
+        //     "大善随访系统解决方案随访系统将互联网、物联网技术与患者院内外医疗健康管理结合，以智能随访、智能宣教、智能提醒、健康监测、医护患沟通为患者管理主要手段，通过平台化的设计理念，为不同类型医疗机构，打造统一随访平台。",
+        //   routerTo: "/productFollow"
+        // },
         // 互联网医院信息平台
         {
           showNumber: 2,
@@ -153,67 +153,68 @@ export default {
             "康复治疗前应先对病、伤、残者进行康复评定，然后制定一个理想的康复方案，由以康复医师为中心，和临床医学相关人员共同组成的康复治疗组去实施，并在实施过程中不断总结、评定调查，直至治疗结束。可实现康复科室的数字化、信息化和过程的管控，有效避免信息孤岛的出现，实现全员的数据共享。",
           routerTo: "/productRecovery"
         },
-        {
-          showNumber: 7,
-          // 编译后，取根目录下的public的地址；
-          imgBigSrc: "images/ylt.png",
-          imgLtSrc: "images/lt-ch-ylt.png",
-          h4: "城市医疗联合体信息平台",
-          p: "",
-          routerTo: "/productYLT"
-        },
-        {
-          showNumber: 8,
-          // 编译后，取根目录下的public的地址；
-          imgBigSrc: "images/qyyyx.png",
-          imgLtSrc: "images/lt-ch-qyyyx.png",
-          h4: "区域医疗影像及诊断云平台",
-          p: "",
-          routerTo: "/productRegionalCloud"
-        },
-        {
-          showNumber: 9,
-          // 编译后，取根目录下的public的地址；Intensive-care   IntensiveCare
-          imgBigSrc: "images/zzhl.png",
-          imgLtSrc: "images/lt-ch-zzhl.png",
-          h4: "重症护理信息管理平台",
-          p: "",
-          routerTo: "/productIntensiveCare"
-        },
-        {
-          showNumber: 10,
-          // 编译后，取根目录下的public的地址； Wise-care  WiseCare
-          imgBigSrc: "images/zhhl.png",
-          imgLtSrc: "images/lt-ch-zhhl.png",
-          h4: "智慧护理管理系统",
-          p: "",
-          routerTo: "/productWiseCare"
-        },
-        {
-          showNumber: 11,
-          // 编译后，取根目录下的public的地址；Clinical-drug  ClinicalDrug
-          imgBigSrc: "images/ywlcsy.png",
-          imgLtSrc: "images/lt-ch-ywlcsy.png",
-          h4: "药物临床试验系统",
-          p: "",
-          routerTo: "/productClinicalDrug"
-        },
-        {
-          showNumber: 12,
-          // 编译后，取根目录下的public的地址； hemodialysis
-          imgBigSrc: "images/xytx.png",
-          imgLtSrc: "images/lt-ch-xytx.png",
-          h4: "血液透析信息管理平台",
-          p: "",
-          routerTo: "/productHemodialysis"
-        },
+        // {
+        //   showNumber: 7,
+        //   // 编译后，取根目录下的public的地址；
+        //   imgBigSrc: "images/ylt.png",
+        //   imgLtSrc: "images/lt-ch-ylt.png",
+        //   h4: "城市医疗联合体信息平台",
+        //   p: "",
+        //   routerTo: "/productYLT"
+        // },
+        // {
+        //   showNumber: 8,
+        //   // 编译后，取根目录下的public的地址；
+        //   imgBigSrc: "images/qyyyx.png",
+        //   imgLtSrc: "images/lt-ch-qyyyx.png",
+        //   h4: "区域医疗影像及诊断云平台",
+        //   p: "",
+        //   routerTo: "/productRegionalCloud"
+        // },
+        // {
+        //   showNumber: 9,
+        //   // 编译后，取根目录下的public的地址；Intensive-care   IntensiveCare
+        //   imgBigSrc: "images/zzhl.png",
+        //   imgLtSrc: "images/lt-ch-zzhl.png",
+        //   h4: "重症护理信息管理平台",
+        //   p: "",
+        //   routerTo: "/productIntensiveCare"
+        // },
+        // {
+        //   showNumber: 10,
+        //   // 编译后，取根目录下的public的地址； Wise-care  WiseCare
+        //   imgBigSrc: "images/zhhl.png",
+        //   imgLtSrc: "images/lt-ch-zhhl.png",
+        //   h4: "智慧护理管理系统",
+        //   p: "",
+        //   routerTo: "/productWiseCare"
+        // },
+        // {
+        //   showNumber: 11,
+        //   // 编译后，取根目录下的public的地址；Clinical-drug  ClinicalDrug
+        //   imgBigSrc: "images/ywlcsy.png",
+        //   imgLtSrc: "images/lt-ch-ywlcsy.png",
+        //   h4: "药物临床试验系统",
+        //   p: "",
+        //   routerTo: "/productClinicalDrug"
+        // },
+        // {
+        //   showNumber: 12,
+        //   // 编译后，取根目录下的public的地址； hemodialysis
+        //   imgBigSrc: "images/xytx.png",
+        //   imgLtSrc: "images/lt-ch-xytx.png",
+        //   h4: "血液透析信息管理平台",
+        //   p: "",
+        //   routerTo: "/productHemodialysis"
+        // },
         {
           showNumber: 13,
           // 编译后，取根目录下的public的地址；regional-slow  regionalSlow
           imgBigSrc: "images/qymb.png",
           imgLtSrc: "images/lt-ch-qymb.png",
           h4: "区域慢病管理系统",
-          p: "",
+          p:
+            "大善区域慢病管理系统，是按照国家公共卫生服务规范，为区域患者提供统一标准化服务，结合互联网、物联网等技术，实现区域信息的互联互通，减少医生团队重复的管理工作量，并实现医疗信息的共享一级数据统一上报",
           routerTo: "/productRegionalSlow"
         }
       ]

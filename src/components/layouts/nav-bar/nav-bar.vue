@@ -138,13 +138,13 @@ export default {
             "基于现有的区域PACS、区域超声、区域心电，进一步实现区域影像数据的在各医疗机构内的共享和应用，推进胶片的按需分发，减少患者就医成本；建立影像云平台，实现影像数据的云存储和互联网调阅，方便患者检查结果的调阅，推进最多跑一次政策的执行。",
           liteImgSrc: "images/lt-ch-pacs.png"
         },
-        {
-          routerTo: "/productFollow",
-          tit: "随访系统",
-          p:
-            "大善随访系统解决方案随访系统将互联网、物联网技术与患者院内外医疗健康管理结合，以智能随访、智能宣教、智能提醒、健康监测、医护患沟通为患者管理主要手段，通过平台化的设计理念，为不同类型医疗机构，打造统一随访平台。",
-          liteImgSrc: "images/lt-ch-sfxt.png"
-        },
+        // {
+        //   routerTo: "/productFollow",
+        //   tit: "随访系统",
+        //   p:
+        //     "大善随访系统解决方案随访系统将互联网、物联网技术与患者院内外医疗健康管理结合，以智能随访、智能宣教、智能提醒、健康监测、医护患沟通为患者管理主要手段，通过平台化的设计理念，为不同类型医疗机构，打造统一随访平台。",
+        //   liteImgSrc: "images/lt-ch-sfxt.png"
+        // },
         {
           routerTo: "/ProductHospitalInfo",
           tit: "xx互联网医院信息平台",
@@ -180,45 +180,46 @@ export default {
             "康复治疗前应先对病、伤、残者进行康复评定，然后制定一个理想的康复方案，由以康复医师为中心，和临床医学相关人员共同组成的康复治疗组去实施，并在实施过程中不断总结、评定调查，直至治疗结束。可实现康复科室的数字化、信息化和过程的管控，有效避免信息孤岛的出现，实现全员的数据共享。",
           liteImgSrc: "images/lt-ch-jkgl.png"
         },
-        {
-          routerTo: "/productYLT",
-          tit: "城市医疗联合体信息平台",
-          p: "“以治病为中心向以健康为中心转变",
-          liteImgSrc: "images/lt-ch-ylt.png"
-        },
-        {
-          routerTo: "/productRegionalCloud",
-          tit: "区域医疗影像及诊断云平台",
-          p:
-            "区域医疗影像与诊断云平台是指为一定区域内居民提供代表该区域先进水平的医疗服务，承担一定的人才培养、医学科研、教学等任务的医院，区域阅片中心同时承担服务区域突发公共卫生事件的医疗救治和技术支持。其",
-          liteImgSrc: "images/lt-ch-qyyyx.png"
-        },
-        {
-          routerTo: "/productIntensiveCare",
-          tit: "重症护理信息管理平台",
-          p: "支持多品牌监护设备实时集中监控",
-          liteImgSrc: "images/lt-ch-zzhl.png"
-        },
-        {
-          routerTo: "/productWiseCare",
-          tit: "智慧护理管理系统",
-          p: "让新技术、新突破帮助医护人员更好的实现对人的照护和关怀",
-          liteImgSrc: "images/lt-ch-zhhl.png"
-        },
-        {
-          routerTo: "/productClinicalDrug",
-          tit: "药物临床试验系统",
-          p:
-            "保证系统独立性的同时确保系统的可扩展性，满足I、II、III、IV期临床试验的需求",
-          liteImgSrc: "images/lt-ch-ywlcsy.png"
-        },
-        {
-          routerTo: "/productHemodialysis",
-          tit: "血液透析信息管理平台",
-          p:
-            "采用信息化手段来促进血液透析中心的管理、运行效率，提高透析安全性及透析质量，已成为目前血液透析中心的重要发展方向。",
-          liteImgSrc: "images/lt-ch-xytx.png"
-        },
+        // {
+        //   routerTo: "/productYLT",
+        //   tit: "城市医疗联合体信息平台",
+        //   p: "“以治病为中心向以健康为中心转变",
+        //   liteImgSrc: "images/lt-ch-ylt.png"
+        // },
+        // {
+        //   routerTo: "/productRegionalCloud",
+        //   tit: "区域医疗影像及诊断云平台",
+        //   p:
+        //     "区域医疗影像与诊断云平台是指为一定区域内居民提供代表该区域先进水平的医疗服务，承担一定的人才培养、医学科研、教学等任务的医院，区域阅片中心同时承担服务区域突发公共卫生事件的医疗救治和技术支持。其",
+        //   liteImgSrc: "images/lt-ch-qyyyx.png"
+        // },
+        // {
+        //   routerTo: "/productIntensiveCare",
+        //   tit: "重症护理信息管理平台",
+        //   p: "支持多品牌监护设备实时集中监控",
+        //   liteImgSrc: "images/lt-ch-zzhl.png"
+        // },
+        // {
+        //   routerTo: "/productWiseCare",
+        //   tit: "智慧护理管理系统",
+        //   p: "让新技术、新突破帮助医护人员更好的实现对人的照护和关怀",
+        //   liteImgSrc: "images/lt-ch-zhhl.png"
+        // },
+        // {
+        //   routerTo: "/productClinicalDrug",
+        //   tit: "药物临床试验系统",
+        //   p:
+        //     "保证系统独立性的同时确保系统的可扩展性，满足I、II、III、IV期临床试验的需求",
+        //   liteImgSrc: "images/lt-ch-ywlcsy.png"
+        // },
+        // {
+        //   routerTo: "/productHemodialysis",
+        //   tit: "血液透析信息管理平台",
+        //   p:
+        //     "采用信息化手段来促进血液透析中心的管理、运行效率，提高透析安全性及透析质量，已成为目前血液透析中心的重要发展方向。",
+        //   liteImgSrc: "images/lt-ch-xytx.png"
+        // }
+        // ,
         {
           routerTo: "/productRegionalSlow",
           tit: "xx区域慢病管理系统",
@@ -589,7 +590,7 @@ export default {
   border: 2px solid #14948a;
   margin: -20px auto 0;
   transition: all .4s;
-  transform: translateY(-100%);
+  transform: translateY(-101%);
   border-top: 1px solid rgba(0,0,0,0);
   z-index: -99;
   box-shadow:0 1px 0 0 rgba(0,0,0,0);

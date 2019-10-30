@@ -25,6 +25,7 @@ router.beforeEach((to, from, next) => {
   next();
 });
 // router加载之后，隐藏进度条
+// router加载之后，判断是否存在，如果router不存在则跳转到404页面
 router.afterEach(() => {
   NProgress.done();
 });
