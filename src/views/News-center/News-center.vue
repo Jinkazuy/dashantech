@@ -99,7 +99,6 @@ export default {
     }
     // eslint-disable-next-line
     $("body").animate({ scrollTop: 0 }, 300);
-    console.log(12);
     return false;
   },
   components: {

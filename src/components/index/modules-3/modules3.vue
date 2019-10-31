@@ -73,7 +73,9 @@
               :key="item.articleId"
             >
               <router-link :to="item.aLink">
-                <img class="w100" :src="item.imgSrc" />
+                <div class="img-box">
+                  <img class="w100" :src="item.imgSrc" />
+                </div>
                 <h4 class="w100" v-html="item.title"></h4>
                 <div class="bot-cont-dates">
                   <span class="month">{{ item.month }}</span>
@@ -125,16 +127,16 @@ export default {
             btClass: "精选文章",
             btCont: [
               {
-                articleId: 1,
+                articleId: 12,
                 // 这里是router-link的to属性对应的URL路由，后边直接?id=文章id即可；
-                aLink: `newsDetail?id=${1}`,
-                month: "August",
-                dates: "2019/09/25",
-                title: "公司团建|与大善同行，聚力向前，出发！",
+                aLink: `newsDetail?id=${12}`,
+                month: "September",
+                dates: "2019/09/17",
+                title: "公司团建|温暖中秋大善向阳，不忘初心共绘蓝图",
                 // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
                 // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
                 // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: "./images/news-bg-img.png"
+                imgSrc: "detail/d-12/det-12.webp"
               },
               {
                 articleId: 2,
@@ -166,7 +168,7 @@ export default {
         {
           // 顶部单独文章内容
           topInfo: {
-            articleId: 12,
+            articleId: 3,
             aLink: `newsDetail?id=${12}`,
             month: "August",
             dates: "2019/09/25",
@@ -546,11 +548,18 @@ export default {
                         cursor: pointer;
                         overflow: hidden;
                         a {
-                            img {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                height: 50%;
+                            .img-box {
+                              position: absolute;
+                              top: 0;
+                              left: 0;
+                              height: 50%;
+                              overflow: hidden;
+                              img {
+                                position: relative;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 100%;
+                              }
                             }
                             h4 {
                                 position: absolute;

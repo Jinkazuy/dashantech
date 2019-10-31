@@ -3,6 +3,8 @@ import Router from "vue-router";
 
 Vue.use(Router);
 
+// 使用路由懒加载
+
 // 一级路由：首页
 const home = resolve => {
   import("./views/Home/Home.vue").then(module => {

@@ -36,6 +36,10 @@ https://www.cnblogs.com/ldlx-mars/p/8012142.html
 https://github.com/VincentGarreau/particles.js
 https://codepen.io/VincentGarreau/pen/pnlso?q=particles.js&order=popularity&depth=code&show_forks=false
 
+5、图片懒加载
+cnpm install vue-lazyload --save-dev
+因为文章详情格式复杂，所以JK用的都是图片一张一张截图，所以使用懒加载插件；
+
 
 ============================
 文件结构（部分）

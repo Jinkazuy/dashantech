@@ -31,6 +31,15 @@ router.afterEach(() => {
 });
 // 进度条插件 ==========================
 
+// 图片懒加载插件 =========================
+import VueLazyload from "vue-lazyload";
+// 挂载懒加载插件
+Vue.use(VueLazyload, {
+  // 这里加载前默认的兜底加载图
+  loading: "detail/default.png"
+});
+// 图片懒加载插件 =========================
+
 // 轮播图插件 ==========================
 import VueAwesomeSwiper from "vue-awesome-swiper";
 Vue.use(VueAwesomeSwiper);
