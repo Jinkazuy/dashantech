@@ -64,5 +64,6 @@ export default {
 .con-modu-3 {
     height: 480px;
     background-color: #fafafa;
+    border-top: 3px solid #14948a;
 }
 </style>

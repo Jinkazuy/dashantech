@@ -9,7 +9,7 @@
       </div>
       <div class="ab-co-3-body w100 posi-ab">
         <div class="ab3-hover-view-1 po-lf50-tr50  h100 posi-ab">
-          <a class="ab3-server-con-1 h100 posi-re" href="#">
+          <a class="ab3-server-con-1 h100 posi-re" href="/product">
             <div class="ab3-server-con-info posi-ab w100">
               <h3>医疗大健康平台</h3>
               <p>
@@ -17,7 +17,7 @@
               </p>
             </div>
           </a>
-          <a class="ab3-server-con-2 h100 posi-re" href="#">
+          <a class="ab3-server-con-2 h100 posi-re" href="/product">
             <div class="ab3-server-con-info posi-ab w100">
               <h3>医疗大健康平台</h3>
               <p>
@@ -25,7 +25,7 @@
               </p>
             </div>
           </a>
-          <a class="ab3-server-con-3 h100 posi-re" href="#">
+          <a class="ab3-server-con-3 h100 posi-re" href="/product">
             <div class="ab3-server-con-info posi-ab w100">
               <h3>医疗大健康平台</h3>
               <p>

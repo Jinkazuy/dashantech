@@ -14,20 +14,20 @@
             <i class="iconfont icon24gf-newspapers2"></i>
             <span>{{ articleInfoData[0].btListInfo.btClass }}</span>
           </li>
-          <li
-            :class="{ 'news-list-route-cl': listModu === 2 }"
-            @click="newsListRoute2"
-          >
-            <i class="iconfont icon24gf-newspapers2"></i>
-            <span>{{ articleInfoData[1].btListInfo.btClass }}</span>
-          </li>
-          <li
-            :class="{ 'news-list-route-cl': listModu === 3 }"
-            @click="newsListRoute3"
-          >
-            <i class="iconfont icon24gf-newspapers2"></i>
-            <span>{{ articleInfoData[2].btListInfo.btClass }}</span>
-          </li>
+          <!--<li-->
+          <!--:class="{ 'news-list-route-cl': listModu === 2 }"-->
+          <!--@click="newsListRoute2"-->
+          <!--&gt;-->
+          <!--<i class="iconfont icon24gf-newspapers2"></i>-->
+          <!--<span>{{ articleInfoData[1].btListInfo.btClass }}</span>-->
+          <!--</li>-->
+          <!--<li-->
+          <!--:class="{ 'news-list-route-cl': listModu === 3 }"-->
+          <!--@click="newsListRoute3"-->
+          <!--&gt;-->
+          <!--<i class="iconfont icon24gf-newspapers2"></i>-->
+          <!--<span>{{ articleInfoData[2].btListInfo.btClass }}</span>-->
+          <!--</li>-->
         </ul>
         <div class="list-qrcode w100">
           <img src="../../../common/images/qr.jpg" alt="微信公众号：大善科技" />
@@ -108,8 +108,8 @@ export default {
         {
           // 顶部单独文章内容
           topInfo: {
-            articleId: 11,
-            aLink: `newsDetail?id=${11}`,
+            articleId: 1,
+            aLink: `newsDetail?id=${1}`,
             month: "August",
             dates: "2019/09/25",
             title:
@@ -127,161 +127,152 @@ export default {
             btClass: "精选文章",
             btCont: [
               {
-                articleId: 12,
+                articleId: 2,
                 // 这里是router-link的to属性对应的URL路由，后边直接?id=文章id即可；
-                aLink: `newsDetail?id=${12}`,
+                aLink: `newsDetail?id=${2}`,
                 month: "September",
                 dates: "2019/09/17",
                 title: "公司团建|温暖中秋大善向阳，不忘初心共绘蓝图",
-                // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
-                // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
-                // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: "detail/d-12/det-12.webp"
-              },
-              {
-                articleId: 2,
-                aLink: `newsDetail?id=${2}`,
-                month: "August",
-                dates: "2019/09/25",
-                title:
-                  "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
-                // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
-                // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
-                // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: "./images/news-bg-img.png"
+                imgSrc: "detail/d-2/det-12.webp"
               },
               {
                 articleId: 3,
                 aLink: `newsDetail?id=${3}`,
                 month: "August",
-                dates: "2019/09/25",
-                title: "公司团建 | 与大善同行，聚力向前，<br />出发！",
-                // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
-                // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
-                // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: "./images/news-bg-img.png"
-              }
-            ]
-          }
-        },
-        // 文章类型分类2：
-        {
-          // 顶部单独文章内容
-          topInfo: {
-            articleId: 3,
-            aLink: `newsDetail?id=${12}`,
-            month: "August",
-            dates: "2019/09/25",
-            title:
-              "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
-            conts: `2019年7月25日，我司正式获聘成为中国卫生信息与健康大数据学会第七届常务理事单位。<br/><br/> 中国卫生信息与健康医疗大数据学会中国卫生信息与健康医疗大数据学会（Chinese Health Information and Big Data Association, CHIBDA, 以下简称“学会”）……`,
-            // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
-            // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
-            // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-            imgSrc: "./images/news-bg-img.png"
-          },
-          // 底部三个文章列表内容
-          btListInfo: {
-            // 与左侧按钮列表分类对应
-            btClass: "团队建设",
-            btCont: [
+                dates: "2019/08/17",
+                title: "公司团建|与大善同行，聚力向前，出发！",
+                imgSrc: "./detail/d-3/det-3.webp"
+              },
               {
                 articleId: 4,
                 aLink: `newsDetail?id=${4}`,
-                month: "August",
-                dates: "2019/09/25",
-                title:
-                  "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
-                // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
-                // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
-                // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: "./images/news-bg-img.png"
-              },
-              {
-                articleId: 5,
-                aLink: `newsDetail?id=${5}`,
-                month: "August",
-                dates: "2019/09/25",
-                title:
-                  "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
-                // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
-                // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
-                // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: "./images/news-bg-img.png"
-              },
-              {
-                articleId: 6,
-                aLink: `newsDetail?id=${6}`,
-                month: "August",
-                dates: "2019/09/25",
-                title: "公司团建 | 与大善同行，聚力向前，<br />出发！",
-                // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
-                // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
-                // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: "./images/news-bg-img.png"
-              }
-            ]
-          }
-        },
-        // 文章类型分类3：
-        {
-          // 顶部单独文章内容
-          topInfo: {
-            articleId: 13,
-            aLink: `newsDetail?id=${13}`,
-            month: "August",
-            dates: "2019/09/25",
-            title:
-              "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
-            conts: `2019年7月25日，我司正式获聘成为中国卫生信息与健康大数据学会第七届常务理事单位。<br/><br/> 中国卫生信息与健康医疗大数据学会中国卫生信息与健康医疗大数据学会（Chinese Health Information and Big Data Association, CHIBDA, 以下简称“学会”）……`,
-            // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
-            // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
-            // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-            imgSrc: "./images/news-bg-img.png"
-          },
-          // 底部三个文章列表内容
-          btListInfo: {
-            // 与左侧按钮列表分类对应
-            btClass: "往期推荐",
-            btCont: [
-              {
-                articleId: 7,
-                aLink: `newsDetail?id=${7}`,
-                month: "August",
-                dates: "2019/09/25",
-                title:
-                  "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
-                // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
-                // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
-                // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: "./images/news-bg-img.png"
-              },
-              {
-                articleId: 8,
-                aLink: `newsDetail?id=${8}`,
-                month: "August",
-                dates: "2019/09/25",
-                title:
-                  "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
-                // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
-                // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
-                // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: "./images/news-bg-img.png"
-              },
-              {
-                articleId: 9,
-                aLink: `newsDetail?id=${9}`,
-                month: "August",
-                dates: "2019/09/25",
-                title: "公司团建 | 与大善同行，聚力向前，<br />出发！",
-                // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
-                // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
-                // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-                imgSrc: "./images/news-bg-img.png"
+                month: "July",
+                dates: "2019/07/30",
+                title: "【关于我们】走进大善科技",
+                imgSrc: "./detail/d-4/d-4.png"
               }
             ]
           }
         }
+        // ,
+        // // 文章类型分类2：
+        // {
+        //   // 顶部单独文章内容
+        //   topInfo: {
+        //     articleId: 3,
+        //     aLink: `newsDetail?id=${12}`,
+        //     month: "August",
+        //     dates: "2019/09/25",
+        //     title:
+        //       "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
+        //     conts: `2019年7月25日，我司正式获聘成为中国卫生信息与健康大数据学会第七届常务理事单位。<br/><br/> 中国卫生信息与健康医疗大数据学会中国卫生信息与健康医疗大数据学会（Chinese Health Information and Big Data Association, CHIBDA, 以下简称“学会”）……`,
+        //     // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
+        //     // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
+        //     // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
+        //     imgSrc: "./images/news-bg-img.png"
+        //   },
+        //   // 底部三个文章列表内容
+        //   btListInfo: {
+        //     // 与左侧按钮列表分类对应
+        //     btClass: "团队建设",
+        //     btCont: [
+        //       {
+        //         articleId: 4,
+        //         aLink: `newsDetail?id=${4}`,
+        //         month: "August",
+        //         dates: "2019/09/25",
+        //         title:
+        //           "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
+        //         // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
+        //         // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
+        //         // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
+        //         imgSrc: "./images/news-bg-img.png"
+        //       },
+        //       {
+        //         articleId: 5,
+        //         aLink: `newsDetail?id=${5}`,
+        //         month: "August",
+        //         dates: "2019/09/25",
+        //         title:
+        //           "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
+        //         // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
+        //         // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
+        //         // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
+        //         imgSrc: "./images/news-bg-img.png"
+        //       },
+        //       {
+        //         articleId: 6,
+        //         aLink: `newsDetail?id=${6}`,
+        //         month: "August",
+        //         dates: "2019/09/25",
+        //         title: "公司团建 | 与大善同行，聚力向前，<br />出发！",
+        //         // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
+        //         // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
+        //         // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
+        //         imgSrc: "./images/news-bg-img.png"
+        //       }
+        //     ]
+        //   }
+        // },
+        // // 文章类型分类3：
+        // {
+        //   // 顶部单独文章内容
+        //   topInfo: {
+        //     articleId: 13,
+        //     aLink: `newsDetail?id=${13}`,
+        //     month: "August",
+        //     dates: "2019/09/25",
+        //     title:
+        //       "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
+        //     conts: `2019年7月25日，我司正式获聘成为中国卫生信息与健康大数据学会第七届常务理事单位。<br/><br/> 中国卫生信息与健康医疗大数据学会中国卫生信息与健康医疗大数据学会（Chinese Health Information and Big Data Association, CHIBDA, 以下简称“学会”）……`,
+        //     // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
+        //     // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
+        //     // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
+        //     imgSrc: "./images/news-bg-img.png"
+        //   },
+        //   // 底部三个文章列表内容
+        //   btListInfo: {
+        //     // 与左侧按钮列表分类对应
+        //     btClass: "往期推荐",
+        //     btCont: [
+        //       {
+        //         articleId: 7,
+        //         aLink: `newsDetail?id=${7}`,
+        //         month: "August",
+        //         dates: "2019/09/25",
+        //         title:
+        //           "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
+        //         // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
+        //         // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
+        //         // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
+        //         imgSrc: "./images/news-bg-img.png"
+        //       },
+        //       {
+        //         articleId: 8,
+        //         aLink: `newsDetail?id=${8}`,
+        //         month: "August",
+        //         dates: "2019/09/25",
+        //         title:
+        //           "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
+        //         // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
+        //         // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
+        //         // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
+        //         imgSrc: "./images/news-bg-img.png"
+        //       },
+        //       {
+        //         articleId: 9,
+        //         aLink: `newsDetail?id=${9}`,
+        //         month: "August",
+        //         dates: "2019/09/25",
+        //         title: "公司团建 | 与大善同行，聚力向前，<br />出发！",
+        //         // 注意！这里的图片，不能写相对路径，必须写线上地址，或者从本文件中import引入图片，然后将对象放在这里；
+        //         // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
+        //         // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
+        //         imgSrc: "./images/news-bg-img.png"
+        //       }
+        //     ]
+        //   }
+        // }
       ]
     };
   },

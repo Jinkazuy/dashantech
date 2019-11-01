@@ -49,10 +49,10 @@
               <router-link to="/newsCenter">公司动态</router-link>
               <div class="border-line" v-if="!mob"></div>
             </li>
-            <li>
-              <router-link to="/solutionCenter">解决方案</router-link>
-              <div class="border-line" v-if="!mob"></div>
-            </li>
+            <!--<li>-->
+            <!--<router-link to="/solutionCenter">解决方案</router-link>-->
+            <!--<div class="border-line" v-if="!mob"></div>-->
+            <!--</li>-->
             <li>
               <router-link to="/join">加入我们</router-link>
               <div class="border-line" v-if="!mob"></div>

@@ -166,6 +166,7 @@ export default {
   background: url("../../../common/images/contact/hand.jpg") no-repeat;
   background-size: cover;
   background-position: center;
+  border-bottom: 3px solid #14948a;
   .bg-mask {
     position: absolute;
     left: 0;

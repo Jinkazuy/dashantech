@@ -55,42 +55,61 @@ export default {
           date: "2019/09/25",
           title:
             "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
-          // info: "报|我司"
-          info: "ddddd"
-        },
-        {
-          id: "11",
-          month: "September",
-          date: "2019/09/25",
-          title:
-            "喜报|我司获聘成为【中国卫生信息与健康大数据学会】第七届常务理事单位",
           info:
-            "<p>2019年7月25日，我司正式获聘成为中国卫生信息与健康大数据学会第七届常务理事单位。 中国卫生信息与健康医疗大数据学会中国卫生信息与健康医疗大数据学会（Chinese Health Information and Big Data Association, CHIBDA, 以下简称“学会”）是国家卫生和计划生育委员会主管的国家一级学会。其前身是成立于1984年的中国卫生统计学会；2004年更名为中国卫生信息学会。2017年7月，经民政部批复，同意中国卫生信息学会更名为中国卫生信息与健康医疗大数据学会，学会现有专业委员会56个。 近两年，伴随着“互联网+医疗健康”“医联体”“医共体”“大健康”等理念和战略的确立，健康中国建设逐步有效地推进，不断迈入新台阶，我司作为医疗领域信息化平台系统产品供应商和相关解决方案提供商（欢迎了解我司《【关于我们】走进大善科技》），竭力与同业仁人志士一起为医疗卫生事业共蓄力谋发展。 此次获得学会的聘任，我司将充分发挥自身高新技术资源优势和理念，在医疗卫生信息化和大健康数据建设方面为卫生健康事业服务。</p>"
+            "<p>2019年7月25日，我司正式获聘成为中国卫生信息与健康大数据学会第七届常务理事单位。 中国卫生信息与健康医疗大数据学会中国卫生信息与健康医疗大数据学会（Chinese Health Information and Big Data Association, CHIBDA, 以下简称“学会”）是国家卫生和计划生育委员会主管的国家一级学会。其前身是成立于1984年的中国卫生统计学会；2004年更名为中国卫生信息学会。2017年7月，经民政部批复，同意中国卫生信息学会更名为中国卫生信息与健康医疗大数据学会，学会现有专业委员会56个。 近两年，伴随着“互联网+医疗健康”“医联体”“医共体”“大健康”等理念和战略的确立，健康中国建设逐步有效地推进，不断迈入新台阶，我司作为医疗领域信息化平台系统产品供应商和相关解决方案提供商（欢迎了解我司《【关于我们】走进大善科技》），竭力与同业仁人志士一起为医疗卫生事业共蓄力谋发展。 此次获得学会的聘任，我司将充分发挥自身高新技术资源优势和理念，在医疗卫生信息化和大健康数据建设方面为卫生健康事业服务。</p>" +
+            '<img class="w100" src="detail/d-1/d-1-1.jpg"/><br>'
         },
         {
-          id: "12",
+          id: "2",
           month: "September",
           date: "2019/09/17",
           title: "公司团建|温暖中秋大善向阳，不忘初心共绘蓝图",
           // 很遗憾这里用不了v-lazy；
-          info: `<img class="w100" src="detail/d-12/det-12-1.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-2.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-3.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-4.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-5.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-6.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-7.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-8.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-9.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-10.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-11.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-12.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-13.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-14.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-15.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-16.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-17.jpg"/><br>
-                 <img class="w100" src="detail/d-12/det-12-18.jpg"/><br>`
+          info: `<img class="w100" src="detail/d-2/det-12-1.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-2.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-3.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-4.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-5.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-6.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-7.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-8.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-9.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-10.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-11.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-12.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-13.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-14.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-15.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-16.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-17.jpg"/><br>
+                 <img class="w100" src="detail/d-2/det-12-18.jpg"/><br>`
+        },
+        {
+          id: "3",
+          month: "August",
+          date: "2019/08/17",
+          title: "公司团建|与大善同行，聚力向前，出发！",
+          info: `<img class="w100" src="detail/d-3/1.jpg"/><br>
+                 <img class="w100" src="detail/d-3/2.jpg"/><br>
+                 <img class="w100" src="detail/d-3/3.jpg"/><br>
+                 <img class="w100" src="detail/d-3/4.jpg"/><br>
+                 <img class="w100" src="detail/d-3/5.jpg"/><br>
+                 <img class="w100" src="detail/d-3/6.jpg"/><br>
+                 <img class="w100" src="detail/d-3/7.jpg"/><br>`
+        },
+        {
+          id: "4",
+          month: "July",
+          date: "2019/07/30",
+          title: "【关于我们】走进大善科技",
+          info: `<img class="w100" src="detail/d-4/1.jpg"/><br>
+                 <img class="w100" src="detail/d-4/2.jpg"/><br>
+                 <img class="w100" src="detail/d-4/3.jpg"/><br>
+                 <img class="w100" src="detail/d-4/4.jpg"/><br>
+                 <img class="w100" src="detail/d-4/5.jpg"/><br>
+                 <img class="w100" src="detail/d-4/6.jpg"/><br>
+                 <img class="w100" src="detail/d-4/7.jpg"/><br>
+                 <img class="w100" src="detail/d-4/8.jpg"/><br>`
         }
       ]
     };
@@ -123,14 +142,27 @@ export default {
   mounted() {
     // 监听页面实时滚动值，在滚动到底部的时候，改变左侧来的position: fixed;
     window.addEventListener("scroll", this.pageScroll);
-    // 在0.4秒后获取右侧文章主体内容的高度值
+    // 在0.01秒后获取右侧文章主体内容的高度值
     setTimeout(() => {
       this.rBoxH =
         this.$refs.rgBox.clientHeight ||
         this.$refs.rgBox.offsetHeight ||
         this.$refs.rgBox.scrollHeight;
       console.log(this.rBoxH);
-    }, 400);
+    }, 10);
+
+    // 在0.02秒判断，如果当前页面滚动值是0，那么就让左侧合作固定在顶部，
+    // 因为页面时SPA的关系，所以如果从其他页面的底部浏览，然后跳转这个文章详情页的时候，
+    // 那么就会从底部滚动到顶部，那么就出发了页面滚动事件，那么就会让左侧栏固定在底部了；
+    // 所以在0.5秒后判断当前滚动值，如果是0，就让左侧栏回到顶部；
+    setTimeout(() => {
+      console.log(this.scrollTopPosition());
+      // 判断，如果当前滚动值为0，将左侧浮动栏固定
+      if (this.scrollTopPosition() === 0) {
+        // eslint-disable-next-line
+        $(".left-box").removeClass("left-box-bt");
+      }
+    }, 20);
 
     // 因为所有页面是作为app.vue的router-view，所以滚动值会继承；
     // 那么切换router的时候就需要将网页的滚动值归零；

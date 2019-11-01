@@ -55,7 +55,7 @@
               v-show="modu1HoverView === 1"
               :key="1"
             >
-              <a class="server-con-1 h100" href="#">
+              <a class="server-con-1 h100" href="/product">
                 <div class="server-con-info w100">
                   <h3>医疗大健康平台</h3>
                   <p>
@@ -63,7 +63,7 @@
                   </p>
                 </div>
               </a>
-              <a class="server-con-2 h100" href="#">
+              <a class="server-con-2 h100" href="/product">
                 <div class="server-con-info w100">
                   <h3>医疗大健康平台</h3>
                   <p>
@@ -71,7 +71,7 @@
                   </p>
                 </div>
               </a>
-              <a class="server-con-3 h100" href="#">
+              <a class="server-con-3 h100" href="/product">
                 <div class="server-con-info w100">
                   <h3>医疗大健康平台</h3>
                   <p>
@@ -80,7 +80,7 @@
                 </div>
               </a>
               <div class="on-more">
-                <a href="#" class="ft-sz-14 w100 h100">查看更多</a>
+                <a href="/product" class="ft-sz-14 w100 h100">查看更多</a>
               </div>
             </div>
             <!--切换显示的第二项-->
