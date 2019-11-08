@@ -9,30 +9,30 @@
       </div>
       <div class="ab-co-3-body w100 posi-ab">
         <div class="ab3-hover-view-1 po-lf50-tr50  h100 posi-ab">
-          <a class="ab3-server-con-1 h100 posi-re" href="/product">
+          <router-link class="ab3-server-con-1 h100 posi-re" to="/product">
             <div class="ab3-server-con-info posi-ab w100">
               <h3>医疗大健康平台</h3>
               <p>
                 依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案
               </p>
             </div>
-          </a>
-          <a class="ab3-server-con-2 h100 posi-re" href="/product">
+          </router-link>
+          <router-link class="ab3-server-con-2 h100 posi-re" to="/product">
             <div class="ab3-server-con-info posi-ab w100">
               <h3>医疗大健康平台</h3>
               <p>
                 依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案
               </p>
             </div>
-          </a>
-          <a class="ab3-server-con-3 h100 posi-re" href="/product">
+          </router-link>
+          <router-link class="ab3-server-con-3 h100 posi-re" to="/product">
             <div class="ab3-server-con-info posi-ab w100">
               <h3>医疗大健康平台</h3>
               <p>
                 依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案
               </p>
             </div>
-          </a>
+          </router-link>
         </div>
       </div>
     </div>

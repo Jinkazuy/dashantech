@@ -114,7 +114,8 @@ export default {
       ]
     };
   },
-  created() {
+  created() {},
+  mounted() {
     // 清空当前文章数据，防止缓存冲突
     this.articleInfo = {};
     // 在初始化的时候拿到哈希值的id内容，然后根据ajax，但是。。。并没有数据库，所以还是从本组件中mockData
@@ -138,8 +139,7 @@ export default {
     } else {
       this.articleInfo = ret;
     }
-  },
-  mounted() {
+
     // 监听页面实时滚动值，在滚动到底部的时候，改变左侧来的position: fixed;
     window.addEventListener("scroll", this.pageScroll);
     // 在0.01秒后获取右侧文章主体内容的高度值
@@ -149,7 +149,7 @@ export default {
         this.$refs.rgBox.offsetHeight ||
         this.$refs.rgBox.scrollHeight;
       console.log(this.rBoxH);
-    }, 10);
+    }, 100);
 
     // 在0.02秒判断，如果当前页面滚动值是0，那么就让左侧合作固定在顶部，
     // 因为页面时SPA的关系，所以如果从其他页面的底部浏览，然后跳转这个文章详情页的时候，
@@ -162,7 +162,7 @@ export default {
         // eslint-disable-next-line
         $(".left-box").removeClass("left-box-bt");
       }
-    }, 20);
+    }, 200);
 
     // 因为所有页面是作为app.vue的router-view，所以滚动值会继承；
     // 那么切换router的时候就需要将网页的滚动值归零；

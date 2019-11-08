@@ -21,7 +21,7 @@ NProgress.configure({ showSpinner: false });
 router.beforeEach((to, from, next) => {
   NProgress.start();
   // 设置进度条曲线和动画时间
-  NProgress.configure({ ease: "ease-in-out", speed: 1000 });
+  NProgress.configure({ ease: "ease-in-out", speed: 100 });
   next();
 });
 // router加载之后，隐藏进度条

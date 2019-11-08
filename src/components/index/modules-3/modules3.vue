@@ -14,6 +14,7 @@
             <i class="iconfont icon24gf-newspapers2"></i>
             <span>{{ articleInfoData[0].btListInfo.btClass }}</span>
           </li>
+          <!--文章分类，暂时没有更多，所以先注释掉-->
           <!--<li-->
           <!--:class="{ 'news-list-route-cl': listModu === 2 }"-->
           <!--@click="newsListRoute2"-->
@@ -54,7 +55,10 @@
               <p v-html="articleInfo.topInfo.conts"></p>
             </div>
             <div class="on-more">
-              <router-link class="w100 h100" :to="articleInfo.topInfo.aLink"
+              <router-link
+                class="w100 h100"
+                target="_blank"
+                :to="articleInfo.topInfo.aLink"
                 >查看更多</router-link
               >
             </div>
@@ -72,7 +76,7 @@
               v-for="item in articleInfo.btListInfo.btCont"
               :key="item.articleId"
             >
-              <router-link :to="item.aLink">
+              <router-link :to="item.aLink" target="_blank">
                 <div class="img-box">
                   <img class="w100" :src="item.imgSrc" />
                 </div>
@@ -133,7 +137,7 @@ export default {
                 month: "September",
                 dates: "2019/09/17",
                 title: "公司团建|温暖中秋大善向阳，不忘初心共绘蓝图",
-                imgSrc: "detail/d-2/det-12.webp"
+                imgSrc: "images/poto-1.jpg"
               },
               {
                 articleId: 3,

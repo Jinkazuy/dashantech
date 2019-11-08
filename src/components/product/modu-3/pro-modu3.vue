@@ -50,33 +50,9 @@
       </div>
       <div class="pro-mo3-ft w100">
         <p class="w100">合作伙伴共建专业稳定医疗大数据服务</p>
-        <ul class="w100">
-          <li>
-            <img
-              class="w100 h100"
-              src="http://www.dashantech.com.cn/images/logo_style.svg"
-            />
-          </li>
-          <li>
-            <img
-              class="w100 h100"
-              src="http://www.baidu.com/img/baidu_jgylogo3.gif"
-            />
-          </li>
-          <li>
-            <img class="w100 h100" src="../../../common/images/ds-logo.svg" />
-          </li>
-          <li>
-            <img
-              class="w100 h100"
-              src="http://www.dashantech.com.cn/images/logo_style.svg"
-            />
-          </li>
-          <li>
-            <img
-              class="w100 h100"
-              src="http://www.dashantech.com.cn/images/logo_style.svg"
-            />
+        <ul class="w100 clearfix">
+          <li v-for="(item, idx) in cooperationImg" :key="idx">
+            <img class="w100 h100" :src="item.imgSrc" :title="item.hoverTit" />
           </li>
         </ul>
       </div>
@@ -87,22 +63,52 @@
 <script>
 export default {
   name: "pro-modu3",
-  props: ["mob"]
+  props: ["mob"],
+  data() {
+    return {
+      // 合作商logo数据
+      cooperationImg: [
+        {
+          idx: 1,
+          imgSrc: "images/logo-chmia.svg",
+          hoverTit: "中国卫生信息与健康医疗大数据学会"
+        },
+        {
+          idx: 2,
+          imgSrc: "images/CMWA.png",
+          hoverTit: "中国女医师协会"
+        },
+        {
+          idx: 3,
+          imgSrc: "images/logo-chmia.svg",
+          hoverTit: "中国卫生信息与健康医疗大数据学会"
+        },
+        {
+          idx: 4,
+          imgSrc: "images/logo-chmia.svg",
+          hoverTit: "中国卫生信息与健康医疗大数据学会"
+        },
+        {
+          idx: 5,
+          imgSrc: "images/logo-chmia.svg",
+          hoverTit: "中国卫生信息与健康医疗大数据学会"
+        }
+      ]
+    };
+  }
 };
 </script>
 
 <style scoped lang="stylus">
 .pro-modu-3 {
     position: relative;
-    height: 744px;
+    height: auto;
     background-color: rgba(46,48,55,1);
     .container {
       padding: 0;
+      display: block;
       .pro-mo3-hd {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 0;
+        margin: 0 auto 80px;
         height: 190px;
         text-align: center;
         color: #fff;
@@ -118,19 +124,13 @@ export default {
         }
       }
       .pro-mo3-bd {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 254px;
+        margin: 0 auto 40px;
         height: 240px;
         width: 700px;
         ul {
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 69%;
+          margin: 0 auto;
+          width: 100%;
           padding: 0;
-          margin: 42px 0 0 0;
           display: flex;
           justify-content: space-between;
           li {
@@ -195,9 +195,7 @@ export default {
         }
       }
       .pro-mo3-ft {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%)
+        margin: 0 auto 80px;
         bottom: 50px;
         color: #fff;
         @media (max-width: 1336px) {
@@ -218,7 +216,7 @@ export default {
             height: 80px;
             width: 19%;
             background-color: rgba(0, 0, 0, .1);
-            margin: 0 1% 0 0;
+            margin: 0 1% 1% 0;
             img {
               padding: 10px;
             }

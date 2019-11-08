@@ -47,10 +47,6 @@ import Banner from "../../components/layouts/swiper/swiper";
 // 引入banner插画组件
 import bannerIllusCont from "../../common/images/index/banner-1/banner-ch-3.png";
 import bannerImg from "../../components/layouts/banner-img/banner-img";
-// 动态引入banner下方轮播文字的配图，如果是线上地址的话，可以直接将地址写在imgSrc对应的变量中，用""包裹；
-import img1 from "../../common/images/index/banner-swiper-illus/ch_lite_1.svg";
-import img2 from "../../common/images/index/banner-swiper-illus/ch_lite_1.svg";
-import img3 from "../../common/images/index/banner-swiper-illus/ch_lite_1.svg";
 // 引入其他两个模块
 import modu2 from "../../components/product/modu-2/pro-modu2";
 import modu3 from "../../components/product/modu-3/pro-modu3";
@@ -65,19 +61,19 @@ export default {
           title:
             "大善科技 立足于大健康医疗产业链 是国内领先的医疗领域国内领先的医疗领域国内领先的医疗领域平台",
           p: `多年耕耘于大健康医疗产业，积累了丰富的行业经验及实施方案。<br />拥有国内众多一线客户的一致好评。`,
-          imgSrc: img1,
+          imgSrc: "images/pro-banner-swiper-illus/blockchain.svg",
           forKey: 1
         },
         {
           title: "高新技术优势 & 行业领军人才汇集",
           p: `融汇10余年IT产品的市场推广经验，现有近百人行业领域人才， <br />30%具备研究生学历，70%都具备大学以上学历`,
-          imgSrc: img2,
+          imgSrc: "images/pro-banner-swiper-illus/dapp.svg",
           forKey: 2
         },
         {
           title: "大善科技 立足于大健康医疗产业链 是国内领先的医疗领域平台",
           p: `多年耕耘于大健康医疗产业，积累了丰富的行业经验及实施方案。<br />拥有国内众多一线客户的一致好评。`,
-          imgSrc: img3,
+          imgSrc: "images/pro-banner-swiper-illus/solidity.svg",
           forKey: 3
         }
       ],

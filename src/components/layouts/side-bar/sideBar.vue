@@ -25,12 +25,8 @@ export default {
     };
   },
   created() {
-    if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-      console.log("index-modu-1-加载移动端样式");
-      this.mob = true;
-    } else {
-      this.mob = false;
-    }
+    // index-modu-1加载移动端样式
+    this.mob = !!navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i);
   },
   methods: {
     // 返回顶部，借用jquery

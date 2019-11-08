@@ -81,8 +81,8 @@
           <li class="programme">
             <h3 class="bottom-nav-title">行业方案</h3>
             <ul class="nav-list">
-              <li v-for="(itm, idx) in navList" :key="idx">
-                <router-link :to="itm.routerTo">{{ itm.tit }}</router-link>
+              <li v-for="(itm, idx) in proInfoData" :key="idx">
+                <router-link :to="itm.routerTo">{{ itm.h4 }}</router-link>
               </li>
             </ul>
           </li>
@@ -107,7 +107,12 @@
           <span class="space"></span>
           <li><a href="#">隐私政策</a></li>
           <span class="space"></span>
-          <li><a href="#">各种友链</a></li>
+          <li>友情链接&nbsp;&nbsp;&nbsp;</li>
+          <li v-for="(item, idx) in fdLink" :key="idx">
+            <a :href="item.url" target="_blank"
+              >{{ item.tit }}&nbsp;&nbsp;&nbsp;</a
+            >
+          </li>
         </ul>
         <!--<div class="text-switch">-->
         <!--<i></i>-->
@@ -125,70 +130,28 @@
 <script>
 // 引入logo动效
 import logoMg from "../logoMg";
+// 引入混入函数文件，拿到各个产品的详细信息；
+import { productInfo } from "../../../common/js/mixin";
 
 export default {
   name: "bottom",
   props: ["mob"],
+  // 引入混入函数文件，拿到各个产品的详细信息；
+  // 那么就可以通过this.xx拿到产品mixin.js中的产品信息；
+  mixins: [productInfo],
   data() {
     return {
-      navList: [
+      fdLink: [
+        // 中国卫生信息与健康医疗大数据学会
         {
-          routerTo: "/productPacs",
-          tit: "PACS影像云"
-        },
-        // {
-        //   routerTo: "/productFollow",
-        //   tit: "随访系统"
-        // },
-        {
-          routerTo: "/ProductHospitalInfo",
-          tit: "xx互联网医院信息平台"
+          tit: "中国卫生信息与健康医疗大数据学会",
+          url: "http://www.chim.org.cn/zgwsxxxh/xhjj/index_lmtt.shtml"
         },
         {
-          routerTo: "/productWardRound",
-          tit: "xx移动医生查房系统"
-        },
-        {
-          routerTo: "/productFilm",
-          tit: "xx电子胶片"
-        },
-        {
-          routerTo: "/productIllMG",
-          tit: "xx医院慢病管理系统"
-        },
-        {
-          routerTo: "/productRecovery",
-          tit: "xx智能康复管理系统"
-        },
-        // {
-        //   routerTo: "/productYLT",
-        //   tit: "城市医疗联合体信息平台"
-        // },
-        // {
-        //   routerTo: "/productRegionalCloud",
-        //   tit: "区域医疗影像及诊断云平台"
-        // },
-        // {
-        //   routerTo: "/productIntensiveCare",
-        //   tit: "重症护理信息管理平台"
-        // },
-        // {
-        //   routerTo: "/productWiseCare",
-        //   tit: "智慧护理管理系统"
-        // },
-        // {
-        //   routerTo: "/productClinicalDrug",
-        //   tit: "药物临床试验系统"
-        // },
-        // {
-        //   routerTo: "/productHemodialysis",
-        //   tit: "血液透析信息管理平台"
-        // }
-        // ,
-        {
-          routerTo: "/productRegionalSlow",
-          tit: "xx区域慢病管理系统"
+          tit: "中国卫生信息与健康医疗大数据学会",
+          url: "http://www.chim.org.cn/zgwsxxxh/xhjj/index_lmtt.shtml"
         }
+        // 中国女医师协会 **网站指向地址被篡改为广告彩票网站，暂不放置链接**
       ]
     };
   },
@@ -349,6 +312,11 @@ export default {
               -webkit-user-select: text;
               font-weight: 300;
             }
+            // 文字框选颜色
+            .num::selection {
+                background:#14948a;
+                color:#fff;
+              }
           }
         }
       }

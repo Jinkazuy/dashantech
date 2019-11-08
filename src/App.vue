@@ -11,6 +11,8 @@
         :showNavBarShadow="showNavBarShadow"
         :mob="mob"
       ></navBar>
+      <!--加上keep-alive后，实现页面路由缓存、缓存路由，切换路由时，保存页面状态，从而减少请求重复的内容-->
+      <!--<keep-alive></keep-alive>-->
       <router-view :mob="mob"></router-view>
       <sideBar :showSideBar="showSideBar"></sideBar>
       <bottom :mob="mob"></bottom>
@@ -24,22 +26,6 @@ import navBar from "./components/layouts/nav-bar/nav-bar";
 import sideBar from "./components/layouts/side-bar/sideBar";
 // 引入页脚组件
 import bottom from "./components/layouts/bottom/bottom";
-
-// 不管是不是ie浏览器，那么都添加这个DOM，在进入vue后，说明支持vue，那么就清除这个DOM元素，并且渲染#app；
-// eslint-disable-next-line
-$("<div class=\"is-ie\">\n" +
-    '<div class="logo-wrapper">\n' +
-    "<img src='images/ds-logo.png' width='100%' height='100%'>\n" +
-    "</div>\n" +
-    '<p class="sorry">\n' +
-    "抱歉，不支持IE浏览器\n" +
-    "<br />\n" +
-    "请使用谷歌浏览器、火狐浏览器、360浏览器极速模式、Edge浏览器\n" +
-    "</p>\n" +
-    '<img class="qr" src="images/qr.jpg" />\n' +
-    '<p class="flow">请关注 ‘大善科技’ 公众号，了解更多医疗科技资讯</p>\n' +
-    "</div>"
-).appendTo("body");
 
 export default {
   name: "App",
@@ -82,6 +68,9 @@ export default {
     };
   },
   mounted() {
+    // TODO: 版本完成后放到笔记
+    // TODO: 版本完成后放到笔记
+    // TODO: 版本完成后放到笔记
     // 1、监听页面实时滚动值，从而控制导航栏投影和侧边栏的显示/隐藏
     // 2、将bootstrap下拉导航navigationBar，点击屏幕或者滚动屏幕时，隐藏起来,否则只能再次点击汉堡建才能将bootstrap的下拉菜单隐藏起来；
     window.addEventListener("scroll", this.appScroll);
@@ -103,6 +92,23 @@ export default {
       // eslint-disable-next-line
       $("img").attr("ondragstart", "return false;");
     }, 1000);
+
+    // 因为VUE是SPA模式，所以在地址栏如果直接输入某个页面的地址的话，会404
+    // 因为此时没有触发router跳转
+    // 那么就需要监听哈希值的改变，如果哈希值改变了，那么就强制router跳转到该值；
+    // 这里是监听当前地址栏哈希值，从而控制重新跳转路由，
+    // 而且在router.js中需要设置跳转方式是hash；
+    window.addEventListener(
+      "hashchange",
+      () => {
+        console.log("当前哈希值=>" + window.location.hash.slice(1));
+        var currentPath = window.location.hash.slice(1); // 获取输入的路由
+        if (this.$router.path !== currentPath) {
+          this.$router.push(currentPath); // 动态跳转
+        }
+      },
+      false
+    );
   },
   created() {
     // 初始化数据的时候判断是否为移动端，用于传给每个一级页面，然后由一级页面传给每个子组件
@@ -116,13 +122,7 @@ export default {
     // 屏幕尺寸改变时候判断是否为移动端，用于传给每个一级页面，然后由一级页面传给每个子组件
     // eslint-disable-next-line
     $(window).resize(()=> {
-      if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-        this.mob = true;
-        console.log(this.mob);
-      } else {
-        this.mob = false;
-        console.log(this.mob);
-      }
+      this.mob = !!navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i);
     });
 
     // 判断是否是id浏览器，整体页面会用这个isIE做判定条件，是否渲染页面，还是渲染‘抱歉，不能用ie’的div；
@@ -250,37 +250,6 @@ export default {
   .better-wrapper-mob {
     #app {
       padding-top: 60px;
-    }
-  }
-  .is-ie {
-    margin-top: 50px;
-    .logo-wrapper {
-      display: block;
-      margin: 120px auto 50px;
-      width: 260px;
-      height: 76px;
-      border-radius: 38px;
-      overflow: hidden;
-    }
-    p.sorry {
-      text-align: center;
-      font-size: 40px;
-      color: #14948a;
-    }
-    img.qr {
-      display: block;
-      margin: 120px auto 0;
-      width: 200px;
-      height: 200px;
-      border: 2px solid #14948a;
-      border-radius: 4px;
-    }
-    p.flow {
-      margin-top: 16px;
-      color: #14948a;
-      font-size: 16px;
-      text-align: center;
-      font-weight: 900;
     }
   }
 </style>

@@ -55,32 +55,34 @@
               v-show="modu1HoverView === 1"
               :key="1"
             >
-              <a class="server-con-1 h100" href="/product">
+              <router-link class="server-con-1 h100" to="/product">
                 <div class="server-con-info w100">
                   <h3>医疗大健康平台</h3>
                   <p>
                     依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案
                   </p>
                 </div>
-              </a>
-              <a class="server-con-2 h100" href="/product">
+              </router-link>
+              <router-link class="server-con-2 h100" to="/product">
                 <div class="server-con-info w100">
                   <h3>医疗大健康平台</h3>
                   <p>
                     依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案
                   </p>
                 </div>
-              </a>
-              <a class="server-con-3 h100" href="/product">
+              </router-link>
+              <router-link class="server-con-3 h100" to="/product">
                 <div class="server-con-info w100">
                   <h3>医疗大健康平台</h3>
                   <p>
                     依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案
                   </p>
                 </div>
-              </a>
+              </router-link>
               <div class="on-more">
-                <a href="/product" class="ft-sz-14 w100 h100">查看更多</a>
+                <router-link to="/product" class="ft-sz-14 w100 h100"
+                  >查看更多</router-link
+                >
               </div>
             </div>
             <!--切换显示的第二项-->
@@ -146,7 +148,9 @@
                 </li>
               </ul>
               <div class="on-more">
-                <a href="#" class="ft-sz-14">查看更多</a>
+                <router-link to="product" class="ft-sz-14"
+                  >查看更多</router-link
+                >
               </div>
             </div>
           </transition-group>

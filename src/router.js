@@ -163,7 +163,9 @@ const notFound = resolve => {
 };
 
 export default new Router({
-  mode: "history",
+  // 这里用hash而不是用history的原因是在浏览器输入地址直接回车的话，会报错，
+  // 所以这里用hash，并且在app.vue中判断当前哈希值变化，从而控制router重新跳转；
+  mode: "hash",
   base: process.env.BASE_URL,
   routes: [
     {

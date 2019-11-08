@@ -36,6 +36,7 @@
       </ul>
     </div>
     <div class="video-mask w100 h100">
+      <!--视频素材来资源 https://vimeo.com/82144045 未购买-->
       <video autoplay loop muted class="h100 vid posi-ab">
         <source
           v-if="!mob"

@@ -220,6 +220,7 @@ export default {
                     padding: 32px 44px;
                     transition: all .8s;
                     overflow: hidden;
+                    border-left: 4px solid #fff;
                     .job-type {
                         display: inline-block;
                         width: 36%;
@@ -286,6 +287,7 @@ export default {
                 .list-item.list-active {
                     height: auto;
                     background-color: #f4f4f4;
+                    border-left: 4px solid #14948a;
                     .job-type {
                         color: #14948a;
                     }
@@ -336,6 +338,10 @@ export default {
                     font-size: 16px;
                     color: rgba(20, 148, 138, 1);
                     margin: 100px 0 0 0;
+                }
+                .ft-l-p2::selection {
+                    background-color: #14948a;
+                    color: #fff;
                 }
             }
             .ft-r {
