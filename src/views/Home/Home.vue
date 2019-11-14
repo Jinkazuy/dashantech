@@ -9,7 +9,7 @@
     <!--内容模块 3 - 公司动态-->
     <homeModules3 :mob="mob"></homeModules3>
     <!--内容模块 4 - 客户评价-->
-    <homeModules4 :mob="mob"></homeModules4>
+    <!--<homeModules4 :mob="mob"></homeModules4>-->
     <!--内容模块 5 - 加入我们-->
     <homeModules5 :mob="mob"></homeModules5>
     <!--内容部分 - 结束-->
@@ -26,7 +26,7 @@ import homeModules2 from "../../components/index/modules-2/modules2";
 // 引入首页模块3 - 公司动态
 import homeModules3 from "../../components/index/modules-3/modules3";
 // 引入首页模块4 - 客户评价
-import homeModules4 from "../../components/index/modules-4/modules4";
+// import homeModules4 from "../../components/index/modules-4/modules4";
 // 引入首页模块5 - 加入我们
 import homeModules5 from "../../components/index/modules-5/modules5";
 
@@ -56,7 +56,7 @@ export default {
     homeModules1,
     homeModules2,
     homeModules3,
-    homeModules4,
+    // homeModules4,
     homeModules5
   }
 };

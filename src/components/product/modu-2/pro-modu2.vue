@@ -44,9 +44,9 @@
         <!--为了实现透明度变化，所以不能用数据替换，只能在这里写死，然后用transition-group标签包裹上-->
         <transition-group name="pro-mo-bd-tran-box">
           <div
-            v-for="(itm, idx) in proInfoData"
+            v-for="itm in proInfoData"
             class="bd-info-1"
-            :key="idx"
+            :key="itm.showNumber"
             v-show="liActiveNum === itm.showNumber"
           >
             <div class="pro-mo2-bd-illus">
@@ -78,7 +78,7 @@ export default {
   data() {
     return {
       // 每个tab的代表数字
-      liActiveNum: 0
+      liActiveNum: 7
       // 产品信息详情模块数据
       // 使用混入函数引入
     };
@@ -115,7 +115,7 @@ export default {
                 margin: 0 20px 20px 0;
                 float: left;
                 height: 88px;
-                width: 160px;
+                width: 200px;
                 cursor: pointer;
                 .pro-mo2-hd-illus {
                     height: 40px;
@@ -229,7 +229,7 @@ export default {
           h4 {
             padding: 0;
             margin: 140px 0 18px 0;
-            font-size: 34px;
+            font-size: 30px;
             font-weight: 700;
           }
           p {

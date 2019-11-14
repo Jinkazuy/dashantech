@@ -3,7 +3,7 @@
     <modu1 :mob="mob"></modu1>
     <modu2 :mob="mob"></modu2>
     <modu3 :mob="mob"></modu3>
-    <modu4 :mob="mob"></modu4>
+    <!--<modu4 :mob="mob"></modu4>-->
   </div>
 </template>
 
@@ -11,7 +11,7 @@
 import modu1 from "../../components/join/join-modu-1/joModu1";
 import modu2 from "../../components/join/join-modu-2/joModu2";
 import modu3 from "../../components/join/join-modu-3/joModu3";
-import modu4 from "../../components/join/join-modu-4/joModu4";
+// import modu4 from "../../components/join/join-modu-4/joModu4";
 export default {
   name: "Join",
   props: ["mob"],
@@ -36,8 +36,9 @@ export default {
   components: {
     modu1,
     modu2,
-    modu3,
-    modu4
+    modu3
+    // ,
+    // modu4
   }
 };
 </script>

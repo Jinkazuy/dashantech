@@ -51,31 +51,26 @@
             <ul class="nav-list">
               <li>
                 <ul class="add">
-                  <li>华北地区</li>
-                  <li class="num">张先森 13800138000</li>
-                  <li class="num">王旅四 13800138000</li>
+                  <li class="num">邮箱：liuyang@dashantech.com.cn</li>
                 </ul>
-                <ul class="add">
-                  <li>华北地区</li>
-                  <li class="num">张先森 13800138000</li>
-                  <li class="num">王旅四 13800138000</li>
-                  <li class="num">王旅四 13800138000</li>
-                </ul>
-                <ul class="add">
-                  <li>华北地区</li>
-                  <li class="num">张先森 13800138000</li>
-                  <li class="num">王旅四 13800138000</li>
-                </ul>
-                <ul class="add">
-                  <li>华北地区</li>
-                  <li class="num">张先森 13800138000</li>
-                  <li class="num">王旅四 13800138000</li>
-                  <li class="num">王旅四 13800138000</li>
-                </ul>
+                <!--<ul class="add">-->
+                <!--<li>华北地区</li>-->
+                <!--<li class="num">张先森 13800138000</li>-->
+                <!--<li class="num">王旅四 13800138000</li>-->
+                <!--<li class="num">王旅四 13800138000</li>-->
+                <!--</ul>-->
+                <!--<ul class="add">-->
+                <!--<li>华北地区</li>-->
+                <!--<li class="num">张先森 13800138000</li>-->
+                <!--<li class="num">王旅四 13800138000</li>-->
+                <!--</ul>-->
+                <!--<ul class="add">-->
+                <!--<li>华北地区</li>-->
+                <!--<li class="num">张先森 13800138000</li>-->
+                <!--<li class="num">王旅四 13800138000</li>-->
+                <!--<li class="num">王旅四 13800138000</li>-->
+                <!--</ul>-->
               </li>
-              <li></li>
-              <li></li>
-              <li></li>
             </ul>
           </li>
           <li class="programme">
@@ -148,10 +143,9 @@ export default {
           url: "http://www.chim.org.cn/zgwsxxxh/xhjj/index_lmtt.shtml"
         },
         {
-          tit: "中国卫生信息与健康医疗大数据学会",
-          url: "http://www.chim.org.cn/zgwsxxxh/xhjj/index_lmtt.shtml"
+          tit: "中国女医师协会",
+          url: "http://www.cmwa.org.cn/"
         }
-        // 中国女医师协会 **网站指向地址被篡改为广告彩票网站，暂不放置链接**
       ]
     };
   },
@@ -518,7 +512,7 @@ export default {
       }
     }
     .bottom-cont {
-      height: 1040px;
+      height: 640px;
       .lg-d {
         width: 100%;
       }

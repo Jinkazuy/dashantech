@@ -16,15 +16,17 @@
       </swiper>
     </div>
     <newsModu :mob="mob"></newsModu>
-    <modu1 :mob="mob"></modu1>
+    <!--<modu1 :mob="mob"></modu1>-->
   </div>
 </template>
 
 <script>
 // 引入新闻列表模块，与首页相同
 import newsModu from "../../components/index/modules-3/modules3";
+
+// 公司大事记，因为太短，故先不上；
 // 引入新闻中心页的第一个模块，但是排在第3个；
-import modu1 from "../../components/news-center/news-modu1/news-modu1";
+// import modu1 from "../../components/news-center/news-modu1/news-modu1";
 export default {
   name: "News-center",
   props: ["mob"],
@@ -59,7 +61,7 @@ export default {
       bannerSrc: [
         {
           index: 1,
-          src: "./images/poto-2.jpg"
+          src: "./images/poto-1.jpg"
         },
         {
           index: 2,
@@ -67,20 +69,21 @@ export default {
         },
         {
           index: 3,
-          src: "./images/poto-2.jpg"
-        },
-        {
-          index: 4,
-          src: "./images/poto-2.jpg"
-        },
-        {
-          index: 5,
-          src: "./images/poto-2.jpg"
-        },
-        {
-          index: 6,
-          src: "./images/poto-2.jpg"
+          src: "./images/poto-3.jpg"
         }
+        // ,
+        // {
+        //   index: 4,
+        //   src: "./images/poto-2.jpg"
+        // },
+        // {
+        //   index: 5,
+        //   src: "./images/poto-2.jpg"
+        // },
+        // {
+        //   index: 6,
+        //   src: "./images/poto-2.jpg"
+        // }
       ]
     };
   },
@@ -102,8 +105,10 @@ export default {
     return false;
   },
   components: {
-    newsModu,
-    modu1
+    newsModu
+    // 公司大事记，因为太短，故先不上；
+    // ,
+    // modu1
   }
 };
 </script>

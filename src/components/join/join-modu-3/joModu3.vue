@@ -11,13 +11,13 @@
       <div class="jo-mo3-pic w100">
         <ul class="w100">
           <li>
-            <img src="../../../common/images/join/fl-1.png" />
+            <img src="../../../../public/images/fl-3.webp" />
           </li>
           <li>
-            <img src="../../../common/images/join/fl-2.png" />
+            <img src="../../../../public/images/fl-2.webp" />
           </li>
           <li>
-            <img src="../../../common/images/join/fl-3.png" />
+            <img src="../../../../public/images/fl-1.webp" />
           </li>
         </ul>
       </div>
@@ -107,6 +107,7 @@ export default {
                     overflow: hidden;
                     img {
                         width: 100%;
+                        height: 100%;
                     }
                 }
             }

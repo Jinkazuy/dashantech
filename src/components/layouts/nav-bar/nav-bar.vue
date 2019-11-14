@@ -42,7 +42,7 @@
               <div class="border-line" v-if="!mob"></div>
             </li>
             <li @mouseenter="proRouterHover" @mouseleave="proRouterUnHover">
-              <router-link to="/product">产品中心</router-link>
+              <router-link to="/product">产品与解决方案</router-link>
               <div class="border-line" v-if="!mob"></div>
             </li>
             <li>

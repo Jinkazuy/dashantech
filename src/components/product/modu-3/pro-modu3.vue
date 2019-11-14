@@ -77,22 +77,23 @@ export default {
           idx: 2,
           imgSrc: "images/CMWA.png",
           hoverTit: "中国女医师协会"
-        },
-        {
-          idx: 3,
-          imgSrc: "images/logo-chmia.svg",
-          hoverTit: "中国卫生信息与健康医疗大数据学会"
-        },
-        {
-          idx: 4,
-          imgSrc: "images/logo-chmia.svg",
-          hoverTit: "中国卫生信息与健康医疗大数据学会"
-        },
-        {
-          idx: 5,
-          imgSrc: "images/logo-chmia.svg",
-          hoverTit: "中国卫生信息与健康医疗大数据学会"
         }
+        // ,
+        // {
+        //   idx: 3,
+        //   imgSrc: "images/logo-chmia.svg",
+        //   hoverTit: "中国卫生信息与健康医疗大数据学会"
+        // },
+        // {
+        //   idx: 4,
+        //   imgSrc: "images/logo-chmia.svg",
+        //   hoverTit: "中国卫生信息与健康医疗大数据学会"
+        // },
+        // {
+        //   idx: 5,
+        //   imgSrc: "images/logo-chmia.svg",
+        //   hoverTit: "中国卫生信息与健康医疗大数据学会"
+        // }
       ]
     };
   }
@@ -211,12 +212,16 @@ export default {
         }
         ul {
           padding: 0;
+          // 下方width和margin是在少量合作logo的时候启用就行；
+          // 如果横排多个的话，就可以注释掉了；
+          width: 50%;
+          margin: 0 auto;
           li {
             float: left;
-            height: 80px;
-            width: 19%;
-            background-color: rgba(0, 0, 0, .1);
             margin: 0 1% 1% 0;
+            height: 80px;
+            width: 48%;
+            background-color: rgba(0, 0, 0, .1);
             img {
               padding: 10px;
             }
