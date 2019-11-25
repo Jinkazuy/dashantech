@@ -114,7 +114,7 @@
         <!--<span>切换语言</span>-->
         <!--</div>-->
         <p class="copyright">
-          北京大善科技有限公司 Copyright &#169; 2019 www.dashantech.com.cn All
+          北京大善青松科技有限公司 Copyright &#169; 2019 www.dashantech.com.cn All
           rights reserved.
         </p>
       </div>
