@@ -11,15 +11,15 @@
         <div class="ab3-hover-view-1 po-lf50-tr50  h100 posi-ab">
           <router-link class="ab3-server-con-1 h100 posi-re" to="/product">
             <div class="ab3-server-con-info posi-ab w100">
-              <h3>医疗大健康平台</h3>
+              <h3>医疗大数据平台</h3>
               <p>
-                依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案
+                汇聚居民全生命周期的总和医疗和健康大数据
               </p>
             </div>
           </router-link>
           <router-link class="ab3-server-con-2 h100 posi-re" to="/product">
             <div class="ab3-server-con-info posi-ab w100">
-              <h3>医疗大健康平台</h3>
+              <h3>健康AI系统</h3>
               <p>
                 依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案
               </p>
@@ -29,7 +29,7 @@
             <div class="ab3-server-con-info posi-ab w100">
               <h3>医疗大健康平台</h3>
               <p>
-                依托大数据和人工智能，固化顶级专家经验和智慧不依赖稀缺医生资源自动给医疗救助人员提供医疗参考方案
+                中央数据中心，完善跟踪、采集居民医疗信息，形成诊疗监管、疾病上报、预防跟踪，解决卫生部、医院多机构的有效协同平台
               </p>
             </div>
           </router-link>

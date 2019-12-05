@@ -23,7 +23,7 @@
             >
               <i class="icon iconfont iconditu"></i>
               <span class="text"
-                >北京南四环西路128号 - 诺德中心4号,<br v-if="mob" />楼8层</span
+                >北京南四环西路128号 - 诺德中心4号<br v-if="mob" />楼8层</span
               >
             </a>
           </li>
@@ -37,7 +37,7 @@
           <li class="bottom-nav" v-if="!mob">
             <h3 class="bottom-nav-title">网站导航</h3>
             <ul class="nav-list">
-              <li><router-link to="/home">首页</router-link></li>
+              <li><router-link to="/">首页</router-link></li>
               <li><router-link to="/about">关于我们</router-link></li>
               <li><router-link to="/product">产品中心</router-link></li>
               <li><router-link to="/newsCenter">公司动态</router-link></li>
@@ -109,13 +109,9 @@
             >
           </li>
         </ul>
-        <!--<div class="text-switch">-->
-        <!--<i></i>-->
-        <!--<span>切换语言</span>-->
-        <!--</div>-->
         <p class="copyright">
-          北京大善青松科技有限公司 Copyright &#169; 2019 www.dashantech.com.cn All
-          rights reserved.
+          北京大善青松科技有限公司 Copyright &#169; 2019 www.dashantech.com.cn
+          All rights reserved.
         </p>
       </div>
     </div>

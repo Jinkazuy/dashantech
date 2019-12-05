@@ -9,7 +9,10 @@
   >
     <div class="container">
       <div class="pro-YltInfo-mo1-tit">
-        <h1>城市医疗联合体信息平台</h1>
+        <h1>
+          城市医疗联合体信息平台
+          <i class="iconfont iconbofang" @click="playMv()"></i>
+        </h1>
         <p>
           2019年5月，为贯彻落实《国务院办公厅关于推进医疗联合体建设和发展的指导意见》
           等有关要求，推进分级诊疗制度建设和医疗联合体(以下简称医联体)建设，构建优质高效
@@ -20,6 +23,17 @@
       <!--将banner插图封装为组件，需要用到时，将插画主体（不包括底板和点缀等部分）的图片传入-->
       <bannerImg :bannerIllusCont="bannerIllusCont"></bannerImg>
     </div>
+    <player
+      :videoSrc="videoSrc"
+      :videoShow="videoShow"
+      ref="player"
+      :mob="mob"
+    ></player>
+    <!--关闭按钮-->
+    <div class="close-pl" @click="closePl" v-show="videoShow">
+      <i class="iconfont iconguanbi"></i>
+    </div>
+    <!--视频播放器 结束-->
   </div>
 </template>
 
@@ -27,17 +41,35 @@
 // 引入banner插画组件
 import bannerIllusCont from "../../../../public/images/ylt.png";
 import bannerImg from "../../../components/layouts/banner-img/banner-img";
+// 引入视频播放器组件
+import player from "../../../components/layouts/player/player";
 export default {
   name: "proYltInfoModu1",
   props: ["mob"],
   data() {
     return {
       // banner插画主体
-      bannerIllusCont: bannerIllusCont
+      bannerIllusCont: bannerIllusCont,
+      videoSrc: "video/ylt.mp4",
+      videoShow: false
     };
   },
+  methods: {
+    playMv() {
+      // 视频播放器组件显示
+      this.videoShow = true;
+      // 视频播放器组件的播放函数
+      this.$refs.player.onPlay();
+    },
+    // 暂停关闭视频&&隐藏视频播放组件
+    closePl() {
+      this.videoShow = false;
+      this.$refs.player.stopPlay();
+    }
+  },
   components: {
-    bannerImg
+    bannerImg,
+    player
   }
 };
 </script>
@@ -74,6 +106,46 @@ export default {
             top: 0;
             transform: translateY(16%);
         }
+    }
+    .iconbofang {
+      font-size: 40px;
+      margin-top: 10px;
+      display: inline-block;
+      opacity: .6;
+      color: #fff;
+      transition: all .3s;
+    }
+    .iconbofang:hover {
+      font-size: 40px;
+      margin-top: 10px;
+      display: inline-block;
+      opacity: 1;
+    }
+    // 关闭按钮
+    // 关闭按钮
+    .close-pl {
+      position: absolute;
+      right: 20%;
+      top: 20%;
+      width: 50px;
+      height: 50px;
+      z-index: 11;
+      background-color: rgba(255,255,255,.1);
+      text-align: center;
+      cursor: pointer;
+      i {
+        padding-left: 6px;
+        font-size: 22px;
+        line-height: 50px;
+        color: #fff;
+        opacity: .5;
+        transition: all .2s;
+      }
+    }
+    .close-pl:hover {
+      i {
+        opacity: 1;
+      }
     }
 }
 // ============= 移动端样式 =============

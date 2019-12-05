@@ -52,6 +52,12 @@ import VueParticles from "vue-particles";
 Vue.use(VueParticles);
 // 粒子动画背景插件 ================================
 
+// 视频播放器插件 ================================
+import Video from "video.js";
+import "video.js/dist/video-js.css";
+Vue.prototype.$video = Video;
+// 视频播放器插件 ================================
+
 new Vue({
   router,
   store,

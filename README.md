@@ -40,6 +40,14 @@ https://codepen.io/VincentGarreau/pen/pnlso?q=particles.js&order=popularity&dept
 cnpm install vue-lazyload --save-dev
 因为文章详情格式复杂，所以JK用的都是图片一张一张截图，所以使用懒加载插件；
 
+6、视频播放插件 Video.js
+https://videojs.com/
+安装：npm install video.js
+在main.js中引入
+import Video from 'video.js'
+import 'video.js/dist/video-js.css'
+Vue.prototype.$video = Video
+
 
 ============================
 文件结构（部分）

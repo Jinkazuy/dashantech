@@ -97,7 +97,8 @@ export const productInfo = {
           h4: "医疗联合体信息平台",
           p:
             "2019年5月，为贯彻落实《国务院办公厅关于推进医疗联合体建设和发展的指导意见》等有关要求，推进分级诊疗制度建设和医疗联合体(以下简称医联体)建设，构建优质高效的医疗卫生服务体系，逐步实现城市医联体网格化布局管理，国家卫生健康委、国家中医药局决定开展城市医联体建设试点工作。",
-          routerTo: "/productYLT"
+          routerTo: "/productYLT",
+          videoSrc: "video/ylt.mp4"
         },
         {
           showNumber: 8,
@@ -107,7 +108,8 @@ export const productInfo = {
           h4: "区域医疗影像及诊断云平台",
           p:
             "区域医疗影像与诊断云平台是指为一定区域内居民提供代表该区域先进水平的医疗服务，承担一定的人才培养、医学科研、教学等任务的医院，区域阅片中心同时承担服务区域突发公共卫生事件的医疗救治和技术支持。其宗旨是:以健康为目标，以信息网络为基础;建立多层级医疗卫生机构的服务联盟;以多学科协同抓手，整合预防、诊治和健康工 作。",
-          routerTo: "/productRegionalCloud"
+          routerTo: "/productRegionalCloud",
+          videoSrc: "video/pacs.mp4"
         }
         // {
         //   showNumber: 9,

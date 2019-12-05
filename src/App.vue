@@ -106,6 +106,19 @@ export default {
         if (this.$router.path !== currentPath) {
           this.$router.push(currentPath); // 动态跳转
         }
+
+        // this.routerPath
+        // router加载之后，判断是否存在，如果router不存在则跳转到404notFound页面
+        var findRouter = this.routerPath.find(item => {
+          // return的后面跟的是条件，item就是数组、对象集；
+          return this.$route.path === item;
+        });
+        if (findRouter === undefined) {
+          console.log("app.vue中判断，路由不存在");
+          this.$router.push({
+            path: "/notFound"
+          });
+        }
       },
       false
     );
@@ -134,19 +147,6 @@ export default {
       // 移除不支持ie的DOM元素
       // eslint-disable-next-line
       $(".is-ie").remove();
-    }
-
-    // this.routerPath
-    // router加载之后，判断是否存在，如果router不存在则跳转到404页面
-    var findRouter = this.routerPath.find(item => {
-      // return的后面跟的是条件，item就是数组、对象集；
-      return this.$route.path === item;
-    });
-    if (findRouter === undefined) {
-      console.log("app.vue中判断，路由不存在");
-      this.$router.push({
-        path: "/notFound"
-      });
     }
   },
   methods: {

@@ -50,10 +50,17 @@
             v-show="liActiveNum === itm.showNumber"
           >
             <div class="pro-mo2-bd-illus">
+              <!--视频播放按钮，点击时将该产品的视频同步this.videoSrc，然后再传给player视频播放组件-->
+              <i class="iconfont iconbofang" @click="playMv(itm)"></i>
               <img :src="itm.imgBigSrc" />
             </div>
             <div class="pro-mo2-bd-info">
               <h4>{{ itm.h4 }}</h4>
+              <i
+                class="iconfont iconbofang"
+                @click="playMv(itm)"
+                v-if="mob"
+              ></i>
               <p>{{ itm.p }}</p>
               <div class="info-btn">
                 <router-link :to="itm.routerTo">查看详情</router-link>
@@ -62,6 +69,18 @@
           </div>
         </transition-group>
       </div>
+      <!--视频播放器 开始-->
+      <player
+        :videoSrc="videoSrc"
+        :videoShow="videoShow"
+        ref="player"
+        :mob="mob"
+      ></player>
+      <!--关闭按钮-->
+      <div class="close-pl" @click="closePl" v-show="videoShow">
+        <i class="iconfont iconguanbi"></i>
+      </div>
+      <!--视频播放器 结束-->
     </div>
   </div>
 </template>
@@ -69,6 +88,8 @@
 <script>
 // 引入混入函数文件，拿到各个产品的详细信息；
 import { productInfo } from "../../../common/js/mixin";
+// 引入视频播放器组件
+import player from "../../../components/layouts/player/player";
 export default {
   name: "pro-modu2",
   props: ["mob"],
@@ -78,15 +99,42 @@ export default {
   data() {
     return {
       // 每个tab的代表数字
-      liActiveNum: 7
+      liActiveNum: 7,
       // 产品信息详情模块数据
       // 使用混入函数引入
+
+      // 视频是否显示&&播放
+      videoShow: false,
+      // 视频地址：点击播放按钮后，更改videoSrc,从而渲染不同视频；
+      videoSrc: ""
+      // 具体是视频路径，也写在混入文件中了；
     };
+  },
+  mounted() {
+    // 因为视频播放地址需要一个视频，所以这里需要先给一个地址；
+    // this.videoSrc = "//vjs.zencdn.net/v/oceans.mp4";
   },
   methods: {
     proLi(idx) {
       this.liActiveNum = idx;
+    },
+    playMv(itm) {
+      console.log(itm.videoSrc);
+      // mixin文件中每个产品的视频地址，替换到当前组件的this.videoSrc;
+      this.videoSrc = itm.videoSrc;
+      // 视频播放器组件显示
+      this.videoShow = true;
+      // 视频播放器组件的播放函数
+      this.$refs.player.onPlay();
+    },
+    // 暂停关闭视频&&隐藏视频播放组件
+    closePl() {
+      this.videoShow = false;
+      this.$refs.player.stopPlay();
     }
+  },
+  components: {
+    player
   }
 };
 </script>
@@ -212,6 +260,25 @@ export default {
             width: 100%;
             height: 100%;
           }
+          i {
+            position: absolute;
+            display: block;
+            left: 50%;
+            top: 50%;
+            width: 150px;
+            height: 150px;
+            transform: translateY(-50%) translateX(-50%);
+            font-size: 150px;
+            line-height: 150px;
+            color: #fff;
+            opacity: .7;
+            box-shadow:0 15px 30px 0 rgba(255, 255, 255,0.6);
+            border-radius: 100px;
+            transition: all .2s;
+          }
+          i:hover {
+            opacity: 1;
+          }
         }
         .pro-mo2-bd-info {
           position: absolute;
@@ -265,6 +332,32 @@ export default {
           }
         }
       }
+      // 关闭按钮
+      // 关闭按钮
+      .close-pl {
+        position: absolute;
+        right: 20%;
+        top: 20%;
+        width: 50px;
+        height: 50px;
+        z-index: 11;
+        background-color: rgba(255,255,255,.1);
+        text-align: center;
+        cursor: pointer;
+        i {
+          padding-left: 6px;
+          font-size: 22px;
+          line-height: 50px;
+          color: #fff;
+          opacity: .5;
+          transition: all .2s;
+        }
+      }
+      .close-pl:hover {
+        i {
+          opacity: 1;
+        }
+      }
     }
 }
 // ============== 移动端样式 ==============
@@ -312,6 +405,32 @@ export default {
           font-size: 12px;
           line-height: 20px;
         }
+      }
+      .iconfont {
+        position: absolute;
+        right: 50px;
+        top: 23px;
+      }
+    }
+    // 关闭按钮
+    // 关闭按钮
+    .close-pl {
+      position: absolute;
+      right: 4%;
+      top: 4%;
+      width: 50px;
+      height: 50px;
+      z-index: 11;
+      background-color: rgba(255,255,255,.1);
+      text-align: center;
+      cursor: pointer;
+      i {
+        padding-left: 6px;
+        font-size: 22px;
+        line-height: 50px;
+        color: #fff;
+        opacity: .5;
+        transition: all .2s;
       }
     }
   }
