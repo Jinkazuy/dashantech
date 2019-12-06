@@ -122,7 +122,7 @@ export default {
             // 注意！这里的图片，是npm run build 后，也就是编译后的相对路径，也就是把public下的images文件夹直接输出到了编译后的根目录
             // 所以直接./images即可；
             // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
-            // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
+            // 2、import xxd from "../../xx.png" , 然后将这个xxd以对象的方式赋值给imgSrc；
             imgSrc: "./images/news-bg-img.png"
           },
           // 底部三个文章列表内容

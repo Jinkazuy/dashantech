@@ -4,10 +4,12 @@
       <img src="../../../common/images/titles/prd-title-CASE.png" />
     </div>
     <div class="pro-modu-4-bd container">
-      <div
+      <router-link
         class="news-cont-top w100"
         v-for="(itm, idx) in caseDatas"
         :key="idx"
+        target="_blank"
+        :to="itm.aLink"
       >
         <div class="left-cont h100">
           <div class="left-cont-dates">
@@ -30,7 +32,7 @@
         <div class="left-img h100">
           <img class="w100 h100" :src="itm.imgSrc" />
         </div>
-      </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -38,6 +40,7 @@
 <script>
 export default {
   name: "pro-modu4",
+  props: ["mob"],
   data() {
     return {
       caseDatas: [
@@ -46,8 +49,7 @@ export default {
           aLink: `newsDetail?id=${1}`,
           month: "August",
           dates: "2019/09/25",
-          title:
-            "蓉城项目",
+          title: "蓉城项目",
           conts: `2019年7月25日，我司正式获聘成为中国卫生信息与健康大数据学会第七届常务理事单位。<br/><br/> 中国卫生信息与健康医疗大数据学会中国卫生信息与健康医疗大数据学会（Chinese Health Information and Big Data Association, CHIBDA, 以下简称“学会”）……`,
           // 注意！这里的图片，是npm run build 后，也就是编译后的相对路径，也就是把public下的images文件夹直接输出到了编译后的根目录
           // 所以直接./images即可；
@@ -61,7 +63,7 @@ export default {
           month: "August",
           dates: "2019/09/25",
           title:
-            "安新县",
+            "安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县",
           conts: `2019年7月25日，我司正式获聘成为中国卫生信息与健康大数据学会第七届常务理事单位。<br/><br/> 中国卫生信息与健康医疗大数据学会中国卫生信息与健康医疗大数据学会（Chinese Health Information and Big Data Association, CHIBDA, 以下简称“学会”）……`,
           // 注意！这里的图片，是npm run build 后，也就是编译后的相对路径，也就是把public下的images文件夹直接输出到了编译后的根目录
           // 所以直接./images即可；
@@ -91,6 +93,7 @@ export default {
         display: block;
         position: relative;
         .news-cont-top {
+            display: block;
             position: relative;
             height: 383px;
             background-color: #fff;
@@ -177,7 +180,6 @@ export default {
             }
         }
         .news-cont-top:hover {
-            cursor: pointer;
             .left-cont {
                 .left-cont-titles {
                     p {
@@ -206,5 +208,49 @@ export default {
             }
         }
     }
+}
+// 移动端样式
+.pro-modu-4-mob {
+  .pro-modu-4-hd{
+    height: 44px;
+  }
+  .pro-modu-4-bd {
+    .news-cont-top {
+      height: 160px;
+      .left-cont {
+        .left-cont-dates {
+          left: 10%;
+          top: 10px;
+          .month {
+            font-size:12px;
+          }
+        }
+        .left-cont-titles {
+          left: 10%;
+          top: 40px;
+          p {
+            width: 90%;
+            font-size: 16px;
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
+          }
+        }
+        .left-cont-conts {
+          display: none;
+        }
+        .on-more {
+          left: 10%;
+          bottom: 14px;
+          width: 70px;
+          height: 30px;
+          a {
+            font-size: 12px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
 }
 </style>

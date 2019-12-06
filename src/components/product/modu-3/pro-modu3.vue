@@ -104,7 +104,9 @@ export default {
 .pro-modu-3 {
     position: relative;
     height: auto;
-    background-color: rgba(46,48,55,1);
+//  灰色背景
+//  background-color: rgba(46,48,55,1);
+    background-color: #0e1833;
     .container {
       padding: 0;
       display: block;

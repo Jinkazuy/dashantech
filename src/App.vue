@@ -132,13 +132,13 @@ export default {
       this.mob = false;
     }
 
-    // 屏幕尺寸改变时候判断是否为移动端，用于传给每个一级页面，然后由一级页面传给每个子组件
+    // 监听屏幕尺寸改变实践，屏幕尺寸改变时候判断是否为移动端，用于传给每个一级页面，然后由一级页面传给每个子组件
     // eslint-disable-next-line
     $(window).resize(()=> {
       this.mob = !!navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i);
     });
 
-    // 判断是否是id浏览器，整体页面会用这个isIE做判定条件，是否渲染页面，还是渲染‘抱歉，不能用ie’的div；
+    // 判断是否是ie浏览器，整体页面会用这个isIE做判定条件，是否渲染页面，还是渲染‘抱歉，不能用ie’的div；
     this.isIE = this.iEVersion();
     // 因为在一开始就在body中追加了对不起，不支持ie浏览器，所以，如果能够进入到这里，说明vue可以生效
     // （因为IE对methods的中function不兼容，所以js报错，不能进入到vue的JS中；）
