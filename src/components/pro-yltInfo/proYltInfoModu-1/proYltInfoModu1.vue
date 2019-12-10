@@ -10,7 +10,7 @@
     <div class="container">
       <div class="pro-YltInfo-mo1-tit">
         <h1>
-          城市医疗联合体信息平台
+          大善医联体云平台
           <i class="iconfont iconbofang" @click="playMv()"></i>
         </h1>
         <p>

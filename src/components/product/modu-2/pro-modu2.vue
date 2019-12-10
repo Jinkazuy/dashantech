@@ -103,7 +103,7 @@ export default {
   data() {
     return {
       // 每个tab的代表数字
-      liActiveNum: 7,
+      liActiveNum: 0,
       // 产品信息详情模块数据
       // 使用混入函数引入
 

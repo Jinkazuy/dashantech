@@ -588,6 +588,22 @@ export default {
             }
           }
         }
+        a.router-link-active {
+          .img-b {
+            img {
+              opacity: 1;
+            }
+          }
+          .tt-b {
+            h6 {
+              color: #14948a;
+              font-weight: 900;
+            }
+            p {
+              color: #14948a;
+            }
+          }
+        }
       }
     }
   }
