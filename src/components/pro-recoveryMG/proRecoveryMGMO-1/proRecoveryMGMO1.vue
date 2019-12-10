@@ -9,7 +9,7 @@
   >
     <div class="container">
       <div class="pro-recover-mg-modu-1-tit">
-        <h1>智能康复管理系统</h1>
+        <h1>大善智能康复管理系统</h1>
         <p>
           康复治疗前应先对病、伤、残者进行康复评定，然后制定一个理想的康复方案，由以康复医师为中心，和临床医学相关人员共同组成的康复治疗组去实施，并在实施过程中不断总结、评定调查，直至治疗结束。可实现康复科室的数字化、信息化和过程的管控，有效避免信息孤岛的出现，实现全员的数据共享。
         </p>
@@ -48,7 +48,7 @@ export default {
         padding: 0 58px;
         .pro-recover-mg-modu-1-tit {
             margin: 220px 0 0 0;
-            width: 34%;
+            width: 38%;
             h1,p {
                 color: #fff;
             }

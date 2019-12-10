@@ -9,7 +9,7 @@
   >
     <div class="container">
       <div class="pro-intensiveCare-mo1-tit">
-        <h1>重症护理信息管理平台</h1>
+        <h1>大善重症护理信息管理平台</h1>
         <p>
           ※ 支持多品牌监护设备实时集中监控
           <br />
@@ -54,7 +54,7 @@ export default {
         padding: 0 58px;
         .pro-intensiveCare-mo1-tit {
             margin: 220px 0 0 0;
-            width: 34%;
+            width: 42%;
             h1,p {
                 color: #fff;
             }

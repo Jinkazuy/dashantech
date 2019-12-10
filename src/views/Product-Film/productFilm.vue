@@ -1,13 +1,19 @@
 <template>
   <div class="product-film">
     <mo1 :mob="mob"></mo1>
-    <onup></onup>
+    <mo2 :mob="mob"></mo2>
+    <mo3 :mob="mob"></mo3>
+    <mo4 :mob="mob"></mo4>
+    <mo5 :mob="mob"></mo5>
   </div>
 </template>
 
 <script>
 import mo1 from "../../components/pro-film/proFilmModu-1/proFilmModu1";
-import onup from "../../components/layouts/onUpData/onUpData";
+import mo2 from "../../components/pro-film/proFilmModu-2/proFilmModu2";
+import mo3 from "../../components/pro-film/proFilmModu-3/proFilmModu3";
+import mo4 from "../../components/pro-film/proFilmModu-4/proFilmModu4";
+import mo5 from "../../components/pro-film/proFilmModu-5/proFilmModu5";
 export default {
   name: "productFilm",
   props: ["mob"],
@@ -30,7 +36,10 @@ export default {
   },
   components: {
     mo1,
-    onup
+    mo2,
+    mo3,
+    mo4,
+    mo5
   }
 };
 </script>

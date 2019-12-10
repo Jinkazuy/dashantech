@@ -1,13 +1,17 @@
 <template>
   <div class="product-illMG">
     <mo1 :mob="mob"></mo1>
-    <onup></onup>
+    <mo2 :mob="mob"></mo2>
+    <mo3 :mob="mob"></mo3>
+    <mo4 :mob="mob"></mo4>
   </div>
 </template>
 
 <script>
 import mo1 from "../../components/pro-illnessMG/proIllnessMGMO-1/proIllnessMGMO1";
-import onup from "../../components/layouts/onUpData/onUpData";
+import mo2 from "../../components/pro-illnessMG/proIllnessMGMO-2/proIllnessMGMO2";
+import mo3 from "../../components/pro-illnessMG/proIllnessMGMO-3/proIllnessMGMO3";
+import mo4 from "../../components/pro-illnessMG/proIllnessMGMO-4/proIllnessMGMO4";
 export default {
   name: "ProductIllnessMG",
   props: ["mob"],
@@ -30,7 +34,9 @@ export default {
   },
   components: {
     mo1,
-    onup
+    mo2,
+    mo3,
+    mo4
   }
 };
 </script>

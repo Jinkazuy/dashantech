@@ -1,13 +1,21 @@
 <template>
   <div class="product-recovery">
     <mo1 :mob="mob"></mo1>
-    <onup></onup>
+    <mo2 :mob="mob"></mo2>
+    <mo3 :mob="mob"></mo3>
+    <mo4 :mob="mob"></mo4>
+    <mo5 :mob="mob"></mo5>
+    <mo6 :mob="mob"></mo6>
   </div>
 </template>
 
 <script>
 import mo1 from "../../components/pro-recoveryMG/proRecoveryMGMO-1/proRecoveryMGMO1";
-import onup from "../../components/layouts/onUpData/onUpData";
+import mo2 from "../../components/pro-recoveryMG/proRecoveryMGMO-2/proRecoveryMGMO2";
+import mo3 from "../../components/pro-recoveryMG/proRecoveryMGMO-3/proRecoveryMGMO3";
+import mo4 from "../../components/pro-recoveryMG/proRecoveryMGMO-4/proRecoveryMGMO4";
+import mo5 from "../../components/pro-recoveryMG/proRecoveryMGMO-5/proRecoveryMGMO5";
+import mo6 from "../../components/pro-recoveryMG/proRecoveryMGMO-6/proRecoveryMGMO6";
 export default {
   name: "ProductRecovery",
   props: ["mob"],
@@ -30,7 +38,11 @@ export default {
   },
   components: {
     mo1,
-    onup
+    mo2,
+    mo3,
+    mo4,
+    mo5,
+    mo6
   }
 };
 </script>

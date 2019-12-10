@@ -9,7 +9,7 @@
   >
     <div class="container">
       <div class="pro-clinicalDrug-mo1-tit">
-        <h1>药物临床试验系统</h1>
+        <h1>大善药物临床试验系统</h1>
         <p>
           ※
           保证系统独立性的同时确保系统的可扩展性，满足I、II、III、IV期临床试验的需求<br /><br />※

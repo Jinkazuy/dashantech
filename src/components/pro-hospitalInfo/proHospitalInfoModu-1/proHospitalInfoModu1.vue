@@ -9,7 +9,7 @@
   >
     <div class="container">
       <div class="pro-HospitalInfo-mo1-tit">
-        <h1>互联网医院信息平台</h1>
+        <h1>大善互联网医院信息平台</h1>
         <p>
           互联网医院信息平台是一套集健康大数据收集、健康管理与疾病预防、网上诊疗为一体的远程医疗服务与协同信息平台，提供基于互联网的医疗卫生服务，利用互联网延伸医嘱、电子处方等网络医疗健康服务应用，从而提高医疗服务效率，保证医疗质量和医疗安全。
         </p>
@@ -49,7 +49,7 @@ export default {
         padding: 0 58px;
         .pro-HospitalInfo-mo1-tit {
             margin: 220px 0 0 0;
-            width: 34%;
+            width: 38%;
             h1,p {
                 color: #fff;
             }

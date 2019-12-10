@@ -1,14 +1,16 @@
 <template>
   <div class="product-hospital-info">
     <mo1 :mob="mob"></mo1>
-    <onup></onup>
+    <mo2 :mob="mob"></mo2>
+    <mo3 :mob="mob"></mo3>
   </div>
 </template>
 
 <script>
 import mo1 from "../../components/pro-hospitalInfo/proHospitalInfoModu-1/proHospitalInfoModu1";
-// 正在升级模块
-import onup from "../../components/layouts/onUpData/onUpData";
+import mo2 from "../../components/pro-hospitalInfo/proHospitalInfoModu-2/proHospitalInfoModu2";
+import mo3 from "../../components/pro-hospitalInfo/proHospitalInfoModu-3/proHospitalInfoModu3";
+
 export default {
   name: "ProductHospitalInfo",
   props: ["mob"],
@@ -31,7 +33,8 @@ export default {
   },
   components: {
     mo1,
-    onup
+    mo2,
+    mo3
   }
 };
 </script>

@@ -51,7 +51,11 @@
           >
             <div class="pro-mo2-bd-illus">
               <!--视频播放按钮，点击时将该产品的视频同步this.videoSrc，然后再传给player视频播放组件-->
-              <i class="iconfont iconbofang" @click="playMv(itm)"></i>
+              <i
+                class="iconfont iconbofang"
+                @click="playMv(itm)"
+                v-if="itm.videoSrc"
+              ></i>
               <img :src="itm.imgBigSrc" />
             </div>
             <div class="pro-mo2-bd-info">
@@ -142,7 +146,7 @@ export default {
 <style scoped lang="stylus">
 .pro-modu-2 {
     margin: 200px 0 0 0;
-    height: 1146px;
+    height: 1280px;
     position: relative;
     .pro-mo2-title {
         position: absolute;
