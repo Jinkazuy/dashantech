@@ -508,7 +508,7 @@ export default {
       }
     }
     .bottom-cont {
-      height: 640px;
+      height: 740px;
       .lg-d {
         width: 100%;
       }

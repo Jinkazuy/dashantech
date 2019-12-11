@@ -68,14 +68,17 @@ export default {
 // ========== 移动端样式 ==========
 .pro-HospitalInfoModu-mo2-mob {
     padding: 40px 0;
-    .pro-HospitalInfoModu-mo2-mob-tit {
+    .pro-HospitalInfoModu-mo2-tit {
         color: #000;
         img {
             height: 42px;
         }
     }
-    .pro-HospitalInfoModu-mo2-mob-bd {
+    .pro-HospitalInfoModu-mo2-bd {
         padding: 0 20px;
+        img {
+          width: 100%;
+        }
     }
 }
 </style>

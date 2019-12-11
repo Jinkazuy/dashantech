@@ -10,7 +10,7 @@
     <div class="pro-WardRound-modu-4-hd">
       <img src="../../../common/images/titles/prd-title-WardRound-3.png" />
     </div>
-    <div class="pro-WardRound-modu-3-bd container">
+    <div class="pro-WardRound-modu-4-bd container">
       <!--// 使用ondragstart防止拖拽-->
       <img
         ondragstart="return false;"
@@ -57,7 +57,8 @@ export default {
     padding-bottom: 20px;
     .pro-WardRound-modu-4-hd {
         img{
-            height: 42px;
+            width: 80%;
+            height: auto;
         }
     }
     .pro-WardRound-modu-4-bd {

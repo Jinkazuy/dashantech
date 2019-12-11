@@ -59,7 +59,7 @@ export default {
     .pro-ill-MG-modu-2-tit {
         padding: 40px 0 90px;
         .tit-img-box{
-            width: 149px;
+           height: 42px;
         }
     }
     .pro-ill-MG-modu-2-bd {

@@ -118,10 +118,24 @@ export default {
         }
     }
     .color-bg-mask {
-        height: 30%;
+        height: 0px;
     }
     .pro-film-modu-3-bd {
         padding: 0 20px;
+        background-color: #28327a;
+        ul {
+          padding: 0;
+          li {
+            h4 {
+              color: #fff;
+              font-size: 16px;
+            }
+            p {
+              color: #fff;
+              font-size: 14px;
+            }
+          }
+        }
     }
 }
 </style>

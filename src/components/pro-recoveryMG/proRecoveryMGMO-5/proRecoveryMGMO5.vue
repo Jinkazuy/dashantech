@@ -60,10 +60,10 @@ export default {
 }
 // ============= 移动端样式 =============
 .pro-recover-mg-modu-5-mob {
-    .pro-recover-mg-modu-3-tit {
+    .pro-recover-mg-modu-5-tit {
         padding: 40px 0 90px;
         .tit-img-box{
-            width: 149px;
+            height: 42px;
         }
     }
     .pro-recover-mg-modu-5-bd {

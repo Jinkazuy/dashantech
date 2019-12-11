@@ -5,7 +5,7 @@
         <img src="../../../common/images/titles/prd-title-film-1.png" />
       </div>
       <p>
-        传统感光胶片、纸质报告等多年来作为影像存储的介质功不可没，<br>但经过时代的变迁诸多弊端和实际问题亟待解决，传统胶片的变革已然成为时代需求。
+        传统感光胶片、纸质报告等多年来作为影像存储的介质功不可没，<br />但经过时代的变迁诸多弊端和实际问题亟待解决，传统胶片的变革已然成为时代需求。
       </p>
     </div>
     <div class="pro-film-modu-2-bd">
@@ -119,7 +119,7 @@ export default {
     .pro-film-modu-2-tit {
         padding: 40px 0 90px;
         .tit-img-box{
-            width: 149px;
+          height: 42px;
         }
         p {
             padding: 0 30px;

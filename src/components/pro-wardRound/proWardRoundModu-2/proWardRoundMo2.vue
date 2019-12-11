@@ -136,6 +136,11 @@ export default {
     }
   }
   // ============= 移动端样式 ============
+  .pro-WardRound-modu-2-hd {
+    img {
+      height: 42px;
+    }
+  }
   .pro-WardRound-modu-2-bd-mob {
     display: block;
     .pro-follow-inter-face-img-box {
