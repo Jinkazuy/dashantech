@@ -110,6 +110,38 @@ export default {
                  <img class="w100" src="detail/d-4/6.jpg"/><br>
                  <img class="w100" src="detail/d-4/7.jpg"/><br>
                  <img class="w100" src="detail/d-4/8.jpg"/><br>`
+        },
+        {
+          id: "5",
+          month: "December",
+          date: "2019/12/17",
+          title:
+            "“智慧医疗+教育·精准扶贫行”在京启动，我司远程医疗云平台是技术支撑平台",
+          info: `<img class="w100" src="detail/d-5/nys-1.png"/><br>
+                 <img class="w100" src="detail/d-5/nys-2.png"/><br>
+                 <img class="w100" src="detail/d-5/nys-3.png"/><br>
+                 <img class="w100" src="detail/d-5/nys-4.png"/><br>
+                 <img class="w100" src="detail/d-5/nys-5.png"/><br>
+                 <img class="w100" src="detail/d-5/nys-6.png"/><br>
+                 <img class="w100" src="detail/d-5/nys-7.png"/><br>`
+        },
+        {
+          id: "6",
+          month: "December",
+          date: "2019/12/03",
+          title: "我司受邀出席中国数字健康医疗大会",
+          info: `<img class="w100" src="detail/d-6/hn-1.png"/><br>
+                 <img class="w100" src="detail/d-6/hn-2.png"/><br>
+                 <img class="w100" src="detail/d-6/hn-3.png"/><br>
+                 <img class="w100" src="detail/d-6/hn-4.png"/><br>
+                 <img class="w100" src="detail/d-6/hn-5.png"/><br>
+                 <img class="w100" src="detail/d-6/hn-6.png"/><br>
+                 <img class="w100" src="detail/d-6/hn-7.png"/><br>
+                 <img class="w100" src="detail/d-6/hn-8.png"/><br>
+                 <img class="w100" src="detail/d-6/hn-9.png"/><br>
+                 <img class="w100" src="detail/d-6/hn-10.png"/><br>
+                 <img class="w100" src="detail/d-6/hn-11.png"/><br>
+                 <img class="w100" src="detail/d-6/hn-12.png"/><br>`
         }
       ]
     };
