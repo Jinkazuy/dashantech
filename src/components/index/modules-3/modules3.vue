@@ -149,7 +149,7 @@ export default {
                 dates: "2019/12/17",
                 title:
                   "“智慧医疗+教育·精准扶贫行”在京启动，我司远程医疗云平台是技术支撑平台",
-                imgSrc: "./detail/d-5/nys-00.png"
+                imgSrc: "./detail/d-7/nys-00.png"
               },
               // 海南大会
               {
@@ -158,7 +158,7 @@ export default {
                 month: "December",
                 dates: "2019/12/03",
                 title: "我司受邀出席中国数字健康医疗大会",
-                imgSrc: "./detail/d-6/hn-00.png"
+                imgSrc: "./detail/d-8/hn-00.png"
               }
             ]
           }
