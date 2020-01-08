@@ -101,7 +101,7 @@ export default {
         background-color: rgba(40, 50, 122, 1);
     }
     .pro-regionalCloud-mo9-bd {
-        padding: 0 58px;
+        padding: 0 200px;
         img {
             width: 100%;
             height: 100%;
@@ -109,7 +109,7 @@ export default {
     }
     .pro-regionalCloud-mo9-ft {
         position: relative;
-        padding: 48px 120px 0;
+        padding: 48px 200px 0;
         z-index: 9;
         display: block;
         li {

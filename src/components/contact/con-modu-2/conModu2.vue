@@ -18,7 +18,7 @@
       <div class="bd-r">
         <h4>业务洽谈</h4>
         <ul>
-          <li>Email&nbsp;&nbsp;&nbsp;liuyang@dashantech.com.cn</li>
+          <li>Email&nbsp;&nbsp;&nbsp;tangfeng@dashantech.com.cn</li>
           <!--<li>华北地区 张先森 13800138000</li>-->
           <!--<li>华北地区 张先森 13800138000</li>-->
           <!--<li>华北地区 张先森 13800138000</li>-->

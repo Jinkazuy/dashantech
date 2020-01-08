@@ -51,7 +51,7 @@
             <ul class="nav-list">
               <li>
                 <ul class="add">
-                  <li class="num">邮箱：liuyang@dashantech.com.cn</li>
+                  <li class="num">邮箱：tangfeng@dashantech.com.cn</li>
                 </ul>
                 <!--<ul class="add">-->
                 <!--<li>华北地区</li>-->

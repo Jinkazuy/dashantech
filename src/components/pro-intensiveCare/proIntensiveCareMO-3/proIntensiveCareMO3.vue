@@ -74,7 +74,7 @@
             </p>
           </div>
           <div class="pic-group" v-if="!mob">
-            <img src="../../../common/images/index/testillus.png" />
+            <img src="../../../common/images/pro-IntensiveCare/IntensiveCare-SJCJ.png" />
           </div>
         </div>
         <div v-if="btnHoverNow === 2" class="bd-cont-box-item-2 clearfix">
@@ -92,7 +92,7 @@
             </p>
           </div>
           <div class="pic-group" v-if="!mob">
-            <img src="../../../common/images/index/testillus.png" />
+            <img src="../../../common/images/pro-IntensiveCare/IntensiveCare-SSJK.png" />
           </div>
         </div>
         <div v-if="btnHoverNow === 3" class="bd-cont-box-item-3 clearfix">
@@ -106,7 +106,7 @@
             </p>
           </div>
           <div class="pic-group" v-if="!mob">
-            <img src="../../../common/images/index/testillus.png" />
+            <img src="../../../common/images/pro-IntensiveCare/IntensiveCare-QSFX.png" />
           </div>
         </div>
         <div v-if="btnHoverNow === 4" class="bd-cont-box-item-4 clearfix">
@@ -119,7 +119,7 @@
             </p>
           </div>
           <div class="pic-group" v-if="!mob">
-            <img src="../../../common/images/index/testillus.png" />
+            <img src="../../../common/images/pro-IntensiveCare/IntensiveCare-ZNPG.png" />
           </div>
         </div>
         <div v-if="btnHoverNow === 5" class="bd-cont-box-item-5 clearfix">
@@ -132,7 +132,7 @@
             </p>
           </div>
           <div class="pic-group" v-if="!mob">
-            <img src="../../../common/images/index/testillus.png" />
+            <img src="../../../common/images/pro-IntensiveCare/IntensiveCare-XXHG.png" />
           </div>
         </div>
         <div v-if="btnHoverNow === 6" class="bd-cont-box-item-6 clearfix">
@@ -145,7 +145,7 @@
             </p>
           </div>
           <div class="pic-group" v-if="!mob">
-            <img src="../../../common/images/index/testillus.png" />
+            <img src="../../../common/images/pro-IntensiveCare/IntensiveCare-WFJC.png" />
           </div>
         </div>
         <div v-if="btnHoverNow === 7" class="bd-cont-box-item-7 clearfix">
@@ -166,7 +166,7 @@
             </p>
           </div>
           <div class="pic-group" v-if="!mob">
-            <img src="../../../common/images/index/testillus.png" />
+            <img src="../../../common/images/pro-IntensiveCare/IntensiveCare-YYJZ.png" />
           </div>
         </div>
       </div>

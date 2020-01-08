@@ -63,7 +63,7 @@ export default {
         background-color: #28327a;
     }
     .pro-YltInfo-mo8-bd {
-        padding: 0 58px;
+        padding: 0 300px;
         img {
             width: 100%;
             height: 100%;

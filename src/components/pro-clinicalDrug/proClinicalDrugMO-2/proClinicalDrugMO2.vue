@@ -69,7 +69,7 @@
             </ul>
           </div>
           <div class="pic-group" v-if="!mob">
-            <img src="../../../common/images/index/testillus.png" />
+            <img src="../../../common/images/pro-clinicalDrug/ClinicalDrug-SYGCGL.png" />
           </div>
         </div>
         <div v-if="btnHoverNow === 2" class="bd-cont-box-item-2 clearfix">
@@ -82,7 +82,7 @@
             </ul>
           </div>
           <div class="pic-group" v-if="!mob">
-            <img src="../../../common/images/index/testillus.png" />
+            <img src="../../../common/images/pro-clinicalDrug/ClinicalDrug-SSZJHGL.png" />
           </div>
         </div>
         <div v-if="btnHoverNow === 3" class="bd-cont-box-item-3 clearfix">
@@ -96,7 +96,7 @@
             </ul>
           </div>
           <div class="pic-group" v-if="!mob">
-            <img src="../../../common/images/index/testillus.png" />
+            <img src="../../../common/images/pro-clinicalDrug/ClinicalDrug-YYLCXT.png" />
           </div>
         </div>
         <div v-if="btnHoverNow === 4" class="bd-cont-box-item-4 clearfix">
@@ -108,7 +108,7 @@
             </ul>
           </div>
           <div class="pic-group" v-if="!mob">
-            <img src="../../../common/images/index/testillus.png" />
+            <img src="../../../common/images/pro-clinicalDrug/ClinicalDrug-YJHTX.png" />
           </div>
         </div>
         <div v-if="btnHoverNow === 5" class="bd-cont-box-item-5 clearfix">
@@ -120,7 +120,7 @@
             </ul>
           </div>
           <div class="pic-group" v-if="!mob">
-            <img src="../../../common/images/index/testillus.png" />
+            <img src="../../../common/images/pro-clinicalDrug/ClinicalDrug-ZLJK.png" />
           </div>
         </div>
         <div v-if="btnHoverNow === 6" class="bd-cont-box-item-6 clearfix">
@@ -133,7 +133,7 @@
             </ul>
           </div>
           <div class="pic-group" v-if="!mob">
-            <img src="../../../common/images/index/testillus.png" />
+            <img src="../../../common/images/pro-clinicalDrug/ClinicalDrug-SJGL.png" />
           </div>
         </div>
       </div>

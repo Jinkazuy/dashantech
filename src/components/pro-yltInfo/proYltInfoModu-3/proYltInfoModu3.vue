@@ -49,7 +49,7 @@ export default {
         }
     }
     .pro-YltInfo-mo3-bd {
-        padding: 0 160px;
+        padding: 0 300px;
         img {
             width: 100%;
             height: 100%;

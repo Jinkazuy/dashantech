@@ -59,17 +59,17 @@
             <div class="card-pic">
               <img
                 class="w100 h100"
-                src="../../../../public/images/per-LH.png"
+                src="../../../../public/images/per-JHP.png"
               />
-              <span>吕辉</span>
+              <span>蒋海平</span>
             </div>
             <div
               :class="[
                 'card-tit',
-                { 'card-tit-active': perShowData.perNameZh === '吕辉' }
+                { 'card-tit-active': perShowData.perNameZh === '蒋海平' }
               ]"
             >
-              <span>营销总裁</span>
+              <span>副总裁</span>
             </div>
           </li>
           <li @mouseenter="perHover3">
@@ -134,21 +134,22 @@ export default {
           perNameZh: "郭志群",
           perNameEn: "Guo Zhiqun",
           perTit: "联合创始人&CEO",
-          perInfoZh: "网络安全大数据专家 连续成功创业者",
+          perInfoZh: "智慧城市、云计算专家",
           perInfoEn:
             "Network Security Big Data Experts Successful Continuous Entrepreneurs"
         },
         {
-          // 吕辉
-          perImgSrc: "./images/per-LH.png",
-          perNameZh: "吕辉",
-          perNameEn: "Lv Hui",
-          perTit: "营销总裁",
+          // 蒋海平
+          perImgSrc: "./images/per-JHP.png",
+          perNameZh: "蒋海平",
+          perNameEn: "Jiang Haiping",
+          perTit: "副总裁",
           perInfoZh:
-            "二十年医疗信息化销售经验<br />" +
-            "前河北名软执行总裁<br />" +
-            "具有丰富的临床经验<br />" +
-            "市场形势及销售模式专家",
+            "资深医疗信息化领域从业经历<br />" +
+            "行业连续创业者<br />" +
+            "专业扎实的2B销售理论基础和实践经验<br />" +
+            "对国家政策解读、前瞻性分析有深度研究<br />" +
+            "成功为国内多家大兴医院、地方政府进行高能方案落地实施",
           perInfoEn:
             "Network Security Big Data Experts Successful Continuous Entrepreneurs"
         },
@@ -179,7 +180,7 @@ export default {
         perNameZh: "郭志群",
         perNameEn: "Guo Zhiqun",
         perTit: "联合创始人&CEO",
-        perInfoZh: "网络安全大数据专家 连续成功创业者",
+        perInfoZh: "智慧城市、云计算专家",
         perInfoEn:
           "Network Security Big Data Experts Successful Continuous Entrepreneurs"
       }
@@ -273,7 +274,7 @@ export default {
             .per-info {
                 left: 578px;
                 top: 260px;
-                width: 440px;
+                width: 540px;
                 .info-zh {
                     font-size: 24px;
                     color: #fff;

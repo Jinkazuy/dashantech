@@ -38,7 +38,7 @@
     <!--banner部分 - 结束-->
     <modu2 :mob="mob"></modu2>
     <modu3 :mob="mob"></modu3>
-    <!--<modu4 :mob="mob"></modu4>-->
+    <modu4 :mob="mob"></modu4>
   </div>
 </template>
 
@@ -51,7 +51,7 @@ import bannerImg from "../../components/layouts/banner-img/banner-img";
 // 引入其他模块
 import modu2 from "../../components/product/modu-2/pro-modu2";
 import modu3 from "../../components/product/modu-3/pro-modu3";
-// import modu4 from "../../components/product/modu-4/pro-modu4";
+import modu4 from "../../components/product/modu-4/pro-modu4";
 export default {
   name: "Product",
   props: ["mob"],
@@ -104,9 +104,8 @@ export default {
     Banner,
     bannerImg,
     modu2,
-    modu3
-    // ,
-    // modu4
+    modu3,
+    modu4
   }
 };
 </script>

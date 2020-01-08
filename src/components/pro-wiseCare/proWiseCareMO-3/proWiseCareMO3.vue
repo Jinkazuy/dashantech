@@ -352,48 +352,39 @@ export default {
       .bd-cont-box-item-1 {
         ul.pic-group {
           li:nth-of-type(1) {
-            // todo: 换图片
-            background-image: url('../../../common/images/index/testillus.png');
+            background-image: url('../../../common/images/pro-wiseCare/WiseCare-HLLC-HLDSJ.png');
           }
           li:nth-of-type(2) {
-            // todo: 换图片
-            background-image: url('../../../common/images/index/testillus.png');
+            background-image: url('../../../common/images/pro-wiseCare/WiseCare-HLLC-HLLCGL.png');
           }
           li:nth-of-type(3) {
-            // todo: 换图片
-            background-image: url('../../../common/images/index/testillus.png');
+            background-image: url('../../../common/images/pro-wiseCare/WiseCare-HLLC-ZHHLDZBL.png');
           }
         }
       }
       .bd-cont-box-item-2 {
         ul.pic-group {
           li:nth-of-type(1) {
-            // todo: 换图片
-            background-image: url('../../../common/images/index/testillus.png');
+            background-image: url('../../../common/images/pro-wiseCare/WiseCare-HLGL-HLJXH.png');
           }
           li:nth-of-type(2) {
-            // todo: 换图片
-            background-image: url('../../../common/images/index/testillus.png');
+            background-image: url('../../../common/images/pro-wiseCare/WiseCare-HLGL-TGZL.png');
           }
           li:nth-of-type(3) {
-            // todo: 换图片
-            background-image: url('../../../common/images/index/testillus.png');
+            background-image: url('../../../common/images/pro-wiseCare/WiseCare-HLGL-AI.png');
           }
         }
       }
       .bd-cont-box-item-3 {
         ul.pic-group {
           li:nth-of-type(1) {
-            // todo: 换图片
-            background-image: url('../../../common/images/index/testillus.png');
+            background-image: url('../../../common/images/pro-wiseCare/WiseCare-HLKYYZW-ZHHLDZBL.png');
           }
           li:nth-of-type(2) {
-            // todo: 换图片
-            background-image: url('../../../common/images/index/testillus.png');
+            background-image: url('../../../common/images/pro-wiseCare/WiseCare-HLKYYZW-HLDSJ.png');
           }
           li:nth-of-type(3) {
-            // todo: 换图片
-            background-image: url('../../../common/images/index/testillus.png');
+            background-image: url('../../../common/images/pro-wiseCare/WiseCare-HLKYYZW-HLLCGL.png');
           }
         }
       }

@@ -113,35 +113,57 @@ export default {
         },
         {
           id: "5",
+          month: "January",
+          date: "2020/01/01",
+          title:
+            "喜讯|与雄安共成长！我司顺利交付容城县中医院远程医疗影像与诊断系统采购项目",
+          info: `<img class="w100" src="detail/d-5/rc-1.png"/><br>
+                 <img class="w100" src="detail/d-5/rc-2.png"/><br>
+                 <img class="w100" src="detail/d-5/rc-3.png"/><br>
+                 <img class="w100" src="detail/d-5/rc-4.png"/><br>`
+        },
+        {
+          id: "6",
+          month: "January",
+          date: "2020/01/01",
+          title: "喜讯|雄安又一城！我司中标安新县卫健局远程会诊系统采购项目",
+          info: `<img class="w100" src="detail/d-6/ax-1.png"/><br>
+                 <img class="w100" src="detail/d-6/ax-2.png"/><br>
+                 <img class="w100" src="detail/d-6/ax-3.png"/><br>
+                 <img class="w100" src="detail/d-6/ax-4.png"/><br>
+                 <img class="w100" src="detail/d-6/ax-5.png"/><br>`
+        },
+        {
+          id: "7",
           month: "December",
           date: "2019/12/17",
           title:
             "“智慧医疗+教育·精准扶贫行”在京启动，我司远程医疗云平台是技术支撑平台",
-          info: `<img class="w100" src="detail/d-5/nys-1.png"/><br>
-                 <img class="w100" src="detail/d-5/nys-2.png"/><br>
-                 <img class="w100" src="detail/d-5/nys-3.png"/><br>
-                 <img class="w100" src="detail/d-5/nys-4.png"/><br>
-                 <img class="w100" src="detail/d-5/nys-5.png"/><br>
-                 <img class="w100" src="detail/d-5/nys-6.png"/><br>
-                 <img class="w100" src="detail/d-5/nys-7.png"/><br>`
+          info: `<img class="w100" src="detail/d-7/nys-1.png"/><br>
+                 <img class="w100" src="detail/d-7/nys-2.png"/><br>
+                 <img class="w100" src="detail/d-7/nys-3.png"/><br>
+                 <img class="w100" src="detail/d-7/nys-4.png"/><br>
+                 <img class="w100" src="detail/d-7/nys-5.png"/><br>
+                 <img class="w100" src="detail/d-7/nys-6.png"/><br>
+                 <img class="w100" src="detail/d-7/nys-7.png"/><br>`
         },
         {
-          id: "6",
+          id: "8",
           month: "December",
           date: "2019/12/03",
           title: "我司受邀出席中国数字健康医疗大会",
-          info: `<img class="w100" src="detail/d-6/hn-1.png"/><br>
-                 <img class="w100" src="detail/d-6/hn-2.png"/><br>
-                 <img class="w100" src="detail/d-6/hn-3.png"/><br>
-                 <img class="w100" src="detail/d-6/hn-4.png"/><br>
-                 <img class="w100" src="detail/d-6/hn-5.png"/><br>
-                 <img class="w100" src="detail/d-6/hn-6.png"/><br>
-                 <img class="w100" src="detail/d-6/hn-7.png"/><br>
-                 <img class="w100" src="detail/d-6/hn-8.png"/><br>
-                 <img class="w100" src="detail/d-6/hn-9.png"/><br>
-                 <img class="w100" src="detail/d-6/hn-10.png"/><br>
-                 <img class="w100" src="detail/d-6/hn-11.png"/><br>
-                 <img class="w100" src="detail/d-6/hn-12.png"/><br>`
+          info: `<img class="w100" src="detail/d-8/hn-1.png"/><br>
+                 <img class="w100" src="detail/d-8/hn-2.png"/><br>
+                 <img class="w100" src="detail/d-8/hn-3.png"/><br>
+                 <img class="w100" src="detail/d-8/hn-4.png"/><br>
+                 <img class="w100" src="detail/d-8/hn-5.png"/><br>
+                 <img class="w100" src="detail/d-8/hn-6.png"/><br>
+                 <img class="w100" src="detail/d-8/hn-7.png"/><br>
+                 <img class="w100" src="detail/d-8/hn-8.png"/><br>
+                 <img class="w100" src="detail/d-8/hn-9.png"/><br>
+                 <img class="w100" src="detail/d-8/hn-10.png"/><br>
+                 <img class="w100" src="detail/d-8/hn-11.png"/><br>
+                 <img class="w100" src="detail/d-8/hn-12.png"/><br>`
         }
       ]
     };

@@ -46,30 +46,30 @@ export default {
       caseDatas: [
         {
           articleId: 1,
-          aLink: `newsDetail?id=${1}`,
-          month: "August",
-          dates: "2019/09/25",
-          title: "蓉城项目",
-          conts: `2019年7月25日，我司正式获聘成为中国卫生信息与健康大数据学会第七届常务理事单位。<br/><br/> 中国卫生信息与健康医疗大数据学会中国卫生信息与健康医疗大数据学会（Chinese Health Information and Big Data Association, CHIBDA, 以下简称“学会”）……`,
+          aLink: `newsDetail?id=${5}`,
+          month: "January",
+          dates: "2020/01/01",
+          title:
+            "喜讯|与雄安共成长！我司顺利交付容城县中医院远程医疗影像与诊断系统采购项目",
+          conts: `在我司技术人员一个月时间的努力下，由大善科技自主研发的远程医疗影像与诊断系统顺利实施并交付容城县中医院。`,
           // 注意！这里的图片，是npm run build 后，也就是编译后的相对路径，也就是把public下的images文件夹直接输出到了编译后的根目录
           // 所以直接./images即可；
           // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
           // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-          imgSrc: "./images/news-bg-img.png"
+          imgSrc: "./images/news-bg-img-xa.webp"
         },
         {
           articleId: 2,
-          aLink: `newsDetail?id=${1}`,
-          month: "August",
-          dates: "2019/09/25",
-          title:
-            "安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县安新县",
-          conts: `2019年7月25日，我司正式获聘成为中国卫生信息与健康大数据学会第七届常务理事单位。<br/><br/> 中国卫生信息与健康医疗大数据学会中国卫生信息与健康医疗大数据学会（Chinese Health Information and Big Data Association, CHIBDA, 以下简称“学会”）……`,
+          aLink: `newsDetail?id=${6}`,
+          month: "January",
+          dates: "2020/01/01",
+          title: "喜讯|雄安又一城！我司中标安新县卫健局远程会诊系统采购项目",
+          conts: `安新县卫健局远程会诊系统采购由北京大善青松科技有限公司成功中标！`,
           // 注意！这里的图片，是npm run build 后，也就是编译后的相对路径，也就是把public下的images文件夹直接输出到了编译后的根目录
           // 所以直接./images即可；
           // 1、线上地址(比如数据返回来的地址，或者pnm run build 编译后，手动添加图片文件，然后在这里引入也可以)：www.baidu.com/xx/xx/images/xx.png
           // 2、import xxd from "../../xx.png" , 然后将这个xxd赋值给imgSrc；
-          imgSrc: "./images/news-bg-img.png"
+          imgSrc: "./images/ax.webp"
         }
       ]
     };
