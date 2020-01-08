@@ -149,7 +149,7 @@ export default {
             "行业连续创业者<br />" +
             "专业扎实的2B销售理论基础和实践经验<br />" +
             "对国家政策解读、前瞻性分析有深度研究<br />" +
-            "成功为国内多家大兴医院、地方政府进行高能方案落地实施",
+            "成功为国内多家大型医院、地方政府进行高能方案落地实施",
           perInfoEn:
             "Network Security Big Data Experts Successful Continuous Entrepreneurs"
         },
