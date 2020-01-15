@@ -7,6 +7,7 @@
       navBarHeightFlage ? 'navbar-h-low' : '',
       mob ? 'navbar-wrapper-mob' : ''
     ]"
+    @click="jk"
   >
     <!--从这里开始，使用bootstrap的结构-->
     <nav class="navbar navbar-default">
@@ -60,6 +61,9 @@
             <li>
               <router-link to="/contact">联系大善</router-link>
               <div class="border-line" v-if="!mob"></div>
+            </li>
+            <li v-if="jkNum > 5">
+              By Jin Kzuya
             </li>
           </ul>
         </div>
@@ -136,7 +140,9 @@ export default {
       // 因为鼠标移出产品中心会将下拉浮层隐藏，因为需要一个定时器来防止移出时立刻隐藏；
       proToastTimeout: {},
       // 下拉菜单左侧文案的索引, 默认是1，也就是pacs,当鼠标移入每个li的时候，文案的索引跟着改变；
-      toastLeftText: 0
+      toastLeftText: 0,
+      // jkNum
+      jkNum: 0
     };
   },
   props: ["showNavBarShadow", "mob"],
@@ -244,6 +250,15 @@ export default {
     // 点击每个下拉浮层的其中的link后，收起浮层
     linkBoxClick() {
       this.proLinkShow = false;
+    },
+    // by
+    jk() {
+      this.jkNum++;
+      if (this.jkNum > 5) {
+        setTimeout(() => {
+          this.jkNum = 0;
+        }, 10000);
+      }
     }
   },
   components: {
