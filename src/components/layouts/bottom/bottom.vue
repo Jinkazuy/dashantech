@@ -113,6 +113,9 @@
           北京大善青松科技有限公司 Copyright &#169; 2019 www.dashantech.com.cn
           All rights reserved.
         </p>
+        <div class="copy-ipc">
+          <a href="http://www.beian.miit.gov.cn" target="_blank">京ICP备19036649号</a>
+        </div>
       </div>
     </div>
   </div>
@@ -450,6 +453,9 @@ export default {
       .copyright {
         margin: 12px 0 0 0;
         color: rgba(255, 255, 255, .4);
+      }
+      .copy-ipc {
+        margin-top: 20px;
       }
       .text-switch {
         cursor: pointer;
